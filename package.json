@@ -10,7 +10,8 @@
     "test": "jest -u",
     "format": "prettier --write .",
     "sb": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=13d0620a8f93"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -39,6 +40,7 @@
     "@types/jest": "^29.4.0",
     "@types/testing-library__jest-dom": "^5.14.5",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "chromatic": "^6.17.1",
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-jest": "^27.2.1",
     "eslint-plugin-storybook": "^0.6.11",
@@ -46,5 +48,7 @@
     "jest-environment-jsdom": "^29.5.0",
     "prettier": "^2.8.4",
     "storybook": "7.0.0-beta.62"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "digisolve@0.1.0"
 }
