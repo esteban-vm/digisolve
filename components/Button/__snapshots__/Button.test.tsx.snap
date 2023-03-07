@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button test cases: should render correctly 1`] = `
+<DocumentFragment>
+  <a
+    class="css-yhfbek"
+    href="#"
+  >
+    Test
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Button test cases: should render full button 1`] = `
+<DocumentFragment>
+  <a
+    class="css-1fps30p"
+    href="#"
+  >
+    Test
+  </a>
+</DocumentFragment>
+`;

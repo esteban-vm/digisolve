@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header test cases: should render correctly 1`] = `
+<DocumentFragment>
+  <header
+    class="css-1yewael"
+  >
+    <nav
+      class="css-rr22mr"
+    >
+      <img
+        alt="Digisolve logo"
+        data-nimg="1"
+        decoding="async"
+        height="40"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+        srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+        style="color: transparent;"
+        width="40"
+      />
+      <ul
+        class="css-3xog9x"
+      >
+        <li>
+          <a
+            href="#"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+          >
+            Contact
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+          >
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div
+      class="css-1hxwiaz"
+    >
+      <div
+        class="css-1q59fp3"
+      >
+        <h1>
+          Digital Agency
+        </h1>
+        <h2>
+          The one stop for all your digital solutions
+        </h2>
+      </div>
+      <a
+        class="css-1fps30p"
+        href="javascript:void(0)"
+      >
+        Get a Quote Today!
+      </a>
+    </div>
+  </header>
+</DocumentFragment>
+`;
