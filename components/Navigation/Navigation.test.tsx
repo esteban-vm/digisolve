@@ -1,21 +1,43 @@
-import { render, screen } from '@/tests'
+import { render, screen, configure } from '@/tests'
 import Navigation from './Navigation'
 
 describe('Navigation test cases:', () => {
+  let asFragment: () => DocumentFragment
+
+  beforeAll(() => {
+    configure({ throwSuggestions: true })
+  })
+
+  beforeEach(() => {
+    void ({ asFragment } = render(<Navigation />))
+  })
+
   it('should render correctly', () => {
-    const { asFragment } = render(<Navigation />)
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('should render nav links', () => {
-    render(<Navigation />)
+  describe('should display:', () => {
+    it('the logo', () => {
+      const logo = screen.getByRole('img')
+      expect(logo).toBeInTheDocument()
+      expect(logo).toBeVisible()
+      expect(logo).toHaveAccessibleName(/^digisolve logo$/i)
+    })
 
-    const links = screen.getAllByRole('link')
+    it('the links', () => {
+      const [link1, link2, link3] = screen.getAllByRole('link')
 
-    for (const link of links) {
-      expect(link).toBeInTheDocument()
-      expect(link).toBeVisible()
-      expect(link).toHaveAttribute('href', '#')
-    }
+      expect(link1).toBeInTheDocument()
+      expect(link1).toBeVisible()
+      expect(link1).toHaveTextContent(/^home$/i)
+
+      expect(link2).toBeInTheDocument()
+      expect(link2).toBeVisible()
+      expect(link2).toHaveTextContent(/^contact$/i)
+
+      expect(link3).toBeInTheDocument()
+      expect(link3).toBeVisible()
+      expect(link3).toHaveTextContent(/^about$/i)
+    })
   })
 })

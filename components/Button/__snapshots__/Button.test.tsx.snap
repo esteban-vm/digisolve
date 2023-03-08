@@ -1,10 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button test cases: should render correctly 1`] = `
+exports[`Button test cases: should render basic button 1`] = `
 <DocumentFragment>
   <a
-    class="css-yhfbek"
-    href="#"
+    class="css-1hk78tk"
+    href="javascript:void(0)"
+    role="button"
   >
     Test
   </a>
@@ -15,7 +16,8 @@ exports[`Button test cases: should render full button 1`] = `
 <DocumentFragment>
   <a
     class="css-1fps30p"
-    href="#"
+    href="javascript:void(0)"
+    role="button"
   >
     Test
   </a>

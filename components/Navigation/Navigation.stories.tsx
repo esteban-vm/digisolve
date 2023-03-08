@@ -6,10 +6,10 @@ export default {
   component: Navigation,
   title: 'Components/Navigation',
   decorators: [
-    (Story) => {
+    (Story, context) => {
       return (
         <div style={{ height: '100vh', width: '100vw', backgroundColor: 'black' }}>
-          <Story />
+          <Story {...context} />
         </div>
       )
     },
@@ -18,14 +18,14 @@ export default {
 
 export const NavigationExample: StoryObj<typeof Navigation> = {
   play() {
-    const [homeLink, contactLink, aboutLink] = screen.getAllByRole('link')
+    const links = screen.getAllByRole('link')
     const logoImg = screen.getByRole('img')
+
+    for (const link of links) {
+      userEvent.click(link)
+    }
 
     userEvent.hover(logoImg)
     userEvent.unhover(logoImg)
-
-    userEvent.click(homeLink)
-    userEvent.click(contactLink)
-    userEvent.click(aboutLink)
   },
 }

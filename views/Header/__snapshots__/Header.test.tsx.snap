@@ -61,6 +61,7 @@ exports[`Header test cases: should render correctly 1`] = `
       <a
         class="css-1fps30p"
         href="javascript:void(0)"
+        role="button"
       >
         Get a Quote Today!
       </a>

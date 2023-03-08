@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About test cases: should render correctly 1`] = `
+<DocumentFragment>
+  <section>
+    <div
+      class="row"
+    >
+      <div
+        class="col span_1_of_2 css-4jp1yt"
+      >
+        <h2>
+          A Digital Agency Focused On Growing your Online presence
+        </h2>
+        <p
+          role="paragraph"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt. Architecto fugiat veritatis cum necessitatibus sapiente!
+        </p>
+        <p
+          role="paragraph"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt. Architecto fugiat veritatis cum necessitatibus sapiente!
+        </p>
+        <a
+          class="css-1hk78tk"
+          href="#"
+          role="button"
+        >
+          Read More
+        </a>
+      </div>
+      <div
+        class="col span_1_of_2 css-4jp1yt"
+      >
+        <img
+          alt="Digisolve app on Laptop"
+          data-nimg="1"
+          decoding="async"
+          height="40"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style="color: transparent;"
+          width="40"
+        />
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
