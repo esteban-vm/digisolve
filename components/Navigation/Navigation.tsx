@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import logo from '@/public/img/digisolve-logo.png'
+import { logo } from '@/images'
 import * as Styled from './Navigation.styled'
 
 const Navigation: FC = () => {
