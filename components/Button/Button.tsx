@@ -26,18 +26,18 @@ const Button = styled.a<ButtonProps>`
             background-color: var(--primary-color-dark);
           }
         `
-      } else {
-        return css`
-          border: 2px solid var(--primary-color);
-          color: var(--primary-color);
-
-          &:hover,
-          &:active {
-            background-color: var(--primary-color);
-            color: #fff;
-          }
-        `
       }
+
+      return css`
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+
+        &:hover,
+        &:active {
+          background-color: var(--primary-color);
+          color: #fff;
+        }
+      `
     }};
   }
 `

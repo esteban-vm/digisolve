@@ -11,9 +11,7 @@ const Header: FC = () => {
           <h1>Digital Agency</h1>
           <h2>The one stop for all your digital solutions</h2>
         </Styled.Text>
-        <Button href='javascript:void(0)' isFull>
-          Get a Quote Today!
-        </Button>
+        <Button isFull>Get a Quote Today!</Button>
       </Styled.Box>
     </Styled.Wrapper>
   )
