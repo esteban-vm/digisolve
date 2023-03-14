@@ -1,22 +1,15 @@
-import { render, screen, configure } from '@/tests'
+import type { ReactTestRendererJSON } from 'react-test-renderer'
+import { render, cleanup, create, screen } from '@/tests'
 import Navigation from './Navigation'
 
-describe('Navigation test cases:', () => {
-  let asFragment: () => DocumentFragment
-
-  beforeAll(() => {
-    configure({ throwSuggestions: true })
-  })
-
-  beforeEach(() => {
-    void ({ asFragment } = render(<Navigation />))
-  })
-
-  it('should render correctly', () => {
-    expect(asFragment()).toMatchSnapshot()
-  })
-
+describe('<Navigation/> test cases:', () => {
   describe('should display:', () => {
+    beforeEach(() => {
+      render(<Navigation />)
+    })
+
+    afterEach(cleanup)
+
     it('the logo', () => {
       const logo = screen.getByRole('img')
       expect(logo).toBeInTheDocument()
@@ -25,19 +18,33 @@ describe('Navigation test cases:', () => {
     })
 
     it('the links', () => {
-      const [link1, link2, link3] = screen.getAllByRole('link')
+      const links = screen.getAllByRole('link')
+      const texts = [/^home$/i, /^contact$/i, /^about$/i]
 
-      expect(link1).toBeInTheDocument()
-      expect(link1).toBeVisible()
-      expect(link1).toHaveTextContent(/^home$/i)
+      expect(links).toHaveLength(3)
 
-      expect(link2).toBeInTheDocument()
-      expect(link2).toBeVisible()
-      expect(link2).toHaveTextContent(/^contact$/i)
+      for (let index = 0; index < links.length; index++) {
+        const link = links[index]
+        expect(link).toBeInTheDocument()
+        expect(link).toBeVisible()
+        expect(link).toHaveTextContent(texts[index])
+      }
+    })
+  })
 
-      expect(link3).toBeInTheDocument()
-      expect(link3).toBeVisible()
-      expect(link3).toHaveTextContent(/^about$/i)
+  describe('style tests:', () => {
+    let navigationTree: ReactTestRendererJSON
+
+    beforeEach(() => {
+      navigationTree = create(<Navigation />).toJSON() as ReactTestRendererJSON
+    })
+
+    it('should render with correct styles', () => {
+      expect(navigationTree).toMatchSnapshot()
+    })
+
+    it('should change color when hovered', () => {
+      expect(navigationTree).toHaveStyleRule('border-bottom', '2px solid var(--color-magenta)', { target: 'a:hover' })
     })
   })
 })

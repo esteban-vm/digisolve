@@ -10,17 +10,19 @@ const styles = css`
   }
 
   :root {
-    --primary-color: #ed07b7;
-    --primary-color-dark: #bd0592;
-    --secondary-color: #6920b0;
-    --light-color: #acdaff;
-    --dark-color: #555;
+    --color-magenta: #ed07b7;
+    --color-dark-magenta: #bd0592;
+    --color-purple: #6920b0;
+    --color-sky-blue: #acdaff;
+    --color-grey: #555;
+    --color-white: #fff;
+    --color-black: #000;
   }
 
   html,
   body {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--color-white);
+    color: var(--color-black);
     text-rendering: optimizeLegibility;
     font-size: 16px;
     font-family: 'Work Sans', Arial, sans-serif;

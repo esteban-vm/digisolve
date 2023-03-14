@@ -1,32 +1,56 @@
-import { render, screen, userEvent, configure } from '@/tests'
+import type { ReactTestRendererJSON } from 'react-test-renderer'
+import { render, cleanup, screen, create, userEvent } from '@/tests'
 import Button from './Button'
 
-describe('Button test cases:', () => {
-  beforeAll(() => {
-    configure({ throwSuggestions: true })
+describe('<Button/> test cases:', () => {
+  describe('event tests:', () => {
+    const handleEvent = jest.fn()
+
+    it('should click correctly', async () => {
+      render(<Button onClick={handleEvent}>Test</Button>)
+      await userEvent.click(screen.getByRole('button'))
+      expect(handleEvent).toHaveBeenCalled()
+    })
+
+    it('should hover correctly', async () => {
+      render(<Button onMouseEnter={handleEvent}>Test</Button>)
+      await userEvent.hover(screen.getByRole('button'))
+      expect(handleEvent).toHaveBeenCalled()
+    })
+
+    afterEach(cleanup)
   })
 
-  it('should render basic button', () => {
-    const { asFragment } = render(<Button>Test</Button>)
-    expect(asFragment()).toMatchSnapshot()
-  })
+  describe('style tests:', () => {
+    let buttonTree: ReactTestRendererJSON
 
-  it('should render full button', () => {
-    const { asFragment } = render(<Button isFull>Test</Button>)
-    expect(asFragment()).toMatchSnapshot()
-  })
+    describe('with basic button:', () => {
+      beforeEach(() => {
+        buttonTree = create(<Button />).toJSON() as ReactTestRendererJSON
+      })
 
-  it('should call click handler', async () => {
-    const handleClick = jest.fn()
-    render(<Button onClick={handleClick}>Test</Button>)
-    await userEvent.click(screen.getByRole('button'))
-    expect(handleClick).toHaveBeenCalled()
-  })
+      it('should render with correct styles', () => {
+        expect(buttonTree).toMatchSnapshot()
+      })
 
-  it('should have default role and href', () => {
-    render(<Button>Test</Button>)
-    const button = screen.getByRole('button')
-    expect(button).toBeInTheDocument()
-    expect(button).toHaveAttribute('href')
+      it('should have correct text and background color', () => {
+        expect(buttonTree).toHaveStyleRule('background-color', 'var(--color-magenta)', { target: ':active' })
+        expect(buttonTree).toHaveStyleRule('color', 'var(--color-white)', { target: ':active' })
+      })
+    })
+
+    describe('with full button:', () => {
+      beforeEach(() => {
+        buttonTree = create(<Button isFull />).toJSON() as ReactTestRendererJSON
+      })
+
+      it('should render with correct styles', () => {
+        expect(buttonTree).toMatchSnapshot()
+      })
+
+      it('should have correct background color', () => {
+        expect(buttonTree).toHaveStyleRule('background-color', 'var(--color-dark-magenta)', { target: ':active' })
+      })
+    })
   })
 })

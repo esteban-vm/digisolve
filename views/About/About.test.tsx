@@ -1,22 +1,14 @@
-import { render, screen, configure } from '@/tests'
+import { render, cleanup, screen, create } from '@/tests'
 import About from './About'
 
-describe('About test cases:', () => {
-  let asFragment: () => DocumentFragment
-
-  beforeAll(() => {
-    configure({ throwSuggestions: true })
-  })
-
-  beforeEach(() => {
-    void ({ asFragment } = render(<About />))
-  })
-
-  it('should render correctly', () => {
-    expect(asFragment()).toMatchSnapshot()
-  })
-
+describe('<About/> test cases:', () => {
   describe('should display:', () => {
+    beforeEach(() => {
+      render(<About />)
+    })
+
+    afterEach(cleanup)
+
     it('the heading', () => {
       const heading = screen.getByRole('heading')
       expect(heading).toBeInTheDocument()
@@ -46,6 +38,13 @@ describe('About test cases:', () => {
       expect(image).toBeInTheDocument()
       expect(image).toBeVisible()
       expect(image).toHaveAccessibleName(/^digisolve app on laptop$/i)
+    })
+  })
+
+  describe('style tests:', () => {
+    it('should render with correct styles', () => {
+      const aboutTree = create(<About />).toJSON()
+      expect(aboutTree).toMatchSnapshot()
     })
   })
 })

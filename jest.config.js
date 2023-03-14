@@ -22,6 +22,7 @@ const customJestConfig = {
   testEnvironment: 'jest-environment-jsdom',
   verbose: true,
   silent: true,
+  snapshotSerializers: ['@emotion/jest/serializer'],
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async

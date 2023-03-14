@@ -1,51 +1,108 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`About test cases: should render correctly 1`] = `
-<DocumentFragment>
-  <section>
+exports[`<About/> test cases: style tests: should render with correct styles 1`] = `
+.emotion-0 {
+  margin-top: 150px;
+}
+
+.emotion-0 h2 {
+  color: var(--color-black);
+  font-size: 250%;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+.emotion-0 p {
+  color: var(--color-grey);
+  margin-bottom: 50px;
+}
+
+.emotion-0 img {
+  width: 80%;
+  height: auto;
+}
+
+.emotion-0 .span_1_of_2:first-child {
+  text-align: left;
+}
+
+.emotion-0 .span_1_of_2:last-child {
+  text-align: right;
+}
+
+.emotion-1:link,
+.emotion-1:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 200px;
+  font-weight: 500;
+  outline: none;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+  border: 2px solid var(--color-magenta);
+  color: var(--color-magenta);
+}
+
+.emotion-1:link:hover,
+.emotion-1:visited:hover,
+.emotion-1:link:active,
+.emotion-1:visited:active {
+  background-color: var(--color-magenta);
+  color: var(--color-white);
+}
+
+<section
+  className="emotion-0"
+>
+  <div
+    className="row"
+  >
     <div
-      class="row"
+      className="col span_1_of_2"
     >
-      <div
-        class="col span_1_of_2 css-4jp1yt"
+      <h2>
+        A Digital Agency Focused On Growing your Online presence
+      </h2>
+      <p
+        role="paragraph"
       >
-        <h2>
-          A Digital Agency Focused On Growing your Online presence
-        </h2>
-        <p
-          role="paragraph"
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt. Architecto fugiat veritatis cum necessitatibus sapiente!
-        </p>
-        <p
-          role="paragraph"
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt. Architecto fugiat veritatis cum necessitatibus sapiente!
-        </p>
-        <a
-          class="css-11ou76f"
-          href="#"
-          role="button"
-        >
-          Read More
-        </a>
-      </div>
-      <div
-        class="col span_1_of_2 css-4jp1yt"
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt. Architecto fugiat veritatis cum necessitatibus sapiente!
+      </p>
+      <p
+        role="paragraph"
       >
-        <img
-          alt="Digisolve app on Laptop"
-          data-nimg="1"
-          decoding="async"
-          height="40"
-          loading="lazy"
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-          style="color: transparent;"
-          width="40"
-        />
-      </div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt. Architecto fugiat veritatis cum necessitatibus sapiente!
+      </p>
+      <a
+        className="emotion-1"
+        href="#"
+        role="button"
+      >
+        Read More
+      </a>
     </div>
-  </section>
-</DocumentFragment>
+    <div
+      className="col span_1_of_2"
+    >
+      <img
+        alt="Digisolve app on Laptop"
+        data-nimg="1"
+        decoding="async"
+        height={40}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+        srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={40}
+      />
+    </div>
+  </div>
+</section>
 `;

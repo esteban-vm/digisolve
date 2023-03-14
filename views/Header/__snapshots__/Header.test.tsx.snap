@@ -1,71 +1,169 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header test cases: should render correctly 1`] = `
-<DocumentFragment>
-  <header
-    class="css-1yewael"
+exports[`<Header/> test cases: style tests: should render with correct styles 1`] = `
+.emotion-0 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),url('/img/header-img.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+  -webkit-background-position: center;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  color: var(--color-white);
+}
+
+.emotion-0 h1 {
+  font-size: 500%;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.emotion-0 h2 {
+  font-size: 200%;
+  font-weight: 400;
+}
+
+.emotion-0>div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.emotion-0>div div {
+  margin-bottom: 100px;
+}
+
+.emotion-1 img {
+  height: 120px;
+  width: auto;
+  float: left;
+}
+
+.emotion-1 ul {
+  list-style: none;
+  float: right;
+  margin-top: 70px;
+}
+
+.emotion-1 ul li {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.emotion-1 ul li a:link,
+.emotion-1 ul li a:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-white);
+  outline: none;
+  -webkit-transition: border-bottom 100ms;
+  transition: border-bottom 100ms;
+}
+
+.emotion-1 ul li a:hover,
+.emotion-1 ul li a:active {
+  border-bottom: 2px solid var(--color-magenta);
+}
+
+.emotion-2:link,
+.emotion-2:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 200px;
+  font-weight: 500;
+  outline: none;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+  background-color: var(--color-magenta);
+  color: var(--color-white);
+}
+
+.emotion-2:link:hover,
+.emotion-2:visited:hover,
+.emotion-2:link:active,
+.emotion-2:visited:active {
+  background-color: var(--color-dark-magenta);
+}
+
+<header
+  className="emotion-0"
+>
+  <nav
+    className="emotion-1"
   >
-    <nav
-      class="css-rr22mr"
-    >
-      <img
-        alt="Digisolve logo"
-        data-nimg="1"
-        decoding="async"
-        height="40"
-        loading="lazy"
-        src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-        srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-        style="color: transparent;"
-        width="40"
-      />
-      <ul
-        class="css-3xog9x"
-      >
-        <li>
-          <a
-            href="#"
-          >
-            Home
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-          >
-            Contact
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-          >
-            About
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <div
-      class="css-1hxwiaz"
-    >
-      <div
-        class="css-1q59fp3"
-      >
-        <h1>
-          Digital Agency
-        </h1>
-        <h2>
-          The one stop for all your digital solutions
-        </h2>
-      </div>
-      <a
-        class="css-1fps30p"
-        href="javascript:void(0)"
-        role="button"
-      >
-        Get a Quote Today!
-      </a>
+    <img
+      alt="Digisolve logo"
+      data-nimg="1"
+      decoding="async"
+      height={40}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+      srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={40}
+    />
+    <ul>
+      <li>
+        <a
+          href="#"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+        >
+          Contact
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+        >
+          About
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div>
+    <div>
+      <h1>
+        Digital Agency
+      </h1>
+      <h2>
+        The one stop for all your digital solutions
+      </h2>
     </div>
-  </header>
-</DocumentFragment>
+    <a
+      className="emotion-2"
+      href="javascript:void(0)"
+      role="button"
+    >
+      Get a Quote Today!
+    </a>
+  </div>
+</header>
 `;

@@ -6,8 +6,13 @@
     "prettier",
     "plugin:jest/recommended"
   ],
+  "plugins": ["@emotion"],
   "ignorePatterns": ["*.js"],
   "env": {
     "jest": true
+  },
+  "rules": {
+    "@emotion/no-vanilla": "error",
+    "@emotion/syntax-preference": ["error", "string"]
   }
 }

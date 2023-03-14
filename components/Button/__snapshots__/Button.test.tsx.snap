@@ -1,25 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button test cases: should render basic button 1`] = `
-<DocumentFragment>
-  <a
-    class="css-11ou76f"
-    href="javascript:void(0)"
-    role="button"
-  >
-    Test
-  </a>
-</DocumentFragment>
+exports[`<Button/> test cases: style tests: with basic button: should render with correct styles 1`] = `
+.emotion-0:link,
+.emotion-0:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 200px;
+  font-weight: 500;
+  outline: none;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+  border: 2px solid var(--color-magenta);
+  color: var(--color-magenta);
+}
+
+.emotion-0:link:hover,
+.emotion-0:visited:hover,
+.emotion-0:link:active,
+.emotion-0:visited:active {
+  background-color: var(--color-magenta);
+  color: var(--color-white);
+}
+
+<a
+  className="emotion-0"
+  href="javascript:void(0)"
+  role="button"
+/>
 `;
 
-exports[`Button test cases: should render full button 1`] = `
-<DocumentFragment>
-  <a
-    class="css-1fps30p"
-    href="javascript:void(0)"
-    role="button"
-  >
-    Test
-  </a>
-</DocumentFragment>
+exports[`<Button/> test cases: style tests: with full button: should render with correct styles 1`] = `
+.emotion-0:link,
+.emotion-0:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 200px;
+  font-weight: 500;
+  outline: none;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+  background-color: var(--color-magenta);
+  color: var(--color-white);
+}
+
+.emotion-0:link:hover,
+.emotion-0:visited:hover,
+.emotion-0:link:active,
+.emotion-0:visited:active {
+  background-color: var(--color-dark-magenta);
+}
+
+<a
+  className="emotion-0"
+  href="javascript:void(0)"
+  role="button"
+/>
 `;

@@ -1,22 +1,14 @@
-import { render, screen, configure } from '@/tests'
+import { render, cleanup, screen, create } from '@/tests'
 import Header from './Header'
 
-describe('Header test cases:', () => {
-  let asFragment: () => DocumentFragment
-
-  beforeAll(() => {
-    configure({ throwSuggestions: true })
-  })
-
-  beforeEach(() => {
-    void ({ asFragment } = render(<Header />))
-  })
-
-  it('should render correctly', () => {
-    expect(asFragment()).toMatchSnapshot()
-  })
-
+describe('<Header/> test cases:', () => {
   describe('should display:', () => {
+    beforeEach(() => {
+      render(<Header />)
+    })
+
+    afterEach(cleanup)
+
     it('the navigation links', () => {
       const links = screen.getAllByRole('link')
       expect(links).toHaveLength(3)
@@ -28,15 +20,17 @@ describe('Header test cases:', () => {
     })
 
     it('the headings', () => {
-      const [heading1, heading2] = screen.getAllByRole('heading')
+      const headings = screen.getAllByRole('heading')
+      const texts = [/^digital agency$/i, /^the one stop for all your digital solutions$/i]
 
-      expect(heading1).toBeInTheDocument()
-      expect(heading1).toBeVisible()
-      expect(heading1).toHaveTextContent(/^digital agency$/i)
+      expect(headings).toHaveLength(2)
 
-      expect(heading2).toBeInTheDocument()
-      expect(heading2).toBeVisible()
-      expect(heading2).toHaveTextContent(/^the one stop for all your digital solutions$/i)
+      for (let index = 0; index < headings.length; index++) {
+        const heading = headings[index]
+        expect(heading).toBeInTheDocument()
+        expect(heading).toBeVisible()
+        expect(heading).toHaveTextContent(texts[index])
+      }
     })
 
     it('the button', () => {
@@ -44,6 +38,13 @@ describe('Header test cases:', () => {
       expect(button).toBeInTheDocument()
       expect(button).toBeVisible()
       expect(button).toHaveTextContent(/^get a quote today\!$/i)
+    })
+  })
+
+  describe('style tests:', () => {
+    it('should render with correct styles', () => {
+      const headerTree = create(<Header />).toJSON()
+      expect(headerTree).toMatchSnapshot()
     })
   })
 })

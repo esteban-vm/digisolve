@@ -18,33 +18,34 @@ const Button = styled.a<ButtonProps>`
     ${({ isFull }) => {
       if (isFull) {
         return css`
-          background-color: var(--primary-color);
-          color: #fff;
+          background-color: var(--color-magenta);
+          color: var(--color-white);
 
           &:hover,
           &:active {
-            background-color: var(--primary-color-dark);
+            background-color: var(--color-dark-magenta);
+          }
+        `
+      } else {
+        return css`
+          border: 2px solid var(--color-magenta);
+          color: var(--color-magenta);
+
+          &:hover,
+          &:active {
+            background-color: var(--color-magenta);
+            color: var(--color-white);
           }
         `
       }
-
-      return css`
-        border: 2px solid var(--primary-color);
-        color: var(--primary-color);
-
-        &:hover,
-        &:active {
-          background-color: var(--primary-color);
-          color: #fff;
-        }
-      `
     }};
   }
 `
 
 Button.defaultProps = {
-  href: 'javascript:void(0)',
+  isFull: false,
   role: 'button',
+  href: 'javascript:void(0)',
 }
 
 export default Button
