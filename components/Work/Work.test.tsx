@@ -1,10 +1,10 @@
 import type { ReactTestRendererJSON } from 'react-test-renderer'
-import { advertising } from '@/utils/images'
 import { render, cleanup, create, screen } from '@/utils/tests'
+import { works } from '@/views'
 import Work from './Work'
 
 describe('🧪 <Work/> test cases:', () => {
-  const work = <Work image={advertising} text='Online advertising' />
+  const work = <Work {...works[0]} />
 
   describe('should display:', () => {
     beforeEach(() => {

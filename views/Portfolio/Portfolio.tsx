@@ -4,9 +4,9 @@ import { advertising, campaigns, design, marketing } from '@/utils/images'
 import { styled } from '@/utils/styles'
 
 export const works: WorkProps[] = [
-  { image: advertising, text: 'Online advertising' },
-  { image: campaigns, text: 'Social media campaigns' },
-  { image: design, text: 'UX design' },
+  { image: advertising, text: 'Online Advertising' },
+  { image: campaigns, text: 'Social Media Campaigns' },
+  { image: design, text: 'UX Design' },
   { image: marketing, text: 'Branding & Digital Marketing' },
 ]
 

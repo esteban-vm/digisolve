@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { screen, userEvent } from '@storybook/testing-library'
-import { advertising, campaigns } from '@/utils/images'
 import { styled } from '@/utils/styles'
+import { works } from '@/views'
 import Work from './Work'
 
 const Wrapper = styled.div`
@@ -45,16 +45,9 @@ export default {
   },
 } as Meta<typeof Work>
 
-export const WorkExample1: StoryObj<typeof Work> = {
-  args: {
-    image: advertising,
-    text: 'Online advertising',
-  },
-}
+const [work1, work2, work3, work4] = works
 
-export const WorkExample2: StoryObj<typeof Work> = {
-  args: {
-    image: campaigns,
-    text: 'Social media campaigns',
-  },
-}
+export const WorkExample1: StoryObj<typeof Work> = { args: work1 }
+export const WorkExample2: StoryObj<typeof Work> = { args: work2 }
+export const WorkExample3: StoryObj<typeof Work> = { args: work3 }
+export const WorkExample4: StoryObj<typeof Work> = { args: work4 }

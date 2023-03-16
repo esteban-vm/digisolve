@@ -34,7 +34,7 @@ exports[`🧪 <Work/> test cases: style tests: should render with correct styles
   className="emotion-0"
 >
   <img
-    alt="Online advertising"
+    alt="Online Advertising"
     data-nimg="1"
     decoding="async"
     height={40}
@@ -53,7 +53,7 @@ exports[`🧪 <Work/> test cases: style tests: should render with correct styles
   <p
     role="paragraph"
   >
-    Online advertising
+    Online Advertising
   </p>
 </figure>
 `;

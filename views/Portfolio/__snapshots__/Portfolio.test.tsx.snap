@@ -89,7 +89,7 @@ exports[`🧪 <Portfolio/> test cases: style tests: should render with correct s
         className="emotion-1"
       >
         <img
-          alt="Online advertising"
+          alt="Online Advertising"
           data-nimg="1"
           decoding="async"
           height={40}
@@ -108,7 +108,7 @@ exports[`🧪 <Portfolio/> test cases: style tests: should render with correct s
         <p
           role="paragraph"
         >
-          Online advertising
+          Online Advertising
         </p>
       </figure>
     </li>
@@ -117,7 +117,7 @@ exports[`🧪 <Portfolio/> test cases: style tests: should render with correct s
         className="emotion-1"
       >
         <img
-          alt="Social media campaigns"
+          alt="Social Media Campaigns"
           data-nimg="1"
           decoding="async"
           height={40}
@@ -136,7 +136,7 @@ exports[`🧪 <Portfolio/> test cases: style tests: should render with correct s
         <p
           role="paragraph"
         >
-          Social media campaigns
+          Social Media Campaigns
         </p>
       </figure>
     </li>
@@ -145,7 +145,7 @@ exports[`🧪 <Portfolio/> test cases: style tests: should render with correct s
         className="emotion-1"
       >
         <img
-          alt="UX design"
+          alt="UX Design"
           data-nimg="1"
           decoding="async"
           height={40}
@@ -164,7 +164,7 @@ exports[`🧪 <Portfolio/> test cases: style tests: should render with correct s
         <p
           role="paragraph"
         >
-          UX design
+          UX Design
         </p>
       </figure>
     </li>
