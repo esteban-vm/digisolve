@@ -1,6 +1,6 @@
 import type { AppComponent } from '@/types'
 import { Button, Navigation } from '@/components'
-import { styled } from '@/styles'
+import { styled } from '@/utils/styles'
 
 const Header: AppComponent = (props) => {
   return (

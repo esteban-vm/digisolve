@@ -1,6 +1,6 @@
-import { Global, css } from '@emotion/react'
+import { css } from '@emotion/react'
 
-const styles = css`
+export const globalStyles = css`
   @import url('/css/fluid.css');
   @import url('/css/normalize.min.css');
 
@@ -15,6 +15,7 @@ const styles = css`
     --color-purple: #6920b0;
     --color-sky-blue: #acdaff;
     --color-grey: #555;
+    --color-light-grey: #f4f4f4;
     --color-white: #fff;
     --color-black: #000;
   }
@@ -35,6 +36,5 @@ const styles = css`
   }
 `
 
-export const Globals = () => <Global styles={styles} />
 export * from '@emotion/react'
 export { default as styled } from '@emotion/styled'

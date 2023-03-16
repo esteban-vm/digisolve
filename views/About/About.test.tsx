@@ -1,7 +1,7 @@
-import { render, cleanup, screen, create } from '@/tests'
+import { render, cleanup, screen, create } from '@/utils/tests'
 import About from './About'
 
-describe('<About/> test cases:', () => {
+describe('🧪 <About/> test cases:', () => {
   describe('should display:', () => {
     beforeEach(() => {
       render(<About />)

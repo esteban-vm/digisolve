@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Navigation/> test cases: style tests: should render with correct styles 1`] = `
+exports[`🧪 <Navigation/> test cases: style tests: should render with correct styles 1`] = `
 .emotion-0 img {
   height: 120px;
   width: auto;

@@ -3,15 +3,23 @@ import { screen, userEvent } from '@storybook/testing-library'
 import Button from './Button'
 
 export default {
-  args: { children: 'Button Example' },
+  args: {
+    children: 'Button Example',
+  },
   argTypes: {
-    onClick: { action: true, control: false },
+    onClick: {
+      action: true,
+      control: false,
+    },
   },
   component: Button,
   title: 'Components/Button',
-  parameters: { layout: 'centered' },
+  parameters: {
+    layout: 'centered',
+  },
   play() {
-    userEvent.click(screen.getByRole('button'))
+    const button = screen.getByRole('button')
+    userEvent.click(button)
   },
 } as Meta<typeof Button>
 

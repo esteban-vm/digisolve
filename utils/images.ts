@@ -1,0 +1,6 @@
+export { default as about } from '../public/img/about-img.jpg'
+export { default as advertising } from '../public/img/online-advertising.png'
+export { default as campaigns } from '../public/img/social-media-campaigns.png'
+export { default as design } from '../public/img/ux-design.png'
+export { default as logo } from '../public/img/digisolve-logo.png'
+export { default as marketing } from '../public/img/branding-digital-marketing.png'

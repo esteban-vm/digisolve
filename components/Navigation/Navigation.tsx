@@ -1,8 +1,8 @@
 import type { AppComponent } from '@/types'
 import Image from 'next/image'
 import Link from 'next/link'
-import { logo } from '@/images'
-import { styled } from '@/styles'
+import { logo } from '@/utils/images'
+import { styled } from '@/utils/styles'
 
 const Navigation: AppComponent = (props) => {
   return (

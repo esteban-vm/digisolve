@@ -1,8 +1,8 @@
 import type { ReactTestRendererJSON } from 'react-test-renderer'
-import { render, cleanup, create, screen } from '@/tests'
+import { render, cleanup, create, screen } from '@/utils/tests'
 import Navigation from './Navigation'
 
-describe('<Navigation/> test cases:', () => {
+describe('🧪 <Navigation/> test cases:', () => {
   describe('should display:', () => {
     beforeEach(() => {
       render(<Navigation />)

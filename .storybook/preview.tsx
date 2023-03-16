@@ -1,6 +1,6 @@
 import React from 'react'
 import type { Preview } from '@storybook/react'
-import { Globals } from '../styles'
+import { Global, globalStyles } from '../utils/styles'
 
 const preview: Preview = {
   parameters: {
@@ -18,7 +18,7 @@ const preview: Preview = {
     (Story, context) => {
       return (
         <>
-          <Globals />
+          <Global styles={globalStyles} />
           <Story {...context} />
         </>
       )

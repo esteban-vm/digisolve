@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`🧪 <Portfolio/> test cases: style tests: should render with correct styles 1`] = `
+.emotion-0 {
+  text-align: center;
+  background: var(--color-light-grey);
+}
+
+.emotion-0 h2 {
+  font-size: 250%;
+  color: var(--color-black);
+  margin-bottom: 20px;
+  margin-top: 150px;
+}
+
+.emotion-0 h3 {
+  font-size: 150%;
+  color: var(--color-grey);
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.emotion-0 h3::after {
+  content: ' ';
+  display: block;
+  height: 2px;
+  width: 100px;
+  background-color: var(--color-magenta);
+  margin: 30px auto 0;
+}
+
+.emotion-0 ul {
+  margin-top: 10px;
+  list-style: none;
+  width: 100%;
+}
+
+.emotion-0 ul li {
+  display: block;
+  width: 25%;
+  float: left;
+}
+
+.emotion-1 {
+  background-color: var(--color-black);
+  overflow: hidden;
+}
+
+.emotion-1 img {
+  width: 100%;
+  height: auto;
+  opacity: 0.7;
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
+  -webkit-transition: -webkit-transform 500ms,opacity 500ms;
+  transition: transform 500ms,opacity 500ms;
+}
+
+.emotion-1 img:hover {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+.emotion-1 p {
+  color: var(--color-white);
+}
+
+<section
+  className="emotion-0"
+>
+  <div
+    className="row"
+  >
+    <h2>
+      Our Work
+    </h2>
+    <h3>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ducimus.
+    </h3>
+  </div>
+  <ul>
+    <li>
+      <figure
+        className="emotion-1"
+      >
+        <img
+          alt="Online advertising"
+          data-nimg="1"
+          decoding="async"
+          height={40}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style={
+            {
+              "color": "transparent",
+            }
+          }
+          width={40}
+        />
+        <p
+          role="paragraph"
+        >
+          Online advertising
+        </p>
+      </figure>
+    </li>
+    <li>
+      <figure
+        className="emotion-1"
+      >
+        <img
+          alt="Social media campaigns"
+          data-nimg="1"
+          decoding="async"
+          height={40}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style={
+            {
+              "color": "transparent",
+            }
+          }
+          width={40}
+        />
+        <p
+          role="paragraph"
+        >
+          Social media campaigns
+        </p>
+      </figure>
+    </li>
+    <li>
+      <figure
+        className="emotion-1"
+      >
+        <img
+          alt="UX design"
+          data-nimg="1"
+          decoding="async"
+          height={40}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style={
+            {
+              "color": "transparent",
+            }
+          }
+          width={40}
+        />
+        <p
+          role="paragraph"
+        >
+          UX design
+        </p>
+      </figure>
+    </li>
+    <li>
+      <figure
+        className="emotion-1"
+      >
+        <img
+          alt="Branding & Digital Marketing"
+          data-nimg="1"
+          decoding="async"
+          height={40}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style={
+            {
+              "color": "transparent",
+            }
+          }
+          width={40}
+        />
+        <p
+          role="paragraph"
+        >
+          Branding & Digital Marketing
+        </p>
+      </figure>
+    </li>
+  </ul>
+</section>
+`;

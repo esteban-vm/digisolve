@@ -1,4 +1,4 @@
-import { styled, css } from '@/styles'
+import { styled, css } from '@/utils/styles'
 
 type ButtonProps = {
   /** Is full or not */

@@ -1,6 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { screen, userEvent } from '@storybook/testing-library'
+import { styled } from '@/utils/styles'
 import Navigation from './Navigation'
+
+const Wrapper = styled.div`
+  width: 100%;
+  height: 120px;
+  background-color: var(--color-black);
+`
 
 export default {
   component: Navigation,
@@ -8,9 +15,9 @@ export default {
   decorators: [
     (Story, context) => {
       return (
-        <div style={{ height: '100vh', width: '100vw', backgroundColor: 'black' }}>
+        <Wrapper>
           <Story {...context} />
-        </div>
+        </Wrapper>
       )
     },
   ],
@@ -19,13 +26,9 @@ export default {
 export const NavigationExample: StoryObj<typeof Navigation> = {
   play() {
     const links = screen.getAllByRole('link')
-    const logoImg = screen.getByRole('img')
-
-    for (const link of links) {
-      userEvent.click(link)
-    }
-
-    userEvent.hover(logoImg)
-    userEvent.unhover(logoImg)
+    const img = screen.getByRole('img')
+    for (const link of links) userEvent.click(link)
+    userEvent.hover(img)
+    userEvent.unhover(img)
   },
 }

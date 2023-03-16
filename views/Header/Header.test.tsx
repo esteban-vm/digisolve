@@ -1,7 +1,7 @@
-import { render, cleanup, screen, create } from '@/tests'
+import { render, cleanup, screen, create } from '@/utils/tests'
 import Header from './Header'
 
-describe('<Header/> test cases:', () => {
+describe('🧪 <Header/> test cases:', () => {
   describe('should display:', () => {
     beforeEach(() => {
       render(<Header />)
@@ -22,7 +22,6 @@ describe('<Header/> test cases:', () => {
     it('the headings', () => {
       const headings = screen.getAllByRole('heading')
       const texts = [/^digital agency$/i, /^the one stop for all your digital solutions$/i]
-
       expect(headings).toHaveLength(2)
 
       for (let index = 0; index < headings.length; index++) {

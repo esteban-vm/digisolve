@@ -1,8 +1,8 @@
 import type { ReactTestRendererJSON } from 'react-test-renderer'
-import { render, cleanup, screen, create, userEvent } from '@/tests'
+import { render, cleanup, screen, create, userEvent } from '@/utils/tests'
 import Button from './Button'
 
-describe('<Button/> test cases:', () => {
+describe('🧪 <Button/> test cases:', () => {
   describe('event tests:', () => {
     const handleEvent = jest.fn()
 

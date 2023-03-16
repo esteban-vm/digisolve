@@ -1,5 +1,11 @@
 import type { Meta } from '@storybook/react'
+import { styled } from '@/utils/styles'
 import About from './About'
+
+const Wrapper = styled.div`
+  width: 100%;
+  background-color: var(--color-white);
+`
 
 export default {
   component: About,
@@ -7,9 +13,9 @@ export default {
   decorators: [
     (Story, context) => {
       return (
-        <div style={{ width: '100vw', backgroundColor: 'white' }}>
+        <Wrapper>
           <Story {...context} />
-        </div>
+        </Wrapper>
       )
     },
   ],

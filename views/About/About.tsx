@@ -1,8 +1,8 @@
 import type { AppComponent } from '@/types'
 import Image from 'next/image'
 import { Button } from '@/components'
-import { about } from '@/images'
-import { styled } from '@/styles'
+import { about } from '@/utils/images'
+import { styled } from '@/utils/styles'
 
 const About: AppComponent = (props) => {
   return (
@@ -30,6 +30,7 @@ const About: AppComponent = (props) => {
 
 const StyledAbout = styled(About)`
   margin-top: 150px;
+  padding-bottom: 20px;
 
   h2 {
     color: var(--color-black);
