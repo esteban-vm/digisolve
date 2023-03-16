@@ -31,7 +31,7 @@ exports[`🧪 <Navigation/> test cases: style tests: should render with correct 
 
 .emotion-0 ul li a:hover,
 .emotion-0 ul li a:active {
-  border-bottom: 2px solid var(--color-magenta);
+  border-bottom: 2px solid var(--color-primary);
 }
 
 <nav

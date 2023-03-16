@@ -18,7 +18,7 @@ const Header: AppComponent = (props) => {
 }
 
 const StyledHeader = styled(Header)`
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('/img/header-img.jpg');
+  background-image: linear-gradient(var(--color-dark), var(--color-darker)), url('/img/header-img.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;

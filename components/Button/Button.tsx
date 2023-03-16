@@ -18,22 +18,22 @@ const Button = styled.a<ButtonProps>`
     ${({ isFull }) => {
       if (isFull) {
         return css`
-          background-color: var(--color-magenta);
+          background-color: var(--color-primary);
           color: var(--color-white);
 
           &:hover,
           &:active {
-            background-color: var(--color-dark-magenta);
+            background-color: var(--color-dark-primary);
           }
         `
       } else {
         return css`
-          border: 2px solid var(--color-magenta);
-          color: var(--color-magenta);
+          border: 2px solid var(--color-primary);
+          color: var(--color-primary);
 
           &:hover,
           &:active {
-            background-color: var(--color-magenta);
+            background-color: var(--color-primary);
             color: var(--color-white);
           }
         `

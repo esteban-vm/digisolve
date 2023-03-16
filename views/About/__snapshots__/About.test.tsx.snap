@@ -41,15 +41,15 @@ exports[`🧪 <About/> test cases: style tests: should render with correct style
   outline: none;
   -webkit-transition: background-color 500ms;
   transition: background-color 500ms;
-  border: 2px solid var(--color-magenta);
-  color: var(--color-magenta);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
 }
 
 .emotion-1:link:hover,
 .emotion-1:visited:hover,
 .emotion-1:link:active,
 .emotion-1:visited:active {
-  background-color: var(--color-magenta);
+  background-color: var(--color-primary);
   color: var(--color-white);
 }
 

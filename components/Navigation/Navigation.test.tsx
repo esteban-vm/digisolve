@@ -20,7 +20,6 @@ describe('🧪 <Navigation/> test cases:', () => {
     it('the links', () => {
       const links = screen.getAllByRole('link')
       const texts = [/^home$/i, /^contact$/i, /^about$/i]
-
       expect(links).toHaveLength(3)
 
       for (let index = 0; index < links.length; index++) {
@@ -44,7 +43,7 @@ describe('🧪 <Navigation/> test cases:', () => {
     })
 
     it('should change color when hovered', () => {
-      expect(navigationTree).toHaveStyleRule('border-bottom', '2px solid var(--color-magenta)', { target: 'a:hover' })
+      expect(navigationTree).toHaveStyleRule('border-bottom', '2px solid var(--color-primary)', { target: 'a:hover' })
     })
   })
 })

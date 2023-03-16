@@ -23,10 +23,5 @@ export default {
   },
 } as Meta<typeof Button>
 
-export const BasicButtonExample: StoryObj<typeof Button> = {
-  args: { isFull: false },
-}
-
-export const FullButtonExample: StoryObj<typeof Button> = {
-  args: { isFull: true },
-}
+export const BasicButtonExample: StoryObj<typeof Button> = { args: { isFull: false } }
+export const FullButtonExample: StoryObj<typeof Button> = { args: { isFull: true } }

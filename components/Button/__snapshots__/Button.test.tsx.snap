@@ -11,15 +11,15 @@ exports[`🧪 <Button/> test cases: style tests: with basic button: should rende
   outline: none;
   -webkit-transition: background-color 500ms;
   transition: background-color 500ms;
-  border: 2px solid var(--color-magenta);
-  color: var(--color-magenta);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
 }
 
 .emotion-0:link:hover,
 .emotion-0:visited:hover,
 .emotion-0:link:active,
 .emotion-0:visited:active {
-  background-color: var(--color-magenta);
+  background-color: var(--color-primary);
   color: var(--color-white);
 }
 
@@ -41,7 +41,7 @@ exports[`🧪 <Button/> test cases: style tests: with full button: should render
   outline: none;
   -webkit-transition: background-color 500ms;
   transition: background-color 500ms;
-  background-color: var(--color-magenta);
+  background-color: var(--color-primary);
   color: var(--color-white);
 }
 
@@ -49,7 +49,7 @@ exports[`🧪 <Button/> test cases: style tests: with full button: should render
 .emotion-0:visited:hover,
 .emotion-0:link:active,
 .emotion-0:visited:active {
-  background-color: var(--color-dark-magenta);
+  background-color: var(--color-dark-primary);
 }
 
 <a

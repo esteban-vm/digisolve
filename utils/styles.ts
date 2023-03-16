@@ -10,14 +10,18 @@ export const globalStyles = css`
   }
 
   :root {
-    --color-magenta: #ed07b7;
-    --color-dark-magenta: #bd0592;
-    --color-purple: #6920b0;
-    --color-sky-blue: #acdaff;
-    --color-grey: #555;
-    --color-light-grey: #f4f4f4;
+    --color-primary: #ed07b7;
+    --color-dark-primary: #bd0592;
+    --color-secondary: #6920b0;
+    --color-tertiary: #acdaff;
+
     --color-white: #fff;
+    --color-grey: #555;
     --color-black: #000;
+
+    --color-light: #f4f4f4;
+    --color-dark: #0000004d;
+    --color-darker: #000000b3;
   }
 
   html,

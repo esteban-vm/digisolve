@@ -51,7 +51,7 @@ const StyledNavigation = styled(Navigation)`
 
         &:hover,
         &:active {
-          border-bottom: 2px solid var(--color-magenta);
+          border-bottom: 2px solid var(--color-primary);
         }
       }
     }

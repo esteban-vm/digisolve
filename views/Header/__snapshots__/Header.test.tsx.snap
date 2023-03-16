@@ -2,7 +2,7 @@
 
 exports[`🧪 <Header/> test cases: style tests: should render with correct styles 1`] = `
 .emotion-0 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),url('/img/header-img.jpg');
+  background-image: linear-gradient(var(--color-dark), var(--color-darker)),url('/img/header-img.jpg');
   -webkit-background-size: cover;
   background-size: cover;
   -webkit-background-position: center;
@@ -68,7 +68,7 @@ exports[`🧪 <Header/> test cases: style tests: should render with correct styl
 
 .emotion-1 ul li a:hover,
 .emotion-1 ul li a:active {
-  border-bottom: 2px solid var(--color-magenta);
+  border-bottom: 2px solid var(--color-primary);
 }
 
 .emotion-2:link,
@@ -81,7 +81,7 @@ exports[`🧪 <Header/> test cases: style tests: should render with correct styl
   outline: none;
   -webkit-transition: background-color 500ms;
   transition: background-color 500ms;
-  background-color: var(--color-magenta);
+  background-color: var(--color-primary);
   color: var(--color-white);
 }
 
@@ -89,7 +89,7 @@ exports[`🧪 <Header/> test cases: style tests: should render with correct styl
 .emotion-2:visited:hover,
 .emotion-2:link:active,
 .emotion-2:visited:active {
-  background-color: var(--color-dark-magenta);
+  background-color: var(--color-dark-primary);
 }
 
 <header

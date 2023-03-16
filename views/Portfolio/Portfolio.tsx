@@ -30,7 +30,7 @@ const Portfolio: AppComponent = (props) => {
 
 const StyledPortfolio = styled(Portfolio)`
   text-align: center;
-  background: var(--color-light-grey);
+  background: var(--color-light);
 
   h2 {
     font-size: 250%;
@@ -50,7 +50,7 @@ const StyledPortfolio = styled(Portfolio)`
       display: block;
       height: 2px;
       width: 100px;
-      background-color: var(--color-magenta);
+      background-color: var(--color-primary);
       margin: 30px auto 0;
     }
   }

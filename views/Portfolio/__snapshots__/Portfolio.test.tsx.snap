@@ -3,7 +3,7 @@
 exports[`🧪 <Portfolio/> test cases: style tests: should render with correct styles 1`] = `
 .emotion-0 {
   text-align: center;
-  background: var(--color-light-grey);
+  background: var(--color-light);
 }
 
 .emotion-0 h2 {
@@ -25,7 +25,7 @@ exports[`🧪 <Portfolio/> test cases: style tests: should render with correct s
   display: block;
   height: 2px;
   width: 100px;
-  background-color: var(--color-magenta);
+  background-color: var(--color-primary);
   margin: 30px auto 0;
 }
 

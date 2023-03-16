@@ -6,6 +6,8 @@ describe('🧪 <Button/> test cases:', () => {
   describe('event tests:', () => {
     const handleEvent = jest.fn()
 
+    afterEach(cleanup)
+
     it('should click correctly', async () => {
       render(<Button onClick={handleEvent}>Test</Button>)
       await userEvent.click(screen.getByRole('button'))
@@ -17,8 +19,6 @@ describe('🧪 <Button/> test cases:', () => {
       await userEvent.hover(screen.getByRole('button'))
       expect(handleEvent).toHaveBeenCalled()
     })
-
-    afterEach(cleanup)
   })
 
   describe('style tests:', () => {
@@ -34,7 +34,7 @@ describe('🧪 <Button/> test cases:', () => {
       })
 
       it('should have correct text and background color', () => {
-        expect(buttonTree).toHaveStyleRule('background-color', 'var(--color-magenta)', { target: ':active' })
+        expect(buttonTree).toHaveStyleRule('background-color', 'var(--color-primary)', { target: ':active' })
         expect(buttonTree).toHaveStyleRule('color', 'var(--color-white)', { target: ':active' })
       })
     })
@@ -49,7 +49,7 @@ describe('🧪 <Button/> test cases:', () => {
       })
 
       it('should have correct background color', () => {
-        expect(buttonTree).toHaveStyleRule('background-color', 'var(--color-dark-magenta)', { target: ':active' })
+        expect(buttonTree).toHaveStyleRule('background-color', 'var(--color-dark-primary)', { target: ':active' })
       })
     })
   })
