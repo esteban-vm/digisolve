@@ -4,9 +4,10 @@
     "plugin:storybook/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
+    "plugin:jsx-a11y/recommended"
   ],
-  "plugins": ["@emotion"],
+  "plugins": ["@emotion", "jsx-a11y"],
   "ignorePatterns": ["*.js"],
   "env": {
     "jest": true
