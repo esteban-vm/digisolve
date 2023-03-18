@@ -43,13 +43,20 @@ exports[`🧪 <ServiceItem /> test cases: style tests: should render with correc
   text-transform: uppercase;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
+}
+
+.emotion-0 a:hover {
+  opacity: 0.7;
 }
 
 <div
   className="col span_1_of_4 emotion-0"
 >
   <svg
-    aria-labelledby="svg-inline--fa-title-OiZxbLUicuDn"
+    aria-labelledby="svg-inline--fa-title-um0tiPsNT5sg"
     className="svg-inline--fa fa-tags "
     data-icon="tags"
     data-prefix="fas"
@@ -59,7 +66,7 @@ exports[`🧪 <ServiceItem /> test cases: style tests: should render with correc
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="svg-inline--fa-title-OiZxbLUicuDn"
+      id="svg-inline--fa-title-um0tiPsNT5sg"
       style={{}}
     >
       Branding

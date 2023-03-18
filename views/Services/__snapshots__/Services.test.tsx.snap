@@ -48,6 +48,13 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
   text-transform: uppercase;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
+}
+
+.emotion-1 a:hover {
+  opacity: 0.7;
 }
 
 <section
@@ -75,7 +82,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
       role="article"
     >
       <svg
-        aria-labelledby="svg-inline--fa-title-zcFjbRxH22je"
+        aria-labelledby="svg-inline--fa-title-VZyXJR7Q8dkg"
         className="svg-inline--fa fa-tags "
         data-icon="tags"
         data-prefix="fas"
@@ -85,7 +92,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="svg-inline--fa-title-zcFjbRxH22je"
+          id="svg-inline--fa-title-VZyXJR7Q8dkg"
           style={{}}
         >
           Branding
@@ -118,7 +125,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
       role="article"
     >
       <svg
-        aria-labelledby="svg-inline--fa-title-kxD8vzt9XilE"
+        aria-labelledby="svg-inline--fa-title-aZK3ZBjW98MS"
         className="svg-inline--fa fa-pen-clip "
         data-icon="pen-clip"
         data-prefix="fas"
@@ -128,7 +135,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="svg-inline--fa-title-kxD8vzt9XilE"
+          id="svg-inline--fa-title-aZK3ZBjW98MS"
           style={{}}
         >
           Content
@@ -161,7 +168,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
       role="article"
     >
       <svg
-        aria-labelledby="svg-inline--fa-title-ZAqrAjY1BdbV"
+        aria-labelledby="svg-inline--fa-title-6EYmpm0D62NJ"
         className="svg-inline--fa fa-filter-circle-dollar "
         data-icon="filter-circle-dollar"
         data-prefix="fas"
@@ -171,7 +178,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="svg-inline--fa-title-ZAqrAjY1BdbV"
+          id="svg-inline--fa-title-6EYmpm0D62NJ"
           style={{}}
         >
           Marketing
@@ -204,7 +211,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
       role="article"
     >
       <svg
-        aria-labelledby="svg-inline--fa-title-2KfIOUtH0MV9"
+        aria-labelledby="svg-inline--fa-title-BcZBV45zkNjM"
         className="svg-inline--fa fa-tags "
         data-icon="tags"
         data-prefix="fas"
@@ -214,7 +221,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="svg-inline--fa-title-2KfIOUtH0MV9"
+          id="svg-inline--fa-title-BcZBV45zkNjM"
           style={{}}
         >
           Web Design

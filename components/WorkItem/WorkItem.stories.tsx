@@ -6,8 +6,6 @@ import WorkItem from './WorkItem'
 
 const Wrapper = styled.div`
   text-align: center;
-  height: auto;
-  width: 100%;
 `
 
 export default {

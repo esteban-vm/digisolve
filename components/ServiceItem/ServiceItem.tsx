@@ -64,6 +64,12 @@ const ServiceItem = styled(ServiceItemComponent)`
     color: var(--color-primary);
     text-transform: uppercase;
     text-decoration: none;
+    outline: none;
+    transition: opacity 200ms;
+
+    :hover {
+      opacity: 0.7;
+    }
   }
 `
 
