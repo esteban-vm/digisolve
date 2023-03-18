@@ -1,5 +1,5 @@
-import type { AppComponent } from '@/types'
-import { Work, type WorkProps } from '@/components'
+import type { FunctionalComponent } from '@/types'
+import { WorkItem, type WorkProps } from '@/components'
 import { advertising, campaigns, design, marketing } from '@/utils/images'
 import { styled } from '@/utils/styles'
 
@@ -10,17 +10,17 @@ export const works: WorkProps[] = [
   { image: marketing, text: 'Branding & Digital Marketing' },
 ]
 
-const Portfolio: AppComponent = (props) => {
+const PortfolioComponent: FunctionalComponent = (props) => {
   return (
     <section {...props}>
       <div className='row'>
-        <h2>Our Work</h2>
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ducimus.</h3>
+        <h2 className='section_heading'>Our Work</h2>
+        <h3 className='section_subheading'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ducimus.</h3>
       </div>
-      <ul>
+      <ul className='clear_fix'>
         {works.map((work, index) => (
           <li key={index}>
-            <Work {...work} />
+            <WorkItem {...work} />
           </li>
         ))}
       </ul>
@@ -28,32 +28,9 @@ const Portfolio: AppComponent = (props) => {
   )
 }
 
-const StyledPortfolio = styled(Portfolio)`
+const Portfolio = styled(PortfolioComponent)`
   text-align: center;
   background: var(--color-light);
-
-  h2 {
-    font-size: 250%;
-    color: var(--color-black);
-    margin-bottom: 20px;
-    margin-top: 150px;
-  }
-
-  h3 {
-    font-size: 150%;
-    color: var(--color-grey);
-    font-weight: 300;
-    margin-bottom: 30px;
-
-    &::after {
-      content: ' ';
-      display: block;
-      height: 2px;
-      width: 100px;
-      background-color: var(--color-primary);
-      margin: 30px auto 0;
-    }
-  }
 
   ul {
     margin-top: 10px;
@@ -68,4 +45,4 @@ const StyledPortfolio = styled(Portfolio)`
   }
 `
 
-export default StyledPortfolio
+export default Portfolio

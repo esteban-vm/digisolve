@@ -1,10 +1,10 @@
-import type { AppComponent } from '@/types'
+import type { FunctionalComponent } from '@/types'
 import Image from 'next/image'
 import { Button } from '@/components'
 import { about } from '@/utils/images'
 import { styled } from '@/utils/styles'
 
-const About: AppComponent = (props) => {
+const AboutComponent: FunctionalComponent = (props) => {
   return (
     <section {...props}>
       <div className='row'>
@@ -28,7 +28,7 @@ const About: AppComponent = (props) => {
   )
 }
 
-const StyledAbout = styled(About)`
+const About = styled(AboutComponent)`
   margin-top: 150px;
   padding-bottom: 20px;
 
@@ -50,14 +50,14 @@ const StyledAbout = styled(About)`
   }
 
   .span_1_of_2 {
-    &:first-child {
+    :first-child {
       text-align: left;
     }
 
-    &:last-child {
+    :last-child {
       text-align: right;
     }
   }
 `
 
-export default StyledAbout
+export default About

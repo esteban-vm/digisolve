@@ -1,3 +1,4 @@
 export * from './Button'
 export * from './Navigation'
-export * from './Work'
+export * from './ServiceItem'
+export * from './WorkItem'

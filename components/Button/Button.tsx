@@ -6,8 +6,8 @@ type ButtonProps = {
 }
 
 const Button = styled.a<ButtonProps>`
-  &:link,
-  &:visited {
+  :link,
+  :visited {
     text-decoration: none;
     padding: 10px 30px;
     border-radius: 200px;
@@ -21,8 +21,8 @@ const Button = styled.a<ButtonProps>`
           background-color: var(--color-primary);
           color: var(--color-white);
 
-          &:hover,
-          &:active {
+          :hover,
+          :active {
             background-color: var(--color-dark-primary);
           }
         `
@@ -31,8 +31,8 @@ const Button = styled.a<ButtonProps>`
           border: 2px solid var(--color-primary);
           color: var(--color-primary);
 
-          &:hover,
-          &:active {
+          :hover,
+          :active {
             background-color: var(--color-primary);
             color: var(--color-white);
           }

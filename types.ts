@@ -1,3 +1,3 @@
 import type { FC, HTMLAttributes } from 'react'
 
-export type AppComponent<T = unknown> = FC<T & HTMLAttributes<HTMLElement>>
+export type FunctionalComponent<T = Record<string, unknown>> = FC<T & HTMLAttributes<HTMLElement>>

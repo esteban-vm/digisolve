@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`🧪 <Header/> test cases: style tests: should render with correct styles 1`] = `
+exports[`🧪 <Header /> test cases: style tests: should render with correct styles 1`] = `
 .emotion-0 {
   background-image: linear-gradient(var(--color-dark), var(--color-darker)),url('/img/header-img.jpg');
   -webkit-background-size: cover;

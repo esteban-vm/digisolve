@@ -1,32 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`🧪 <Portfolio/> test cases: style tests: should render with correct styles 1`] = `
+exports[`🧪 <Portfolio /> test cases: style tests: should render with correct styles 1`] = `
 .emotion-0 {
   text-align: center;
   background: var(--color-light);
-}
-
-.emotion-0 h2 {
-  font-size: 250%;
-  color: var(--color-black);
-  margin-bottom: 20px;
-  margin-top: 150px;
-}
-
-.emotion-0 h3 {
-  font-size: 150%;
-  color: var(--color-grey);
-  font-weight: 300;
-  margin-bottom: 30px;
-}
-
-.emotion-0 h3::after {
-  content: ' ';
-  display: block;
-  height: 2px;
-  width: 100px;
-  background-color: var(--color-primary);
-  margin: 30px auto 0;
 }
 
 .emotion-0 ul {
@@ -76,14 +53,20 @@ exports[`🧪 <Portfolio/> test cases: style tests: should render with correct s
   <div
     className="row"
   >
-    <h2>
+    <h2
+      className="section_heading"
+    >
       Our Work
     </h2>
-    <h3>
+    <h3
+      className="section_subheading"
+    >
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ducimus.
     </h3>
   </div>
-  <ul>
+  <ul
+    className="clear_fix"
+  >
     <li>
       <figure
         className="emotion-1"

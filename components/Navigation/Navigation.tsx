@@ -1,10 +1,10 @@
-import type { AppComponent } from '@/types'
+import type { FunctionalComponent } from '@/types'
 import Image from 'next/image'
 import Link from 'next/link'
 import { logo } from '@/utils/images'
 import { styled } from '@/utils/styles'
 
-const Navigation: AppComponent = (props) => {
+const NavigationComponent: FunctionalComponent = (props) => {
   return (
     <nav {...props}>
       <Image src={logo} alt='Digisolve logo' />
@@ -23,7 +23,7 @@ const Navigation: AppComponent = (props) => {
   )
 }
 
-const StyledNavigation = styled(Navigation)`
+const Navigation = styled(NavigationComponent)`
   img {
     height: 120px;
     width: auto;
@@ -40,8 +40,8 @@ const StyledNavigation = styled(Navigation)`
       margin-right: 40px;
 
       a {
-        &:link,
-        &:visited {
+        :link,
+        :visited {
           text-decoration: none;
           text-transform: uppercase;
           color: var(--color-white);
@@ -49,8 +49,8 @@ const StyledNavigation = styled(Navigation)`
           transition: border-bottom 100ms;
         }
 
-        &:hover,
-        &:active {
+        :hover,
+        :active {
           border-bottom: 2px solid var(--color-primary);
         }
       }
@@ -58,4 +58,4 @@ const StyledNavigation = styled(Navigation)`
   }
 `
 
-export default StyledNavigation
+export default Navigation

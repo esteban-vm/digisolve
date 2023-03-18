@@ -4,8 +4,12 @@ import { Global, globalStyles } from '../utils/styles'
 
 const preview: Preview = {
   parameters: {
-    backgrounds: { default: 'dark' },
-    actions: { argTypesRegex: '^on[A-Z].*' },
+    backgrounds: {
+      default: 'dark',
+    },
+    actions: {
+      argTypesRegex: '^on[A-Z].*',
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,

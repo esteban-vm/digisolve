@@ -1,10 +1,10 @@
 import type { ReactTestRendererJSON } from 'react-test-renderer'
 import { render, cleanup, create, screen } from '@/utils/tests'
 import { works } from '@/views'
-import Work from './Work'
+import WorkItem from './WorkItem'
 
-describe('🧪 <Work/> test cases:', () => {
-  const work = <Work {...works[0]} />
+describe('🧪 <WorkItem /> test cases:', () => {
+  const work = <WorkItem {...works[0]} />
 
   describe('should display:', () => {
     beforeEach(() => {

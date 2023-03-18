@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`🧪 <Button/> test cases: style tests: with basic button: should render with correct styles 1`] = `
+exports[`🧪 <Button /> test cases: style tests: with basic button: should render with correct styles 1`] = `
 .emotion-0:link,
 .emotion-0:visited {
   -webkit-text-decoration: none;
@@ -30,7 +30,7 @@ exports[`🧪 <Button/> test cases: style tests: with basic button: should rende
 />
 `;
 
-exports[`🧪 <Button/> test cases: style tests: with full button: should render with correct styles 1`] = `
+exports[`🧪 <Button /> test cases: style tests: with full button: should render with correct styles 1`] = `
 .emotion-0:link,
 .emotion-0:visited {
   -webkit-text-decoration: none;

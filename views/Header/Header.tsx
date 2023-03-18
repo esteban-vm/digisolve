@@ -1,8 +1,8 @@
-import type { AppComponent } from '@/types'
+import type { FunctionalComponent } from '@/types'
 import { Button, Navigation } from '@/components'
 import { styled } from '@/utils/styles'
 
-const Header: AppComponent = (props) => {
+const HeaderComponent: FunctionalComponent = (props) => {
   return (
     <header {...props}>
       <Navigation />
@@ -17,7 +17,7 @@ const Header: AppComponent = (props) => {
   )
 }
 
-const StyledHeader = styled(Header)`
+const Header = styled(HeaderComponent)`
   background-image: linear-gradient(var(--color-dark), var(--color-darker)), url('/img/header-img.jpg');
   background-size: cover;
   background-position: center;
@@ -36,7 +36,7 @@ const StyledHeader = styled(Header)`
     font-weight: 400;
   }
 
-  & > div {
+  > div {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -49,4 +49,4 @@ const StyledHeader = styled(Header)`
   }
 `
 
-export default StyledHeader
+export default Header

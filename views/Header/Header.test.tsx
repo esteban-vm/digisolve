@@ -1,7 +1,7 @@
 import { render, cleanup, screen, create } from '@/utils/tests'
 import Header from './Header'
 
-describe('🧪 <Header/> test cases:', () => {
+describe('🧪 <Header /> test cases:', () => {
   describe('should display:', () => {
     beforeEach(() => {
       render(<Header />)

@@ -1,7 +1,7 @@
 import { render, cleanup, screen, create } from '@/utils/tests'
 import Portfolio, { works } from './Portfolio'
 
-describe('🧪 <Portfolio/> test cases:', () => {
+describe('🧪 <Portfolio /> test cases:', () => {
   describe('should display:', () => {
     beforeEach(() => {
       render(<Portfolio />)
@@ -13,17 +13,17 @@ describe('🧪 <Portfolio/> test cases:', () => {
       const headings = screen.getAllByRole('heading')
       expect(headings).toHaveLength(2)
 
-      for (let index = 0; index < headings.length; index++) {
-        const heading = headings[index]
+      for (const heading of headings) {
         expect(heading).toBeInTheDocument()
         expect(heading).toBeVisible()
       }
     })
 
     it('the works', () => {
+      const workQuantity = works.length
+
       const workImages = screen.getAllByRole('img')
       const workTexts = screen.getAllByRole('paragraph')
-      const workQuantity = works.length
 
       expect(workImages).toHaveLength(workQuantity)
       expect(workTexts).toHaveLength(workQuantity)

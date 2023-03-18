@@ -1,4 +1,4 @@
-import type { AppComponent } from '@/types'
+import type { FunctionalComponent } from '@/types'
 import Image, { type StaticImageData } from 'next/image'
 import { styled } from '@/utils/styles'
 
@@ -9,7 +9,7 @@ export type WorkProps = {
   text: string
 }
 
-const Work: AppComponent<WorkProps> = ({ image, text, ...rest }) => {
+const WorkItemComponent: FunctionalComponent<WorkProps> = ({ image, text, ...rest }) => {
   return (
     <figure {...rest}>
       <Image src={image} alt={text} />
@@ -18,7 +18,7 @@ const Work: AppComponent<WorkProps> = ({ image, text, ...rest }) => {
   )
 }
 
-const StyledWork = styled(Work)`
+const WorkItem = styled(WorkItemComponent)`
   background-color: var(--color-black);
   overflow: hidden;
 
@@ -29,7 +29,7 @@ const StyledWork = styled(Work)`
     transform: scale(1.15);
     transition: transform 500ms, opacity 500ms;
 
-    &:hover {
+    :hover {
       transform: scale(1);
       opacity: 1;
     }
@@ -40,4 +40,4 @@ const StyledWork = styled(Work)`
   }
 `
 
-export default StyledWork
+export default WorkItem

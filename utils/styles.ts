@@ -38,6 +38,40 @@ export const globalStyles = css`
     max-width: 1140px;
     margin: 0 auto;
   }
+
+  .section_heading {
+    font-size: 250%;
+    color: var(--color-black);
+    margin-bottom: 20px;
+    margin-top: 150px;
+  }
+
+  .section_subheading {
+    font-size: 150%;
+    color: var(--color-grey);
+    font-weight: 300;
+    margin-bottom: 30px;
+
+    ::after {
+      content: ' ';
+      display: block;
+      height: 2px;
+      width: 100px;
+      background-color: var(--color-primary);
+      margin: 30px auto 0;
+    }
+  }
+
+  .clear_fix {
+    zoom: 1;
+
+    ::after {
+      content: '';
+      display: table;
+      clear: both;
+      visibility: hidden;
+    }
+  }
 `
 
 export * from '@emotion/react'
