@@ -4,8 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import { styled } from '@/utils/styles'
 
+/** Properties for service item */
 export type ServiceProps = {
-  /** The heading */
+  /** The heading (title) */
   heading: string
   /** The icon */
   icon: IconDefinition

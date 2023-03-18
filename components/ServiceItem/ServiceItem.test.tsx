@@ -1,3 +1,4 @@
+import type { ReactTestRendererJSON } from 'react-test-renderer'
 import { render, cleanup, create, screen } from '@/utils/tests'
 import { services } from '@/views'
 import ServiceItem from './ServiceItem'
@@ -40,9 +41,18 @@ describe('🧪 <ServiceItem /> test cases:', () => {
   })
 
   describe('style tests:', () => {
+    let serviceTree: ReactTestRendererJSON
+
+    beforeEach(() => {
+      serviceTree = create(service).toJSON() as ReactTestRendererJSON
+    })
+
     it('should render with correct styles', () => {
-      const serviceTree = create(service).toJSON()
       expect(serviceTree).toMatchSnapshot()
+    })
+
+    it('should decrease opacity when hovered', () => {
+      expect(serviceTree).toHaveStyleRule('opacity', '0.7', { target: 'a:hover' })
     })
   })
 })

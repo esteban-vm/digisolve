@@ -1,13 +1,13 @@
 import type { FunctionalComponent } from '@/types'
 import { ServiceItem, type ServiceProps } from '@/components'
-import { faTags, faPenAlt, faFunnelDollar } from '@fortawesome/free-solid-svg-icons'
+import { faTags, faPenAlt, faFunnelDollar, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
 import { styled } from '@/utils/styles'
 
 export const services: ServiceProps[] = [
   { heading: 'Branding', icon: faTags },
   { heading: 'Content', icon: faPenAlt },
   { heading: 'Marketing', icon: faFunnelDollar },
-  { heading: 'Web Design', icon: faTags },
+  { heading: 'Web Design', icon: faLaptopCode },
 ]
 
 const ServiceComponent: FunctionalComponent = (props) => {
