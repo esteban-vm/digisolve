@@ -6,33 +6,33 @@ import ServiceItem from './ServiceItem'
 describe('🧪 <ServiceItem /> test cases:', () => {
   const service = <ServiceItem {...services[0]} />
 
-  describe('should display:', () => {
+  describe('there should be:', () => {
     beforeEach(() => {
       render(service)
     })
 
     afterEach(cleanup)
 
-    it('the icon', () => {
+    it('an icon', () => {
       const icon = screen.getByRole('img')
       expect(icon).toBeInTheDocument()
       expect(icon).toBeVisible()
       expect(icon).toHaveAccessibleName(/^branding$/i)
     })
 
-    it('the heading', () => {
+    it('a heading', () => {
       const heading = screen.getByRole('heading')
       expect(heading).toBeInTheDocument()
       expect(heading).toBeVisible()
     })
 
-    it('the text', () => {
+    it('a text', () => {
       const text = screen.getByRole('paragraph')
       expect(text).toBeInTheDocument()
       expect(text).toBeVisible()
     })
 
-    it('the link', () => {
+    it('a link', () => {
       const link = screen.getByRole('link')
       expect(link).toBeInTheDocument()
       expect(link).toBeVisible()

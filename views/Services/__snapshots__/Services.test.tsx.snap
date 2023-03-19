@@ -79,10 +79,10 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
   >
     <div
       className="col span_1_of_4 emotion-1"
-      role="article"
+      role="listitem"
     >
       <svg
-        aria-labelledby="svg-inline--fa-title-4kRVGkysENaj"
+        aria-labelledby="svg-inline--fa-title-x9nDvjaHcWRj"
         className="svg-inline--fa fa-tags "
         data-icon="tags"
         data-prefix="fas"
@@ -92,7 +92,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="svg-inline--fa-title-4kRVGkysENaj"
+          id="svg-inline--fa-title-x9nDvjaHcWRj"
           style={{}}
         >
           Branding
@@ -122,10 +122,10 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
     </div>
     <div
       className="col span_1_of_4 emotion-1"
-      role="article"
+      role="listitem"
     >
       <svg
-        aria-labelledby="svg-inline--fa-title-DEg1UKrcKnaI"
+        aria-labelledby="svg-inline--fa-title-KpUCuE7qG66j"
         className="svg-inline--fa fa-pen-clip "
         data-icon="pen-clip"
         data-prefix="fas"
@@ -135,7 +135,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="svg-inline--fa-title-DEg1UKrcKnaI"
+          id="svg-inline--fa-title-KpUCuE7qG66j"
           style={{}}
         >
           Content
@@ -165,10 +165,10 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
     </div>
     <div
       className="col span_1_of_4 emotion-1"
-      role="article"
+      role="listitem"
     >
       <svg
-        aria-labelledby="svg-inline--fa-title-0fpUIZd867We"
+        aria-labelledby="svg-inline--fa-title-xda7thnHKDkj"
         className="svg-inline--fa fa-filter-circle-dollar "
         data-icon="filter-circle-dollar"
         data-prefix="fas"
@@ -178,7 +178,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="svg-inline--fa-title-0fpUIZd867We"
+          id="svg-inline--fa-title-xda7thnHKDkj"
           style={{}}
         >
           Marketing
@@ -208,10 +208,10 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
     </div>
     <div
       className="col span_1_of_4 emotion-1"
-      role="article"
+      role="listitem"
     >
       <svg
-        aria-labelledby="svg-inline--fa-title-GsZWo0Ke4Pl3"
+        aria-labelledby="svg-inline--fa-title-psj8o44D8gsB"
         className="svg-inline--fa fa-laptop-code "
         data-icon="laptop-code"
         data-prefix="fas"
@@ -221,7 +221,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="svg-inline--fa-title-GsZWo0Ke4Pl3"
+          id="svg-inline--fa-title-psj8o44D8gsB"
           style={{}}
         >
           Web Design

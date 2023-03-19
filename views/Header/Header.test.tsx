@@ -2,14 +2,14 @@ import { render, cleanup, screen, create } from '@/utils/tests'
 import Header from './Header'
 
 describe('🧪 <Header /> test cases:', () => {
-  describe('should display:', () => {
+  describe('there should be:', () => {
     beforeEach(() => {
       render(<Header />)
     })
 
     afterEach(cleanup)
 
-    it('the navigation links', () => {
+    it('three navigation links', () => {
       const links = screen.getAllByRole('link')
       expect(links).toHaveLength(3)
 
@@ -19,20 +19,19 @@ describe('🧪 <Header /> test cases:', () => {
       }
     })
 
-    it('the headings', () => {
-      const headings = screen.getAllByRole('heading')
-      const texts = [/^digital agency$/i, /^the one stop for all your digital solutions$/i]
-      expect(headings).toHaveLength(2)
-
-      for (let index = 0; index < headings.length; index++) {
-        const heading = headings[index]
-        expect(heading).toBeInTheDocument()
-        expect(heading).toBeVisible()
-        expect(heading).toHaveTextContent(texts[index])
-      }
+    it('a heading', () => {
+      const heading = screen.getByRole('heading', { name: /^digital agency$/i })
+      expect(heading).toBeInTheDocument()
+      expect(heading).toBeVisible()
     })
 
-    it('the button', () => {
+    it('a subheading', () => {
+      const subheading = screen.getByRole('heading', { name: /^the one stop for all your digital solutions$/i })
+      expect(subheading).toBeInTheDocument()
+      expect(subheading).toBeVisible()
+    })
+
+    it('a button', () => {
       const button = screen.getByRole('button')
       expect(button).toBeInTheDocument()
       expect(button).toBeVisible()

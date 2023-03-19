@@ -6,21 +6,21 @@ import WorkItem from './WorkItem'
 describe('🧪 <WorkItem /> test cases:', () => {
   const work = <WorkItem {...works[0]} />
 
-  describe('should display:', () => {
+  describe('there should be:', () => {
     beforeEach(() => {
       render(work)
     })
 
     afterEach(cleanup)
 
-    it('the image', () => {
+    it('an image', () => {
       const image = screen.getByRole('img')
       expect(image).toBeInTheDocument()
       expect(image).toBeVisible()
       expect(image).toHaveAccessibleName(/^online\sadvertising$/i)
     })
 
-    it('the text', () => {
+    it('a text', () => {
       const text = screen.getByRole('paragraph')
       expect(text).toBeInTheDocument()
       expect(text).toBeVisible()

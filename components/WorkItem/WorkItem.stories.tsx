@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { screen, userEvent } from '@storybook/testing-library'
+import { within, userEvent } from '@storybook/testing-library'
 import { styled } from '@/utils/styles'
 import { works } from '@/views'
 import WorkItem from './WorkItem'
@@ -36,10 +36,11 @@ export default {
   parameters: {
     layout: 'centered',
   },
-  play() {
-    const img = screen.getByRole('img')
-    userEvent.click(img)
-    userEvent.hover(img)
+  play({ canvasElement }) {
+    const canvas = within(canvasElement)
+    const image = canvas.getByRole('img')
+    userEvent.click(image)
+    userEvent.hover(image)
   },
 } as Meta<typeof WorkItem>
 

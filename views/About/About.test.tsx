@@ -2,21 +2,21 @@ import { render, cleanup, screen, create } from '@/utils/tests'
 import About from './About'
 
 describe('🧪 <About /> test cases:', () => {
-  describe('should display:', () => {
+  describe('there should be:', () => {
     beforeEach(() => {
       render(<About />)
     })
 
     afterEach(cleanup)
 
-    it('the heading', () => {
+    it('a heading', () => {
       const heading = screen.getByRole('heading')
       expect(heading).toBeInTheDocument()
       expect(heading).toBeVisible()
       expect(heading).toHaveTextContent(/^a digital agency focused on Growing your online presence$/i)
     })
 
-    it('the paragraphs', () => {
+    it('2 paragraphs', () => {
       const paragraphs = screen.getAllByRole('paragraph')
       expect(paragraphs).toHaveLength(2)
 
@@ -26,14 +26,14 @@ describe('🧪 <About /> test cases:', () => {
       }
     })
 
-    it('the button', () => {
+    it('a button', () => {
       const button = screen.getByRole('button')
       expect(button).toBeInTheDocument()
       expect(button).toBeVisible()
       expect(button).toHaveTextContent(/^read more$/i)
     })
 
-    it('the image', () => {
+    it('an image', () => {
       const image = screen.getByRole('img')
       expect(image).toBeInTheDocument()
       expect(image).toBeVisible()

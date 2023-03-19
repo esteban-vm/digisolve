@@ -51,6 +51,7 @@ export const globalStyles = css`
     color: var(--color-grey);
     font-weight: 300;
     margin-bottom: 30px;
+    line-height: 1.5;
 
     ::after {
       content: ' ';

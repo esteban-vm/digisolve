@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { screen, userEvent } from '@storybook/testing-library'
+import { within, userEvent } from '@storybook/testing-library'
 import Button from './Button'
 
 export default {
@@ -17,8 +17,9 @@ export default {
   parameters: {
     layout: 'centered',
   },
-  play() {
-    const button = screen.getByRole('button')
+  play({ canvasElement }) {
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button')
     userEvent.click(button)
   },
 } as Meta<typeof Button>

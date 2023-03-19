@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { within, userEvent } from '@storybook/testing-library'
 import { styled } from '@/utils/styles'
-import { services } from '@/views'
-import ServiceItem from './ServiceItem'
+import { logos } from '@/views'
+import LogoItem from './LogoItem'
 
 const Wrapper = styled.div`
   text-align: center;
@@ -18,11 +18,10 @@ const Wrapper = styled.div`
 
 export default {
   argTypes: {
-    icon: {
+    logo: {
       control: false,
     },
-    onClick: {
-      action: true,
+    alt: {
       control: false,
     },
     onMouseEnter: {
@@ -30,8 +29,8 @@ export default {
       control: false,
     },
   },
-  component: ServiceItem,
-  title: 'Components/ServiceItem',
+  component: LogoItem,
+  title: 'Components/LogoItem',
   decorators: [
     (Story, context) => {
       return (
@@ -47,15 +46,13 @@ export default {
   play({ canvasElement }) {
     const canvas = within(canvasElement)
     const logo = canvas.getByRole('img')
-    const link = canvas.getByRole('link')
     userEvent.hover(logo)
-    userEvent.click(link)
   },
-} as Meta<typeof ServiceItem>
+} as Meta<typeof LogoItem>
 
-const [service1, service2, service3, service4] = services
+const [logo1, logo2, logo3, logo4] = logos
 
-export const ServiceExample1: StoryObj<typeof ServiceItem> = { args: service1 }
-export const ServiceExample2: StoryObj<typeof ServiceItem> = { args: service2 }
-export const ServiceExample3: StoryObj<typeof ServiceItem> = { args: service3 }
-export const ServiceExample4: StoryObj<typeof ServiceItem> = { args: service4 }
+export const LogoExample1: StoryObj<typeof LogoItem> = { args: logo1 }
+export const LogoExample2: StoryObj<typeof LogoItem> = { args: logo2 }
+export const LogoExample3: StoryObj<typeof LogoItem> = { args: logo3 }
+export const LogoExample4: StoryObj<typeof LogoItem> = { args: logo4 }

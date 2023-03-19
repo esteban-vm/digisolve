@@ -19,7 +19,7 @@ const ServiceComponent: FunctionalComponent = (props) => {
       </div>
       <div className='row'>
         {services.map((service, index) => (
-          <ServiceItem key={index} {...service} role='article' />
+          <ServiceItem key={index} {...service} role='listitem' />
         ))}
       </div>
     </section>

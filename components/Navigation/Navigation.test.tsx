@@ -3,21 +3,21 @@ import { render, cleanup, create, screen } from '@/utils/tests'
 import Navigation from './Navigation'
 
 describe('🧪 <Navigation /> test cases:', () => {
-  describe('should display:', () => {
+  describe('there should be:', () => {
     beforeEach(() => {
       render(<Navigation />)
     })
 
     afterEach(cleanup)
 
-    it('the logo', () => {
+    it('a logo', () => {
       const logo = screen.getByRole('img')
       expect(logo).toBeInTheDocument()
       expect(logo).toBeVisible()
       expect(logo).toHaveAccessibleName(/^digisolve logo$/i)
     })
 
-    it('the links', () => {
+    it('3 links', () => {
       const links = screen.getAllByRole('link')
       const texts = [/^home$/i, /^contact$/i, /^about$/i]
       expect(links).toHaveLength(3)

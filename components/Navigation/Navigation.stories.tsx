@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { screen, userEvent } from '@storybook/testing-library'
+import { within, userEvent } from '@storybook/testing-library'
 import { styled } from '@/utils/styles'
 import Navigation from './Navigation'
 
@@ -24,11 +24,12 @@ export default {
 } as Meta<typeof Navigation>
 
 export const NavigationExample: StoryObj<typeof Navigation> = {
-  play() {
-    const links = screen.getAllByRole('link')
-    const img = screen.getByRole('img')
+  play({ canvasElement }) {
+    const canvas = within(canvasElement)
+    const links = canvas.getAllByRole('link')
+    const logo = canvas.getByRole('img')
     for (const link of links) userEvent.click(link)
-    userEvent.hover(img)
-    userEvent.unhover(img)
+    userEvent.hover(logo)
+    userEvent.unhover(logo)
   },
 }
