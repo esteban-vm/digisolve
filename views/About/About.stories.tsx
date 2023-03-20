@@ -21,4 +21,4 @@ export default {
   ],
 } as Meta<typeof About>
 
-export const AboutExample = () => <About />
+export const AboutView = () => <About />

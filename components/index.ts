@@ -1,5 +1,2 @@
 export * from './Button'
-export * from './LogoItem'
-export * from './Navigation'
-export * from './ServiceItem'
-export * from './WorkItem'
+export * from './Heading'

@@ -50,11 +50,11 @@ const About = styled(AboutComponent)`
   }
 
   .span_1_of_2 {
-    :first-child {
+    :first-of-type {
       text-align: left;
     }
 
-    :last-child {
+    :last-of-type {
       text-align: right;
     }
   }

@@ -1,1 +1,1 @@
-export { default as Partners, logos } from './Partners'
+export { default as Partners } from './Partners'

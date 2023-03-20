@@ -18,12 +18,36 @@ exports[`🧪 <Portfolio /> test cases: style tests: should render with correct 
   float: left;
 }
 
-.emotion-1 {
+.emotion-1 h2 {
+  font-size: 250%;
+  color: var(--color-black);
+  margin-bottom: 20px;
+  margin-top: 150px;
+}
+
+.emotion-1 h3 {
+  font-size: 150%;
+  color: var(--color-grey);
+  font-weight: 300;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.emotion-1 h3::after {
+  content: ' ';
+  display: block;
+  height: 2px;
+  width: 100px;
+  background-color: var(--color-primary);
+  margin: 30px auto 0;
+}
+
+.emotion-2 {
   background-color: var(--color-black);
   overflow: hidden;
 }
 
-.emotion-1 img {
+.emotion-2 img {
   width: 100%;
   height: auto;
   opacity: 0.7;
@@ -35,7 +59,7 @@ exports[`🧪 <Portfolio /> test cases: style tests: should render with correct 
   transition: transform 500ms,opacity 500ms;
 }
 
-.emotion-1 img:hover {
+.emotion-2 img:hover {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -43,7 +67,7 @@ exports[`🧪 <Portfolio /> test cases: style tests: should render with correct 
   opacity: 1;
 }
 
-.emotion-1 p {
+.emotion-2 p {
   color: var(--color-white);
 }
 
@@ -51,16 +75,12 @@ exports[`🧪 <Portfolio /> test cases: style tests: should render with correct 
   className="emotion-0"
 >
   <div
-    className="row"
+    className="row emotion-1"
   >
-    <h2
-      className="section_heading"
-    >
+    <h2>
       Our Work
     </h2>
-    <h3
-      className="section_subheading"
-    >
+    <h3>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ducimus.
     </h3>
   </div>
@@ -69,7 +89,7 @@ exports[`🧪 <Portfolio /> test cases: style tests: should render with correct 
   >
     <li>
       <figure
-        className="emotion-1"
+        className="emotion-2"
       >
         <img
           alt="Online Advertising"
@@ -97,7 +117,7 @@ exports[`🧪 <Portfolio /> test cases: style tests: should render with correct 
     </li>
     <li>
       <figure
-        className="emotion-1"
+        className="emotion-2"
       >
         <img
           alt="Social Media Campaigns"
@@ -125,7 +145,7 @@ exports[`🧪 <Portfolio /> test cases: style tests: should render with correct 
     </li>
     <li>
       <figure
-        className="emotion-1"
+        className="emotion-2"
       >
         <img
           alt="UX Design"
@@ -153,7 +173,7 @@ exports[`🧪 <Portfolio /> test cases: style tests: should render with correct 
     </li>
     <li>
       <figure
-        className="emotion-1"
+        className="emotion-2"
       >
         <img
           alt="Branding & Digital Marketing"

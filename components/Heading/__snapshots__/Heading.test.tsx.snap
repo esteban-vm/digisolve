@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`🧪 <Heading /> test cases: style tests: should render with correct styles 1`] = `
+.emotion-0 h2 {
+  font-size: 250%;
+  color: var(--color-black);
+  margin-bottom: 20px;
+  margin-top: 150px;
+}
+
+.emotion-0 h3 {
+  font-size: 150%;
+  color: var(--color-grey);
+  font-weight: 300;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.emotion-0 h3::after {
+  content: ' ';
+  display: block;
+  height: 2px;
+  width: 100px;
+  background-color: var(--color-primary);
+  margin: 30px auto 0;
+}
+
+<div
+  className="row emotion-0"
+>
+  <h2>
+    Test heading
+  </h2>
+  <h3>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ducimus.
+  </h3>
+</div>
+`;

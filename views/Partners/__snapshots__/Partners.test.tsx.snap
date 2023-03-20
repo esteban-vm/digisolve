@@ -5,7 +5,31 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
   text-align: center;
 }
 
-.emotion-1 img {
+.emotion-1 h2 {
+  font-size: 250%;
+  color: var(--color-black);
+  margin-bottom: 20px;
+  margin-top: 150px;
+}
+
+.emotion-1 h3 {
+  font-size: 150%;
+  color: var(--color-grey);
+  font-weight: 300;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.emotion-1 h3::after {
+  content: ' ';
+  display: block;
+  height: 2px;
+  width: 100px;
+  background-color: var(--color-primary);
+  margin: 30px auto 0;
+}
+
+.emotion-2 img {
   width: 65%;
   height: auto;
 }
@@ -14,16 +38,12 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
   className="emotion-0"
 >
   <div
-    className="row"
+    className="row emotion-1"
   >
-    <h2
-      className="section_heading"
-    >
+    <h2>
       Featured Clients
     </h2>
-    <h3
-      className="section_subheading"
-    >
+    <h3>
       We've worked with some of the best companies in the world. Here are some of our Amazing Partners
     </h3>
   </div>
@@ -31,7 +51,7 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
     className="row"
   >
     <div
-      className="col span_1_of_4 emotion-1"
+      className="col span_1_of_4 emotion-2"
     >
       <img
         alt="Brand Logo 1"
@@ -52,7 +72,7 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
       />
     </div>
     <div
-      className="col span_1_of_4 emotion-1"
+      className="col span_1_of_4 emotion-2"
     >
       <img
         alt="Brand Logo 2"
@@ -73,7 +93,7 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
       />
     </div>
     <div
-      className="col span_1_of_4 emotion-1"
+      className="col span_1_of_4 emotion-2"
     >
       <img
         alt="Brand Logo 3"
@@ -94,7 +114,7 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
       />
     </div>
     <div
-      className="col span_1_of_4 emotion-1"
+      className="col span_1_of_4 emotion-2"
     >
       <img
         alt="Brand Logo 4"
@@ -119,7 +139,7 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
     className="row"
   >
     <div
-      className="col span_1_of_4 emotion-1"
+      className="col span_1_of_4 emotion-2"
     >
       <img
         alt="Brand Logo 5"
@@ -140,7 +160,7 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
       />
     </div>
     <div
-      className="col span_1_of_4 emotion-1"
+      className="col span_1_of_4 emotion-2"
     >
       <img
         alt="Brand Logo 6"
@@ -161,7 +181,7 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
       />
     </div>
     <div
-      className="col span_1_of_4 emotion-1"
+      className="col span_1_of_4 emotion-2"
     >
       <img
         alt="Brand Logo 7"
@@ -182,7 +202,7 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
       />
     </div>
     <div
-      className="col span_1_of_4 emotion-1"
+      className="col span_1_of_4 emotion-2"
     >
       <img
         alt="Brand Logo 8"

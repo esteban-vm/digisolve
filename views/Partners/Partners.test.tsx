@@ -23,7 +23,7 @@ describe('🧪 <Partners /> test cases:', () => {
       expect(subheading).toBeVisible()
     })
 
-    it(`${logos.length} logo items`, () => {
+    it(`${logos.length} logo boxes`, () => {
       const numberOfLogos = logos.length
       const logoElements = screen.getAllByRole('img')
       expect(logoElements).toHaveLength(numberOfLogos)

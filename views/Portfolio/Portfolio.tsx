@@ -1,7 +1,8 @@
 import type { FunctionalComponent } from '@/types'
-import { WorkItem, type WorkProps } from '@/components'
+import { Heading } from '@/components'
 import { advertising, campaigns, design, marketing } from '@/utils/images'
 import { styled } from '@/utils/styles'
+import WorkBox, { type WorkProps } from './WorkBox'
 
 export const works: WorkProps[] = [
   { image: advertising, text: 'Online Advertising' },
@@ -13,14 +14,11 @@ export const works: WorkProps[] = [
 const PortfolioComponent: FunctionalComponent = (props) => {
   return (
     <section {...props}>
-      <div className='row'>
-        <h2 className='section_heading'>Our Work</h2>
-        <h3 className='section_subheading'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ducimus.</h3>
-      </div>
+      <Heading heading='Our Work' />
       <ul className='clear_fix'>
         {works.map((work, index) => (
           <li key={index}>
-            <WorkItem {...work} />
+            <WorkBox {...work} />
           </li>
         ))}
       </ul>

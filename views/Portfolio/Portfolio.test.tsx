@@ -21,7 +21,7 @@ describe('🧪 <Portfolio /> test cases:', () => {
       expect(subheading).toBeVisible()
     })
 
-    it(`${works.length} work items`, () => {
+    it(`${works.length} work boxes`, () => {
       const numberOfWorks = works.length
       const workImages = screen.getAllByRole('img')
       const workTexts = screen.getAllByRole('paragraph')

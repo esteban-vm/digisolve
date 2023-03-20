@@ -6,4 +6,4 @@ export default {
   title: 'Views/Portfolio',
 } as Meta<typeof Portfolio>
 
-export const PortfolioExample = () => <Portfolio />
+export const PortfolioView = () => <Portfolio />

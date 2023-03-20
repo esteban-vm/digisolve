@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`🧪 <Testimonials /> test cases: style tests: should render with correct styles 1`] = `
+.emotion-0 {
+  background-image: linear-gradient(var(--color-overlay3), var(--color-overlay4)),url('/img/testimonial-bg.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.emotion-0 h2 {
+  font-size: 250%;
+  margin-bottom: 20px;
+  margin-top: 150px;
+}
+
+.emotion-1 {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.emotion-1 blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+}
+
+.emotion-1 blockquote::before {
+  content: '\\201C';
+  display: block;
+  font-size: 500%;
+  position: absolute;
+  left: -5px;
+  top: -5px;
+}
+
+.emotion-1 cite {
+  display: block;
+  margin-top: 25px;
+  font-size: 90%;
+}
+
+.emotion-1 cite img {
+  border-radius: 50%;
+  height: 20%;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+<section
+  className="emotion-0"
+>
+  <div
+    className="row"
+  >
+    <h2>
+      Our Testimonials
+    </h2>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col span_1_of_3 emotion-1"
+      role="listitem"
+    >
+      <blockquote>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
+      </blockquote>
+      <cite>
+        <img
+          alt="Aaron Cruz"
+          data-nimg="1"
+          decoding="async"
+          height={40}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style={
+            {
+              "color": "transparent",
+            }
+          }
+          width={40}
+        />
+        Aaron Cruz
+      </cite>
+    </div>
+    <div
+      className="col span_1_of_3 emotion-1"
+      role="listitem"
+    >
+      <blockquote>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
+      </blockquote>
+      <cite>
+        <img
+          alt="Jeff Jones"
+          data-nimg="1"
+          decoding="async"
+          height={40}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style={
+            {
+              "color": "transparent",
+            }
+          }
+          width={40}
+        />
+        Jeff Jones
+      </cite>
+    </div>
+    <div
+      className="col span_1_of_3 emotion-1"
+      role="listitem"
+    >
+      <blockquote>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
+      </blockquote>
+      <cite>
+        <img
+          alt="Helen Smith"
+          data-nimg="1"
+          decoding="async"
+          height={40}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style={
+            {
+              "color": "transparent",
+            }
+          }
+          width={40}
+        />
+        Helen Smith
+      </cite>
+    </div>
+  </div>
+</section>
+`;

@@ -20,8 +20,11 @@ export const globalStyles = css`
     --color-black: #000;
 
     --color-light: #f4f4f4;
-    --color-dark: #0000004d;
-    --color-darker: #000000b3;
+
+    --color-overlay1: #0000004d;
+    --color-overlay2: #000000b3;
+    --color-overlay3: #00000080;
+    --color-overlay4: #000000cc;
   }
 
   html,
@@ -39,7 +42,7 @@ export const globalStyles = css`
     margin: 0 auto;
   }
 
-  .section_heading {
+  /* .section_heading {
     font-size: 250%;
     color: var(--color-black);
     margin-bottom: 20px;
@@ -61,7 +64,7 @@ export const globalStyles = css`
       background-color: var(--color-primary);
       margin: 30px auto 0;
     }
-  }
+  } */
 
   .clear_fix {
     zoom: 1;

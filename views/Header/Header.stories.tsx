@@ -6,4 +6,4 @@ export default {
   title: 'Views/Header',
 } as Meta<typeof Header>
 
-export const HeaderExample = () => <Header />
+export const HeaderView = () => <Header />

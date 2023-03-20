@@ -25,7 +25,7 @@ exports[`🧪 <Button /> test cases: style tests: with basic button: should rend
 
 <a
   className="emotion-0"
-  href="javascript:void(0)"
+  href="#"
   role="button"
 />
 `;
@@ -54,7 +54,7 @@ exports[`🧪 <Button /> test cases: style tests: with full button: should rende
 
 <a
   className="emotion-0"
-  href="javascript:void(0)"
+  href="#"
   role="button"
 />
 `;

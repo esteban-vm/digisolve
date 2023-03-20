@@ -6,4 +6,4 @@ export default {
   title: 'Views/Services',
 } as Meta<typeof Services>
 
-export const ServicesExample = () => <Services />
+export const ServicesView = () => <Services />

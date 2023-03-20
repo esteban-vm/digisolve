@@ -21,7 +21,7 @@ describe('🧪 <Services /> test cases:', () => {
       expect(subheading).toBeVisible()
     })
 
-    it(`${services.length} service items`, () => {
+    it(`${services.length} service boxes`, () => {
       const numberOfServices = services.length
       const serviceElements = screen.getAllByRole('listitem')
       const serviceIcons = screen.getAllByRole('img')

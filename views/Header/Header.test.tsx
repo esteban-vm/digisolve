@@ -9,7 +9,7 @@ describe('🧪 <Header /> test cases:', () => {
 
     afterEach(cleanup)
 
-    it('three navigation links', () => {
+    it('3 navigation links', () => {
       const links = screen.getAllByRole('link')
       expect(links).toHaveLength(3)
 

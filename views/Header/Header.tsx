@@ -1,11 +1,12 @@
 import type { FunctionalComponent } from '@/types'
-import { Button, Navigation } from '@/components'
+import { Button } from '@/components'
 import { styled } from '@/utils/styles'
+import Navbar from './Navbar'
 
 const HeaderComponent: FunctionalComponent = (props) => {
   return (
     <header {...props}>
-      <Navigation />
+      <Navbar />
       <div>
         <div>
           <h1>Digital Agency</h1>
@@ -18,7 +19,7 @@ const HeaderComponent: FunctionalComponent = (props) => {
 }
 
 const Header = styled(HeaderComponent)`
-  background-image: linear-gradient(var(--color-dark), var(--color-darker)), url('/img/header-img.jpg');
+  background-image: linear-gradient(var(--color-overlay1), var(--color-overlay2)), url('/img/header-img.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;

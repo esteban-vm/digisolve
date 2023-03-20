@@ -1,7 +1,8 @@
 import type { FunctionalComponent } from '@/types'
-import { ServiceItem, type ServiceProps } from '@/components'
 import { faTags, faPenAlt, faFunnelDollar, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
+import { Heading } from '@/components'
 import { styled } from '@/utils/styles'
+import ServiceBox, { type ServiceProps } from './ServiceBox'
 
 export const services: ServiceProps[] = [
   { heading: 'Branding', icon: faTags },
@@ -10,23 +11,20 @@ export const services: ServiceProps[] = [
   { heading: 'Web Design', icon: faLaptopCode },
 ]
 
-const ServiceComponent: FunctionalComponent = (props) => {
+const ServicesComponent: FunctionalComponent = (props) => {
   return (
     <section {...props}>
-      <div className='row'>
-        <h2 className='section_heading'>Our Services</h2>
-        <h3 className='section_subheading'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ducimus.</h3>
-      </div>
+      <Heading heading='Our Services' />
       <div className='row'>
         {services.map((service, index) => (
-          <ServiceItem key={index} {...service} role='listitem' />
+          <ServiceBox key={index} {...service} role='listitem' />
         ))}
       </div>
     </section>
   )
 }
 
-const Services = styled(ServiceComponent)`
+const Services = styled(ServicesComponent)`
   text-align: center;
   background-color: var(--color-light);
 `

@@ -5,8 +5,12 @@ import Button from './Button'
 export default {
   args: {
     children: 'Button Example',
+    href: 'javascript:void(0)',
   },
   argTypes: {
+    href: {
+      control: false,
+    },
     onClick: {
       action: true,
       control: false,
@@ -24,13 +28,13 @@ export default {
   },
 } as Meta<typeof Button>
 
-export const BasicButtonExample: StoryObj<typeof Button> = {
+export const BasicButton: StoryObj<typeof Button> = {
   args: {
     isFull: false,
   },
 }
 
-export const FullButtonExample: StoryObj<typeof Button> = {
+export const FullButton: StoryObj<typeof Button> = {
   args: {
     isFull: true,
   },

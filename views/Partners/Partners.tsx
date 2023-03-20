@@ -1,27 +1,26 @@
 import type { FunctionalComponent } from '@/types'
-import { LogoItem, type LogoProps } from '@/components'
+import { Heading } from '@/components'
 import { brandLogos } from '@/utils/images'
 import { styled } from '@/utils/styles'
+import PartnerLogo, { type LogoProps } from './PartnerLogo'
 
 export const logos = brandLogos.map((logo, index) => ({ logo, alt: `Brand Logo ${index + 1}` } as LogoProps))
 
 const PartnersComponent: FunctionalComponent = (props) => {
   return (
     <section {...props}>
-      <div className='row'>
-        <h2 className='section_heading'>Featured Clients</h2>
-        <h3 className='section_subheading'>
-          We&apos;ve worked with some of the best companies in the world. Here are some of our Amazing Partners
-        </h3>
-      </div>
+      <Heading
+        heading='Featured Clients'
+        subheading="We've worked with some of the best companies in the world. Here are some of our Amazing Partners"
+      />
       <div className='row'>
         {logos.slice(0, 4).map((logo, index) => (
-          <LogoItem key={index} {...logo} />
+          <PartnerLogo key={index} {...logo} />
         ))}
       </div>
       <div className='row'>
         {logos.slice(4).map((logo, index) => (
-          <LogoItem key={index} {...logo} />
+          <PartnerLogo key={index} {...logo} />
         ))}
       </div>
     </section>

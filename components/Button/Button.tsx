@@ -46,7 +46,7 @@ const Button = styled.a<ButtonProps>`
 Button.defaultProps = {
   isFull: false,
   role: 'button',
-  href: 'javascript:void(0)',
+  href: '#',
 }
 
 export default Button
