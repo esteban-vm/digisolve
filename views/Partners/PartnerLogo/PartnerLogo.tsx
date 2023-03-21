@@ -2,7 +2,7 @@ import type { FunctionalComponent } from '@/types'
 import Image, { type StaticImageData } from 'next/image'
 import { styled } from '@/utils/styles'
 
-/** Properties for logo item */
+/** Properties for partner logo component */
 export type LogoProps = {
   /** The logo itself */
   logo: StaticImageData
@@ -10,7 +10,7 @@ export type LogoProps = {
   alt: string
 }
 
-const LogoItemComponent: FunctionalComponent<LogoProps> = ({ logo, alt, ...rest }) => {
+const PartnerLogoComponent: FunctionalComponent<LogoProps> = ({ logo, alt, ...rest }) => {
   return (
     <div {...rest}>
       <Image src={logo} alt={alt} />
@@ -18,15 +18,15 @@ const LogoItemComponent: FunctionalComponent<LogoProps> = ({ logo, alt, ...rest 
   )
 }
 
-const LogoItem = styled(LogoItemComponent)`
+const PartnerLogo = styled(PartnerLogoComponent)`
   img {
     width: 65%;
     height: auto;
   }
 `
 
-LogoItem.defaultProps = {
+PartnerLogo.defaultProps = {
   className: 'col span_1_of_4',
 }
 
-export default LogoItem
+export default PartnerLogo

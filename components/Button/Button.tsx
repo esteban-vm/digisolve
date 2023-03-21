@@ -1,6 +1,6 @@
 import { styled, css } from '@/utils/styles'
 
-/** Properties for button */
+/** Properties for button component */
 type ButtonProps = {
   /** Has styles to be a full button or not */
   isFull?: boolean

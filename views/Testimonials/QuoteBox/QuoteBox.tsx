@@ -2,7 +2,7 @@ import type { FunctionalComponent } from '@/types'
 import Image, { type StaticImageData } from 'next/image'
 import { styled } from '@/utils/styles'
 
-/** Properties for quote box */
+/** Properties for quote box component */
 export type QuoteProps = {
   /** The client's name */
   name: string

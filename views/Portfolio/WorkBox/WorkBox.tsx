@@ -2,7 +2,7 @@ import type { FunctionalComponent } from '@/types'
 import Image, { type StaticImageData } from 'next/image'
 import { styled } from '@/utils/styles'
 
-/** Properties for work box */
+/** Properties for work box component */
 export type WorkProps = {
   /** The image */
   image: StaticImageData
