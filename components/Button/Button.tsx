@@ -1,4 +1,4 @@
-import { styled, css } from '@/utils/styles'
+import { styled, css } from '@/styles'
 
 /** Properties for button component */
 type ButtonProps = {

@@ -1,39 +1,46 @@
-import { render, cleanup, create, screen } from '@/utils/tests'
+import { render, cleanup, screen, create } from '@/tests'
 import { quotes } from '../Testimonials'
 import QuoteBox from './QuoteBox'
 
-describe('🧪 <QuoteBox /> test cases:', () => {
-  describe('there should be:', () => {
+describe('🧪 QUOTE BOX:', () => {
+  const [testQuote] = quotes
+
+  describe('display tests:', () => {
+    let parent: HTMLElement
+
     beforeEach(() => {
-      render(<QuoteBox {...quotes[0]} />)
+      render(<QuoteBox {...testQuote} />)
+      parent = screen.getByRole('article')
     })
 
     afterEach(cleanup)
 
-    it('a photo', () => {
-      const photo = screen.getByRole('img')
+    it('should display the photo', () => {
+      const photo = screen.getByRole('img', { name: testQuote.name })
       expect(photo).toBeInTheDocument()
       expect(photo).toBeVisible()
-      expect(photo).toHaveAccessibleName(quotes[0].name)
+      expect(parent).toContainElement(photo)
     })
 
-    it('a name', () => {
-      const name = screen.getByText(quotes[0].name)
+    it('should display the name', () => {
+      const name = screen.getByText(testQuote.name)
       expect(name).toBeInTheDocument()
       expect(name).toBeVisible()
+      expect(parent).toContainElement(name)
     })
 
-    it('a quote', () => {
-      const quoteElement = screen.getByText('Lorem ipsum dolor', { exact: false })
-      expect(quoteElement).toBeInTheDocument()
-      expect(quoteElement).toBeVisible()
+    it('should display the quote', () => {
+      const quote = screen.getByText(/^lorem ipsum/i)
+      expect(quote).toBeInTheDocument()
+      expect(quote).toBeVisible()
+      expect(parent).toContainElement(quote)
     })
   })
 
   describe('style tests:', () => {
     it('should render with correct styles', () => {
-      const quoteTree = create(<QuoteBox {...quotes[0]} />).toJSON()
-      expect(quoteTree).toMatchSnapshot()
+      const tree = create(<QuoteBox {...testQuote} />)
+      expect(tree).toMatchSnapshot()
     })
   })
 })

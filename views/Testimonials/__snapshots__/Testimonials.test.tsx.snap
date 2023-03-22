@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`🧪 <Testimonials /> test cases: style tests: should render with correct styles 1`] = `
+exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] = `
 .emotion-0 {
   background-image: linear-gradient(var(--color-overlay3), var(--color-overlay4)),url('/img/testimonial-bg.jpg');
   -webkit-background-size: cover;
@@ -52,21 +52,23 @@ exports[`🧪 <Testimonials /> test cases: style tests: should render with corre
 }
 
 <section
+  aria-labelledby="testimonials_heading"
   className="emotion-0"
 >
   <div
     className="row"
   >
-    <h2>
+    <h2
+      id="testimonials_heading"
+    >
       Our Testimonials
     </h2>
   </div>
   <div
     className="row"
   >
-    <div
+    <article
       className="col span_1_of_3 emotion-1"
-      role="listitem"
     >
       <blockquote>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
@@ -91,10 +93,9 @@ exports[`🧪 <Testimonials /> test cases: style tests: should render with corre
         />
         Aaron Cruz
       </cite>
-    </div>
-    <div
+    </article>
+    <article
       className="col span_1_of_3 emotion-1"
-      role="listitem"
     >
       <blockquote>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
@@ -119,10 +120,9 @@ exports[`🧪 <Testimonials /> test cases: style tests: should render with corre
         />
         Jeff Jones
       </cite>
-    </div>
-    <div
+    </article>
+    <article
       className="col span_1_of_3 emotion-1"
-      role="listitem"
     >
       <blockquote>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
@@ -147,7 +147,7 @@ exports[`🧪 <Testimonials /> test cases: style tests: should render with corre
         />
         Helen Smith
       </cite>
-    </div>
+    </article>
   </div>
 </section>
 `;

@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
+.emotion-0 {
+  text-align: center;
+  background-color: var(--color-light);
+}
+
+.emotion-0 h2 {
+  color: var(--color-black);
+  font-size: 250%;
+  margin-bottom: 20px;
+  margin-top: 150px;
+}
+
+.emotion-1>div {
+  background-color: var(--color-white);
+  width: 90%;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 2px var(--color-shadow);
+  text-align: left;
+}
+
+.emotion-1>div h4 {
+  font-size: 150%;
+  color: var(--color-grey);
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.emotion-1>div p:first-of-type {
+  color: var(--color-primary);
+  font-size: 300%;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.emotion-1>div p:first-of-type span {
+  font-size: 30%;
+  font-weight: 500;
+}
+
+.emotion-1>div p:last-of-type {
+  color: var(--color-grey);
+  font-size: 80%;
+  margin-bottom: 10px;
+}
+
+.emotion-1>div ul {
+  list-style: none;
+}
+
+.emotion-1>div ul li {
+  color: var(--color-grey);
+  padding: 5px 0;
+}
+
+.emotion-1>div svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.emotion-1>div svg path {
+  fill: var(--color-primary);
+}
+
+.emotion-1>div div {
+  padding: 15px;
+  border-bottom: 1px solid var(--color-shadow);
+}
+
+.emotion-1>div div:last-of-type {
+  border: 0;
+  text-align: center;
+}
+
+.emotion-2:link,
+.emotion-2:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 200px;
+  font-weight: 500;
+  outline: none;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.emotion-2:link:hover,
+.emotion-2:visited:hover,
+.emotion-2:link:active,
+.emotion-2:visited:active {
+  background-color: var(--color-dark-primary);
+}
+
+<section
+  aria-labelledby="packages_heading"
+  className="emotion-0"
+>
+  <div
+    className="row"
+  >
+    <h2
+      id="packages_heading"
+    >
+      Check out Our Most Popular Packages
+    </h2>
+  </div>
+  <div
+    className="row"
+  >
+    <article
+      className="col span_1_of_3 emotion-1"
+    >
+      <div>
+        <div>
+          <h4>
+            Starter
+          </h4>
+          <p>
+            $699
+             
+            <span>
+              3
+               months
+            </span>
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sit nemo natus ad vero molestias?
+          </p>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check "
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              SEO, SMO and PPC
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check "
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              2 Blogs per month
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check "
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              Facebook & Twitter Marketing
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check "
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              Monthly Performance
+            </li>
+          </ul>
+        </div>
+        <div>
+          <a
+            className="emotion-2"
+            href="#"
+            role="button"
+          >
+            Sign up now
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+`;

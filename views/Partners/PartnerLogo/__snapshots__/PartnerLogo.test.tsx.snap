@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`🧪 <PartnerLogo /> test cases: style tests: should render with correct styles 1`] = `
+exports[`🧪 PARTNER LOGO: style tests: should render with correct styles 1`] = `
 .emotion-0 img {
   width: 65%;
   height: auto;
 }
 
-<div
+<article
   className="col span_1_of_4 emotion-0"
 >
   <img
@@ -26,5 +26,5 @@ exports[`🧪 <PartnerLogo /> test cases: style tests: should render with correc
     }
     width={40}
   />
-</div>
+</article>
 `;

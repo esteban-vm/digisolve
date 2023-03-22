@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { within, userEvent } from '@storybook/testing-library'
-import { styled } from '@/utils/styles'
+import { styled } from '@/styles'
 import { quotes } from '../Testimonials'
 import QuoteBox from './QuoteBox'
 
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   align-items: center;
   width: 75vw;
 
-  div {
+  article {
     background-color: var(--color-light);
     padding: 1rem;
   }

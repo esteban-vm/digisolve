@@ -1,56 +1,62 @@
-import type { ReactTestRendererJSON } from 'react-test-renderer'
-import { render, cleanup, create, screen } from '@/utils/tests'
+import { render, cleanup, screen, create } from '@/tests'
 import { services } from '../Services'
 import ServiceBox from './ServiceBox'
 
-describe('🧪 <ServiceBox /> test cases:', () => {
-  describe('there should be:', () => {
+describe('🧪 SERVICE BOX:', () => {
+  const [testService] = services
+
+  describe('display tests:', () => {
+    let parent: HTMLElement
+
     beforeEach(() => {
-      render(<ServiceBox {...services[0]} />)
+      render(<ServiceBox {...testService} />)
+      parent = screen.getByRole('article')
     })
 
     afterEach(cleanup)
 
-    it('an icon', () => {
-      const icon = screen.getByRole('img')
+    it('should display the icon', () => {
+      const icon = screen.getByRole('img', { name: testService.heading })
       expect(icon).toBeInTheDocument()
       expect(icon).toBeVisible()
-      expect(icon).toHaveAccessibleName(/^branding$/i)
+      expect(parent).toContainElement(icon)
     })
 
-    it('a heading', () => {
-      const heading = screen.getByRole('heading')
+    it('should display the heading', () => {
+      const heading = screen.getByRole('heading', { name: testService.heading, level: 4 })
       expect(heading).toBeInTheDocument()
       expect(heading).toBeVisible()
+      expect(parent).toContainElement(heading)
     })
 
-    it('a text', () => {
-      const text = screen.getByRole('paragraph')
-      expect(text).toBeInTheDocument()
-      expect(text).toBeVisible()
+    it('should display the paragraph', () => {
+      const paragraph = screen.getByText(/^lorem ipsum/i)
+      expect(paragraph).toBeInTheDocument()
+      expect(paragraph).toBeVisible()
+      expect(parent).toContainElement(paragraph)
     })
 
-    it('a link', () => {
-      const link = screen.getByRole('link')
+    it('should display the link', () => {
+      const link = screen.getByRole('link', { name: /^read more$/i })
       expect(link).toBeInTheDocument()
       expect(link).toBeVisible()
-      expect(link).toHaveTextContent(/^read more$/i)
+      expect(parent).toContainElement(link)
     })
   })
 
   describe('style tests:', () => {
-    let serviceTree: ReactTestRendererJSON
+    let tree: ReturnType<typeof create>
 
     beforeEach(() => {
-      serviceTree = create(<ServiceBox {...services[0]} />).toJSON() as ReactTestRendererJSON
+      tree = create(<ServiceBox {...testService} />)
     })
 
     it('should render with correct styles', () => {
-      expect(serviceTree).toMatchSnapshot()
+      expect(tree).toMatchSnapshot()
     })
 
     it('should decrease opacity when hovered', () => {
-      expect(serviceTree).toHaveStyleRule('opacity', '0.7', { target: 'a:hover' })
+      expect(tree).toHaveStyleRule('opacity', '0.7', { target: 'a:hover' })
     })
   })
 })

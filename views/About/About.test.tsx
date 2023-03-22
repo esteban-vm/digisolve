@@ -1,50 +1,58 @@
-import { render, cleanup, screen, create } from '@/utils/tests'
+import { render, cleanup, screen, create } from '@/tests'
 import About from './About'
 
-describe('🧪 <About /> test cases:', () => {
-  describe('there should be:', () => {
+describe('🧪 ABOUT:', () => {
+  describe('display tests:', () => {
+    let parent: HTMLElement
+
     beforeEach(() => {
       render(<About />)
+      parent = screen.getByRole('region')
     })
 
     afterEach(cleanup)
 
-    it('a heading', () => {
-      const heading = screen.getByRole('heading')
+    it('should display the heading', () => {
+      const heading = screen.getByRole('heading', {
+        name: /^a digital agency focused on Growing your online presence$/i,
+        level: 2,
+      })
+
       expect(heading).toBeInTheDocument()
       expect(heading).toBeVisible()
-      expect(heading).toHaveTextContent(/^a digital agency focused on Growing your online presence$/i)
+      expect(parent).toContainElement(heading)
     })
 
-    it('2 paragraphs', () => {
-      const paragraphs = screen.getAllByRole('paragraph')
+    it('should display the paragraphs', () => {
+      const paragraphs = screen.getAllByText(/^lorem/i, { exact: false })
       expect(paragraphs).toHaveLength(2)
 
       for (const paragraph of paragraphs) {
         expect(paragraph).toBeInTheDocument()
         expect(paragraph).toBeVisible()
+        expect(parent).toContainElement(paragraph)
       }
     })
 
-    it('a button', () => {
-      const button = screen.getByRole('button')
+    it('should display the button', () => {
+      const button = screen.getByRole('button', { name: /^read more$/i })
       expect(button).toBeInTheDocument()
       expect(button).toBeVisible()
-      expect(button).toHaveTextContent(/^read more$/i)
+      expect(parent).toContainElement(button)
     })
 
-    it('an image', () => {
-      const image = screen.getByRole('img')
+    it('should display the image', () => {
+      const image = screen.getByRole('img', { name: /^digisolve app on laptop$/i })
       expect(image).toBeInTheDocument()
       expect(image).toBeVisible()
-      expect(image).toHaveAccessibleName(/^digisolve app on laptop$/i)
+      expect(parent).toContainElement(image)
     })
   })
 
   describe('style tests:', () => {
     it('should render with correct styles', () => {
-      const aboutTree = create(<About />).toJSON()
-      expect(aboutTree).toMatchSnapshot()
+      const tree = create(<About />)
+      expect(tree).toMatchSnapshot()
     })
   })
 })

@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import { styled } from '@/utils/styles'
+import { styled } from '@/styles'
 import About from './About'
 
 const Wrapper = styled.div`

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`🧪 <QuoteBox /> test cases: style tests: should render with correct styles 1`] = `
+exports[`🧪 QUOTE BOX: style tests: should render with correct styles 1`] = `
 .emotion-0 {
   text-align: left;
   margin-bottom: 50px;
@@ -36,7 +36,7 @@ exports[`🧪 <QuoteBox /> test cases: style tests: should render with correct s
   margin-right: 10px;
 }
 
-<div
+<article
   className="col span_1_of_3 emotion-0"
 >
   <blockquote>
@@ -62,5 +62,5 @@ exports[`🧪 <QuoteBox /> test cases: style tests: should render with correct s
     />
     Aaron Cruz
   </cite>
-</div>
+</article>
 `;

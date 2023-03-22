@@ -1,0 +1,45 @@
+import type { FunctionalComponent } from '@/types'
+import { styled } from '@/styles'
+import PackageBox, { type PackageProps } from './PackageBox'
+
+export const packages: PackageProps[] = [
+  {
+    heading: 'Starter',
+    price: 699,
+    duration: 3,
+    benefits: ['SEO, SMO and PPC', '2 Blogs per month', 'Facebook & Twitter Marketing', 'Monthly Performance'],
+  },
+]
+
+const PackagesComponent: FunctionalComponent = (props) => {
+  return (
+    <section {...props}>
+      <div className='row'>
+        <h2 id='packages_heading'>Check out Our Most Popular Packages</h2>
+      </div>
+      <div className='row'>
+        {packages.map((pack, index) => (
+          <PackageBox key={index} {...pack} />
+        ))}
+      </div>
+    </section>
+  )
+}
+
+const Packages = styled(PackagesComponent)`
+  text-align: center;
+  background-color: var(--color-light);
+
+  h2 {
+    color: var(--color-black);
+    font-size: 250%;
+    margin-bottom: 20px;
+    margin-top: 150px;
+  }
+`
+
+Packages.defaultProps = {
+  'aria-labelledby': 'packages_heading',
+}
+
+export default Packages

@@ -1,8 +1,7 @@
-import type { ReactTestRendererJSON } from 'react-test-renderer'
-import { render, cleanup, screen, create, userEvent } from '@/utils/tests'
+import { render, cleanup, screen, create, userEvent } from '@/tests'
 import Button from './Button'
 
-describe('🧪 <Button /> test cases:', () => {
+describe('🧪 BUTTON:', () => {
   describe('event tests:', () => {
     const handleEvent = jest.fn()
 
@@ -22,34 +21,34 @@ describe('🧪 <Button /> test cases:', () => {
   })
 
   describe('style tests:', () => {
-    let buttonTree: ReactTestRendererJSON
+    let tree: ReturnType<typeof create>
 
     describe('with basic button:', () => {
       beforeEach(() => {
-        buttonTree = create(<Button />).toJSON() as ReactTestRendererJSON
+        tree = create(<Button />)
       })
 
       it('should render with correct styles', () => {
-        expect(buttonTree).toMatchSnapshot()
+        expect(tree).toMatchSnapshot()
       })
 
       it('should have correct text and background color', () => {
-        expect(buttonTree).toHaveStyleRule('background-color', 'var(--color-primary)', { target: ':active' })
-        expect(buttonTree).toHaveStyleRule('color', 'var(--color-white)', { target: ':active' })
+        expect(tree).toHaveStyleRule('background-color', 'var(--color-primary)', { target: ':active' })
+        expect(tree).toHaveStyleRule('color', 'var(--color-white)', { target: ':active' })
       })
     })
 
     describe('with full button:', () => {
       beforeEach(() => {
-        buttonTree = create(<Button isFull />).toJSON() as ReactTestRendererJSON
+        tree = create(<Button isFull />)
       })
 
       it('should render with correct styles', () => {
-        expect(buttonTree).toMatchSnapshot()
+        expect(tree).toMatchSnapshot()
       })
 
       it('should have correct background color', () => {
-        expect(buttonTree).toHaveStyleRule('background-color', 'var(--color-dark-primary)', { target: ':active' })
+        expect(tree).toHaveStyleRule('background-color', 'var(--color-dark-primary)', { target: ':active' })
       })
     })
   })

@@ -2,7 +2,7 @@ import type { FunctionalComponent } from '@/types'
 import type { IconDefinition } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
-import { styled } from '@/utils/styles'
+import { styled } from '@/styles'
 
 /** Properties for service box component */
 export type ServiceProps = {
@@ -14,14 +14,14 @@ export type ServiceProps = {
 
 const ServiceBoxComponent: FunctionalComponent<ServiceProps> = ({ heading, icon, ...rest }) => {
   return (
-    <div {...rest}>
-      <FontAwesomeIcon icon={icon} role='img' title={heading} />
+    <article {...rest}>
+      <FontAwesomeIcon icon={icon} title={heading} />
       <h4>{heading}</h4>
-      <p role='paragraph'>
+      <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.
       </p>
       <Link href='#'>Read more</Link>
-    </div>
+    </article>
   )
 }
 

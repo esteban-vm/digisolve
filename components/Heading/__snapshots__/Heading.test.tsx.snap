@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`🧪 <Heading /> test cases: style tests: should render with correct styles 1`] = `
+exports[`🧪 HEADING: style tests: should render with correct styles 1`] = `
 .emotion-0 h2 {
   font-size: 250%;
   color: var(--color-black);
@@ -27,6 +27,7 @@ exports[`🧪 <Heading /> test cases: style tests: should render with correct st
 
 <div
   className="row emotion-0"
+  role="none"
 >
   <h2>
     Test heading

@@ -1,47 +1,47 @@
-import { render, cleanup, screen, create } from '@/utils/tests'
+import { render, cleanup, screen, create } from '@/tests'
 import Services, { services } from './Services'
 
-describe('🧪 <Services /> test cases:', () => {
-  describe('there should be:', () => {
+describe('🧪 SERVICES:', () => {
+  describe('display tests:', () => {
+    let parent: HTMLElement
+
     beforeEach(() => {
       render(<Services />)
+      parent = screen.getByRole('region')
     })
 
     afterEach(cleanup)
 
-    it('a heading', () => {
-      const heading = screen.getByRole('heading', { name: /^our services$/i })
+    it('should display the heading', () => {
+      const heading = screen.getByRole('heading', { name: /^our services$/i, level: 2 })
       expect(heading).toBeInTheDocument()
       expect(heading).toBeVisible()
+      expect(parent).toContainElement(heading)
     })
 
-    it('a subheading', () => {
-      const [, subheading] = screen.getAllByRole('heading')
+    it('should display the subheading', () => {
+      const subheading = screen.getByRole('heading', { level: 3 })
       expect(subheading).toBeInTheDocument()
       expect(subheading).toBeVisible()
+      expect(parent).toContainElement(subheading)
     })
 
-    it(`${services.length} service boxes`, () => {
-      const numberOfServices = services.length
-      const serviceElements = screen.getAllByRole('listitem')
-      const serviceIcons = screen.getAllByRole('img')
+    it('should display the services', () => {
+      const serviceElements = screen.getAllByRole('article')
+      expect(serviceElements).toHaveLength(services.length)
 
-      expect(serviceElements).toHaveLength(numberOfServices)
-      expect(serviceIcons).toHaveLength(numberOfServices)
-
-      for (let index = 0; index < numberOfServices; index++) {
-        const serviceElement = serviceElements[index]
-        expect(serviceElement).toBeInTheDocument()
-        expect(serviceElement).toBeVisible()
-        expect(serviceElement).toContainElement(serviceIcons[index])
+      for (const service of serviceElements) {
+        expect(service).toBeInTheDocument()
+        expect(service).toBeVisible()
+        expect(parent).toContainElement(service)
       }
     })
   })
 
   describe('style tests:', () => {
     it('should render with correct styles', () => {
-      const servicesTree = create(<Services />).toJSON()
-      expect(servicesTree).toMatchSnapshot()
+      const tree = create(<Services />)
+      expect(tree).toMatchSnapshot()
     })
   })
 })

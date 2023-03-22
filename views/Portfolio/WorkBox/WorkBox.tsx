@@ -1,6 +1,6 @@
 import type { FunctionalComponent } from '@/types'
 import Image, { type StaticImageData } from 'next/image'
-import { styled } from '@/utils/styles'
+import { styled } from '@/styles'
 
 /** Properties for work box component */
 export type WorkProps = {
@@ -14,7 +14,7 @@ const WorkBoxComponent: FunctionalComponent<WorkProps> = ({ image, text, ...rest
   return (
     <figure {...rest}>
       <Image src={image} alt={text} />
-      <p role='paragraph'>{text}</p>
+      <p>{text}</p>
     </figure>
   )
 }

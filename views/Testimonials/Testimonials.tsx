@@ -1,6 +1,6 @@
 import type { FunctionalComponent } from '@/types'
-import { client1, client2, client3 } from '@/utils/images'
-import { styled } from '@/utils/styles'
+import { client1, client2, client3 } from '@/images'
+import { styled } from '@/styles'
 import QuoteBox, { type QuoteProps } from './QuoteBox'
 
 export const quotes: QuoteProps[] = [
@@ -13,11 +13,11 @@ const TestimonialsComponent: FunctionalComponent = (props) => {
   return (
     <section {...props}>
       <div className='row'>
-        <h2>Our Testimonials</h2>
+        <h2 id='testimonials_heading'>Our Testimonials</h2>
       </div>
       <div className='row'>
         {quotes.map((quote, index) => (
-          <QuoteBox key={index} {...quote} role='listitem' />
+          <QuoteBox key={index} {...quote} />
         ))}
       </div>
     </section>
@@ -37,5 +37,9 @@ const Testimonials = styled(TestimonialsComponent)`
     margin-top: 150px;
   }
 `
+
+Testimonials.defaultProps = {
+  'aria-labelledby': 'testimonials_heading',
+}
 
 export default Testimonials

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { within, userEvent } from '@storybook/testing-library'
-import { styled } from '@/utils/styles'
+import { styled } from '@/styles'
 import { works } from '../Portfolio'
 import WorkBox from './WorkBox'
 

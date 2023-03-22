@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`🧪 <WorkBox /> test cases: style tests: should render with correct styles 1`] = `
+exports[`🧪 WORK BOX: style tests: should render with correct styles 1`] = `
 .emotion-0 {
   background-color: var(--color-black);
   overflow: hidden;
@@ -50,9 +50,7 @@ exports[`🧪 <WorkBox /> test cases: style tests: should render with correct st
     }
     width={40}
   />
-  <p
-    role="paragraph"
-  >
+  <p>
     Online Advertising
   </p>
 </figure>

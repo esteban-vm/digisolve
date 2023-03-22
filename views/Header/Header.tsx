@@ -1,6 +1,6 @@
 import type { FunctionalComponent } from '@/types'
 import { Button } from '@/components'
-import { styled } from '@/utils/styles'
+import { styled } from '@/styles'
 import Navbar from './Navbar'
 
 const HeaderComponent: FunctionalComponent = (props) => {

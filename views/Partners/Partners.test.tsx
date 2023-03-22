@@ -1,46 +1,51 @@
-import { render, cleanup, screen, create } from '@/utils/tests'
+import { render, cleanup, screen, create } from '@/tests'
 import Partners, { logos } from './Partners'
 
-describe('🧪 <Partners /> test cases:', () => {
-  describe('there should be:', () => {
+describe('🧪 PARTNERS:', () => {
+  describe('display tests:', () => {
+    let parent: HTMLElement
+
     beforeEach(() => {
       render(<Partners />)
+      parent = screen.getByRole('region')
     })
 
     afterEach(cleanup)
 
-    it('a heading', () => {
-      const heading = screen.getByRole('heading', { name: /^featured clients$/i })
+    it('should display the heading', () => {
+      const heading = screen.getByRole('heading', { name: /^featured clients$/i, level: 2 })
       expect(heading).toBeInTheDocument()
       expect(heading).toBeVisible()
+      expect(parent).toContainElement(heading)
     })
 
-    it('a subheading', () => {
+    it('should display the subheading', () => {
       const subheading = screen.getByRole('heading', {
         name: /^we've worked with some of the best companies in the world\. here are some of our amazing partners$/i,
+        level: 3,
       })
+
       expect(subheading).toBeInTheDocument()
       expect(subheading).toBeVisible()
+      expect(parent).toContainElement(subheading)
     })
 
-    it(`${logos.length} logo boxes`, () => {
-      const numberOfLogos = logos.length
-      const logoElements = screen.getAllByRole('img')
-      expect(logoElements).toHaveLength(numberOfLogos)
+    it('should display the logos', () => {
+      const logoElements = screen.getAllByRole('article')
+      expect(logoElements).toHaveLength(logos.length)
 
-      for (let index = 0; index < numberOfLogos; index++) {
-        const logoElement = logoElements[index]
-        expect(logoElement).toBeInTheDocument()
-        expect(logoElement).toBeVisible()
-        expect(logoElement).toHaveAccessibleName(logos[index].alt)
+      for (const logo of logoElements) {
+        expect(logo).toBeInTheDocument()
+        expect(logo).toBeVisible()
+        expect(parent).toContainElement(logo)
       }
     })
   })
 
   describe('style tests:', () => {
     it('should render with correct styles', () => {
-      const partnersTree = create(<Partners />).toJSON()
-      expect(partnersTree).toMatchSnapshot()
+      const tree = create(<Partners />)
+      expect(tree).toMatchSnapshot()
     })
   })
 })

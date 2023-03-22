@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`🧪 <Services /> test cases: style tests: should render with correct styles 1`] = `
+exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
 .emotion-0 {
   text-align: center;
   background-color: var(--color-light);
@@ -82,10 +82,13 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
 }
 
 <section
+  aria-labelledby="services_heading"
   className="emotion-0"
 >
   <div
     className="row emotion-1"
+    id="services_heading"
+    role="none"
   >
     <h2>
       Our Services
@@ -97,12 +100,11 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
   <div
     className="row"
   >
-    <div
+    <article
       className="col span_1_of_4 emotion-2"
-      role="listitem"
     >
       <svg
-        aria-labelledby="svg-inline--fa-title-z1lt4bdtUy2F"
+        aria-labelledby="svg-inline--fa-title-PnHo6FRJ6Wbl"
         className="svg-inline--fa fa-tags "
         data-icon="tags"
         data-prefix="fas"
@@ -112,7 +114,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="svg-inline--fa-title-z1lt4bdtUy2F"
+          id="svg-inline--fa-title-PnHo6FRJ6Wbl"
           style={{}}
         >
           Branding
@@ -126,9 +128,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
       <h4>
         Branding
       </h4>
-      <p
-        role="paragraph"
-      >
+      <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.
       </p>
       <a
@@ -139,13 +139,12 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
       >
         Read more
       </a>
-    </div>
-    <div
+    </article>
+    <article
       className="col span_1_of_4 emotion-2"
-      role="listitem"
     >
       <svg
-        aria-labelledby="svg-inline--fa-title-gMFIRwp98KXK"
+        aria-labelledby="svg-inline--fa-title-Ye1ClIsu8cJc"
         className="svg-inline--fa fa-pen-clip "
         data-icon="pen-clip"
         data-prefix="fas"
@@ -155,7 +154,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="svg-inline--fa-title-gMFIRwp98KXK"
+          id="svg-inline--fa-title-Ye1ClIsu8cJc"
           style={{}}
         >
           Content
@@ -169,9 +168,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
       <h4>
         Content
       </h4>
-      <p
-        role="paragraph"
-      >
+      <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.
       </p>
       <a
@@ -182,13 +179,12 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
       >
         Read more
       </a>
-    </div>
-    <div
+    </article>
+    <article
       className="col span_1_of_4 emotion-2"
-      role="listitem"
     >
       <svg
-        aria-labelledby="svg-inline--fa-title-douwjJES7lQH"
+        aria-labelledby="svg-inline--fa-title-HBw6DN5xads6"
         className="svg-inline--fa fa-filter-circle-dollar "
         data-icon="filter-circle-dollar"
         data-prefix="fas"
@@ -198,7 +194,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="svg-inline--fa-title-douwjJES7lQH"
+          id="svg-inline--fa-title-HBw6DN5xads6"
           style={{}}
         >
           Marketing
@@ -212,9 +208,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
       <h4>
         Marketing
       </h4>
-      <p
-        role="paragraph"
-      >
+      <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.
       </p>
       <a
@@ -225,13 +219,12 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
       >
         Read more
       </a>
-    </div>
-    <div
+    </article>
+    <article
       className="col span_1_of_4 emotion-2"
-      role="listitem"
     >
       <svg
-        aria-labelledby="svg-inline--fa-title-XBkqTYtsBuih"
+        aria-labelledby="svg-inline--fa-title-lTecBrr9kggX"
         className="svg-inline--fa fa-laptop-code "
         data-icon="laptop-code"
         data-prefix="fas"
@@ -241,7 +234,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="svg-inline--fa-title-XBkqTYtsBuih"
+          id="svg-inline--fa-title-lTecBrr9kggX"
           style={{}}
         >
           Web Design
@@ -255,9 +248,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
       <h4>
         Web Design
       </h4>
-      <p
-        role="paragraph"
-      >
+      <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.
       </p>
       <a
@@ -268,7 +259,7 @@ exports[`🧪 <Services /> test cases: style tests: should render with correct s
       >
         Read more
       </a>
-    </div>
+    </article>
   </div>
 </section>
 `;

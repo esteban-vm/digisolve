@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`🧪 <Partners /> test cases: style tests: should render with correct styles 1`] = `
+exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
 .emotion-0 {
   text-align: center;
 }
@@ -35,10 +35,13 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
 }
 
 <section
+  aria-labelledby="partners_heading"
   className="emotion-0"
 >
   <div
     className="row emotion-1"
+    id="partners_heading"
+    role="none"
   >
     <h2>
       Featured Clients
@@ -50,7 +53,7 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
   <div
     className="row"
   >
-    <div
+    <article
       className="col span_1_of_4 emotion-2"
     >
       <img
@@ -70,8 +73,8 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
         }
         width={40}
       />
-    </div>
-    <div
+    </article>
+    <article
       className="col span_1_of_4 emotion-2"
     >
       <img
@@ -91,8 +94,8 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
         }
         width={40}
       />
-    </div>
-    <div
+    </article>
+    <article
       className="col span_1_of_4 emotion-2"
     >
       <img
@@ -112,8 +115,8 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
         }
         width={40}
       />
-    </div>
-    <div
+    </article>
+    <article
       className="col span_1_of_4 emotion-2"
     >
       <img
@@ -133,12 +136,12 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
         }
         width={40}
       />
-    </div>
+    </article>
   </div>
   <div
     className="row"
   >
-    <div
+    <article
       className="col span_1_of_4 emotion-2"
     >
       <img
@@ -158,8 +161,8 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
         }
         width={40}
       />
-    </div>
-    <div
+    </article>
+    <article
       className="col span_1_of_4 emotion-2"
     >
       <img
@@ -179,8 +182,8 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
         }
         width={40}
       />
-    </div>
-    <div
+    </article>
+    <article
       className="col span_1_of_4 emotion-2"
     >
       <img
@@ -200,8 +203,8 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
         }
         width={40}
       />
-    </div>
-    <div
+    </article>
+    <article
       className="col span_1_of_4 emotion-2"
     >
       <img
@@ -221,7 +224,7 @@ exports[`🧪 <Partners /> test cases: style tests: should render with correct s
         }
         width={40}
       />
-    </div>
+    </article>
   </div>
 </section>
 `;

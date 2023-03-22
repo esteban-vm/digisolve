@@ -1,49 +1,49 @@
-import type { ReactTestRendererJSON } from 'react-test-renderer'
-import { render, cleanup, create, screen } from '@/utils/tests'
+import { render, cleanup, screen, create } from '@/tests'
 import Navbar from './Navbar'
 
-describe('🧪 <Navbar /> test cases:', () => {
-  describe('there should be:', () => {
+describe('🧪 NAVBAR:', () => {
+  describe('display tests:', () => {
+    let parent: HTMLElement
+
     beforeEach(() => {
       render(<Navbar />)
+      parent = screen.getByRole('navigation')
     })
 
     afterEach(cleanup)
 
-    it('a logo', () => {
-      const logo = screen.getByRole('img')
+    it('should display the logo', () => {
+      const logo = screen.getByRole('img', { name: /^digisolve logo$/i })
       expect(logo).toBeInTheDocument()
       expect(logo).toBeVisible()
-      expect(logo).toHaveAccessibleName(/^digisolve logo$/i)
+      expect(parent).toContainElement(logo)
     })
 
-    it('3 links', () => {
-      const links = screen.getAllByRole('link')
-      const texts = [/^home$/i, /^contact$/i, /^about$/i]
+    it('should display the links', () => {
+      const links = screen.getAllByRole('link', { name: /^(home|contact|about)$/i })
       expect(links).toHaveLength(3)
 
-      for (let index = 0; index < links.length; index++) {
-        const link = links[index]
+      for (const link of links) {
         expect(link).toBeInTheDocument()
         expect(link).toBeVisible()
-        expect(link).toHaveTextContent(texts[index])
+        expect(parent).toContainElement(link)
       }
     })
   })
 
   describe('style tests:', () => {
-    let navbarTree: ReactTestRendererJSON
+    let tree: ReturnType<typeof create>
 
     beforeEach(() => {
-      navbarTree = create(<Navbar />).toJSON() as ReactTestRendererJSON
+      tree = create(<Navbar />)
     })
 
     it('should render with correct styles', () => {
-      expect(navbarTree).toMatchSnapshot()
+      expect(tree).toMatchSnapshot()
     })
 
     it('should change color when hovered', () => {
-      expect(navbarTree).toHaveStyleRule('border-bottom', '2px solid var(--color-primary)', { target: 'a:hover' })
+      expect(tree).toHaveStyleRule('border-bottom', '2px solid var(--color-primary)', { target: 'a:hover' })
     })
   })
 })

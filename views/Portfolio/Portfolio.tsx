@@ -1,7 +1,7 @@
 import type { FunctionalComponent } from '@/types'
 import { Heading } from '@/components'
-import { advertising, campaigns, design, marketing } from '@/utils/images'
-import { styled } from '@/utils/styles'
+import { advertising, campaigns, design, marketing } from '@/images'
+import { styled } from '@/styles'
 import WorkBox, { type WorkProps } from './WorkBox'
 
 export const works: WorkProps[] = [
@@ -14,7 +14,7 @@ export const works: WorkProps[] = [
 const PortfolioComponent: FunctionalComponent = (props) => {
   return (
     <section {...props}>
-      <Heading heading='Our Work' />
+      <Heading heading='Our Work' id='portfolio_heading' />
       <ul className='clear_fix'>
         {works.map((work, index) => (
           <li key={index}>
@@ -42,5 +42,9 @@ const Portfolio = styled(PortfolioComponent)`
     }
   }
 `
+
+Portfolio.defaultProps = {
+  'aria-labelledby': 'portfolio_heading',
+}
 
 export default Portfolio

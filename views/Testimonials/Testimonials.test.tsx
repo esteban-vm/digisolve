@@ -1,41 +1,40 @@
-import { render, cleanup, screen, create } from '@/utils/tests'
+import { render, cleanup, screen, create } from '@/tests'
 import Testimonials, { quotes } from './Testimonials'
 
-describe('🧪 <Testimonials /> test cases:', () => {
-  describe('there should be:', () => {
+describe('🧪 TESTIMONIALS:', () => {
+  describe('display tests:', () => {
+    let parent: HTMLElement
+
     beforeEach(() => {
       render(<Testimonials />)
+      parent = screen.getByRole('region')
     })
 
     afterEach(cleanup)
 
-    it('a heading', () => {
-      const heading = screen.getByRole('heading', { name: /^our testimonials$/i })
+    it('should display the heading', () => {
+      const heading = screen.getByRole('heading', { name: /^our testimonials$/i, level: 2 })
       expect(heading).toBeInTheDocument()
       expect(heading).toBeVisible()
+      expect(parent).toContainElement(heading)
     })
 
-    it(`${quotes.length} quote boxes`, () => {
-      const numberOfQuotes = quotes.length
-      const quoteElements = screen.getAllByRole('listitem')
-      const quotePhotos = screen.getAllByRole('img')
+    it('should display the quotes', () => {
+      const quoteElements = screen.getAllByRole('article')
+      expect(quoteElements).toHaveLength(quotes.length)
 
-      expect(quoteElements).toHaveLength(numberOfQuotes)
-      expect(quotePhotos).toHaveLength(numberOfQuotes)
-
-      for (let index = 0; index < numberOfQuotes; index++) {
-        const quoteElement = quoteElements[index]
-        expect(quoteElement).toBeInTheDocument()
-        expect(quoteElement).toBeVisible()
-        expect(quoteElement).toContainElement(quotePhotos[index])
+      for (const quote of quoteElements) {
+        expect(quote).toBeInTheDocument()
+        expect(quote).toBeVisible()
+        expect(parent).toContainElement(quote)
       }
     })
   })
 
   describe('style tests:', () => {
     it('should render with correct styles', () => {
-      const testimonialsTree = create(<Testimonials />).toJSON()
-      expect(testimonialsTree).toMatchSnapshot()
+      const tree = create(<Testimonials />)
+      expect(tree).toMatchSnapshot()
     })
   })
 })

@@ -1,8 +1,8 @@
 import type { FunctionalComponent } from '@/types'
-import { styled } from '@/utils/styles'
+import { styled } from '@/styles'
 
 /** Properties for heading component */
-type HeadingProps = {
+export type HeadingProps = {
   /** The heading text */
   heading: string
   /** The subheading text */
@@ -47,6 +47,7 @@ const Heading = styled(HeadingComponent)`
 Heading.defaultProps = {
   className: 'row',
   subheading: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ducimus.',
+  role: 'none',
 }
 
 export default Heading

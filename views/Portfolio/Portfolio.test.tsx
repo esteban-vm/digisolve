@@ -1,54 +1,47 @@
-import { render, cleanup, screen, create } from '@/utils/tests'
+import { render, cleanup, screen, create } from '@/tests'
 import Portfolio, { works } from './Portfolio'
 
-describe('🧪 <Portfolio /> test cases:', () => {
-  describe('there should be:', () => {
+describe('🧪 PORTFOLIO:', () => {
+  describe('display tests:', () => {
+    let parent: HTMLElement
+
     beforeEach(() => {
       render(<Portfolio />)
+      parent = screen.getByRole('region')
     })
 
     afterEach(cleanup)
 
-    it('a heading', () => {
-      const heading = screen.getByRole('heading', { name: /^our work$/i })
+    it('should display the heading', () => {
+      const heading = screen.getByRole('heading', { name: /^our work$/i, level: 2 })
       expect(heading).toBeInTheDocument()
       expect(heading).toBeVisible()
+      expect(parent).toContainElement(heading)
     })
 
-    it('a subheading', () => {
-      const [, subheading] = screen.getAllByRole('heading')
+    it('should display the subheading', () => {
+      const subheading = screen.getByRole('heading', { level: 3 })
       expect(subheading).toBeInTheDocument()
       expect(subheading).toBeVisible()
+      expect(parent).toContainElement(subheading)
     })
 
-    it(`${works.length} work boxes`, () => {
-      const numberOfWorks = works.length
-      const workImages = screen.getAllByRole('img')
-      const workTexts = screen.getAllByRole('paragraph')
+    it('should display the works', () => {
+      const workElements = screen.getAllByRole('figure')
+      expect(workElements).toHaveLength(works.length)
 
-      expect(workImages).toHaveLength(numberOfWorks)
-      expect(workTexts).toHaveLength(numberOfWorks)
-
-      for (let index = 0; index < numberOfWorks; index++) {
-        const workImage = workImages[index]
-        const workTextElem = workTexts[index]
-        const workTextStr = works[index].text
-
-        expect(workImage).toBeInTheDocument()
-        expect(workImage).toBeVisible()
-        expect(workImage).toHaveAccessibleName(workTextStr)
-
-        expect(workTextElem).toBeInTheDocument()
-        expect(workTextElem).toBeVisible()
-        expect(workTextElem).toHaveTextContent(workTextStr)
+      for (const work of workElements) {
+        expect(work).toBeInTheDocument()
+        expect(work).toBeVisible()
+        expect(parent).toContainElement(work)
       }
     })
   })
 
   describe('style tests:', () => {
     it('should render with correct styles', () => {
-      const portfolioTree = create(<Portfolio />).toJSON()
-      expect(portfolioTree).toMatchSnapshot()
+      const tree = create(<Portfolio />)
+      expect(tree).toMatchSnapshot()
     })
   })
 })

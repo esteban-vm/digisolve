@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`🧪 <ServiceBox /> test cases: style tests: should render with correct styles 1`] = `
+exports[`🧪 SERVICE BOX: style tests: should render with correct styles 1`] = `
 .emotion-0 {
   padding: 1% 1.5%;
   width: 20%;
@@ -52,11 +52,11 @@ exports[`🧪 <ServiceBox /> test cases: style tests: should render with correct
   opacity: 0.7;
 }
 
-<div
+<article
   className="col span_1_of_4 emotion-0"
 >
   <svg
-    aria-labelledby="svg-inline--fa-title-yA3J9xJHe51i"
+    aria-labelledby="svg-inline--fa-title-ogozLSLZTpPH"
     className="svg-inline--fa fa-tags "
     data-icon="tags"
     data-prefix="fas"
@@ -66,7 +66,7 @@ exports[`🧪 <ServiceBox /> test cases: style tests: should render with correct
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="svg-inline--fa-title-yA3J9xJHe51i"
+      id="svg-inline--fa-title-ogozLSLZTpPH"
       style={{}}
     >
       Branding
@@ -80,9 +80,7 @@ exports[`🧪 <ServiceBox /> test cases: style tests: should render with correct
   <h4>
     Branding
   </h4>
-  <p
-    role="paragraph"
-  >
+  <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.
   </p>
   <a
@@ -93,5 +91,5 @@ exports[`🧪 <ServiceBox /> test cases: style tests: should render with correct
   >
     Read more
   </a>
-</div>
+</article>
 `;

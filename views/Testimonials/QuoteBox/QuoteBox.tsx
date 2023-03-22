@@ -1,6 +1,6 @@
 import type { FunctionalComponent } from '@/types'
 import Image, { type StaticImageData } from 'next/image'
-import { styled } from '@/utils/styles'
+import { styled } from '@/styles'
 
 /** Properties for quote box component */
 export type QuoteProps = {
@@ -12,13 +12,13 @@ export type QuoteProps = {
 
 const QuoteBoxComponent: FunctionalComponent<QuoteProps> = ({ name, photo, ...rest }) => {
   return (
-    <div {...rest}>
+    <article {...rest}>
       <blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.</blockquote>
       <cite>
         <Image src={photo} alt={name} />
         {name}
       </cite>
-    </div>
+    </article>
   )
 }
 

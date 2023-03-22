@@ -1,6 +1,6 @@
 import type { FunctionalComponent } from '@/types'
 import Image, { type StaticImageData } from 'next/image'
-import { styled } from '@/utils/styles'
+import { styled } from '@/styles'
 
 /** Properties for partner logo component */
 export type LogoProps = {
@@ -12,9 +12,9 @@ export type LogoProps = {
 
 const PartnerLogoComponent: FunctionalComponent<LogoProps> = ({ logo, alt, ...rest }) => {
   return (
-    <div {...rest}>
+    <article {...rest}>
       <Image src={logo} alt={alt} />
-    </div>
+    </article>
   )
 }
 

@@ -1,20 +1,20 @@
 import type { FunctionalComponent } from '@/types'
 import Image from 'next/image'
 import { Button } from '@/components'
-import { about } from '@/utils/images'
-import { styled } from '@/utils/styles'
+import { about } from '@/images'
+import { styled } from '@/styles'
 
 const AboutComponent: FunctionalComponent = (props) => {
   return (
     <section {...props}>
       <div className='row'>
         <div className='col span_1_of_2'>
-          <h2>A Digital Agency Focused On Growing your Online presence</h2>
-          <p role='paragraph'>
+          <h2 id='about_heading'>A Digital Agency Focused On Growing your Online presence</h2>
+          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt.
             Architecto fugiat veritatis cum necessitatibus sapiente!
           </p>
-          <p role='paragraph'>
+          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt.
             Architecto fugiat veritatis cum necessitatibus sapiente!
           </p>
@@ -59,5 +59,9 @@ const About = styled(AboutComponent)`
     }
   }
 `
+
+About.defaultProps = {
+  'aria-labelledby': 'about_heading',
+}
 
 export default About

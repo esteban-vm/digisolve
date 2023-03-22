@@ -1,33 +1,38 @@
-import { render, cleanup, screen, create } from '@/utils/tests'
-import Heading from './Heading'
+import { render, cleanup, screen, create } from '@/tests'
+import Heading, { type HeadingProps } from './Heading'
 
-describe('🧪 <Heading /> test cases:', () => {
-  const heading = <Heading heading='Test heading' />
+describe('🧪 HEADING:', () => {
+  const testHeading: HeadingProps = { heading: 'Test heading' }
 
-  describe('there should be:', () => {
+  describe('display tests:', () => {
+    let parent: HTMLElement
+
     beforeEach(() => {
-      render(heading)
+      render(<Heading {...testHeading} />)
+      parent = screen.getByRole('none')
     })
 
     afterEach(cleanup)
 
-    it('a heading text', () => {
-      const headingElement = screen.getByRole('heading', { name: /^test heading$/i })
-      expect(headingElement).toBeInTheDocument()
-      expect(headingElement).toBeVisible()
+    it('should display the heading text', () => {
+      const heading = screen.getByRole('heading', { name: testHeading.heading, level: 2 })
+      expect(heading).toBeInTheDocument()
+      expect(heading).toBeVisible()
+      expect(parent).toContainElement(heading)
     })
 
-    it('a subheading text', () => {
-      const [, subheadingElement] = screen.getAllByRole('heading')
-      expect(subheadingElement).toBeInTheDocument()
-      expect(subheadingElement).toBeVisible()
+    it('should display the subheading text', () => {
+      const subheading = screen.getByRole('heading', { name: /^lorem ipsum/i, level: 3 })
+      expect(subheading).toBeInTheDocument()
+      expect(subheading).toBeVisible()
+      expect(parent).toContainElement(subheading)
     })
   })
 
   describe('style tests:', () => {
     it('should render with correct styles', () => {
-      const headingTree = create(heading).toJSON()
-      expect(headingTree).toMatchSnapshot()
+      const tree = create(<Heading {...testHeading} />)
+      expect(tree).toMatchSnapshot()
     })
   })
 })

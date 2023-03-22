@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`🧪 <About /> test cases: style tests: should render with correct styles 1`] = `
+exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
 .emotion-0 {
   margin-top: 150px;
   padding-bottom: 20px;
@@ -54,6 +54,7 @@ exports[`🧪 <About /> test cases: style tests: should render with correct styl
 }
 
 <section
+  aria-labelledby="about_heading"
   className="emotion-0"
 >
   <div
@@ -62,17 +63,15 @@ exports[`🧪 <About /> test cases: style tests: should render with correct styl
     <div
       className="col span_1_of_2"
     >
-      <h2>
+      <h2
+        id="about_heading"
+      >
         A Digital Agency Focused On Growing your Online presence
       </h2>
-      <p
-        role="paragraph"
-      >
+      <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt. Architecto fugiat veritatis cum necessitatibus sapiente!
       </p>
-      <p
-        role="paragraph"
-      >
+      <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt. Architecto fugiat veritatis cum necessitatibus sapiente!
       </p>
       <a

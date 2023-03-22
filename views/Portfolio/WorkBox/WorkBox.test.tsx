@@ -1,45 +1,49 @@
-import type { ReactTestRendererJSON } from 'react-test-renderer'
-import { render, cleanup, create, screen } from '@/utils/tests'
+import { render, cleanup, screen, create } from '@/tests'
 import { works } from '../Portfolio'
 import WorkBox from './WorkBox'
 
-describe('🧪 <WorkBox /> test cases:', () => {
-  describe('there should be:', () => {
+describe('🧪 WORK BOX:', () => {
+  const [testWork] = works
+
+  describe('display tests:', () => {
+    let parent: HTMLElement
+
     beforeEach(() => {
-      render(<WorkBox {...works[0]} />)
+      render(<WorkBox {...testWork} />)
+      parent = screen.getByRole('figure')
     })
 
     afterEach(cleanup)
 
-    it('an image', () => {
-      const image = screen.getByRole('img')
+    it('should display the image', () => {
+      const image = screen.getByRole('img', { name: testWork.text })
       expect(image).toBeInTheDocument()
       expect(image).toBeVisible()
-      expect(image).toHaveAccessibleName(/^online\sadvertising$/i)
+      expect(parent).toContainElement(image)
     })
 
-    it('a text', () => {
-      const text = screen.getByRole('paragraph')
+    it('should display the text', () => {
+      const text = screen.getByText(testWork.text)
       expect(text).toBeInTheDocument()
       expect(text).toBeVisible()
-      expect(text).toHaveTextContent(/^online\sadvertising$/i)
+      expect(parent).toContainElement(text)
     })
   })
 
   describe('style tests:', () => {
-    let workTree: ReactTestRendererJSON
+    let tree: ReturnType<typeof create>
 
     beforeEach(() => {
-      workTree = create(<WorkBox {...works[0]} />).toJSON() as ReactTestRendererJSON
+      tree = create(<WorkBox {...testWork} />)
     })
 
     it('should render with correct styles', () => {
-      expect(workTree).toMatchSnapshot()
+      expect(tree).toMatchSnapshot()
     })
 
     it('should transform scale and increment opacity when hovered', () => {
-      expect(workTree).toHaveStyleRule('transform', 'scale(1)', { target: 'img:hover' })
-      expect(workTree).toHaveStyleRule('opacity', '1', { target: 'img:hover' })
+      expect(tree).toHaveStyleRule('transform', 'scale(1)', { target: 'img:hover' })
+      expect(tree).toHaveStyleRule('opacity', '1', { target: 'img:hover' })
     })
   })
 })

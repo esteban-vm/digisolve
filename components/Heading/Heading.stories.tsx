@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { styled } from '@/utils/styles'
+import { styled } from '@/styles'
 import Heading from './Heading'
 
 const Wrapper = styled.div`

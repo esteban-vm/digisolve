@@ -25,6 +25,8 @@ export const globalStyles = css`
     --color-overlay2: #000000b3;
     --color-overlay3: #00000080;
     --color-overlay4: #000000cc;
+
+    --color-shadow: #efefefef;
   }
 
   html,
