@@ -20,6 +20,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
 
 .emotion-1 h2 {
   font-size: 250%;
+  text-transform: capitalize;
   color: var(--color-black);
   margin-bottom: 20px;
   margin-top: 150px;
@@ -69,6 +70,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
 
 .emotion-2 p {
   color: var(--color-white);
+  text-transform: capitalize;
 }
 
 <section
@@ -95,7 +97,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
         className="emotion-2"
       >
         <img
-          alt="Online Advertising"
+          alt="Online advertising"
           data-nimg="1"
           decoding="async"
           height={40}
@@ -112,7 +114,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
           width={40}
         />
         <p>
-          Online Advertising
+          Online advertising
         </p>
       </figure>
     </li>
@@ -121,7 +123,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
         className="emotion-2"
       >
         <img
-          alt="Social Media Campaigns"
+          alt="Social media campaigns"
           data-nimg="1"
           decoding="async"
           height={40}
@@ -138,7 +140,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
           width={40}
         />
         <p>
-          Social Media Campaigns
+          Social media campaigns
         </p>
       </figure>
     </li>
@@ -147,7 +149,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
         className="emotion-2"
       >
         <img
-          alt="UX Design"
+          alt="UX design"
           data-nimg="1"
           decoding="async"
           height={40}
@@ -164,7 +166,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
           width={40}
         />
         <p>
-          UX Design
+          UX design
         </p>
       </figure>
     </li>
@@ -173,7 +175,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
         className="emotion-2"
       >
         <img
-          alt="Branding & Digital Marketing"
+          alt="Branding & digital marketing"
           data-nimg="1"
           decoding="async"
           height={40}
@@ -190,7 +192,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
           width={40}
         />
         <p>
-          Branding & Digital Marketing
+          Branding & digital marketing
         </p>
       </figure>
     </li>

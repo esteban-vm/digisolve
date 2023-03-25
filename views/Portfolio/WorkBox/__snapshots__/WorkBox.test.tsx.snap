@@ -28,13 +28,14 @@ exports[`🧪 WORK BOX: style tests: should render with correct styles 1`] = `
 
 .emotion-0 p {
   color: var(--color-white);
+  text-transform: capitalize;
 }
 
 <figure
   className="emotion-0"
 >
   <img
-    alt="Online Advertising"
+    alt="Online advertising"
     data-nimg="1"
     decoding="async"
     height={40}
@@ -51,7 +52,7 @@ exports[`🧪 WORK BOX: style tests: should render with correct styles 1`] = `
     width={40}
   />
   <p>
-    Online Advertising
+    Online advertising
   </p>
 </figure>
 `;

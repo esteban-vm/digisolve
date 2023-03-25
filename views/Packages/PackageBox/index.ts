@@ -1,1 +1,1 @@
-export { default, type PackageProps } from './PackageBox'
+export { default } from './PackageBox'

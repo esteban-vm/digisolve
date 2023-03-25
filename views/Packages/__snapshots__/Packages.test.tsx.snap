@@ -11,6 +11,7 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
   font-size: 250%;
   margin-bottom: 20px;
   margin-top: 150px;
+  text-transform: capitalize;
 }
 
 .emotion-1>div {
@@ -19,51 +20,6 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
   margin-bottom: 30px;
   box-shadow: 0 3px 2px var(--color-shadow);
   text-align: left;
-}
-
-.emotion-1>div h4 {
-  font-size: 150%;
-  color: var(--color-grey);
-  font-weight: 400;
-  margin-bottom: 50px;
-}
-
-.emotion-1>div p:first-of-type {
-  color: var(--color-primary);
-  font-size: 300%;
-  font-weight: 300;
-  margin-bottom: 10px;
-}
-
-.emotion-1>div p:first-of-type span {
-  font-size: 30%;
-  font-weight: 500;
-}
-
-.emotion-1>div p:last-of-type {
-  color: var(--color-grey);
-  font-size: 80%;
-  margin-bottom: 10px;
-}
-
-.emotion-1>div ul {
-  list-style: none;
-}
-
-.emotion-1>div ul li {
-  color: var(--color-grey);
-  padding: 5px 0;
-}
-
-.emotion-1>div svg {
-  width: 1.2rem;
-  height: 1.2rem;
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.emotion-1>div svg path {
-  fill: var(--color-primary);
 }
 
 .emotion-1>div div {
@@ -76,10 +32,57 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
   text-align: center;
 }
 
+.emotion-1 h4 {
+  font-size: 150%;
+  color: var(--color-grey);
+  font-weight: 400;
+  margin-bottom: 50px;
+  text-transform: capitalize;
+}
+
+.emotion-1 p:first-of-type {
+  color: var(--color-primary);
+  font-size: 300%;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.emotion-1 p:first-of-type span {
+  font-size: 30%;
+  font-weight: 500;
+}
+
+.emotion-1 p:last-of-type {
+  color: var(--color-grey);
+  font-size: 80%;
+  margin-bottom: 10px;
+}
+
+.emotion-1 ul {
+  list-style: none;
+}
+
+.emotion-1 ul li {
+  color: var(--color-grey);
+  padding: 5px 0;
+}
+
+.emotion-1 svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.emotion-1 svg path {
+  fill: var(--color-primary);
+}
+
 .emotion-2:link,
 .emotion-2:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
+  text-transform: capitalize;
   padding: 10px 30px;
   border-radius: 200px;
   font-weight: 500;
@@ -107,7 +110,7 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
     <h2
       id="packages_heading"
     >
-      Check out Our Most Popular Packages
+      check out our most popular packages
     </h2>
   </div>
   <div
@@ -119,7 +122,7 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
       <div>
         <div>
           <h4>
-            Starter
+            starter
           </h4>
           <p>
             $699
@@ -221,9 +224,13 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
           <a
             className="emotion-2"
             href="#"
+            isFull={true}
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
             role="button"
           >
-            Sign up now
+            sign up now
           </a>
         </div>
       </div>

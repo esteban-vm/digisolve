@@ -4,17 +4,7 @@ import Button from './Button'
 
 export default {
   args: {
-    children: 'Button Example',
-    href: 'javascript:void(0)',
-  },
-  argTypes: {
-    href: {
-      control: false,
-    },
-    onClick: {
-      action: true,
-      control: false,
-    },
+    children: 'button example',
   },
   component: Button,
   title: 'Components/Button',

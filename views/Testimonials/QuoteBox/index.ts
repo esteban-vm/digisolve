@@ -1,1 +1,1 @@
-export { default, type QuoteProps } from './QuoteBox'
+export { default } from './QuoteBox'

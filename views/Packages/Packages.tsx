@@ -1,21 +1,21 @@
-import type { FunctionalComponent } from '@/types'
+import type { View, PackageComponentProps } from '@/types'
 import { styled } from '@/styles'
-import PackageBox, { type PackageProps } from './PackageBox'
+import PackageBox from './PackageBox'
 
-export const packages: PackageProps[] = [
+export const packages: PackageComponentProps[] = [
   {
-    heading: 'Starter',
+    heading: 'starter',
     price: 699,
     duration: 3,
     benefits: ['SEO, SMO and PPC', '2 Blogs per month', 'Facebook & Twitter Marketing', 'Monthly Performance'],
   },
 ]
 
-const PackagesComponent: FunctionalComponent = (props) => {
+const PackagesComponent: View = (props) => {
   return (
     <section {...props}>
       <div className='row'>
-        <h2 id='packages_heading'>Check out Our Most Popular Packages</h2>
+        <h2 id='packages_heading'>check out our most popular packages</h2>
       </div>
       <div className='row'>
         {packages.map((pack, index) => (
@@ -35,6 +35,7 @@ const Packages = styled(PackagesComponent)`
     font-size: 250%;
     margin-bottom: 20px;
     margin-top: 150px;
+    text-transform: capitalize;
   }
 `
 

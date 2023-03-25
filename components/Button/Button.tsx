@@ -1,15 +1,16 @@
+import type { ButtonComponent as ButtonComponentType } from '@/types'
+import Link from 'next/link'
 import { styled, css } from '@/styles'
 
-/** Properties for button component */
-type ButtonProps = {
-  /** Has styles to be a full button or not */
-  isFull?: boolean
+const ButtonComponent: ButtonComponentType = ({ href = '#', ...rest }) => {
+  return <Link href={href} {...rest} />
 }
 
-const Button = styled.a<ButtonProps>`
+const Button = styled(ButtonComponent)`
   :link,
   :visited {
     text-decoration: none;
+    text-transform: capitalize;
     padding: 10px 30px;
     border-radius: 200px;
     font-weight: 500;
@@ -46,7 +47,9 @@ const Button = styled.a<ButtonProps>`
 Button.defaultProps = {
   isFull: false,
   role: 'button',
-  href: '#',
+  onClick(event) {
+    event.preventDefault()
+  },
 }
 
 export default Button

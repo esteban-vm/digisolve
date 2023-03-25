@@ -1,22 +1,14 @@
-import type { FunctionalComponent } from '@/types'
-import Image, { type StaticImageData } from 'next/image'
+import type { ImageComponent } from '@/types'
+import Image from 'next/image'
 import { styled } from '@/styles'
 
-/** Properties for quote box component */
-export type QuoteProps = {
-  /** The client's name */
-  name: string
-  /** The client's photo */
-  photo: StaticImageData
-}
-
-const QuoteBoxComponent: FunctionalComponent<QuoteProps> = ({ name, photo, ...rest }) => {
+const QuoteBoxComponent: ImageComponent = ({ src, alt, className }) => {
   return (
-    <article {...rest}>
+    <article className={className}>
       <blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.</blockquote>
       <cite>
-        <Image src={photo} alt={name} />
-        {name}
+        <Image src={src} alt={alt} />
+        {alt}
       </cite>
     </article>
   )
@@ -41,12 +33,17 @@ const QuoteBox = styled(QuoteBoxComponent)`
       left: -5px;
       top: -5px;
     }
+
+    ::first-letter {
+      text-transform: capitalize;
+    }
   }
 
   cite {
     display: block;
     margin-top: 25px;
     font-size: 90%;
+    text-transform: capitalize;
 
     img {
       border-radius: 50%;

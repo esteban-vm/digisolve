@@ -8,6 +8,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
 
 .emotion-1 h2 {
   font-size: 250%;
+  text-transform: capitalize;
   color: var(--color-black);
   margin-bottom: 20px;
   margin-top: 150px;
@@ -59,6 +60,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
   font-size: 150%;
   margin-bottom: 30px;
   font-weight: 400;
+  text-transform: capitalize;
 }
 
 .emotion-2 p {
@@ -91,7 +93,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
     role="none"
   >
     <h2>
-      Our Services
+      Our services
     </h2>
     <h3>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ducimus.
@@ -104,7 +106,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
       className="col span_1_of_4 emotion-2"
     >
       <svg
-        aria-labelledby="svg-inline--fa-title-PnHo6FRJ6Wbl"
+        aria-labelledby="svg-inline--fa-title-w4TkFQ7l6VLu"
         className="svg-inline--fa fa-tags "
         data-icon="tags"
         data-prefix="fas"
@@ -114,10 +116,10 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="svg-inline--fa-title-PnHo6FRJ6Wbl"
+          id="svg-inline--fa-title-w4TkFQ7l6VLu"
           style={{}}
         >
-          Branding
+          branding
         </title>
         <path
           d="M345 39.1L472.8 168.4c52.4 53 52.4 138.2 0 191.2L360.8 472.9c-9.3 9.4-24.5 9.5-33.9 .2s-9.5-24.5-.2-33.9L438.6 325.9c33.9-34.3 33.9-89.4 0-123.7L310.9 72.9c-9.3-9.4-9.2-24.6 .2-33.9s24.6-9.2 33.9 .2zM0 229.5V80C0 53.5 21.5 32 48 32H197.5c17 0 33.3 6.7 45.3 18.7l168 168c25 25 25 65.5 0 90.5L277.3 442.7c-25 25-65.5 25-90.5 0l-168-168C6.7 262.7 0 246.5 0 229.5zM144 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"
@@ -126,7 +128,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
         />
       </svg>
       <h4>
-        Branding
+        branding
       </h4>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.
@@ -144,7 +146,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
       className="col span_1_of_4 emotion-2"
     >
       <svg
-        aria-labelledby="svg-inline--fa-title-Ye1ClIsu8cJc"
+        aria-labelledby="svg-inline--fa-title-N59YOaLg0awc"
         className="svg-inline--fa fa-pen-clip "
         data-icon="pen-clip"
         data-prefix="fas"
@@ -154,10 +156,10 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="svg-inline--fa-title-Ye1ClIsu8cJc"
+          id="svg-inline--fa-title-N59YOaLg0awc"
           style={{}}
         >
-          Content
+          content
         </title>
         <path
           d="M453.3 19.3l39.4 39.4c25 25 25 65.5 0 90.5l-52.1 52.1 0 0-1-1 0 0-16-16-96-96-17-17 52.1-52.1c25-25 65.5-25 90.5 0zM241 114.9c-9.4-9.4-24.6-9.4-33.9 0L105 217c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9L173.1 81c28.1-28.1 73.7-28.1 101.8 0L288 94.1l17 17 96 96 16 16 1 1-17 17L229.5 412.5c-48 48-109.2 80.8-175.8 94.1l-25 5c-7.9 1.6-16-.9-21.7-6.6s-8.1-13.8-6.6-21.7l5-25c13.3-66.6 46.1-127.8 94.1-175.8L254.1 128 241 114.9z"
@@ -166,7 +168,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
         />
       </svg>
       <h4>
-        Content
+        content
       </h4>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.
@@ -184,7 +186,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
       className="col span_1_of_4 emotion-2"
     >
       <svg
-        aria-labelledby="svg-inline--fa-title-HBw6DN5xads6"
+        aria-labelledby="svg-inline--fa-title-SRcLFzZh2IvW"
         className="svg-inline--fa fa-filter-circle-dollar "
         data-icon="filter-circle-dollar"
         data-prefix="fas"
@@ -194,10 +196,10 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="svg-inline--fa-title-HBw6DN5xads6"
+          id="svg-inline--fa-title-SRcLFzZh2IvW"
           style={{}}
         >
-          Marketing
+          marketing
         </title>
         <path
           d="M3.9 22.9C10.5 8.9 24.5 0 40 0H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L396.4 195.6C316.2 212.1 256 283 256 368c0 27.4 6.3 53.4 17.5 76.5c-1.6-.8-3.2-1.8-4.7-2.9l-64-48c-8.1-6-12.8-15.5-12.8-25.6V288.9L9 65.3C-.7 53.4-2.8 36.8 3.9 22.9zM576 368c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM408.8 335.4c.6-.9 1.8-2.1 4.2-3.4c5.1-2.7 12.5-4.1 18.7-4c8.2 .1 17.1 1.8 26.4 4.1c8.6 2.1 17.3-3.1 19.4-11.7s-3.1-17.3-11.7-19.4c-5.6-1.4-11.6-2.7-17.9-3.7V288c0-8.8-7.2-16-16-16s-16 7.2-16 16v9.5c-6.1 1.2-12.3 3.2-18 6.3c-11.8 6.3-23 18.4-21.8 37.2c1 16 11.7 25.3 21.6 30.7c8.8 4.7 19.7 7.8 28.6 10.3l1.8 .5c10.3 2.9 17.9 5.2 23.2 8.3c4.5 2.7 4.7 4.2 4.7 5.6c.1 2.4-.5 3.7-1 4.5c-.6 1-1.8 2.2-4 3.3c-4.7 2.5-11.8 3.8-18.5 3.6c-9.5-.3-18.5-3.1-29.9-6.8c-1.9-.6-3.8-1.2-5.8-1.8c-8.4-2.6-17.4 2.1-20 10.5s2.1 17.4 10.5 20c1.6 .5 3.3 1 5 1.6l0 0 0 0c7 2.3 15.1 4.8 23.7 6.6v11.4c0 8.8 7.2 16 16 16s16-7.2 16-16V438.7c6.2-1.1 12.5-3.1 18.3-6.2c12.1-6.5 22.3-18.7 21.7-36.9c-.5-16.2-10.3-26.3-20.5-32.3c-9.4-5.6-21.2-8.9-30.5-11.5l-.2 0c-10.4-2.9-18.3-5.2-23.9-8.2c-4.8-2.6-4.8-4-4.8-4.5l0-.1c-.1-1.9 .3-2.9 .8-3.6z"
@@ -206,7 +208,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
         />
       </svg>
       <h4>
-        Marketing
+        marketing
       </h4>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.
@@ -224,7 +226,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
       className="col span_1_of_4 emotion-2"
     >
       <svg
-        aria-labelledby="svg-inline--fa-title-lTecBrr9kggX"
+        aria-labelledby="svg-inline--fa-title-MJNJjqaDeD9k"
         className="svg-inline--fa fa-laptop-code "
         data-icon="laptop-code"
         data-prefix="fas"
@@ -234,10 +236,10 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="svg-inline--fa-title-lTecBrr9kggX"
+          id="svg-inline--fa-title-MJNJjqaDeD9k"
           style={{}}
         >
-          Web Design
+          web design
         </title>
         <path
           d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"
@@ -246,7 +248,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
         />
       </svg>
       <h4>
-        Web Design
+        web design
       </h4>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.

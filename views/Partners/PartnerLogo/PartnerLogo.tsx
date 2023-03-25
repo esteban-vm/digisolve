@@ -1,19 +1,11 @@
-import type { FunctionalComponent } from '@/types'
-import Image, { type StaticImageData } from 'next/image'
+import type { ImageComponent } from '@/types'
+import Image from 'next/image'
 import { styled } from '@/styles'
 
-/** Properties for partner logo component */
-export type LogoProps = {
-  /** The logo itself */
-  logo: StaticImageData
-  /** The accessible text */
-  alt: string
-}
-
-const PartnerLogoComponent: FunctionalComponent<LogoProps> = ({ logo, alt, ...rest }) => {
+const PartnerLogoComponent: ImageComponent = ({ src, alt, ...rest }) => {
   return (
     <article {...rest}>
-      <Image src={logo} alt={alt} />
+      <Image src={src} alt={alt} />
     </article>
   )
 }

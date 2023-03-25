@@ -1,22 +1,13 @@
-import type { FunctionalComponent } from '@/types'
-import type { IconDefinition } from '@fortawesome/free-solid-svg-icons'
+import type { IconComponent } from '@/types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import { styled } from '@/styles'
 
-/** Properties for service box component */
-export type ServiceProps = {
-  /** The heading (title) */
-  heading: string
-  /** The icon */
-  icon: IconDefinition
-}
-
-const ServiceBoxComponent: FunctionalComponent<ServiceProps> = ({ heading, icon, ...rest }) => {
+const ServiceBoxComponent: IconComponent = ({ icon, title, ...rest }) => {
   return (
     <article {...rest}>
-      <FontAwesomeIcon icon={icon} title={heading} />
-      <h4>{heading}</h4>
+      <FontAwesomeIcon icon={icon} title={title} />
+      <h4>{title}</h4>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.
       </p>
@@ -53,6 +44,7 @@ const ServiceBox = styled(ServiceBoxComponent)`
     font-size: 150%;
     margin-bottom: 30px;
     font-weight: 400;
+    text-transform: capitalize;
   }
 
   p {

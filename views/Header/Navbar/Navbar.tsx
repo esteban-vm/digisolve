@@ -1,10 +1,10 @@
-import type { FunctionalComponent } from '@/types'
+import type { NavbarComponent as NavbarComponentType } from '@/types'
 import Image from 'next/image'
 import Link from 'next/link'
 import { logo } from '@/images'
 import { styled } from '@/styles'
 
-const NavbarComponent: FunctionalComponent = (props) => {
+const NavbarComponent: NavbarComponentType = (props) => {
   return (
     <nav {...props}>
       <Image src={logo} alt='Digisolve logo' />

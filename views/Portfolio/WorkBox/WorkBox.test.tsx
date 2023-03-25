@@ -16,14 +16,14 @@ describe('🧪 WORK BOX:', () => {
     afterEach(cleanup)
 
     it('should display the image', () => {
-      const image = screen.getByRole('img', { name: testWork.text })
+      const image = screen.getByRole('img', { name: testWork.alt })
       expect(image).toBeInTheDocument()
       expect(image).toBeVisible()
       expect(parent).toContainElement(image)
     })
 
     it('should display the text', () => {
-      const text = screen.getByText(testWork.text)
+      const text = screen.getByText(testWork.alt)
       expect(text).toBeInTheDocument()
       expect(text).toBeVisible()
       expect(parent).toContainElement(text)

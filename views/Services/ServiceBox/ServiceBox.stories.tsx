@@ -21,14 +21,6 @@ export default {
     icon: {
       control: false,
     },
-    onClick: {
-      action: true,
-      control: false,
-    },
-    onMouseEnter: {
-      action: true,
-      control: false,
-    },
   },
   component: ServiceBox,
   title: 'Views/Services/Services',

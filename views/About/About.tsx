@@ -1,15 +1,15 @@
-import type { FunctionalComponent } from '@/types'
+import type { View } from '@/types'
 import Image from 'next/image'
 import { Button } from '@/components'
 import { about } from '@/images'
 import { styled } from '@/styles'
 
-const AboutComponent: FunctionalComponent = (props) => {
+const AboutComponent: View = (props) => {
   return (
     <section {...props}>
       <div className='row'>
         <div className='col span_1_of_2'>
-          <h2 id='about_heading'>A Digital Agency Focused On Growing your Online presence</h2>
+          <h2 id='about_heading'>A digital agency focused on growing your online presence</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt.
             Architecto fugiat veritatis cum necessitatibus sapiente!
@@ -18,7 +18,7 @@ const AboutComponent: FunctionalComponent = (props) => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt.
             Architecto fugiat veritatis cum necessitatibus sapiente!
           </p>
-          <Button href='#'>Read More</Button>
+          <Button href='#'>Read more</Button>
         </div>
         <div className='col span_1_of_2'>
           <Image src={about} alt='Digisolve app on Laptop' />
@@ -34,6 +34,7 @@ const About = styled(AboutComponent)`
 
   h2 {
     color: var(--color-black);
+    text-transform: capitalize;
     font-size: 250%;
     font-weight: 500;
     margin-bottom: 50px;

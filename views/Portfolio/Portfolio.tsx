@@ -1,17 +1,17 @@
-import type { FunctionalComponent } from '@/types'
+import type { View, ImageComponentProps } from '@/types'
 import { Heading } from '@/components'
 import { advertising, campaigns, design, marketing } from '@/images'
 import { styled } from '@/styles'
-import WorkBox, { type WorkProps } from './WorkBox'
+import WorkBox from './WorkBox'
 
-export const works: WorkProps[] = [
-  { image: advertising, text: 'Online Advertising' },
-  { image: campaigns, text: 'Social Media Campaigns' },
-  { image: design, text: 'UX Design' },
-  { image: marketing, text: 'Branding & Digital Marketing' },
+export const works: ImageComponentProps[] = [
+  { src: advertising, alt: 'Online advertising' },
+  { src: campaigns, alt: 'Social media campaigns' },
+  { src: design, alt: 'UX design' },
+  { src: marketing, alt: 'Branding & digital marketing' },
 ]
 
-const PortfolioComponent: FunctionalComponent = (props) => {
+const PortfolioComponent: View = (props) => {
   return (
     <section {...props}>
       <Heading heading='Our Work' id='portfolio_heading' />

@@ -3,6 +3,7 @@
 exports[`🧪 HEADING: style tests: should render with correct styles 1`] = `
 .emotion-0 h2 {
   font-size: 250%;
+  text-transform: capitalize;
   color: var(--color-black);
   margin-bottom: 20px;
   margin-top: 150px;

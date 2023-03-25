@@ -1,12 +1,15 @@
-import type { FunctionalComponent } from '@/types'
+import type { View, ImageComponentProps } from '@/types'
 import { Heading } from '@/components'
 import { brandLogos } from '@/images'
 import { styled } from '@/styles'
-import PartnerLogo, { type LogoProps } from './PartnerLogo'
+import PartnerLogo from './PartnerLogo'
 
-export const logos = brandLogos.map((logo, index) => ({ logo, alt: `Brand Logo ${index + 1}` } as LogoProps))
+export const logos = brandLogos.map((logo, index) => ({
+  src: logo,
+  alt: `Brand Logo ${index + 1}`,
+})) as ImageComponentProps[]
 
-const PartnersComponent: FunctionalComponent = (props) => {
+const PartnersComponent: View = (props) => {
   return (
     <section {...props}>
       <Heading

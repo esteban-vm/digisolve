@@ -1,18 +1,18 @@
-import type { FunctionalComponent } from '@/types'
+import type { View } from '@/types'
 import { Button } from '@/components'
 import { styled } from '@/styles'
 import Navbar from './Navbar'
 
-const HeaderComponent: FunctionalComponent = (props) => {
+const HeaderComponent: View = (props) => {
   return (
     <header {...props}>
       <Navbar />
       <div>
         <div>
-          <h1>Digital Agency</h1>
+          <h1>Digital agency</h1>
           <h2>The one stop for all your digital solutions</h2>
         </div>
-        <Button isFull>Get a Quote Today!</Button>
+        <Button isFull>Get a quote today!</Button>
       </div>
     </header>
   )
@@ -25,6 +25,7 @@ const Header = styled(HeaderComponent)`
   height: 100vh;
   position: relative;
   color: var(--color-white);
+  text-transform: capitalize;
 
   h1 {
     font-size: 500%;

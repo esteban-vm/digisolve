@@ -14,6 +14,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
   font-size: 250%;
   margin-bottom: 20px;
   margin-top: 150px;
+  text-transform: capitalize;
 }
 
 .emotion-1 {
@@ -38,10 +39,15 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
   top: -5px;
 }
 
+.emotion-1 blockquote::first-letter {
+  text-transform: capitalize;
+}
+
 .emotion-1 cite {
   display: block;
   margin-top: 25px;
   font-size: 90%;
+  text-transform: capitalize;
 }
 
 .emotion-1 cite img {
@@ -61,7 +67,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
     <h2
       id="testimonials_heading"
     >
-      Our Testimonials
+      Our testimonials
     </h2>
   </div>
   <div

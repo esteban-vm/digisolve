@@ -1,1 +1,1 @@
-export { default, type WorkProps } from './WorkBox'
+export { default } from './WorkBox'

@@ -10,15 +10,7 @@ const Wrapper = styled.div`
 
 export default {
   argTypes: {
-    image: {
-      control: false,
-    },
-    onClick: {
-      action: true,
-      control: false,
-    },
-    onMouseEnter: {
-      action: true,
+    src: {
       control: false,
     },
   },

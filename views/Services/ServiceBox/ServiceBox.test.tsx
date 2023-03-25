@@ -16,14 +16,14 @@ describe('🧪 SERVICE BOX:', () => {
     afterEach(cleanup)
 
     it('should display the icon', () => {
-      const icon = screen.getByRole('img', { name: testService.heading })
+      const icon = screen.getByRole('img', { name: testService.title })
       expect(icon).toBeInTheDocument()
       expect(icon).toBeVisible()
       expect(parent).toContainElement(icon)
     })
 
     it('should display the heading', () => {
-      const heading = screen.getByRole('heading', { name: testService.heading, level: 4 })
+      const heading = screen.getByRole('heading', { name: testService.title, level: 4 })
       expect(heading).toBeInTheDocument()
       expect(heading).toBeVisible()
       expect(parent).toContainElement(heading)

@@ -16,14 +16,14 @@ describe('🧪 QUOTE BOX:', () => {
     afterEach(cleanup)
 
     it('should display the photo', () => {
-      const photo = screen.getByRole('img', { name: testQuote.name })
+      const photo = screen.getByRole('img', { name: testQuote.alt })
       expect(photo).toBeInTheDocument()
       expect(photo).toBeVisible()
       expect(parent).toContainElement(photo)
     })
 
     it('should display the name', () => {
-      const name = screen.getByText(testQuote.name)
+      const name = screen.getByText(testQuote.alt)
       expect(name).toBeInTheDocument()
       expect(name).toBeVisible()
       expect(parent).toContainElement(name)

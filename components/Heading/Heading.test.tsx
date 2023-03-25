@@ -1,8 +1,9 @@
+import type { HeadingComponentProps } from '@/types'
 import { render, cleanup, screen, create } from '@/tests'
-import Heading, { type HeadingProps } from './Heading'
+import Heading from './Heading'
 
 describe('🧪 HEADING:', () => {
-  const testHeading: HeadingProps = { heading: 'Test heading' }
+  const testHeading: HeadingComponentProps = { heading: 'Test heading' }
 
   describe('display tests:', () => {
     let parent: HTMLElement

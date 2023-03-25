@@ -5,6 +5,7 @@ exports[`🧪 BUTTON: style tests: with basic button: should render with correct
 .emotion-0:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
+  text-transform: capitalize;
   padding: 10px 30px;
   border-radius: 200px;
   font-weight: 500;
@@ -26,6 +27,10 @@ exports[`🧪 BUTTON: style tests: with basic button: should render with correct
 <a
   className="emotion-0"
   href="#"
+  isFull={false}
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onTouchStart={[Function]}
   role="button"
 />
 `;
@@ -35,6 +40,7 @@ exports[`🧪 BUTTON: style tests: with full button: should render with correct 
 .emotion-0:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
+  text-transform: capitalize;
   padding: 10px 30px;
   border-radius: 200px;
   font-weight: 500;
@@ -55,6 +61,10 @@ exports[`🧪 BUTTON: style tests: with full button: should render with correct 
 <a
   className="emotion-0"
   href="#"
+  isFull={true}
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onTouchStart={[Function]}
   role="button"
 />
 `;

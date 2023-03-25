@@ -1,20 +1,12 @@
-import type { FunctionalComponent } from '@/types'
-import Image, { type StaticImageData } from 'next/image'
+import type { ImageComponent } from '@/types'
+import Image from 'next/image'
 import { styled } from '@/styles'
 
-/** Properties for work box component */
-export type WorkProps = {
-  /** The image */
-  image: StaticImageData
-  /** The text */
-  text: string
-}
-
-const WorkBoxComponent: FunctionalComponent<WorkProps> = ({ image, text, ...rest }) => {
+const WorkBoxComponent: ImageComponent = ({ src, alt, ...rest }) => {
   return (
     <figure {...rest}>
-      <Image src={image} alt={text} />
-      <p>{text}</p>
+      <Image src={src} alt={alt} />
+      <p>{alt}</p>
     </figure>
   )
 }
@@ -38,6 +30,7 @@ const WorkBox = styled(WorkBoxComponent)`
 
   p {
     color: var(--color-white);
+    text-transform: capitalize;
   }
 `
 

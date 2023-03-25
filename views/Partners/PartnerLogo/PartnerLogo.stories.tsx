@@ -18,14 +18,10 @@ const Wrapper = styled.div`
 
 export default {
   argTypes: {
-    logo: {
+    src: {
       control: false,
     },
     alt: {
-      control: false,
-    },
-    onMouseEnter: {
-      action: true,
       control: false,
     },
   },

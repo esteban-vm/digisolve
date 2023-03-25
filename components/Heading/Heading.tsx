@@ -1,15 +1,7 @@
-import type { FunctionalComponent } from '@/types'
+import type { HeadingComponent as HeadingComponentType } from '@/types'
 import { styled } from '@/styles'
 
-/** Properties for heading component */
-export type HeadingProps = {
-  /** The heading text */
-  heading: string
-  /** The subheading text */
-  subheading?: string
-}
-
-const HeadingComponent: FunctionalComponent<HeadingProps> = ({ heading, subheading, ...rest }) => {
+const HeadingComponent: HeadingComponentType = ({ heading, subheading, ...rest }) => {
   return (
     <div {...rest}>
       <h2>{heading}</h2>
@@ -21,6 +13,7 @@ const HeadingComponent: FunctionalComponent<HeadingProps> = ({ heading, subheadi
 const Heading = styled(HeadingComponent)`
   h2 {
     font-size: 250%;
+    text-transform: capitalize;
     color: var(--color-black);
     margin-bottom: 20px;
     margin-top: 150px;
@@ -46,8 +39,8 @@ const Heading = styled(HeadingComponent)`
 
 Heading.defaultProps = {
   className: 'row',
-  subheading: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ducimus.',
   role: 'none',
+  subheading: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ducimus.',
 }
 
 export default Heading

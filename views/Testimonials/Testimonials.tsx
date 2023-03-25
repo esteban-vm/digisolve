@@ -1,19 +1,19 @@
-import type { FunctionalComponent } from '@/types'
+import type { View, ImageComponentProps } from '@/types'
 import { client1, client2, client3 } from '@/images'
 import { styled } from '@/styles'
-import QuoteBox, { type QuoteProps } from './QuoteBox'
+import QuoteBox from './QuoteBox'
 
-export const quotes: QuoteProps[] = [
-  { name: 'Aaron Cruz', photo: client1 },
-  { name: 'Jeff Jones', photo: client2 },
-  { name: 'Helen Smith', photo: client3 },
+export const quotes: ImageComponentProps[] = [
+  { src: client1, alt: 'Aaron Cruz' },
+  { src: client2, alt: 'Jeff Jones' },
+  { src: client3, alt: 'Helen Smith' },
 ]
 
-const TestimonialsComponent: FunctionalComponent = (props) => {
+const TestimonialsComponent: View = (props) => {
   return (
     <section {...props}>
       <div className='row'>
-        <h2 id='testimonials_heading'>Our Testimonials</h2>
+        <h2 id='testimonials_heading'>Our testimonials</h2>
       </div>
       <div className='row'>
         {quotes.map((quote, index) => (
@@ -35,6 +35,7 @@ const Testimonials = styled(TestimonialsComponent)`
     font-size: 250%;
     margin-bottom: 20px;
     margin-top: 150px;
+    text-transform: capitalize;
   }
 `
 
