@@ -32,6 +32,8 @@ export default {
   },
 } as Meta<typeof PackageBox>
 
-const [package1] = packages
+const [package1, package2, package3] = packages
 
 export const PackageExample1: StoryObj<typeof PackageBox> = { args: package1 }
+export const PackageExample2: StoryObj<typeof PackageBox> = { args: package2 }
+export const PackageExample3: StoryObj<typeof PackageBox> = { args: package3 }

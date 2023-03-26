@@ -57,7 +57,7 @@ exports[`🧪 SERVICE BOX: style tests: should render with correct styles 1`] = 
   className="col span_1_of_4 emotion-0"
 >
   <svg
-    aria-labelledby="svg-inline--fa-title-qyYIhKceOg84"
+    aria-labelledby="svg-inline--fa-title-mYpQRIMUfpoP"
     className="svg-inline--fa fa-tags "
     data-icon="tags"
     data-prefix="fas"
@@ -67,7 +67,7 @@ exports[`🧪 SERVICE BOX: style tests: should render with correct styles 1`] = 
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="svg-inline--fa-title-qyYIhKceOg84"
+      id="svg-inline--fa-title-mYpQRIMUfpoP"
       style={{}}
     >
       branding

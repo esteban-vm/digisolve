@@ -12,8 +12,8 @@ exports[`🧪 BUTTON: style tests: with basic button: should render with correct
   outline: none;
   -webkit-transition: background-color 500ms;
   transition: background-color 500ms;
-  border: 2px solid var(--color-primary);
   color: var(--color-primary);
+  border: 2px solid var(--color-primary);
 }
 
 .emotion-0:link:hover,

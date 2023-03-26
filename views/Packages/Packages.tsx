@@ -7,7 +7,37 @@ export const packages: PackageComponentProps[] = [
     heading: 'starter',
     price: 699,
     duration: 3,
-    benefits: ['SEO, SMO and PPC', '2 Blogs per month', 'Facebook & Twitter Marketing', 'Monthly Performance'],
+    benefits: [
+      'SEO, SMO and PPC',
+      '2 Blogs per month',
+      'Facebook & Twitter Marketing',
+      'Monthly Performance',
+      'Traffic Report',
+    ],
+  },
+  {
+    heading: 'corporate',
+    price: 2999,
+    duration: 6,
+    benefits: [
+      'SEO, SMO and PPC',
+      '4 Blogs per month',
+      'All Social Media Channels',
+      'Monthly Performance',
+      'Traffic Report',
+    ],
+  },
+  {
+    heading: 'enterprice',
+    price: 4999,
+    duration: 6,
+    benefits: [
+      'Personalized Marketing',
+      '8 Blogs per month',
+      'All Social Media Channels',
+      'Monthly Performance',
+      'Traffic Report',
+    ],
   },
 ]
 

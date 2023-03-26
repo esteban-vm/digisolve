@@ -43,8 +43,8 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   outline: none;
   -webkit-transition: background-color 500ms;
   transition: background-color 500ms;
-  border: 2px solid var(--color-primary);
   color: var(--color-primary);
+  border: 2px solid var(--color-primary);
 }
 
 .emotion-1:link:hover,

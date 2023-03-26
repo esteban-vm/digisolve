@@ -27,6 +27,10 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
   border-bottom: 1px solid var(--color-shadow);
 }
 
+.emotion-1>div div:first-of-type {
+  background-color: #fcfcfc;
+}
+
 .emotion-1>div div:last-of-type {
   border: 0;
   text-align: center;
@@ -217,6 +221,304 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
                 />
               </svg>
               Monthly Performance
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check "
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              Traffic Report
+            </li>
+          </ul>
+        </div>
+        <div>
+          <a
+            className="emotion-2"
+            href="#"
+            isFull={true}
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+          >
+            sign up now
+          </a>
+        </div>
+      </div>
+    </article>
+    <article
+      className="col span_1_of_3 emotion-1"
+    >
+      <div>
+        <div>
+          <h4>
+            corporate
+          </h4>
+          <p>
+            $2,999
+             
+            <span>
+              6
+               months
+            </span>
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sit nemo natus ad vero molestias?
+          </p>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check "
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              SEO, SMO and PPC
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check "
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              4 Blogs per month
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check "
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              All Social Media Channels
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check "
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              Monthly Performance
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check "
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              Traffic Report
+            </li>
+          </ul>
+        </div>
+        <div>
+          <a
+            className="emotion-2"
+            href="#"
+            isFull={true}
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+          >
+            sign up now
+          </a>
+        </div>
+      </div>
+    </article>
+    <article
+      className="col span_1_of_3 emotion-1"
+    >
+      <div>
+        <div>
+          <h4>
+            enterprice
+          </h4>
+          <p>
+            $4,999
+             
+            <span>
+              6
+               months
+            </span>
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sit nemo natus ad vero molestias?
+          </p>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check "
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              Personalized Marketing
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check "
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              8 Blogs per month
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check "
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              All Social Media Channels
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check "
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              Monthly Performance
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check "
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              Traffic Report
             </li>
           </ul>
         </div>

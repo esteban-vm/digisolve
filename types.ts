@@ -18,7 +18,7 @@ export type PackageComponentProps = {
   heading: string
   price: number
   duration: number
-  benefits: [string, string, string, string]
+  benefits: [string, string, string, string, string]
 } & WithClassName
 export type PackageComponent = FC<PackageComponentProps>
 

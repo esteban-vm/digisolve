@@ -1,6 +1,6 @@
 import type { ButtonComponent as ButtonComponentType } from '@/types'
 import Link from 'next/link'
-import { styled, css } from '@/styles'
+import { styled } from '@/styles'
 
 const ButtonComponent: ButtonComponentType = ({ href = '#', ...rest }) => {
   return <Link href={href} {...rest} />
@@ -17,30 +17,15 @@ const Button = styled(ButtonComponent)`
     outline: none;
     transition: background-color 500ms;
 
-    ${({ isFull }) => {
-      if (isFull) {
-        return css`
-          background-color: var(--color-primary);
-          color: var(--color-white);
+    background-color: ${({ isFull }) => isFull && 'var(--color-primary)'};
+    color: ${({ isFull }) => (isFull ? 'var(--color-white)' : 'var(--color-primary)')};
+    border: ${({ isFull }) => !isFull && '2px solid var(--color-primary)'};
 
-          :hover,
-          :active {
-            background-color: var(--color-dark-primary);
-          }
-        `
-      } else {
-        return css`
-          border: 2px solid var(--color-primary);
-          color: var(--color-primary);
-
-          :hover,
-          :active {
-            background-color: var(--color-primary);
-            color: var(--color-white);
-          }
-        `
-      }
-    }};
+    :hover,
+    :active {
+      background-color: ${({ isFull }) => (isFull ? 'var(--color-dark-primary)' : 'var(--color-primary)')};
+      color: ${({ isFull }) => !isFull && 'var(--color-white)'};
+    }
   }
 `
 

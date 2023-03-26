@@ -48,6 +48,10 @@ const PackageBox = styled(PackageBoxComponent)`
       padding: 15px;
       border-bottom: 1px solid var(--color-shadow);
 
+      :first-of-type {
+        background-color: #fcfcfc;
+      }
+
       :last-of-type {
         border: 0;
         text-align: center;
