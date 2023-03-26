@@ -2,29 +2,39 @@ import type { ButtonComponent as ButtonComponentType } from '@/types'
 import Link from 'next/link'
 import { styled } from '@/styles'
 
-const ButtonComponent: ButtonComponentType = ({ href = '#', ...rest }) => {
-  return <Link href={href} {...rest} />
+const ButtonComponent: ButtonComponentType = ({ href = '#', className, role, children }) => {
+  return (
+    <span className={className}>
+      <Link href={href} role={role}>
+        {children}
+      </Link>
+    </span>
+  )
 }
 
 const Button = styled(ButtonComponent)`
-  :link,
-  :visited {
-    text-decoration: none;
-    text-transform: capitalize;
-    padding: 10px 30px;
-    border-radius: 200px;
-    font-weight: 500;
-    outline: none;
-    transition: background-color 500ms;
+  display: inline-block;
 
-    background-color: ${({ isFull }) => isFull && 'var(--color-primary)'};
-    color: ${({ isFull }) => (isFull ? 'var(--color-white)' : 'var(--color-primary)')};
-    border: ${({ isFull }) => !isFull && '2px solid var(--color-primary)'};
+  a {
+    :link,
+    :visited {
+      text-decoration: none;
+      text-transform: capitalize;
+      padding: 10px 30px;
+      border-radius: 200px;
+      font-weight: 500;
+      outline: none;
+      transition: background-color 500ms;
+      border: 2px solid var(--color-primary);
 
-    :hover,
-    :active {
-      background-color: ${({ isFull }) => (isFull ? 'var(--color-dark-primary)' : 'var(--color-primary)')};
-      color: ${({ isFull }) => !isFull && 'var(--color-white)'};
+      background-color: ${({ isFull }) => isFull && 'var(--color-primary)'};
+      color: ${({ isFull }) => (isFull ? 'var(--color-white)' : 'var(--color-primary)')};
+
+      :hover,
+      :active {
+        background-color: ${({ isFull }) => (isFull ? 'var(--color-dark-primary)' : 'var(--color-primary)')};
+        color: ${({ isFull }) => !isFull && 'var(--color-white)'};
+      }
     }
   }
 `
@@ -32,9 +42,6 @@ const Button = styled(ButtonComponent)`
 Button.defaultProps = {
   isFull: false,
   role: 'button',
-  onClick(event) {
-    event.preventDefault()
-  },
 }
 
 export default Button

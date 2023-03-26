@@ -1,8 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`🧪 BUTTON: style tests: with basic button: should render with correct styles 1`] = `
-.emotion-0:link,
-.emotion-0:visited {
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 a:link,
+.emotion-0 a:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -12,32 +16,38 @@ exports[`🧪 BUTTON: style tests: with basic button: should render with correct
   outline: none;
   -webkit-transition: background-color 500ms;
   transition: background-color 500ms;
-  color: var(--color-primary);
   border: 2px solid var(--color-primary);
+  color: var(--color-primary);
 }
 
-.emotion-0:link:hover,
-.emotion-0:visited:hover,
-.emotion-0:link:active,
-.emotion-0:visited:active {
+.emotion-0 a:link:hover,
+.emotion-0 a:visited:hover,
+.emotion-0 a:link:active,
+.emotion-0 a:visited:active {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
 
-<a
+<span
   className="emotion-0"
-  href="#"
-  isFull={false}
-  onClick={[Function]}
-  onMouseEnter={[Function]}
-  onTouchStart={[Function]}
-  role="button"
-/>
+>
+  <a
+    href="#"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onTouchStart={[Function]}
+    role="button"
+  />
+</span>
 `;
 
 exports[`🧪 BUTTON: style tests: with full button: should render with correct styles 1`] = `
-.emotion-0:link,
-.emotion-0:visited {
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 a:link,
+.emotion-0 a:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -47,24 +57,27 @@ exports[`🧪 BUTTON: style tests: with full button: should render with correct 
   outline: none;
   -webkit-transition: background-color 500ms;
   transition: background-color 500ms;
+  border: 2px solid var(--color-primary);
   background-color: var(--color-primary);
   color: var(--color-white);
 }
 
-.emotion-0:link:hover,
-.emotion-0:visited:hover,
-.emotion-0:link:active,
-.emotion-0:visited:active {
+.emotion-0 a:link:hover,
+.emotion-0 a:visited:hover,
+.emotion-0 a:link:active,
+.emotion-0 a:visited:active {
   background-color: var(--color-dark-primary);
 }
 
-<a
+<span
   className="emotion-0"
-  href="#"
-  isFull={true}
-  onClick={[Function]}
-  onMouseEnter={[Function]}
-  onTouchStart={[Function]}
-  role="button"
-/>
+>
+  <a
+    href="#"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onTouchStart={[Function]}
+    role="button"
+  />
+</span>
 `;

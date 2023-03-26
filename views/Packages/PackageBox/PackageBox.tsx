@@ -55,6 +55,10 @@ const PackageBox = styled(PackageBoxComponent)`
       :last-of-type {
         border: 0;
         text-align: center;
+
+        span {
+          margin: 15px 0;
+        }
       }
     }
   }

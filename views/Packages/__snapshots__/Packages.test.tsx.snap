@@ -36,6 +36,10 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
   text-align: center;
 }
 
+.emotion-1>div div:last-of-type span {
+  margin: 15px 0;
+}
+
 .emotion-1 h4 {
   font-size: 150%;
   color: var(--color-grey);
@@ -82,8 +86,12 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
   fill: var(--color-primary);
 }
 
-.emotion-2:link,
-.emotion-2:visited {
+.emotion-2 {
+  display: inline-block;
+}
+
+.emotion-2 a:link,
+.emotion-2 a:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -93,14 +101,15 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
   outline: none;
   -webkit-transition: background-color 500ms;
   transition: background-color 500ms;
+  border: 2px solid var(--color-primary);
   background-color: var(--color-primary);
   color: var(--color-white);
 }
 
-.emotion-2:link:hover,
-.emotion-2:visited:hover,
-.emotion-2:link:active,
-.emotion-2:visited:active {
+.emotion-2 a:link:hover,
+.emotion-2 a:visited:hover,
+.emotion-2 a:link:active,
+.emotion-2 a:visited:active {
   background-color: var(--color-dark-primary);
 }
 
@@ -245,17 +254,19 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
           </ul>
         </div>
         <div>
-          <a
+          <span
             className="emotion-2"
-            href="#"
-            isFull={true}
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-            onTouchStart={[Function]}
-            role="button"
           >
-            sign up now
-          </a>
+            <a
+              href="#"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+            >
+              sign up now
+            </a>
+          </span>
         </div>
       </div>
     </article>
@@ -384,17 +395,19 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
           </ul>
         </div>
         <div>
-          <a
+          <span
             className="emotion-2"
-            href="#"
-            isFull={true}
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-            onTouchStart={[Function]}
-            role="button"
           >
-            sign up now
-          </a>
+            <a
+              href="#"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+            >
+              sign up now
+            </a>
+          </span>
         </div>
       </div>
     </article>
@@ -523,17 +536,19 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
           </ul>
         </div>
         <div>
-          <a
+          <span
             className="emotion-2"
-            href="#"
-            isFull={true}
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-            onTouchStart={[Function]}
-            role="button"
           >
-            sign up now
-          </a>
+            <a
+              href="#"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+            >
+              sign up now
+            </a>
+          </span>
         </div>
       </div>
     </article>

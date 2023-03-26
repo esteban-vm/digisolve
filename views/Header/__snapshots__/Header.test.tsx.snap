@@ -72,8 +72,12 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
   border-bottom: 2px solid var(--color-primary);
 }
 
-.emotion-2:link,
-.emotion-2:visited {
+.emotion-2 {
+  display: inline-block;
+}
+
+.emotion-2 a:link,
+.emotion-2 a:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -83,14 +87,15 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
   outline: none;
   -webkit-transition: background-color 500ms;
   transition: background-color 500ms;
+  border: 2px solid var(--color-primary);
   background-color: var(--color-primary);
   color: var(--color-white);
 }
 
-.emotion-2:link:hover,
-.emotion-2:visited:hover,
-.emotion-2:link:active,
-.emotion-2:visited:active {
+.emotion-2 a:link:hover,
+.emotion-2 a:visited:hover,
+.emotion-2 a:link:active,
+.emotion-2 a:visited:active {
   background-color: var(--color-dark-primary);
 }
 
@@ -159,17 +164,19 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
         The one stop for all your digital solutions
       </h2>
     </div>
-    <a
+    <span
       className="emotion-2"
-      href="#"
-      isFull={true}
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-      onTouchStart={[Function]}
-      role="button"
     >
-      Get a quote today!
-    </a>
+      <a
+        href="#"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+      >
+        Get a quote today!
+      </a>
+    </span>
   </div>
 </header>
 `;

@@ -24,7 +24,7 @@ export type PackageComponent = FC<PackageComponentProps>
 
 export type ButtonComponentProps = {
   isFull?: boolean
-} & Pick<AnchorHTMLAttributes<HTMLAnchorElement>, 'href' | 'role' | 'onClick' | 'onMouseEnter' | 'children'>
+} & Pick<AnchorHTMLAttributes<HTMLAnchorElement>, 'className' | 'href' | 'role' | 'children'>
 export type ButtonComponent = FC<ButtonComponentProps>
 
 export type HeadingComponentProps = {

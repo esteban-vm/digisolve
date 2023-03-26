@@ -1,25 +1,7 @@
-import { render, cleanup, screen, create, userEvent } from '@/tests'
+import { create } from '@/tests'
 import Button from './Button'
 
 describe('🧪 BUTTON:', () => {
-  describe('event tests:', () => {
-    const handleEvent = jest.fn()
-
-    afterEach(cleanup)
-
-    it('should click correctly', async () => {
-      render(<Button onClick={handleEvent}>Test</Button>)
-      await userEvent.click(screen.getByRole('button'))
-      expect(handleEvent).toHaveBeenCalled()
-    })
-
-    it('should hover correctly', async () => {
-      render(<Button onMouseEnter={handleEvent}>Test</Button>)
-      await userEvent.hover(screen.getByRole('button'))
-      expect(handleEvent).toHaveBeenCalled()
-    })
-  })
-
   describe('style tests:', () => {
     let tree: ReturnType<typeof create>
 

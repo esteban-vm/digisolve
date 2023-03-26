@@ -32,8 +32,12 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   text-align: right;
 }
 
-.emotion-1:link,
-.emotion-1:visited {
+.emotion-1 {
+  display: inline-block;
+}
+
+.emotion-1 a:link,
+.emotion-1 a:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -43,14 +47,14 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   outline: none;
   -webkit-transition: background-color 500ms;
   transition: background-color 500ms;
-  color: var(--color-primary);
   border: 2px solid var(--color-primary);
+  color: var(--color-primary);
 }
 
-.emotion-1:link:hover,
-.emotion-1:visited:hover,
-.emotion-1:link:active,
-.emotion-1:visited:active {
+.emotion-1 a:link:hover,
+.emotion-1 a:visited:hover,
+.emotion-1 a:link:active,
+.emotion-1 a:visited:active {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
@@ -76,17 +80,19 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt. Architecto fugiat veritatis cum necessitatibus sapiente!
       </p>
-      <a
+      <span
         className="emotion-1"
-        href="#"
-        isFull={false}
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
-        role="button"
       >
-        Read more
-      </a>
+        <a
+          href="#"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          role="button"
+        >
+          Read more
+        </a>
+      </span>
     </div>
     <div
       className="col span_1_of_2"
