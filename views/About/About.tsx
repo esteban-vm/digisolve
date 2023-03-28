@@ -18,7 +18,7 @@ const AboutComponent: View = (props) => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt.
             Architecto fugiat veritatis cum necessitatibus sapiente!
           </p>
-          <Button href='#'>Read more</Button>
+          <Button text='Read more' href='#' />
         </div>
         <div className='col span_1_of_2'>
           <Image src={about} alt='Digisolve app on Laptop' />

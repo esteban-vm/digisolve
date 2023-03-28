@@ -76,8 +76,9 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
   display: inline-block;
 }
 
-.emotion-2 a:link,
-.emotion-2 a:visited {
+.emotion-2 a,
+.emotion-2 input[type='submit'] {
+  cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -92,10 +93,10 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
   color: var(--color-white);
 }
 
-.emotion-2 a:link:hover,
-.emotion-2 a:visited:hover,
-.emotion-2 a:link:active,
-.emotion-2 a:visited:active {
+.emotion-2 a:hover,
+.emotion-2 input[type='submit']:hover,
+.emotion-2 a:active,
+.emotion-2 input[type='submit']:active {
   background-color: var(--color-dark-primary);
 }
 

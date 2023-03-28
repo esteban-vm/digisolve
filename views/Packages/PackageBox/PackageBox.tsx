@@ -29,7 +29,7 @@ const PackageBoxComponent: PackageComponent = ({ heading, price, duration, benef
           </ul>
         </div>
         <div>
-          <Button isFull>sign up now</Button>
+          <Button text='Sign up now' isFull />
         </div>
       </div>
     </article>
@@ -49,7 +49,7 @@ const PackageBox = styled(PackageBoxComponent)`
       border-bottom: 1px solid var(--color-shadow);
 
       :first-of-type {
-        background-color: #fcfcfc;
+        background-color: var(--color-lighter);
       }
 
       :last-of-type {

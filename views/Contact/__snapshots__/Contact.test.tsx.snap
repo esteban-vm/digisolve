@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
+.emotion-0 {
+  text-align: center;
+}
+
+.emotion-0 h2 {
+  color: var(--color-black);
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+.emotion-1 {
+  text-align: left;
+  width: 60%;
+  margin: 0 auto;
+  color: var(--color-grey);
+}
+
+.emotion-1 input[type='text'],
+.emotion-1 input[type='email'],
+.emotion-1 textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background-color: var(--color-white);
+}
+
+.emotion-1 textarea {
+  height: 100px;
+  resize: none;
+}
+
+.emotion-1 input[type='checkbox'] {
+  margin: 10px 5px 10px 0;
+}
+
+.emotion-1 label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2 {
+  display: inline-block;
+}
+
+.emotion-2 a,
+.emotion-2 input[type='submit'] {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 10px 30px;
+  border-radius: 200px;
+  font-weight: 500;
+  outline: none;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.emotion-2 a:hover,
+.emotion-2 input[type='submit']:hover,
+.emotion-2 a:active,
+.emotion-2 input[type='submit']:active {
+  background-color: var(--color-dark-primary);
+}
+
+<section
+  aria-labelledby="contact_heading"
+  className="emotion-0"
+>
+  <div
+    className="row"
+  >
+    <h2
+      id="contact_heading"
+    >
+      We are happy to hear from you
+    </h2>
+  </div>
+  <div
+    className="row"
+  >
+    <form
+      className="emotion-1"
+      data-testid="form"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col span_1_of_3"
+        >
+          <label
+            htmlFor="name"
+          >
+            Name
+          </label>
+        </div>
+        <div
+          className="col span_2_of_3"
+        >
+          <input
+            id="name"
+            name="name"
+            placeholder="Your name"
+            required={true}
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col span_1_of_3"
+        >
+          <label
+            htmlFor="email"
+          >
+            Email
+          </label>
+        </div>
+        <div
+          className="col span_2_of_3"
+        >
+          <input
+            id="email"
+            name="email"
+            placeholder="Your email"
+            required={true}
+            type="email"
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col span_1_of_3"
+        >
+          <label
+            htmlFor="newsletter"
+          >
+            Newsletter?
+          </label>
+        </div>
+        <div
+          className="col span_2_of_3"
+        >
+          <input
+            defaultChecked={true}
+            id="newsletter"
+            name="newsletter"
+            type="checkbox"
+          />
+          Yes, please
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col span_1_of_3"
+        >
+          <label
+            htmlFor="message"
+          >
+            Drop us a line
+          </label>
+        </div>
+        <div
+          className="col span_2_of_3"
+        >
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your message"
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col span_1_of_3"
+        />
+        <div
+          className="col span_2_of_3"
+        >
+          <span
+            className="emotion-2"
+          >
+            <input
+              type="submit"
+              value="Send it!"
+            />
+          </span>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+`;

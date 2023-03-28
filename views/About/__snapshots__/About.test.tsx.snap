@@ -36,8 +36,9 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   display: inline-block;
 }
 
-.emotion-1 a:link,
-.emotion-1 a:visited {
+.emotion-1 a,
+.emotion-1 input[type='submit'] {
+  cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -48,13 +49,14 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   -webkit-transition: background-color 500ms;
   transition: background-color 500ms;
   border: 2px solid var(--color-primary);
+  background-color: transparent;
   color: var(--color-primary);
 }
 
-.emotion-1 a:link:hover,
-.emotion-1 a:visited:hover,
-.emotion-1 a:link:active,
-.emotion-1 a:visited:active {
+.emotion-1 a:hover,
+.emotion-1 input[type='submit']:hover,
+.emotion-1 a:active,
+.emotion-1 input[type='submit']:active {
   background-color: var(--color-primary);
   color: var(--color-white);
 }

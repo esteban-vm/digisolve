@@ -20,6 +20,7 @@ export const globalStyles = css`
     --color-black: #000;
 
     --color-light: #f4f4f4;
+    --color-lighter: #fcfcfc;
 
     --color-overlay1: #0000004d;
     --color-overlay2: #000000b3;

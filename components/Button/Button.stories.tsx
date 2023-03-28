@@ -4,7 +4,7 @@ import Button from './Button'
 
 export default {
   args: {
-    children: 'button example',
+    text: 'button example',
   },
   component: Button,
   title: 'Components/Button',
@@ -26,6 +26,13 @@ export const BasicButton: StoryObj<typeof Button> = {
 
 export const FullButton: StoryObj<typeof Button> = {
   args: {
+    isFull: true,
+  },
+}
+
+export const SubmitButton: StoryObj<typeof Button> = {
+  args: {
+    isSubmit: true,
     isFull: true,
   },
 }

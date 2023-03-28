@@ -12,7 +12,7 @@ const HeaderComponent: View = (props) => {
           <h1>Digital agency</h1>
           <h2>The one stop for all your digital solutions</h2>
         </div>
-        <Button isFull>Get a quote today!</Button>
+        <Button text='Get a quote today!' isFull />
       </div>
     </header>
   )

@@ -1,10 +1,10 @@
-import type { NavbarComponent as NavbarComponentType } from '@/types'
+import type { BasicComponent } from '@/types'
 import Image from 'next/image'
 import Link from 'next/link'
 import { logo } from '@/images'
 import { styled } from '@/styles'
 
-const NavbarComponent: NavbarComponentType = (props) => {
+const NavbarComponent: BasicComponent = (props) => {
   return (
     <nav {...props}>
       <Image src={logo} alt='Digisolve logo' />

@@ -7,7 +7,7 @@ describe('🧪 BUTTON:', () => {
 
     describe('with basic button:', () => {
       beforeEach(() => {
-        tree = create(<Button />)
+        tree = create(<Button text='test' />)
       })
 
       it('should render with correct styles', () => {
@@ -22,7 +22,7 @@ describe('🧪 BUTTON:', () => {
 
     describe('with full button:', () => {
       beforeEach(() => {
-        tree = create(<Button isFull />)
+        tree = create(<Button text='test' isFull />)
       })
 
       it('should render with correct styles', () => {
@@ -31,6 +31,16 @@ describe('🧪 BUTTON:', () => {
 
       it('should have correct background color', () => {
         expect(tree).toHaveStyleRule('background-color', 'var(--color-dark-primary)', { target: ':active' })
+      })
+    })
+
+    describe('with submit button', () => {
+      beforeEach(() => {
+        tree = create(<Button text='test' isSubmit />)
+      })
+
+      it('should render with correct styles', () => {
+        expect(tree).toMatchSnapshot()
       })
     })
   })

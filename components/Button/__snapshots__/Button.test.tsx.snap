@@ -5,8 +5,9 @@ exports[`🧪 BUTTON: style tests: with basic button: should render with correct
   display: inline-block;
 }
 
-.emotion-0 a:link,
-.emotion-0 a:visited {
+.emotion-0 a,
+.emotion-0 input[type='submit'] {
+  cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -17,13 +18,14 @@ exports[`🧪 BUTTON: style tests: with basic button: should render with correct
   -webkit-transition: background-color 500ms;
   transition: background-color 500ms;
   border: 2px solid var(--color-primary);
+  background-color: transparent;
   color: var(--color-primary);
 }
 
-.emotion-0 a:link:hover,
-.emotion-0 a:visited:hover,
-.emotion-0 a:link:active,
-.emotion-0 a:visited:active {
+.emotion-0 a:hover,
+.emotion-0 input[type='submit']:hover,
+.emotion-0 a:active,
+.emotion-0 input[type='submit']:active {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
@@ -37,7 +39,9 @@ exports[`🧪 BUTTON: style tests: with basic button: should render with correct
     onMouseEnter={[Function]}
     onTouchStart={[Function]}
     role="button"
-  />
+  >
+    test
+  </a>
 </span>
 `;
 
@@ -46,8 +50,9 @@ exports[`🧪 BUTTON: style tests: with full button: should render with correct 
   display: inline-block;
 }
 
-.emotion-0 a:link,
-.emotion-0 a:visited {
+.emotion-0 a,
+.emotion-0 input[type='submit'] {
+  cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -62,10 +67,10 @@ exports[`🧪 BUTTON: style tests: with full button: should render with correct 
   color: var(--color-white);
 }
 
-.emotion-0 a:link:hover,
-.emotion-0 a:visited:hover,
-.emotion-0 a:link:active,
-.emotion-0 a:visited:active {
+.emotion-0 a:hover,
+.emotion-0 input[type='submit']:hover,
+.emotion-0 a:active,
+.emotion-0 input[type='submit']:active {
   background-color: var(--color-dark-primary);
 }
 
@@ -78,6 +83,48 @@ exports[`🧪 BUTTON: style tests: with full button: should render with correct 
     onMouseEnter={[Function]}
     onTouchStart={[Function]}
     role="button"
+  >
+    test
+  </a>
+</span>
+`;
+
+exports[`🧪 BUTTON: style tests: with submit button should render with correct styles 1`] = `
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 a,
+.emotion-0 input[type='submit'] {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 10px 30px;
+  border-radius: 200px;
+  font-weight: 500;
+  outline: none;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+  border: 2px solid var(--color-primary);
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.emotion-0 a:hover,
+.emotion-0 input[type='submit']:hover,
+.emotion-0 a:active,
+.emotion-0 input[type='submit']:active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+<span
+  className="emotion-0"
+>
+  <input
+    type="submit"
+    value="test"
   />
 </span>
 `;
