@@ -1,4 +1,4 @@
-import type { View, ImageComponentProps } from '@/types'
+import type { ViewComponent, ImageComponentProps } from '@/types'
 import { client1, client2, client3 } from '@/images'
 import { styled } from '@/styles'
 import QuoteBox from './QuoteBox'
@@ -9,7 +9,7 @@ export const quotes: ImageComponentProps[] = [
   { src: client3, alt: 'Helen Smith' },
 ]
 
-const TestimonialsComponent: View = (props) => {
+const TestimonialsComponent: ViewComponent = (props) => {
   return (
     <section {...props}>
       <div className='row'>

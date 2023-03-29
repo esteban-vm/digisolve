@@ -1,8 +1,8 @@
-import type { View } from '@/types'
+import type { ViewComponent } from '@/types'
 import { styled } from '@/styles'
 import ContactForm from './ContactForm'
 
-const ContactComponent: View = (props) => {
+const ContactComponent: ViewComponent = (props) => {
   return (
     <section {...props}>
       <div className='row'>

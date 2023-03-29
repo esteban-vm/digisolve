@@ -1,4 +1,4 @@
-import type { View, ImageComponentProps } from '@/types'
+import type { ViewComponent, ImageComponentProps } from '@/types'
 import { Heading } from '@/components'
 import { brandLogos } from '@/images'
 import { styled } from '@/styles'
@@ -9,7 +9,7 @@ export const logos = brandLogos.map((logo, index) => ({
   alt: `Brand Logo ${index + 1}`,
 })) as ImageComponentProps[]
 
-const PartnersComponent: View = (props) => {
+const PartnersComponent: ViewComponent = (props) => {
   return (
     <section {...props}>
       <Heading

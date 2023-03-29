@@ -2,7 +2,7 @@ import type { FC, HTMLAttributes, AnchorHTMLAttributes } from 'react'
 import type { ImageProps } from 'next/image'
 import type { FontAwesomeIconProps } from '@fortawesome/react-fontawesome'
 
-export type View = FC<Pick<HTMLAttributes<HTMLElement>, 'id' | 'aria-labelledby' | 'className'>>
+export type ViewComponent = FC<Pick<HTMLAttributes<HTMLElement>, 'id' | 'aria-labelledby' | 'className'>>
 
 export type ImageComponentProps = Pick<ImageProps, 'src' | 'alt' | 'className'>
 export type ImageComponent = FC<ImageComponentProps>

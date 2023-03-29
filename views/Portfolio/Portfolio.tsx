@@ -1,4 +1,4 @@
-import type { View, ImageComponentProps } from '@/types'
+import type { ViewComponent, ImageComponentProps } from '@/types'
 import { Heading } from '@/components'
 import { advertising, campaigns, design, marketing } from '@/images'
 import { styled } from '@/styles'
@@ -11,7 +11,7 @@ export const works: ImageComponentProps[] = [
   { src: marketing, alt: 'Branding & digital marketing' },
 ]
 
-const PortfolioComponent: View = (props) => {
+const PortfolioComponent: ViewComponent = (props) => {
   return (
     <section {...props}>
       <Heading heading='Our Work' id='portfolio_heading' />

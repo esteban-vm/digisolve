@@ -1,4 +1,4 @@
-import type { View, IconComponentProps } from '@/types'
+import type { ViewComponent, IconComponentProps } from '@/types'
 import { faTags, faPenAlt, faFunnelDollar, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
 import { Heading } from '@/components'
 import { styled } from '@/styles'
@@ -11,7 +11,7 @@ export const services: IconComponentProps[] = [
   { title: 'web design', icon: faLaptopCode },
 ]
 
-const ServicesComponent: View = (props) => {
+const ServicesComponent: ViewComponent = (props) => {
   return (
     <section {...props}>
       <Heading heading='Our services' id='services_heading' />

@@ -1,10 +1,10 @@
-import type { View } from '@/types'
+import type { ViewComponent } from '@/types'
 import Image from 'next/image'
 import { Button } from '@/components'
 import { about } from '@/images'
 import { styled } from '@/styles'
 
-const AboutComponent: View = (props) => {
+const AboutComponent: ViewComponent = (props) => {
   return (
     <section {...props}>
       <div className='row'>

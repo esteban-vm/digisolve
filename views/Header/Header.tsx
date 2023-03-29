@@ -1,9 +1,9 @@
-import type { View } from '@/types'
+import type { ViewComponent } from '@/types'
 import { Button } from '@/components'
 import { styled } from '@/styles'
 import Navbar from './Navbar'
 
-const HeaderComponent: View = (props) => {
+const HeaderComponent: ViewComponent = (props) => {
   return (
     <header {...props}>
       <Navbar />

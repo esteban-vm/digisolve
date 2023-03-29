@@ -1,4 +1,4 @@
-import type { View, PackageComponentProps } from '@/types'
+import type { ViewComponent, PackageComponentProps } from '@/types'
 import { styled } from '@/styles'
 import PackageBox from './PackageBox'
 
@@ -41,7 +41,7 @@ export const packages: PackageComponentProps[] = [
   },
 ]
 
-const PackagesComponent: View = (props) => {
+const PackagesComponent: ViewComponent = (props) => {
   return (
     <section {...props}>
       <div className='row'>
