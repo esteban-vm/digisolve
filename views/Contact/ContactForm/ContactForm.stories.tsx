@@ -29,7 +29,7 @@ export default {
     const textField = canvas.getByPlaceholderText(/^your name$/i)
     const emailField = canvas.getByPlaceholderText(/^your email$/i)
     const messageArea = canvas.getByPlaceholderText(/^your message$/i)
-    userEvent.type(textField, 'Test name')
+    userEvent.type(textField, 'John Doe')
     userEvent.type(emailField, 'test@example.com')
     userEvent.type(messageArea, 'Test message')
   },

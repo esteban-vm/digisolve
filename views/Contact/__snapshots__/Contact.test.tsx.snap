@@ -28,6 +28,58 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
   background-color: var(--color-white);
 }
 
+.emotion-1 input[type='text']::-webkit-input-placeholder {
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
+.emotion-1 input[type='text']::-moz-placeholder {
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
+.emotion-1 input[type='text']:-ms-input-placeholder {
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
+.emotion-1 input[type='email']::-webkit-input-placeholder {
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
+.emotion-1 input[type='email']::-moz-placeholder {
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
+.emotion-1 input[type='email']:-ms-input-placeholder {
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
+.emotion-1 textarea::-webkit-input-placeholder {
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
+.emotion-1 textarea::-moz-placeholder {
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
+.emotion-1 textarea:-ms-input-placeholder {
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
+.emotion-1 input[type='text']::placeholder,
+.emotion-1 input[type='email']::placeholder,
+.emotion-1 textarea::placeholder {
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
 .emotion-1 textarea {
   height: 100px;
   resize: none;
@@ -91,6 +143,8 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
     <form
       className="emotion-1"
       data-testid="form"
+      noValidate={true}
+      onSubmit={[Function]}
     >
       <div
         className="row"
@@ -110,8 +164,9 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
           <input
             id="name"
             name="name"
-            placeholder="Your name"
-            required={true}
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="your name"
             type="text"
           />
         </div>
@@ -134,8 +189,9 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
           <input
             id="email"
             name="email"
-            placeholder="Your email"
-            required={true}
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="your email"
             type="email"
           />
         </div>
@@ -159,9 +215,11 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
             defaultChecked={true}
             id="newsletter"
             name="newsletter"
+            onBlur={[Function]}
+            onChange={[Function]}
             type="checkbox"
           />
-          Yes, please
+          Yes, Please
         </div>
       </div>
       <div
@@ -182,7 +240,9 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
           <textarea
             id="message"
             name="message"
-            placeholder="Your message"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="your message"
           />
         </div>
       </div>
@@ -205,6 +265,21 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
           </span>
         </div>
       </div>
+      <div
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          {
+            "bottom": 16,
+            "left": 16,
+            "pointerEvents": "none",
+            "position": "fixed",
+            "right": 16,
+            "top": 16,
+            "zIndex": 9999,
+          }
+        }
+      />
     </form>
   </div>
 </section>

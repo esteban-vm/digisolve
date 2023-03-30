@@ -1,4 +1,4 @@
-import { render, cleanup, screen, create } from '@/tests'
+import { render, cleanup, screen, create, userEvent } from '@/tests'
 import ContactForm from './ContactForm'
 
 describe('🧪 CONTACT FORM:', () => {
@@ -13,17 +13,17 @@ describe('🧪 CONTACT FORM:', () => {
     afterEach(cleanup)
 
     it('should display a text field for name', () => {
-      const field = screen.getByPlaceholderText(/^your name$/i)
-      expect(field).toBeInTheDocument()
-      expect(field).toBeVisible()
-      expect(parent).toContainElement(field)
+      const nameField = screen.getByPlaceholderText(/^your name$/i)
+      expect(nameField).toBeInTheDocument()
+      expect(nameField).toBeVisible()
+      expect(parent).toContainElement(nameField)
     })
 
     it('should display an email field', () => {
-      const field = screen.getByPlaceholderText(/^your email$/i)
-      expect(field).toBeInTheDocument()
-      expect(field).toBeVisible()
-      expect(parent).toContainElement(field)
+      const emailField = screen.getByPlaceholderText(/^your email$/i)
+      expect(emailField).toBeInTheDocument()
+      expect(emailField).toBeVisible()
+      expect(parent).toContainElement(emailField)
     })
 
     it('should display a checkbox for newsletter', () => {
@@ -34,10 +34,40 @@ describe('🧪 CONTACT FORM:', () => {
     })
 
     it('should display a text area for message', () => {
-      const textArea = screen.getByPlaceholderText(/^your message$/i)
-      expect(textArea).toBeInTheDocument()
-      expect(textArea).toBeVisible()
-      expect(parent).toContainElement(textArea)
+      const messageField = screen.getByPlaceholderText(/^your message$/i)
+      expect(messageField).toBeInTheDocument()
+      expect(messageField).toBeVisible()
+      expect(parent).toContainElement(messageField)
+    })
+  })
+
+  describe('submit tests:', () => {
+    beforeEach(() => {
+      render(<ContactForm />)
+    })
+
+    afterEach(cleanup)
+
+    it('should fail with all fields empty', async () => {
+      const submitButton = screen.getByRole('button', { name: /^send it\!$/i })
+      await userEvent.click(submitButton)
+      const notification = screen.queryByRole('alert')
+      const nameField = screen.getByPlaceholderText(/^your name$/i)
+      expect(notification).not.toBeInTheDocument()
+      expect(nameField).toHaveFocus()
+    })
+
+    it('should succeed with all fields full', async () => {
+      const nameField = screen.getByPlaceholderText(/^your name$/i)
+      const emailField = screen.getByPlaceholderText(/^your email$/i)
+      const messageField = screen.getByPlaceholderText(/^your message$/i)
+      const submitButton = screen.getByRole('button', { name: /^send it\!$/i })
+      await userEvent.type(nameField, 'John Doe')
+      await userEvent.type(emailField, 'test@example.com')
+      await userEvent.type(messageField, 'test message')
+      await userEvent.click(submitButton)
+      const notification = await screen.findByRole('alert')
+      expect(notification).toBeInTheDocument()
     })
   })
 
