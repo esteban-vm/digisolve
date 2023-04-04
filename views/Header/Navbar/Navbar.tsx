@@ -4,20 +4,18 @@ import Link from 'next/link'
 import { logo } from '@/images'
 import { styled } from '@/styles'
 
+export const navLinks = ['Home', 'Contact', 'About']
+
 const NavbarComponent: BasicComponent = (props) => {
   return (
     <nav {...props}>
       <Image src={logo} alt='Digisolve logo' />
       <ul>
-        <li>
-          <Link href='#'>Home</Link>
-        </li>
-        <li>
-          <Link href='#'>Contact</Link>
-        </li>
-        <li>
-          <Link href='#'>About</Link>
-        </li>
+        {navLinks.map((link, index) => (
+          <li key={index}>
+            <Link href='#'>{link}</Link>
+          </li>
+        ))}
       </ul>
     </nav>
   )

@@ -96,6 +96,16 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
   user-select: none;
 }
 
+.emotion-1 .toast {
+  text-align: center;
+  color: var(--color-primary);
+  background-color: var(--color-light);
+}
+
+.emotion-1 .toast svg path {
+  fill: var(--color-secondary);
+}
+
 .emotion-2 {
   display: inline-block;
 }
@@ -167,6 +177,7 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
             onBlur={[Function]}
             onChange={[Function]}
             placeholder="your name"
+            spellCheck={false}
             type="text"
           />
         </div>

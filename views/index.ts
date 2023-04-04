@@ -1,5 +1,6 @@
 export * from './About'
 export * from './Contact'
+export * from './Footer'
 export * from './Header'
 export * from './Packages'
 export * from './Partners'

@@ -4,14 +4,15 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import toast, { Toaster } from 'react-hot-toast'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelopeCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import { Button } from '@/components'
 import { styled } from '@/styles'
 
 const validationSchema = yup.object().shape({
   name: yup.string().trim().required(),
   email: yup.string().trim().email().required(),
-  message: yup.string().trim(),
+  newsletter: yup.boolean().default(true),
+  message: yup.string().trim().required(),
 })
 
 type FormFields = {
@@ -24,13 +25,21 @@ type FormFields = {
 const ContactFormComponent: BasicComponent = (props) => {
   const { register, handleSubmit, reset } = useForm<FormFields>({ resolver: yupResolver(validationSchema) })
 
-  const onSubmit: SubmitHandler<FormFields> = (data) => {
-    toast(JSON.stringify(data, null, 2), {
-      icon: <FontAwesomeIcon size='2x' icon={faCheckCircle} />,
+  const onSubmit: SubmitHandler<FormFields> = ({ name, email, newsletter, message }) => {
+    const data = `Name: ${name}
+      Email: ${email}
+      Newsletter?: ${newsletter ? 'yes' : 'no'}
+      Message: ${message}
+    `
+
+    toast(data, {
+      icon: <FontAwesomeIcon size='2x' icon={faEnvelopeCircleCheck} />,
       duration: 5_000,
       position: 'top-center',
       ariaProps: { role: 'alert', 'aria-live': 'off' },
+      className: 'toast',
     })
+
     reset()
   }
 
@@ -41,7 +50,7 @@ const ContactFormComponent: BasicComponent = (props) => {
           <label htmlFor='name'>Name</label>
         </div>
         <div className='col span_2_of_3'>
-          <input type='text' id='name' placeholder='your name' {...register('name')} />
+          <input type='text' id='name' placeholder='your name' spellCheck={false} {...register('name')} />
         </div>
       </div>
 
@@ -117,6 +126,18 @@ const ContactForm = styled(ContactFormComponent)`
 
   label {
     user-select: none;
+  }
+
+  .toast {
+    text-align: center;
+    color: var(--color-primary);
+    background-color: var(--color-light);
+
+    svg {
+      path {
+        fill: var(--color-secondary);
+      }
+    }
   }
 `
 

@@ -1,5 +1,5 @@
 import { render, cleanup, screen, create } from '@/tests'
-import Navbar from './Navbar'
+import Navbar, { navLinks } from './Navbar'
 
 describe('🧪 NAVBAR:', () => {
   describe('display tests:', () => {
@@ -20,12 +20,14 @@ describe('🧪 NAVBAR:', () => {
     })
 
     it('should display the links', () => {
-      const links = screen.getAllByRole('link', { name: /^(home|contact|about)$/i })
-      expect(links).toHaveLength(3)
+      const links = screen.getAllByRole('link')
+      expect(links).toHaveLength(navLinks.length)
 
-      for (const link of links) {
+      for (let index = 0; index < links.length; index++) {
+        const link = links[index]
         expect(link).toBeInTheDocument()
         expect(link).toBeVisible()
+        expect(link).toHaveTextContent(navLinks[index])
         expect(parent).toContainElement(link)
       }
     })

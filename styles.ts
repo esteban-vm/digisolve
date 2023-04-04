@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 
 export const globalStyles = css`
-  @import url('/css/fluid.css');
+  @import url('/css/fluid.min.css');
   @import url('/css/normalize.min.css');
 
   @font-face {
@@ -22,12 +22,21 @@ export const globalStyles = css`
     --color-light: #f4f4f4;
     --color-lighter: #fcfcfc;
 
+    --color-dark: #888;
+    --color-darker: #333;
+
     --color-overlay1: #0000004d;
     --color-overlay2: #000000b3;
     --color-overlay3: #00000080;
     --color-overlay4: #000000cc;
 
     --color-shadow: #efefefef;
+
+    --color-facebook: #3b5998;
+    --color-twitter: #00aced;
+    --color-google-plus: #dd4b39;
+    --color-youtube: #f00;
+    --color-instagram: #517fa4;
   }
 
   html,
@@ -54,6 +63,10 @@ export const globalStyles = css`
       clear: both;
       visibility: hidden;
     }
+  }
+
+  *:focus {
+    outline: none;
   }
 `
 
