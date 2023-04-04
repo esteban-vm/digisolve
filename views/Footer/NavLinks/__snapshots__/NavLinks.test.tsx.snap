@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`🧪 NAV LINKS style tests: should render with correct styles 1`] = `
+.emotion-0 {
+  float: left;
+}
+
+.emotion-0 li {
+  margin-right: 20px;
+}
+
+.emotion-0 li a:hover {
+  opacity: 0.8;
+}
+
+<ul
+  className="emotion-0"
+>
+  <li>
+    <a
+      href="#"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+      target="_blank"
+    >
+      About us
+    </a>
+  </li>
+  <li>
+    <a
+      href="#"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+      target="_blank"
+    >
+      Blog
+    </a>
+  </li>
+  <li>
+    <a
+      href="#"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+      target="_blank"
+    >
+      Help & Support
+    </a>
+  </li>
+  <li>
+    <a
+      href="#"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+      target="_blank"
+    >
+      iOS App
+    </a>
+  </li>
+  <li>
+    <a
+      href="#"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+      target="_blank"
+    >
+      Android App
+    </a>
+  </li>
+</ul>
+`;

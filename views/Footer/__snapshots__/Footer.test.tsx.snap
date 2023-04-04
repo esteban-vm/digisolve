@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`🧪 FOOTER style tests should render with correct styles 1`] = `
+exports[`🧪 FOOTER style tests: should render with correct styles 1`] = `
 .emotion-0 {
   background-color: var(--color-darker);
   padding: 50px;
@@ -37,43 +37,43 @@ exports[`🧪 FOOTER style tests should render with correct styles 1`] = `
   text-decoration: none;
 }
 
-.emotion-0 .nav_links {
+.emotion-1 {
   float: left;
 }
 
-.emotion-0 .nav_links li {
+.emotion-1 li {
   margin-right: 20px;
 }
 
-.emotion-0 .nav_links li a:hover {
+.emotion-1 li a:hover {
   opacity: 0.8;
 }
 
-.emotion-0 .social_links {
+.emotion-2 {
   float: right;
 }
 
-.emotion-0 .social_links li {
+.emotion-2 li {
   margin-left: 20px;
 }
 
-.emotion-0 .social_links li:hover:first-of-type a {
+.emotion-2 li:hover:first-of-type a {
   color: var(--color-facebook);
 }
 
-.emotion-0 .social_links li:hover:nth-of-type(2) a {
+.emotion-2 li:hover:nth-of-type(2) a {
   color: var(--color-twitter);
 }
 
-.emotion-0 .social_links li:hover:nth-of-type(3) a {
+.emotion-2 li:hover:nth-of-type(3) a {
   color: var(--color-google-plus);
 }
 
-.emotion-0 .social_links li:hover:nth-of-type(4) a {
+.emotion-2 li:hover:nth-of-type(4) a {
   color: var(--color-instagram);
 }
 
-.emotion-0 .social_links li:hover:last-of-type a {
+.emotion-2 li:hover:last-of-type a {
   color: var(--color-youtube);
 }
 
@@ -87,7 +87,7 @@ exports[`🧪 FOOTER style tests should render with correct styles 1`] = `
       className="col span_1_of_2"
     >
       <ul
-        className="nav_links"
+        className="emotion-1"
       >
         <li>
           <a
@@ -150,7 +150,7 @@ exports[`🧪 FOOTER style tests should render with correct styles 1`] = `
       className="col span_1_of_2"
     >
       <ul
-        className="social_links"
+        className="emotion-2"
       >
         <li>
           <a

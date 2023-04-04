@@ -1,8 +1,10 @@
 import { render, cleanup, screen, create } from '@/tests'
-import Footer, { navLinks, socialLinks } from './Footer'
+import { navLinks } from './NavLinks'
+import { socialLinks } from './SocialLinks'
+import Footer from './Footer'
 
 describe('🧪 FOOTER', () => {
-  describe('display tests', () => {
+  describe('display tests:', () => {
     it('should display all the links', () => {
       render(<Footer />)
       const parent = screen.getByRole('contentinfo')
@@ -22,7 +24,7 @@ describe('🧪 FOOTER', () => {
     })
   })
 
-  describe('style tests', () => {
+  describe('style tests:', () => {
     it('should render with correct styles', () => {
       const tree = create(<Footer />)
       expect(tree).toMatchSnapshot()
