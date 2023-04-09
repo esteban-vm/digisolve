@@ -6,49 +6,24 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
   background: var(--color-light);
 }
 
-.emotion-0 ul {
+.emotion-0 .portfolio__work--list {
   margin-top: 10px;
   list-style: none;
   width: 100%;
 }
 
-.emotion-0 ul li {
+.emotion-0 .portfolio__work--item {
   display: block;
   width: 25%;
   float: left;
 }
 
-.emotion-1 h2 {
-  font-size: 250%;
-  text-transform: capitalize;
-  color: var(--color-black);
-  margin-bottom: 20px;
-  margin-top: 150px;
-}
-
-.emotion-1 h3 {
-  font-size: 150%;
-  color: var(--color-grey);
-  font-weight: 300;
-  margin-bottom: 30px;
-  line-height: 1.5;
-}
-
-.emotion-1 h3::after {
-  content: ' ';
-  display: block;
-  height: 2px;
-  width: 100px;
-  background-color: var(--color-primary);
-  margin: 30px auto 0;
-}
-
-.emotion-2 {
+.emotion-1 {
   background-color: var(--color-black);
   overflow: hidden;
 }
 
-.emotion-2 img {
+.emotion-1 .work__image {
   width: 100%;
   height: auto;
   opacity: 0.7;
@@ -60,7 +35,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
   transition: transform 500ms,opacity 500ms;
 }
 
-.emotion-2 img:hover {
+.emotion-1 .work__image:hover {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -68,36 +43,43 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
   opacity: 1;
 }
 
-.emotion-2 p {
+.emotion-1 .work__paragraph {
   color: var(--color-white);
   text-transform: capitalize;
 }
 
 <section
-  aria-labelledby="portfolio_heading"
+  aria-labelledby=":r0:"
   className="emotion-0"
 >
   <div
-    className="row emotion-1"
-    id="portfolio_heading"
-    role="none"
+    className="row"
+    role="presentation"
   >
-    <h2>
+    <h2
+      className="section__heading"
+      id=":r0:"
+    >
       Our Work
     </h2>
-    <h3>
+    <h3
+      className="section__subheading"
+    >
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ducimus.
     </h3>
   </div>
   <ul
-    className="clear_fix"
+    className="clear_fix portfolio__work--list"
   >
-    <li>
+    <li
+      className="portfolio__work--item"
+    >
       <figure
-        className="emotion-2"
+        className="emotion-1"
       >
         <img
           alt="Online advertising"
+          className="work__image"
           data-nimg="1"
           decoding="async"
           height={40}
@@ -113,17 +95,22 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
           }
           width={40}
         />
-        <p>
+        <p
+          className="work__paragraph"
+        >
           Online advertising
         </p>
       </figure>
     </li>
-    <li>
+    <li
+      className="portfolio__work--item"
+    >
       <figure
-        className="emotion-2"
+        className="emotion-1"
       >
         <img
           alt="Social media campaigns"
+          className="work__image"
           data-nimg="1"
           decoding="async"
           height={40}
@@ -139,17 +126,22 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
           }
           width={40}
         />
-        <p>
+        <p
+          className="work__paragraph"
+        >
           Social media campaigns
         </p>
       </figure>
     </li>
-    <li>
+    <li
+      className="portfolio__work--item"
+    >
       <figure
-        className="emotion-2"
+        className="emotion-1"
       >
         <img
           alt="UX design"
+          className="work__image"
           data-nimg="1"
           decoding="async"
           height={40}
@@ -165,17 +157,22 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
           }
           width={40}
         />
-        <p>
+        <p
+          className="work__paragraph"
+        >
           UX design
         </p>
       </figure>
     </li>
-    <li>
+    <li
+      className="portfolio__work--item"
+    >
       <figure
-        className="emotion-2"
+        className="emotion-1"
       >
         <img
           alt="Branding & digital marketing"
+          className="work__image"
           data-nimg="1"
           decoding="async"
           height={40}
@@ -191,7 +188,9 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
           }
           width={40}
         />
-        <p>
+        <p
+          className="work__paragraph"
+        >
           Branding & digital marketing
         </p>
       </figure>

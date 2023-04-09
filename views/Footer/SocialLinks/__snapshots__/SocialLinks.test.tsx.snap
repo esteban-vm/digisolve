@@ -1,39 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`🧪 SOCIAL LINKS style tests: should render with correct styles 1`] = `
+exports[`🧪 SOCIAL LINKS: style tests: should render with correct styles 1`] = `
 .emotion-0 {
   float: right;
 }
 
-.emotion-0 li {
+.emotion-0 .footer__social--item {
   margin-left: 20px;
 }
 
-.emotion-0 li:hover:first-of-type a {
+.emotion-0 .footer__social--link:hover .fa-facebook-f {
   color: var(--color-facebook);
 }
 
-.emotion-0 li:hover:nth-of-type(2) a {
+.emotion-0 .footer__social--link:hover .fa-twitter {
   color: var(--color-twitter);
 }
 
-.emotion-0 li:hover:nth-of-type(3) a {
+.emotion-0 .footer__social--link:hover .fa-google-plus-g {
   color: var(--color-google-plus);
 }
 
-.emotion-0 li:hover:nth-of-type(4) a {
+.emotion-0 .footer__social--link:hover .fa-instagram {
   color: var(--color-instagram);
 }
 
-.emotion-0 li:hover:last-of-type a {
+.emotion-0 .footer__social--link:hover .fa-youtube {
   color: var(--color-youtube);
 }
 
 <ul
   className="emotion-0"
 >
-  <li>
+  <li
+    className="footer__social--item"
+  >
     <a
+      className="footer__social--link"
       href="#"
       onClick={[Function]}
       onMouseEnter={[Function]}
@@ -59,8 +62,11 @@ exports[`🧪 SOCIAL LINKS style tests: should render with correct styles 1`] = 
       </svg>
     </a>
   </li>
-  <li>
+  <li
+    className="footer__social--item"
+  >
     <a
+      className="footer__social--link"
       href="#"
       onClick={[Function]}
       onMouseEnter={[Function]}
@@ -86,8 +92,11 @@ exports[`🧪 SOCIAL LINKS style tests: should render with correct styles 1`] = 
       </svg>
     </a>
   </li>
-  <li>
+  <li
+    className="footer__social--item"
+  >
     <a
+      className="footer__social--link"
       href="#"
       onClick={[Function]}
       onMouseEnter={[Function]}
@@ -113,8 +122,11 @@ exports[`🧪 SOCIAL LINKS style tests: should render with correct styles 1`] = 
       </svg>
     </a>
   </li>
-  <li>
+  <li
+    className="footer__social--item"
+  >
     <a
+      className="footer__social--link"
       href="#"
       onClick={[Function]}
       onMouseEnter={[Function]}
@@ -140,8 +152,11 @@ exports[`🧪 SOCIAL LINKS style tests: should render with correct styles 1`] = 
       </svg>
     </a>
   </li>
-  <li>
+  <li
+    className="footer__social--item"
+  >
     <a
+      className="footer__social--link"
       href="#"
       onClick={[Function]}
       onMouseEnter={[Function]}

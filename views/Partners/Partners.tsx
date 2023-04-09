@@ -1,32 +1,44 @@
-import type { ViewComponent, ImageComponentProps } from '@/types'
-import { Heading } from '@/components'
+import type { Component, ImageComponentProps } from '@/types'
+import { useId } from 'react'
+import { Grid } from '@/components'
 import { brandLogos } from '@/images'
 import { styled } from '@/styles'
-import PartnerLogo from './PartnerLogo'
+import Partner from './Partner'
 
-export const logos = brandLogos.map((logo, index) => ({
+export const partners = brandLogos.map((logo, index) => ({
   src: logo,
-  alt: `Brand Logo ${index + 1}`,
+  alt: `Brand partner ${index + 1}`,
 })) as ImageComponentProps[]
 
-const PartnersComponent: ViewComponent = (props) => {
+const PartnersComponent: Component = (props) => {
+  const id = useId()
+
   return (
-    <section {...props}>
-      <Heading
-        heading='Featured Clients'
-        subheading="We've worked with some of the best companies in the world. Here are some of our Amazing Partners"
-        id='partners_heading'
-      />
-      <div className='row'>
-        {logos.slice(0, 4).map((logo, index) => (
-          <PartnerLogo key={index} {...logo} />
+    <section aria-labelledby={id} {...props}>
+      <Grid.Row>
+        <h2 id={id} className='section__heading'>
+          Featured clients
+        </h2>
+        <h3 className='section__subheading'>
+          We&apos;ve worked with some of the best companies in the world. Here are some of our Amazing Partners
+        </h3>
+      </Grid.Row>
+
+      <Grid.Row>
+        {partners.slice(0, 4).map((partner, index) => (
+          <Grid.Col key={index} isOneQuarter>
+            <Partner {...partner} />
+          </Grid.Col>
         ))}
-      </div>
-      <div className='row'>
-        {logos.slice(4).map((logo, index) => (
-          <PartnerLogo key={index} {...logo} />
+      </Grid.Row>
+
+      <Grid.Row>
+        {partners.slice(4).map((partner, index) => (
+          <Grid.Col key={index} isOneQuarter>
+            <Partner {...partner} />
+          </Grid.Col>
         ))}
-      </div>
+      </Grid.Row>
     </section>
   )
 }
@@ -34,9 +46,5 @@ const PartnersComponent: ViewComponent = (props) => {
 const Partners = styled(PartnersComponent)`
   text-align: center;
 `
-
-Partners.defaultProps = {
-  'aria-labelledby': 'partners_heading',
-}
 
 export default Partners

@@ -20,6 +20,7 @@ describe('🧪 NAVBAR:', () => {
     })
 
     it('should display the links', () => {
+      const list = screen.getByRole('list')
       const links = screen.getAllByRole('link')
       expect(links).toHaveLength(navLinks.length)
 
@@ -28,8 +29,10 @@ describe('🧪 NAVBAR:', () => {
         expect(link).toBeInTheDocument()
         expect(link).toBeVisible()
         expect(link).toHaveTextContent(navLinks[index])
-        expect(parent).toContainElement(link)
+        expect(list).toContainElement(link)
       }
+
+      expect(parent).toContainElement(list)
     })
   })
 
@@ -45,7 +48,7 @@ describe('🧪 NAVBAR:', () => {
     })
 
     it('should change color when hovered', () => {
-      expect(tree).toHaveStyleRule('border-bottom', '2px solid var(--color-primary)', { target: 'a:hover' })
+      expect(tree).toHaveStyleRule('border-bottom', '2px solid var(--color-primary)', { target: '.navbar__link:hover' })
     })
   })
 })

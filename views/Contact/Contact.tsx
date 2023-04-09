@@ -1,16 +1,22 @@
-import type { ViewComponent } from '@/types'
+import type { Component } from '@/types'
+import { useId } from 'react'
+import { Grid } from '@/components'
 import { styled } from '@/styles'
 import ContactForm from './ContactForm'
 
-const ContactComponent: ViewComponent = (props) => {
+const ContactComponent: Component = (props) => {
+  const id = useId()
+
   return (
-    <section {...props}>
-      <div className='row'>
-        <h2 id='contact_heading'>We are happy to hear from you</h2>
-      </div>
-      <div className='row'>
+    <section aria-labelledby={id} {...props}>
+      <Grid.Row>
+        <h2 id={id} className='contact__heading'>
+          We are happy to hear from you
+        </h2>
+      </Grid.Row>
+      <Grid.Row>
         <ContactForm />
-      </div>
+      </Grid.Row>
     </section>
   )
 }
@@ -18,15 +24,11 @@ const ContactComponent: ViewComponent = (props) => {
 const Contact = styled(ContactComponent)`
   text-align: center;
 
-  h2 {
+  .contact__heading {
     color: var(--color-black);
     margin-top: 150px;
     margin-bottom: 50px;
   }
 `
-
-Contact.defaultProps = {
-  'aria-labelledby': 'contact_heading',
-}
 
 export default Contact

@@ -3,7 +3,7 @@ import { navLinks } from './NavLinks'
 import { socialLinks } from './SocialLinks'
 import Footer from './Footer'
 
-describe('🧪 FOOTER', () => {
+describe('🧪 FOOTER:', () => {
   describe('display tests:', () => {
     it('should display all the links', () => {
       render(<Footer />)

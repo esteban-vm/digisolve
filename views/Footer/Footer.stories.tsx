@@ -1,9 +1,14 @@
-import type { Meta } from '@storybook/react'
+import type { Meta } from '@/stories'
 import Footer from './Footer'
 
 export default {
   component: Footer,
   title: 'Views/Footer',
+  parameters: {
+    backgrounds: {
+      disable: true,
+    },
+  },
 } as Meta<typeof Footer>
 
-export const FooterView = () => <Footer />
+export const View = () => <Footer />

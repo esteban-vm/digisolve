@@ -1,5 +1,5 @@
 import { render, cleanup, screen, create } from '@/tests'
-import Partners, { logos } from './Partners'
+import Partners, { partners } from './Partners'
 
 describe('🧪 PARTNERS:', () => {
   describe('display tests:', () => {
@@ -30,9 +30,9 @@ describe('🧪 PARTNERS:', () => {
       expect(parent).toContainElement(subheading)
     })
 
-    it('should display the logos', () => {
+    it('should display the partners', () => {
       const logoElements = screen.getAllByRole('article')
-      expect(logoElements).toHaveLength(logos.length)
+      expect(logoElements).toHaveLength(partners.length)
 
       for (const logo of logoElements) {
         expect(logo).toBeInTheDocument()

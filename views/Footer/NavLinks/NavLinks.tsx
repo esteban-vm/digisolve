@@ -1,16 +1,16 @@
-import type { BasicComponent } from '@/types'
+import type { Component } from '@/types'
 import Link from 'next/link'
 import { styled } from '@/styles'
 
 export const navLinks = ['About us', 'Blog', 'Help & Support', 'iOS App', 'Android App']
 
-const NavLinksComponent: BasicComponent = (props) => {
+const NavLinksComponent: Component = (props) => {
   return (
     <ul {...props}>
-      {navLinks.map((link, index) => (
-        <li key={index}>
-          <Link href='#' target='_blank'>
-            {link}
+      {navLinks.map((text, index) => (
+        <li key={index} className='footer__nav--item'>
+          <Link href='#' target='_blank' className='footer__nav--link'>
+            {text}
           </Link>
         </li>
       ))}
@@ -21,10 +21,12 @@ const NavLinksComponent: BasicComponent = (props) => {
 const NavLinks = styled(NavLinksComponent)`
   float: left;
 
-  li {
-    margin-right: 20px;
+  .footer__nav {
+    &--item {
+      margin-right: 20px;
+    }
 
-    a {
+    &--link {
       :hover {
         opacity: 0.8;
       }

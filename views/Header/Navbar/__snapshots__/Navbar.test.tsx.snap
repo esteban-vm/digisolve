@@ -1,25 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`🧪 NAVBAR: style tests: should render with correct styles 1`] = `
-.emotion-0 img {
+.emotion-0 .navbar__image {
   height: 120px;
   width: auto;
   float: left;
 }
 
-.emotion-0 ul {
+.emotion-0 .navbar__list {
   list-style: none;
   float: right;
   margin-top: 70px;
 }
 
-.emotion-0 ul li {
+.emotion-0 .navbar__item {
   display: inline-block;
   margin-right: 40px;
 }
 
-.emotion-0 ul li a:link,
-.emotion-0 ul li a:visited {
+.emotion-0 .navbar__link:link,
+.emotion-0 .navbar__link:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: uppercase;
@@ -29,8 +29,8 @@ exports[`🧪 NAVBAR: style tests: should render with correct styles 1`] = `
   transition: border-bottom 100ms;
 }
 
-.emotion-0 ul li a:hover,
-.emotion-0 ul li a:active {
+.emotion-0 .navbar__link:hover,
+.emotion-0 .navbar__link:active {
   border-bottom: 2px solid var(--color-primary);
 }
 
@@ -39,6 +39,7 @@ exports[`🧪 NAVBAR: style tests: should render with correct styles 1`] = `
 >
   <img
     alt="Digisolve logo"
+    className="navbar__image"
     data-nimg="1"
     decoding="async"
     height={40}
@@ -54,9 +55,14 @@ exports[`🧪 NAVBAR: style tests: should render with correct styles 1`] = `
     }
     width={40}
   />
-  <ul>
-    <li>
+  <ul
+    className="navbar__list"
+  >
+    <li
+      className="navbar__item"
+    >
       <a
+        className="navbar__link"
         href="#"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -65,8 +71,11 @@ exports[`🧪 NAVBAR: style tests: should render with correct styles 1`] = `
         Home
       </a>
     </li>
-    <li>
+    <li
+      className="navbar__item"
+    >
       <a
+        className="navbar__link"
         href="#"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -75,8 +84,11 @@ exports[`🧪 NAVBAR: style tests: should render with correct styles 1`] = `
         Contact
       </a>
     </li>
-    <li>
+    <li
+      className="navbar__item"
+    >
       <a
+        className="navbar__link"
         href="#"
         onClick={[Function]}
         onMouseEnter={[Function]}

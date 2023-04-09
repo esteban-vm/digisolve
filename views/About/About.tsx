@@ -1,29 +1,34 @@
-import type { ViewComponent } from '@/types'
+import type { Component } from '@/types'
+import { useId } from 'react'
 import Image from 'next/image'
-import { Button } from '@/components'
+import { Button, Grid } from '@/components'
 import { about } from '@/images'
 import { styled } from '@/styles'
 
-const AboutComponent: ViewComponent = (props) => {
+const AboutComponent: Component = (props) => {
+  const id = useId()
+
   return (
-    <section {...props}>
-      <div className='row'>
-        <div className='col span_1_of_2'>
-          <h2 id='about_heading'>A digital agency focused on growing your online presence</h2>
-          <p>
+    <section aria-labelledby={id} {...props}>
+      <Grid.Row>
+        <Grid.Col isHalf>
+          <h2 id={id} className='about__heading'>
+            A digital agency focused on growing your online presence
+          </h2>
+          <p className='about__paragraph'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt.
             Architecto fugiat veritatis cum necessitatibus sapiente!
           </p>
-          <p>
+          <p className='about__paragraph'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt.
             Architecto fugiat veritatis cum necessitatibus sapiente!
           </p>
-          <Button text='Read more' href='#' />
-        </div>
-        <div className='col span_1_of_2'>
-          <Image src={about} alt='Digisolve app on Laptop' />
-        </div>
-      </div>
+          <Button text='Read more' />
+        </Grid.Col>
+        <Grid.Col isHalf>
+          <Image src={about} alt='Digisolve app on Laptop' className='about__image' />
+        </Grid.Col>
+      </Grid.Row>
     </section>
   )
 }
@@ -32,22 +37,24 @@ const About = styled(AboutComponent)`
   margin-top: 150px;
   padding-bottom: 20px;
 
-  h2 {
-    color: var(--color-black);
-    text-transform: capitalize;
-    font-size: 250%;
-    font-weight: 500;
-    margin-bottom: 50px;
-  }
+  .about {
+    &__heading {
+      color: var(--color-black);
+      text-transform: capitalize;
+      font-size: 250%;
+      font-weight: 500;
+      margin-bottom: 50px;
+    }
 
-  p {
-    color: var(--color-grey);
-    margin-bottom: 50px;
-  }
+    &__paragraph {
+      color: var(--color-grey);
+      margin-bottom: 50px;
+    }
 
-  img {
-    width: 80%;
-    height: auto;
+    &__image {
+      width: 80%;
+      height: auto;
+    }
   }
 
   .span_1_of_2 {
@@ -60,9 +67,5 @@ const About = styled(AboutComponent)`
     }
   }
 `
-
-About.defaultProps = {
-  'aria-labelledby': 'about_heading',
-}
 
 export default About

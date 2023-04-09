@@ -1,8 +1,9 @@
-import type { ViewComponent, IconComponentProps } from '@/types'
+import type { Component, IconComponentProps } from '@/types'
+import { useId } from 'react'
 import { faTags, faPenAlt, faFunnelDollar, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
-import { Heading } from '@/components'
+import { Grid } from '@/components'
 import { styled } from '@/styles'
-import ServiceBox from './ServiceBox'
+import Service from './Service'
 
 export const services: IconComponentProps[] = [
   { title: 'branding', icon: faTags },
@@ -11,15 +12,26 @@ export const services: IconComponentProps[] = [
   { title: 'web design', icon: faLaptopCode },
 ]
 
-const ServicesComponent: ViewComponent = (props) => {
+const ServicesComponent: Component = (props) => {
+  const id = useId()
+
   return (
-    <section {...props}>
-      <Heading heading='Our services' id='services_heading' />
-      <div className='row'>
+    <section aria-labelledby={id} {...props}>
+      <Grid.Row>
+        <h2 id={id} className='section__heading'>
+          Our services
+        </h2>
+        <h3 className='section__subheading'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ducimus.
+        </h3>
+      </Grid.Row>
+      <Grid.Row>
         {services.map((service, index) => (
-          <ServiceBox key={index} {...service} />
+          <Grid.Col key={index} isOneQuarter>
+            <Service {...service} />
+          </Grid.Col>
         ))}
-      </div>
+      </Grid.Row>
     </section>
   )
 }
@@ -28,9 +40,5 @@ const Services = styled(ServicesComponent)`
   text-align: center;
   background-color: var(--color-light);
 `
-
-Services.defaultProps = {
-  'aria-labelledby': 'services_heading',
-}
 
 export default Services

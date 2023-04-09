@@ -1,11 +1,10 @@
-import type { Meta } from '@storybook/react'
-import { within, userEvent } from '@storybook/testing-library'
+import { type Meta, within, userEvent } from '@/stories'
 import { styled } from '@/styles'
 import ContactForm from './ContactForm'
 
 const Wrapper = styled.div`
   padding: 3rem 0;
-  width: 65vw;
+  width: 60vw;
   background-color: var(--color-white);
 `
 
@@ -35,4 +34,4 @@ export default {
   },
 } as Meta<typeof ContactForm>
 
-export const FormExample = () => <ContactForm />
+export const Example = () => <ContactForm />

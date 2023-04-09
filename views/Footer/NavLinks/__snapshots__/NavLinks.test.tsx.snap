@@ -1,23 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`🧪 NAV LINKS style tests: should render with correct styles 1`] = `
+exports[`🧪 NAV LINKS: style tests: should render with correct styles 1`] = `
 .emotion-0 {
   float: left;
 }
 
-.emotion-0 li {
+.emotion-0 .footer__nav--item {
   margin-right: 20px;
 }
 
-.emotion-0 li a:hover {
+.emotion-0 .footer__nav--link:hover {
   opacity: 0.8;
 }
 
 <ul
   className="emotion-0"
 >
-  <li>
+  <li
+    className="footer__nav--item"
+  >
     <a
+      className="footer__nav--link"
       href="#"
       onClick={[Function]}
       onMouseEnter={[Function]}
@@ -27,8 +30,11 @@ exports[`🧪 NAV LINKS style tests: should render with correct styles 1`] = `
       About us
     </a>
   </li>
-  <li>
+  <li
+    className="footer__nav--item"
+  >
     <a
+      className="footer__nav--link"
       href="#"
       onClick={[Function]}
       onMouseEnter={[Function]}
@@ -38,8 +44,11 @@ exports[`🧪 NAV LINKS style tests: should render with correct styles 1`] = `
       Blog
     </a>
   </li>
-  <li>
+  <li
+    className="footer__nav--item"
+  >
     <a
+      className="footer__nav--link"
       href="#"
       onClick={[Function]}
       onMouseEnter={[Function]}
@@ -49,8 +58,11 @@ exports[`🧪 NAV LINKS style tests: should render with correct styles 1`] = `
       Help & Support
     </a>
   </li>
-  <li>
+  <li
+    className="footer__nav--item"
+  >
     <a
+      className="footer__nav--link"
       href="#"
       onClick={[Function]}
       onMouseEnter={[Function]}
@@ -60,8 +72,11 @@ exports[`🧪 NAV LINKS style tests: should render with correct styles 1`] = `
       iOS App
     </a>
   </li>
-  <li>
+  <li
+    className="footer__nav--item"
+  >
     <a
+      className="footer__nav--link"
       href="#"
       onClick={[Function]}
       onMouseEnter={[Function]}

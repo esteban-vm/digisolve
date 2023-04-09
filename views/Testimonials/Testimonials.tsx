@@ -1,25 +1,33 @@
-import type { ViewComponent, ImageComponentProps } from '@/types'
+import type { Component, ImageComponentProps } from '@/types'
+import { useId } from 'react'
+import { Grid } from '@/components'
 import { client1, client2, client3 } from '@/images'
 import { styled } from '@/styles'
-import QuoteBox from './QuoteBox'
+import Testimonial from './Testimonial'
 
-export const quotes: ImageComponentProps[] = [
+export const testimonials: ImageComponentProps[] = [
   { src: client1, alt: 'Aaron Cruz' },
   { src: client2, alt: 'Jeff Jones' },
   { src: client3, alt: 'Helen Smith' },
 ]
 
-const TestimonialsComponent: ViewComponent = (props) => {
+const TestimonialsComponent: Component = (props) => {
+  const id = useId()
+
   return (
-    <section {...props}>
-      <div className='row'>
-        <h2 id='testimonials_heading'>Our testimonials</h2>
-      </div>
-      <div className='row'>
-        {quotes.map((quote, index) => (
-          <QuoteBox key={index} {...quote} />
+    <section aria-labelledby={id} {...props}>
+      <Grid.Row>
+        <h2 id={id} className='testimonials__heading'>
+          Our testimonials
+        </h2>
+      </Grid.Row>
+      <Grid.Row>
+        {testimonials.map((quote, index) => (
+          <Grid.Col key={index} isOneThird>
+            <Testimonial {...quote} />
+          </Grid.Col>
         ))}
-      </div>
+      </Grid.Row>
     </section>
   )
 }
@@ -31,16 +39,12 @@ const Testimonials = styled(TestimonialsComponent)`
   text-align: center;
   color: var(--color-white);
 
-  h2 {
+  .testimonials__heading {
     font-size: 250%;
     margin-bottom: 20px;
     margin-top: 150px;
     text-transform: capitalize;
   }
 `
-
-Testimonials.defaultProps = {
-  'aria-labelledby': 'testimonials_heading',
-}
 
 export default Testimonials

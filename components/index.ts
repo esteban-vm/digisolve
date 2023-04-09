@@ -1,2 +1,2 @@
 export * from './Button'
-export * from './Heading'
+export * as Grid from './Grid'

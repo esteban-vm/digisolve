@@ -1,7 +1,7 @@
 import { render, cleanup, screen, create } from '@/tests'
 import NavLinks, { navLinks } from './NavLinks'
 
-describe('🧪 NAV LINKS', () => {
+describe('🧪 NAV LINKS:', () => {
   describe('display tests:', () => {
     it('should display the nav links', () => {
       render(<NavLinks />)

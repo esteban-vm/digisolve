@@ -1,12 +1,13 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { within, userEvent } from '@storybook/testing-library'
+import { type Meta, within, userEvent } from '@/stories'
 import { styled } from '@/styles'
 import Navbar from './Navbar'
 
 const Wrapper = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 120px;
-  background-color: var(--color-black);
+  background-image: linear-gradient(var(--color-overlay1), var(--color-overlay2)), url('/img/header-img.jpg');
+  background-size: cover;
+  background-position: top;
 `
 
 export default {
@@ -21,9 +22,11 @@ export default {
       )
     },
   ],
-} as Meta<typeof Navbar>
-
-export const NavbarExample: StoryObj<typeof Navbar> = {
+  parameters: {
+    backgrounds: {
+      disable: true,
+    },
+  },
   play({ canvasElement }) {
     const canvas = within(canvasElement)
     const links = canvas.getAllByRole('link')
@@ -32,4 +35,6 @@ export const NavbarExample: StoryObj<typeof Navbar> = {
     userEvent.hover(logo)
     userEvent.unhover(logo)
   },
-}
+} as Meta<typeof Navbar>
+
+export const Example = () => <Navbar />

@@ -7,7 +7,7 @@ describe('🧪 CONTACT FORM:', () => {
 
     beforeEach(() => {
       render(<ContactForm />)
-      parent = screen.getByTestId('form')
+      parent = screen.getByRole('form')
     })
 
     afterEach(cleanup)

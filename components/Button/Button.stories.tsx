@@ -1,5 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { within, userEvent } from '@storybook/testing-library'
+import { type Meta, type StoryObj, within, userEvent } from '@/stories'
 import Button from './Button'
 
 export default {
@@ -18,19 +17,19 @@ export default {
   },
 } as Meta<typeof Button>
 
-export const BasicButton: StoryObj<typeof Button> = {
+export const BasicExample: StoryObj<typeof Button> = {
   args: {
     isFull: false,
   },
 }
 
-export const FullButton: StoryObj<typeof Button> = {
+export const FullExample: StoryObj<typeof Button> = {
   args: {
     isFull: true,
   },
 }
 
-export const SubmitButton: StoryObj<typeof Button> = {
+export const SubmitExample: StoryObj<typeof Button> = {
   args: {
     isSubmit: true,
     isFull: true,

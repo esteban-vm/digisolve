@@ -6,7 +6,7 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   padding-bottom: 20px;
 }
 
-.emotion-0 h2 {
+.emotion-0 .about__heading {
   color: var(--color-black);
   text-transform: capitalize;
   font-size: 250%;
@@ -14,12 +14,12 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   margin-bottom: 50px;
 }
 
-.emotion-0 p {
+.emotion-0 .about__paragraph {
   color: var(--color-grey);
   margin-bottom: 50px;
 }
 
-.emotion-0 img {
+.emotion-0 .about__image {
   width: 80%;
   height: auto;
 }
@@ -36,9 +36,12 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   display: inline-block;
 }
 
-.emotion-1 a,
-.emotion-1 input[type='submit'] {
+.emotion-1 .btn {
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -53,39 +56,45 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   color: var(--color-primary);
 }
 
-.emotion-1 a:hover,
-.emotion-1 input[type='submit']:hover,
-.emotion-1 a:active,
-.emotion-1 input[type='submit']:active {
+.emotion-1 .btn:hover,
+.emotion-1 .btn:active {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
 
 <section
-  aria-labelledby="about_heading"
+  aria-labelledby=":r0:"
   className="emotion-0"
 >
   <div
     className="row"
+    role="presentation"
   >
     <div
       className="col span_1_of_2"
+      role="presentation"
     >
       <h2
-        id="about_heading"
+        className="about__heading"
+        id=":r0:"
       >
         A digital agency focused on growing your online presence
       </h2>
-      <p>
+      <p
+        className="about__paragraph"
+      >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt. Architecto fugiat veritatis cum necessitatibus sapiente!
       </p>
-      <p>
+      <p
+        className="about__paragraph"
+      >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt. Architecto fugiat veritatis cum necessitatibus sapiente!
       </p>
       <span
         className="emotion-1"
       >
         <a
+          className="btn"
           href="#"
           onClick={[Function]}
           onMouseEnter={[Function]}
@@ -98,9 +107,11 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
     </div>
     <div
       className="col span_1_of_2"
+      role="presentation"
     >
       <img
         alt="Digisolve app on Laptop"
+        className="about__image"
         data-nimg="1"
         decoding="async"
         height={40}

@@ -1,4 +1,4 @@
-import type { BasicComponent } from '@/types'
+import type { Component } from '@/types'
 import Image from 'next/image'
 import Link from 'next/link'
 import { logo } from '@/images'
@@ -6,14 +6,16 @@ import { styled } from '@/styles'
 
 export const navLinks = ['Home', 'Contact', 'About']
 
-const NavbarComponent: BasicComponent = (props) => {
+const NavbarComponent: Component = (props) => {
   return (
     <nav {...props}>
-      <Image src={logo} alt='Digisolve logo' />
-      <ul>
+      <Image src={logo} alt='Digisolve logo' className='navbar__image' />
+      <ul className='navbar__list'>
         {navLinks.map((link, index) => (
-          <li key={index}>
-            <Link href='#'>{link}</Link>
+          <li key={index} className='navbar__item'>
+            <Link href='#' className='navbar__link'>
+              {link}
+            </Link>
           </li>
         ))}
       </ul>
@@ -22,35 +24,37 @@ const NavbarComponent: BasicComponent = (props) => {
 }
 
 const Navbar = styled(NavbarComponent)`
-  img {
-    height: 120px;
-    width: auto;
-    float: left;
-  }
+  .navbar {
+    &__image {
+      height: 120px;
+      width: auto;
+      float: left;
+    }
 
-  ul {
-    list-style: none;
-    float: right;
-    margin-top: 70px;
+    &__list {
+      list-style: none;
+      float: right;
+      margin-top: 70px;
+    }
 
-    li {
+    &__item {
       display: inline-block;
       margin-right: 40px;
+    }
 
-      a {
-        :link,
-        :visited {
-          text-decoration: none;
-          text-transform: uppercase;
-          color: var(--color-white);
-          outline: none;
-          transition: border-bottom 100ms;
-        }
+    &__link {
+      :link,
+      :visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--color-white);
+        outline: none;
+        transition: border-bottom 100ms;
+      }
 
-        :hover,
-        :active {
-          border-bottom: 2px solid var(--color-primary);
-        }
+      :hover,
+      :active {
+        border-bottom: 2px solid var(--color-primary);
       }
     }
   }

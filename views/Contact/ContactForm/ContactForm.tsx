@@ -1,11 +1,11 @@
-import type { BasicComponent } from '@/types'
+import type { Component } from '@/types'
 import { useForm, type SubmitHandler } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import toast, { Toaster } from 'react-hot-toast'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelopeCircleCheck } from '@fortawesome/free-solid-svg-icons'
-import { Button } from '@/components'
+import { Button, Grid } from '@/components'
 import { styled } from '@/styles'
 
 const validationSchema = yup.object().shape({
@@ -22,7 +22,7 @@ type FormFields = {
   message: string
 }
 
-const ContactFormComponent: BasicComponent = (props) => {
+const ContactFormComponent: Component = (props) => {
   const { register, handleSubmit, reset } = useForm<FormFields>({ resolver: yupResolver(validationSchema) })
 
   const onSubmit: SubmitHandler<FormFields> = ({ name, email, newsletter, message }) => {
@@ -33,61 +33,94 @@ const ContactFormComponent: BasicComponent = (props) => {
     `
 
     toast(data, {
-      icon: <FontAwesomeIcon size='2x' icon={faEnvelopeCircleCheck} />,
+      icon: <FontAwesomeIcon size='2x' icon={faEnvelopeCircleCheck} className='contact__form--icon' />,
       duration: 5_000,
       position: 'top-center',
-      ariaProps: { role: 'alert', 'aria-live': 'off' },
-      className: 'toast',
+      ariaProps: { role: 'alert', 'aria-live': 'assertive' },
+      className: 'contact__form--toast',
     })
 
     reset()
   }
 
   return (
-    <form {...props} data-testid='form' onSubmit={handleSubmit(onSubmit)} noValidate>
-      <div className='row'>
-        <div className='col span_1_of_3'>
-          <label htmlFor='name'>Name</label>
-        </div>
-        <div className='col span_2_of_3'>
-          <input type='text' id='name' placeholder='your name' spellCheck={false} {...register('name')} />
-        </div>
-      </div>
+    <form {...props} aria-label='Send a message' onSubmit={handleSubmit(onSubmit)} noValidate>
+      <Grid.Row>
+        <Grid.Col isOneThird>
+          <label htmlFor='name' className='contact__form--label'>
+            Name
+          </label>
+        </Grid.Col>
+        <Grid.Col isTwoThirds>
+          <input
+            type='text'
+            id='name'
+            className='contact__form--control'
+            placeholder='your name'
+            spellCheck={false}
+            autoCorrect='off'
+            {...register('name')}
+          />
+        </Grid.Col>
+      </Grid.Row>
 
-      <div className='row'>
-        <div className='col span_1_of_3'>
-          <label htmlFor='email'>Email</label>
-        </div>
-        <div className='col span_2_of_3'>
-          <input type='email' id='email' placeholder='your email' {...register('email')} />
-        </div>
-      </div>
+      <Grid.Row>
+        <Grid.Col isOneThird>
+          <label htmlFor='email' className='contact__form--label'>
+            Email
+          </label>
+        </Grid.Col>
+        <Grid.Col isTwoThirds>
+          <input
+            type='email'
+            id='email'
+            className='contact__form--control'
+            placeholder='your email'
+            {...register('email')}
+          />
+        </Grid.Col>
+      </Grid.Row>
 
-      <div className='row'>
-        <div className='col span_1_of_3'>
-          <label htmlFor='newsletter'>Newsletter?</label>
-        </div>
-        <div className='col span_2_of_3'>
-          <input type='checkbox' id='newsletter' defaultChecked {...register('newsletter')} />
+      <Grid.Row>
+        <Grid.Col isOneThird>
+          <label htmlFor='newsletter' className='contact__form--label'>
+            Newsletter?
+          </label>
+        </Grid.Col>
+        <Grid.Col isTwoThirds>
+          <input
+            type='checkbox'
+            id='newsletter'
+            className='contact__form--checkbox'
+            defaultChecked
+            {...register('newsletter')}
+          />
           Yes, Please
-        </div>
-      </div>
+        </Grid.Col>
+      </Grid.Row>
 
-      <div className='row'>
-        <div className='col span_1_of_3'>
-          <label htmlFor='message'>Drop us a line</label>
-        </div>
-        <div className='col span_2_of_3'>
-          <textarea id='message' placeholder='your message' {...register('message')} />
-        </div>
-      </div>
+      <Grid.Row>
+        <Grid.Col isOneThird>
+          <label htmlFor='message' className='contact__form--label'>
+            Drop us a line
+          </label>
+        </Grid.Col>
+        <Grid.Col isTwoThirds>
+          <textarea
+            id='message'
+            className='contact__form--control'
+            placeholder='your message'
+            {...register('message')}
+          />
+        </Grid.Col>
+      </Grid.Row>
 
-      <div className='row'>
-        <div className='col span_1_of_3' />
-        <div className='col span_2_of_3'>
+      <Grid.Row>
+        <Grid.Col isOneThird>&nbsp;</Grid.Col>
+        <Grid.Col isTwoThirds>
           <Button text='Send it!' isFull isSubmit />
-        </div>
-      </div>
+        </Grid.Col>
+      </Grid.Row>
 
       <Toaster />
     </form>
@@ -100,43 +133,41 @@ const ContactForm = styled(ContactFormComponent)`
   margin: 0 auto;
   color: var(--color-grey);
 
-  input[type='text'],
-  input[type='email'],
-  textarea {
-    width: 100%;
-    padding: 8px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-    background-color: var(--color-white);
-
-    ::placeholder {
-      text-transform: capitalize;
-      opacity: 0.7;
+  .contact__form {
+    &--label {
+      user-select: none;
     }
-  }
 
-  textarea {
-    height: 100px;
-    resize: none;
-  }
+    &--control {
+      width: 100%;
+      padding: 8px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      background-color: var(--color-white);
 
-  input[type='checkbox'] {
-    margin: 10px 5px 10px 0;
-  }
-
-  label {
-    user-select: none;
-  }
-
-  .toast {
-    text-align: center;
-    color: var(--color-primary);
-    background-color: var(--color-light);
-
-    svg {
-      path {
-        fill: var(--color-secondary);
+      ::placeholder {
+        text-transform: capitalize;
+        opacity: 0.7;
       }
+
+      :is(textarea) {
+        height: 100px;
+        resize: none;
+      }
+    }
+
+    &--checkbox {
+      margin: 10px 5px 10px 0;
+    }
+
+    &--toast {
+      text-align: center;
+      color: var(--color-primary);
+      background-color: var(--color-light);
+    }
+
+    &--icon {
+      color: var(--color-secondary);
     }
   }
 `

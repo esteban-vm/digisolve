@@ -1,7 +1,7 @@
 import { render, cleanup, screen, create } from '@/tests'
 import SocialLinks, { socialLinks } from './SocialLinks'
 
-describe('🧪 SOCIAL LINKS', () => {
+describe('🧪 SOCIAL LINKS:', () => {
   describe('display tests:', () => {
     it('should display the social links', () => {
       render(<SocialLinks />)

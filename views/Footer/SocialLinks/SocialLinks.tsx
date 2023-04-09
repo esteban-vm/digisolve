@@ -1,4 +1,4 @@
-import type { BasicComponent } from '@/types'
+import type { Component } from '@/types'
 import type { IconProp } from '@fortawesome/fontawesome-svg-core'
 import Link from 'next/link'
 import { faFacebookF, faTwitter, faGooglePlusG, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
@@ -7,12 +7,12 @@ import { styled } from '@/styles'
 
 export const socialLinks = [faFacebookF, faTwitter, faGooglePlusG, faInstagram, faYoutube] as IconProp[]
 
-const SocialLinksComponent: BasicComponent = (props) => {
+const SocialLinksComponent: Component = (props) => {
   return (
     <ul {...props}>
       {socialLinks.map((icon, index) => (
-        <li key={index}>
-          <Link href='#' target='_blank'>
+        <li key={index} className='footer__social--item'>
+          <Link href='#' target='_blank' className='footer__social--link'>
             <FontAwesomeIcon icon={icon} />
           </Link>
         </li>
@@ -24,36 +24,30 @@ const SocialLinksComponent: BasicComponent = (props) => {
 const SocialLinks = styled(SocialLinksComponent)`
   float: right;
 
-  li {
-    margin-left: 20px;
+  .footer__social {
+    &--item {
+      margin-left: 20px;
+    }
 
-    :hover {
-      :first-of-type {
-        a {
+    &--link {
+      :hover {
+        .fa-facebook-f {
           color: var(--color-facebook);
         }
-      }
 
-      :nth-of-type(2) {
-        a {
+        .fa-twitter {
           color: var(--color-twitter);
         }
-      }
 
-      :nth-of-type(3) {
-        a {
+        .fa-google-plus-g {
           color: var(--color-google-plus);
         }
-      }
 
-      :nth-of-type(4) {
-        a {
+        .fa-instagram {
           color: var(--color-instagram);
         }
-      }
 
-      :last-of-type {
-        a {
+        .fa-youtube {
           color: var(--color-youtube);
         }
       }

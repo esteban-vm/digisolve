@@ -1,16 +1,16 @@
-import type { ViewComponent } from '@/types'
+import type { Component } from '@/types'
 import { Button } from '@/components'
 import { styled } from '@/styles'
 import Navbar from './Navbar'
 
-const HeaderComponent: ViewComponent = (props) => {
+const HeaderComponent: Component = (props) => {
   return (
     <header {...props}>
       <Navbar />
-      <div>
-        <div>
-          <h1>Digital agency</h1>
-          <h2>The one stop for all your digital solutions</h2>
+      <div className='header__box'>
+        <div className='header__titles'>
+          <h1 className='header__heading'>Digital agency</h1>
+          <h2 className='header__subheading'>The one stop for all your digital solutions</h2>
         </div>
         <Button text='Get a quote today!' isFull />
       </div>
@@ -27,26 +27,28 @@ const Header = styled(HeaderComponent)`
   color: var(--color-white);
   text-transform: capitalize;
 
-  h1 {
-    font-size: 500%;
-    font-weight: 400;
-    margin-bottom: 20px;
-  }
+  .header {
+    &__box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
 
-  h2 {
-    font-size: 200%;
-    font-weight: 400;
-  }
-
-  > div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-
-    div {
+    &__titles {
       margin-bottom: 100px;
+    }
+
+    &__heading {
+      font-size: 500%;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    &__subheading {
+      font-size: 200%;
+      font-weight: 400;
     }
   }
 `

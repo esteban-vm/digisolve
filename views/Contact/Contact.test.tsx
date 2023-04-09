@@ -24,7 +24,7 @@ describe('🧪 CONTACT:', () => {
     })
 
     it('should display the form', () => {
-      const form = screen.getByTestId('form')
+      const form = screen.getByRole('form')
       expect(form).toBeInTheDocument()
       expect(form).toBeVisible()
       expect(parent).toContainElement(form)

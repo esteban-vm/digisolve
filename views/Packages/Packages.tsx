@@ -1,6 +1,8 @@
-import type { ViewComponent, PackageComponentProps } from '@/types'
+import type { Component, PackageComponentProps } from '@/types'
+import { useId } from 'react'
+import { Grid } from '@/components'
 import { styled } from '@/styles'
-import PackageBox from './PackageBox'
+import Package from './Package'
 
 export const packages: PackageComponentProps[] = [
   {
@@ -41,17 +43,24 @@ export const packages: PackageComponentProps[] = [
   },
 ]
 
-const PackagesComponent: ViewComponent = (props) => {
+const PackagesComponent: Component = (props) => {
+  const id = useId()
+
   return (
-    <section {...props}>
-      <div className='row'>
-        <h2 id='packages_heading'>check out our most popular packages</h2>
-      </div>
-      <div className='row'>
+    <section aria-labelledby={id} {...props}>
+      <Grid.Row>
+        <h2 id={id} className='packages__heading'>
+          Check out our most popular packages
+        </h2>
+      </Grid.Row>
+
+      <Grid.Row>
         {packages.map((pack, index) => (
-          <PackageBox key={index} {...pack} />
+          <Grid.Col key={index} isOneThird>
+            <Package {...pack} />
+          </Grid.Col>
         ))}
-      </div>
+      </Grid.Row>
     </section>
   )
 }
@@ -60,7 +69,7 @@ const Packages = styled(PackagesComponent)`
   text-align: center;
   background-color: var(--color-light);
 
-  h2 {
+  .packages__heading {
     color: var(--color-black);
     font-size: 250%;
     margin-bottom: 20px;
@@ -68,9 +77,5 @@ const Packages = styled(PackagesComponent)`
     text-transform: capitalize;
   }
 `
-
-Packages.defaultProps = {
-  'aria-labelledby': 'packages_heading',
-}
 
 export default Packages

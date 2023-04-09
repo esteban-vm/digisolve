@@ -1,5 +1,5 @@
 import { render, cleanup, screen, create } from '@/tests'
-import Testimonials, { quotes } from './Testimonials'
+import Testimonials, { testimonials } from './Testimonials'
 
 describe('🧪 TESTIMONIALS:', () => {
   describe('display tests:', () => {
@@ -19,14 +19,14 @@ describe('🧪 TESTIMONIALS:', () => {
       expect(parent).toContainElement(heading)
     })
 
-    it('should display the quotes', () => {
-      const quoteElements = screen.getAllByRole('article')
-      expect(quoteElements).toHaveLength(quotes.length)
+    it('should display the testimonials', () => {
+      const testimonialElements = screen.getAllByRole('article')
+      expect(testimonialElements).toHaveLength(testimonials.length)
 
-      for (const quote of quoteElements) {
-        expect(quote).toBeInTheDocument()
-        expect(quote).toBeVisible()
-        expect(parent).toContainElement(quote)
+      for (const testimonial of testimonialElements) {
+        expect(testimonial).toBeInTheDocument()
+        expect(testimonial).toBeVisible()
+        expect(parent).toContainElement(testimonial)
       }
     })
   })

@@ -10,7 +10,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
   color: var(--color-white);
 }
 
-.emotion-0 h2 {
+.emotion-0 .testimonials__heading {
   font-size: 250%;
   margin-bottom: 20px;
   margin-top: 150px;
@@ -22,7 +22,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
   margin-bottom: 50px;
 }
 
-.emotion-1 blockquote {
+.emotion-1 .testimonial__quote {
   padding: 2%;
   font-style: italic;
   line-height: 145%;
@@ -30,7 +30,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
   margin-top: 40px;
 }
 
-.emotion-1 blockquote::before {
+.emotion-1 .testimonial__quote::before {
   content: '\\201C';
   display: block;
   font-size: 500%;
@@ -39,18 +39,18 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
   top: -5px;
 }
 
-.emotion-1 blockquote::first-letter {
+.emotion-1 .testimonial__quote::first-letter {
   text-transform: capitalize;
 }
 
-.emotion-1 cite {
+.emotion-1 .testimonial__box {
   display: block;
   margin-top: 25px;
   font-size: 90%;
   text-transform: capitalize;
 }
 
-.emotion-1 cite img {
+.emotion-1 .testimonial__photo {
   border-radius: 50%;
   height: 20%;
   vertical-align: middle;
@@ -58,102 +58,135 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
 }
 
 <section
-  aria-labelledby="testimonials_heading"
+  aria-labelledby=":r0:"
   className="emotion-0"
 >
   <div
     className="row"
+    role="presentation"
   >
     <h2
-      id="testimonials_heading"
+      className="testimonials__heading"
+      id=":r0:"
     >
       Our testimonials
     </h2>
   </div>
   <div
     className="row"
+    role="presentation"
   >
-    <article
-      className="col span_1_of_3 emotion-1"
+    <div
+      className="col span_1_of_3"
+      role="presentation"
     >
-      <blockquote>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
-      </blockquote>
-      <cite>
-        <img
-          alt="Aaron Cruz"
-          data-nimg="1"
-          decoding="async"
-          height={40}
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-          style={
-            {
-              "color": "transparent",
+      <article
+        className="emotion-1"
+      >
+        <blockquote
+          className="testimonial__quote"
+        >
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
+        </blockquote>
+        <cite
+          className="testimonial__box"
+        >
+          <img
+            alt="Aaron Cruz"
+            className="testimonial__photo"
+            data-nimg="1"
+            decoding="async"
+            height={40}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
             }
-          }
-          width={40}
-        />
-        Aaron Cruz
-      </cite>
-    </article>
-    <article
-      className="col span_1_of_3 emotion-1"
+            width={40}
+          />
+          Aaron Cruz
+        </cite>
+      </article>
+    </div>
+    <div
+      className="col span_1_of_3"
+      role="presentation"
     >
-      <blockquote>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
-      </blockquote>
-      <cite>
-        <img
-          alt="Jeff Jones"
-          data-nimg="1"
-          decoding="async"
-          height={40}
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-          style={
-            {
-              "color": "transparent",
+      <article
+        className="emotion-1"
+      >
+        <blockquote
+          className="testimonial__quote"
+        >
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
+        </blockquote>
+        <cite
+          className="testimonial__box"
+        >
+          <img
+            alt="Jeff Jones"
+            className="testimonial__photo"
+            data-nimg="1"
+            decoding="async"
+            height={40}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
             }
-          }
-          width={40}
-        />
-        Jeff Jones
-      </cite>
-    </article>
-    <article
-      className="col span_1_of_3 emotion-1"
+            width={40}
+          />
+          Jeff Jones
+        </cite>
+      </article>
+    </div>
+    <div
+      className="col span_1_of_3"
+      role="presentation"
     >
-      <blockquote>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
-      </blockquote>
-      <cite>
-        <img
-          alt="Helen Smith"
-          data-nimg="1"
-          decoding="async"
-          height={40}
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-          style={
-            {
-              "color": "transparent",
+      <article
+        className="emotion-1"
+      >
+        <blockquote
+          className="testimonial__quote"
+        >
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
+        </blockquote>
+        <cite
+          className="testimonial__box"
+        >
+          <img
+            alt="Helen Smith"
+            className="testimonial__photo"
+            data-nimg="1"
+            decoding="async"
+            height={40}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
             }
-          }
-          width={40}
-        />
-        Helen Smith
-      </cite>
-    </article>
+            width={40}
+          />
+          Helen Smith
+        </cite>
+      </article>
+    </div>
   </div>
 </section>
 `;

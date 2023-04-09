@@ -27,10 +27,10 @@ describe('🧪 PACKAGES:', () => {
       const packageElements = screen.getAllByRole('article')
       expect(packageElements).toHaveLength(packages.length)
 
-      for (const $package of packageElements) {
-        expect($package).toBeInTheDocument()
-        expect($package).toBeVisible()
-        expect(parent).toContainElement($package)
+      for (const pack of packageElements) {
+        expect(pack).toBeInTheDocument()
+        expect(pack).toBeVisible()
+        expect(parent).toContainElement(pack)
       }
     })
   })

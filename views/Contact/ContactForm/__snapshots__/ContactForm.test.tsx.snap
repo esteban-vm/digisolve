@@ -8,9 +8,14 @@ exports[`🧪 CONTACT FORM: style tests: should render with correct styles 1`] =
   color: var(--color-grey);
 }
 
-.emotion-0 input[type='text'],
-.emotion-0 input[type='email'],
-.emotion-0 textarea {
+.emotion-0 .contact__form--label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-0 .contact__form--control {
   width: 100%;
   padding: 8px;
   border-radius: 3px;
@@ -18,91 +23,55 @@ exports[`🧪 CONTACT FORM: style tests: should render with correct styles 1`] =
   background-color: var(--color-white);
 }
 
-.emotion-0 input[type='text']::-webkit-input-placeholder {
+.emotion-0 .contact__form--control::-webkit-input-placeholder {
   text-transform: capitalize;
   opacity: 0.7;
 }
 
-.emotion-0 input[type='text']::-moz-placeholder {
+.emotion-0 .contact__form--control::-moz-placeholder {
   text-transform: capitalize;
   opacity: 0.7;
 }
 
-.emotion-0 input[type='text']:-ms-input-placeholder {
+.emotion-0 .contact__form--control:-ms-input-placeholder {
   text-transform: capitalize;
   opacity: 0.7;
 }
 
-.emotion-0 input[type='email']::-webkit-input-placeholder {
+.emotion-0 .contact__form--control::placeholder {
   text-transform: capitalize;
   opacity: 0.7;
 }
 
-.emotion-0 input[type='email']::-moz-placeholder {
-  text-transform: capitalize;
-  opacity: 0.7;
-}
-
-.emotion-0 input[type='email']:-ms-input-placeholder {
-  text-transform: capitalize;
-  opacity: 0.7;
-}
-
-.emotion-0 textarea::-webkit-input-placeholder {
-  text-transform: capitalize;
-  opacity: 0.7;
-}
-
-.emotion-0 textarea::-moz-placeholder {
-  text-transform: capitalize;
-  opacity: 0.7;
-}
-
-.emotion-0 textarea:-ms-input-placeholder {
-  text-transform: capitalize;
-  opacity: 0.7;
-}
-
-.emotion-0 input[type='text']::placeholder,
-.emotion-0 input[type='email']::placeholder,
-.emotion-0 textarea::placeholder {
-  text-transform: capitalize;
-  opacity: 0.7;
-}
-
-.emotion-0 textarea {
+.emotion-0 .contact__form--control:is(textarea) {
   height: 100px;
   resize: none;
 }
 
-.emotion-0 input[type='checkbox'] {
+.emotion-0 .contact__form--checkbox {
   margin: 10px 5px 10px 0;
 }
 
-.emotion-0 label {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-0 .toast {
+.emotion-0 .contact__form--toast {
   text-align: center;
   color: var(--color-primary);
   background-color: var(--color-light);
 }
 
-.emotion-0 .toast svg path {
-  fill: var(--color-secondary);
+.emotion-0 .contact__form--icon {
+  color: var(--color-secondary);
 }
 
 .emotion-1 {
   display: inline-block;
 }
 
-.emotion-1 a,
-.emotion-1 input[type='submit'] {
+.emotion-1 .btn {
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -117,26 +86,27 @@ exports[`🧪 CONTACT FORM: style tests: should render with correct styles 1`] =
   color: var(--color-white);
 }
 
-.emotion-1 a:hover,
-.emotion-1 input[type='submit']:hover,
-.emotion-1 a:active,
-.emotion-1 input[type='submit']:active {
+.emotion-1 .btn:hover,
+.emotion-1 .btn:active {
   background-color: var(--color-dark-primary);
 }
 
 <form
+  aria-label="Send a message"
   className="emotion-0"
-  data-testid="form"
   noValidate={true}
   onSubmit={[Function]}
 >
   <div
     className="row"
+    role="presentation"
   >
     <div
       className="col span_1_of_3"
+      role="presentation"
     >
       <label
+        className="contact__form--label"
         htmlFor="name"
       >
         Name
@@ -144,8 +114,11 @@ exports[`🧪 CONTACT FORM: style tests: should render with correct styles 1`] =
     </div>
     <div
       className="col span_2_of_3"
+      role="presentation"
     >
       <input
+        autoCorrect="off"
+        className="contact__form--control"
         id="name"
         name="name"
         onBlur={[Function]}
@@ -158,11 +131,14 @@ exports[`🧪 CONTACT FORM: style tests: should render with correct styles 1`] =
   </div>
   <div
     className="row"
+    role="presentation"
   >
     <div
       className="col span_1_of_3"
+      role="presentation"
     >
       <label
+        className="contact__form--label"
         htmlFor="email"
       >
         Email
@@ -170,8 +146,10 @@ exports[`🧪 CONTACT FORM: style tests: should render with correct styles 1`] =
     </div>
     <div
       className="col span_2_of_3"
+      role="presentation"
     >
       <input
+        className="contact__form--control"
         id="email"
         name="email"
         onBlur={[Function]}
@@ -183,11 +161,14 @@ exports[`🧪 CONTACT FORM: style tests: should render with correct styles 1`] =
   </div>
   <div
     className="row"
+    role="presentation"
   >
     <div
       className="col span_1_of_3"
+      role="presentation"
     >
       <label
+        className="contact__form--label"
         htmlFor="newsletter"
       >
         Newsletter?
@@ -195,8 +176,10 @@ exports[`🧪 CONTACT FORM: style tests: should render with correct styles 1`] =
     </div>
     <div
       className="col span_2_of_3"
+      role="presentation"
     >
       <input
+        className="contact__form--checkbox"
         defaultChecked={true}
         id="newsletter"
         name="newsletter"
@@ -209,11 +192,14 @@ exports[`🧪 CONTACT FORM: style tests: should render with correct styles 1`] =
   </div>
   <div
     className="row"
+    role="presentation"
   >
     <div
       className="col span_1_of_3"
+      role="presentation"
     >
       <label
+        className="contact__form--label"
         htmlFor="message"
       >
         Drop us a line
@@ -221,8 +207,10 @@ exports[`🧪 CONTACT FORM: style tests: should render with correct styles 1`] =
     </div>
     <div
       className="col span_2_of_3"
+      role="presentation"
     >
       <textarea
+        className="contact__form--control"
         id="message"
         name="message"
         onBlur={[Function]}
@@ -233,17 +221,23 @@ exports[`🧪 CONTACT FORM: style tests: should render with correct styles 1`] =
   </div>
   <div
     className="row"
+    role="presentation"
   >
     <div
       className="col span_1_of_3"
-    />
+      role="presentation"
+    >
+       
+    </div>
     <div
       className="col span_2_of_3"
+      role="presentation"
     >
       <span
         className="emotion-1"
       >
         <input
+          className="btn"
           type="submit"
           value="Send it!"
         />
@@ -281,7 +275,7 @@ exports[`🧪 CONTACT FORM: style tests: should render with correct styles 1`] =
       }
     >
       <div
-        className="go2072408551 toast"
+        className="go2072408551 contact__form--toast"
         style={
           {
             "opacity": 0,
@@ -290,7 +284,7 @@ exports[`🧪 CONTACT FORM: style tests: should render with correct styles 1`] =
       >
         <svg
           aria-hidden="true"
-          className="svg-inline--fa fa-envelope-circle-check fa-2x "
+          className="svg-inline--fa fa-envelope-circle-check fa-2x contact__form--icon"
           data-icon="envelope-circle-check"
           data-prefix="fas"
           focusable="false"
@@ -306,7 +300,7 @@ exports[`🧪 CONTACT FORM: style tests: should render with correct styles 1`] =
           />
         </svg>
         <div
-          aria-live="off"
+          aria-live="assertive"
           className="go3958317564"
           role="alert"
         >

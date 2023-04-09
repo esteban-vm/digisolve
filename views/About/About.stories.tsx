@@ -1,24 +1,14 @@
-import type { Meta } from '@storybook/react'
-import { styled } from '@/styles'
+import type { Meta } from '@/stories'
 import About from './About'
-
-const Wrapper = styled.div`
-  width: 100%;
-  background-color: var(--color-white);
-`
 
 export default {
   component: About,
   title: 'Views/About',
-  decorators: [
-    (Story, context) => {
-      return (
-        <Wrapper>
-          <Story {...context} />
-        </Wrapper>
-      )
+  parameters: {
+    backgrounds: {
+      disable: true,
     },
-  ],
+  },
 } as Meta<typeof About>
 
-export const AboutView = () => <About />
+export const View = () => <About />

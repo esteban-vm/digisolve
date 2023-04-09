@@ -1,8 +1,9 @@
-import type { ViewComponent, ImageComponentProps } from '@/types'
-import { Heading } from '@/components'
+import type { Component, ImageComponentProps } from '@/types'
+import { useId } from 'react'
+import { Grid } from '@/components'
 import { advertising, campaigns, design, marketing } from '@/images'
 import { styled } from '@/styles'
-import WorkBox from './WorkBox'
+import Work from './Work'
 
 export const works: ImageComponentProps[] = [
   { src: advertising, alt: 'Online advertising' },
@@ -11,14 +12,23 @@ export const works: ImageComponentProps[] = [
   { src: marketing, alt: 'Branding & digital marketing' },
 ]
 
-const PortfolioComponent: ViewComponent = (props) => {
+const PortfolioComponent: Component = (props) => {
+  const id = useId()
+
   return (
-    <section {...props}>
-      <Heading heading='Our Work' id='portfolio_heading' />
-      <ul className='clear_fix'>
+    <section aria-labelledby={id} {...props}>
+      <Grid.Row>
+        <h2 id={id} className='section__heading'>
+          Our Work
+        </h2>
+        <h3 className='section__subheading'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ducimus.
+        </h3>
+      </Grid.Row>
+      <ul className='clear_fix portfolio__work--list'>
         {works.map((work, index) => (
-          <li key={index}>
-            <WorkBox {...work} />
+          <li key={index} className='portfolio__work--item'>
+            <Work {...work} />
           </li>
         ))}
       </ul>
@@ -30,21 +40,21 @@ const Portfolio = styled(PortfolioComponent)`
   text-align: center;
   background: var(--color-light);
 
-  ul {
-    margin-top: 10px;
-    list-style: none;
-    width: 100%;
+  .portfolio {
+    &__work {
+      &--list {
+        margin-top: 10px;
+        list-style: none;
+        width: 100%;
+      }
 
-    li {
-      display: block;
-      width: 25%;
-      float: left;
+      &--item {
+        display: block;
+        width: 25%;
+        float: left;
+      }
     }
   }
 `
-
-Portfolio.defaultProps = {
-  'aria-labelledby': 'portfolio_heading',
-}
 
 export default Portfolio

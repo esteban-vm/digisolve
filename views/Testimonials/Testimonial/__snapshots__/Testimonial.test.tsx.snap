@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`🧪 TESTIMONIAL: style tests: should render with correct styles 1`] = `
+.emotion-0 {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.emotion-0 .testimonial__quote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+}
+
+.emotion-0 .testimonial__quote::before {
+  content: '\\201C';
+  display: block;
+  font-size: 500%;
+  position: absolute;
+  left: -5px;
+  top: -5px;
+}
+
+.emotion-0 .testimonial__quote::first-letter {
+  text-transform: capitalize;
+}
+
+.emotion-0 .testimonial__box {
+  display: block;
+  margin-top: 25px;
+  font-size: 90%;
+  text-transform: capitalize;
+}
+
+.emotion-0 .testimonial__photo {
+  border-radius: 50%;
+  height: 20%;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+<article
+  className="emotion-0"
+>
+  <blockquote
+    className="testimonial__quote"
+  >
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
+  </blockquote>
+  <cite
+    className="testimonial__box"
+  >
+    <img
+      alt="Aaron Cruz"
+      className="testimonial__photo"
+      data-nimg="1"
+      decoding="async"
+      height={40}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+      srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={40}
+    />
+    Aaron Cruz
+  </cite>
+</article>
+`;
