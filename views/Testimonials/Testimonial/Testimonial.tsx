@@ -19,6 +19,7 @@ const TestimonialComponent: ImageComponent = ({ src, alt, ...rest }) => {
 const Testimonial = styled(TestimonialComponent)`
   text-align: left;
   margin-bottom: 50px;
+  user-select: none;
 
   .testimonial {
     &__quote {

@@ -20,6 +20,10 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
 .emotion-1 {
   text-align: left;
   margin-bottom: 50px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .emotion-1 .testimonial__quote {

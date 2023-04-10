@@ -6,11 +6,15 @@ import Testimonial from './Testimonial'
 
 const Wrapper = styled.div`
   text-align: center;
+  color: var(--color-white);
   width: 75vw;
 
+  background-image: linear-gradient(var(--color-overlay3), var(--color-overlay4)), url('/img/testimonial-bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+
   article {
-    background-color: var(--color-white);
-    padding: 1rem;
+    padding: 1rem 0;
   }
 `
 

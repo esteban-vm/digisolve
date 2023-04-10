@@ -3,9 +3,9 @@ import { Grid } from '@/components'
 import { styled } from '@/styles'
 
 const Wrapper = styled.div`
-  width: 75vw;
   text-align: center;
   font-size: 200%;
+  width: 75vw;
   user-select: none;
   color: var(--color-light);
 

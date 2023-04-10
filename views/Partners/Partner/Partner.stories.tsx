@@ -5,8 +5,8 @@ import { partners } from '../Partners'
 import Partner from './Partner'
 
 const Wrapper = styled.div`
-  width: 50vw;
   text-align: center;
+  width: 50vw;
 
   article {
     background-color: var(--color-white);
