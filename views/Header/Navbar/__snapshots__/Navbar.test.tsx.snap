@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`🧪 NAVBAR: style tests: should render with correct styles 1`] = `
+.emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .emotion-0 .navbar__image {
   height: 120px;
   width: auto;
