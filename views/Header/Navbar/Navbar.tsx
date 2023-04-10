@@ -24,6 +24,8 @@ const NavbarComponent: Component = (props) => {
 }
 
 const Navbar = styled(NavbarComponent)`
+  user-select: none;
+
   .navbar {
     &__image {
       height: 120px;
