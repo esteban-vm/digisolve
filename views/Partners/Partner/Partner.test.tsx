@@ -1,21 +1,26 @@
 import { render, cleanup, screen, create } from '@/tests'
-import { partners } from '../Partners'
+import partners from '../partners.json'
 import Partner from './Partner'
 
 describe('🧪 PARTNER:', () => {
   const [testPartner] = partners
 
   describe('display tests:', () => {
-    it('should display the partner logo', () => {
+    beforeEach(() => {
       render(<Partner {...testPartner} />)
+    })
 
-      const parent = screen.getByRole('article')
-      const image = screen.getByRole('img', { name: testPartner.alt })
-      expect(image).toBeInTheDocument()
-      expect(image).toBeVisible()
-      expect(parent).toContainElement(image)
+    afterEach(cleanup)
 
-      cleanup()
+    it('should be accessible', () => {
+      const article = screen.getByRole('article', { name: testPartner.text })
+      expect(article).toBeInTheDocument()
+    })
+
+    it('the logo should be displayed', () => {
+      const logo = screen.getByRole('img', { name: testPartner.text })
+      expect(logo).toBeInTheDocument()
+      expect(logo).toBeVisible()
     })
   })
 

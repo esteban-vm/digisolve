@@ -5,13 +5,9 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
   text-align: center;
 }
 
-.emotion-1 .partner__image {
+.emotion-1 img {
   width: 65%;
   height: auto;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 <section
@@ -43,25 +39,26 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
+        aria-labelledby=":r1:"
         className="emotion-1"
       >
         <img
-          alt="Brand partner 1"
-          className="partner__image"
+          alt="Partner"
           data-nimg="1"
           decoding="async"
-          height={40}
+          height={500}
+          id=":r1:"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          src="/_next/image?url=%2Fimg%2Fbrand-logo-1.png&w=1080&q=75"
+          srcSet="/_next/image?url=%2Fimg%2Fbrand-logo-1.png&w=640&q=75 1x, /_next/image?url=%2Fimg%2Fbrand-logo-1.png&w=1080&q=75 2x"
           style={
             {
               "color": "transparent",
             }
           }
-          width={40}
+          width={500}
         />
       </article>
     </div>
@@ -70,25 +67,26 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
+        aria-labelledby=":r2:"
         className="emotion-1"
       >
         <img
-          alt="Brand partner 2"
-          className="partner__image"
+          alt="Partner"
           data-nimg="1"
           decoding="async"
-          height={40}
+          height={500}
+          id=":r2:"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          src="/_next/image?url=%2Fimg%2Fbrand-logo-2.png&w=1080&q=75"
+          srcSet="/_next/image?url=%2Fimg%2Fbrand-logo-2.png&w=640&q=75 1x, /_next/image?url=%2Fimg%2Fbrand-logo-2.png&w=1080&q=75 2x"
           style={
             {
               "color": "transparent",
             }
           }
-          width={40}
+          width={500}
         />
       </article>
     </div>
@@ -97,25 +95,26 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
+        aria-labelledby=":r3:"
         className="emotion-1"
       >
         <img
-          alt="Brand partner 3"
-          className="partner__image"
+          alt="Partner"
           data-nimg="1"
           decoding="async"
-          height={40}
+          height={500}
+          id=":r3:"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          src="/_next/image?url=%2Fimg%2Fbrand-logo-3.png&w=1080&q=75"
+          srcSet="/_next/image?url=%2Fimg%2Fbrand-logo-3.png&w=640&q=75 1x, /_next/image?url=%2Fimg%2Fbrand-logo-3.png&w=1080&q=75 2x"
           style={
             {
               "color": "transparent",
             }
           }
-          width={40}
+          width={500}
         />
       </article>
     </div>
@@ -124,25 +123,26 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
+        aria-labelledby=":r4:"
         className="emotion-1"
       >
         <img
-          alt="Brand partner 4"
-          className="partner__image"
+          alt="Partner"
           data-nimg="1"
           decoding="async"
-          height={40}
+          height={500}
+          id=":r4:"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          src="/_next/image?url=%2Fimg%2Fbrand-logo-4.png&w=1080&q=75"
+          srcSet="/_next/image?url=%2Fimg%2Fbrand-logo-4.png&w=640&q=75 1x, /_next/image?url=%2Fimg%2Fbrand-logo-4.png&w=1080&q=75 2x"
           style={
             {
               "color": "transparent",
             }
           }
-          width={40}
+          width={500}
         />
       </article>
     </div>
@@ -156,25 +156,26 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
+        aria-labelledby=":r5:"
         className="emotion-1"
       >
         <img
-          alt="Brand partner 5"
-          className="partner__image"
+          alt="Partner"
           data-nimg="1"
           decoding="async"
-          height={40}
+          height={500}
+          id=":r5:"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          src="/_next/image?url=%2Fimg%2Fbrand-logo-5.png&w=1080&q=75"
+          srcSet="/_next/image?url=%2Fimg%2Fbrand-logo-5.png&w=640&q=75 1x, /_next/image?url=%2Fimg%2Fbrand-logo-5.png&w=1080&q=75 2x"
           style={
             {
               "color": "transparent",
             }
           }
-          width={40}
+          width={500}
         />
       </article>
     </div>
@@ -183,25 +184,26 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
+        aria-labelledby=":r6:"
         className="emotion-1"
       >
         <img
-          alt="Brand partner 6"
-          className="partner__image"
+          alt="Partner"
           data-nimg="1"
           decoding="async"
-          height={40}
+          height={500}
+          id=":r6:"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          src="/_next/image?url=%2Fimg%2Fbrand-logo-6.png&w=1080&q=75"
+          srcSet="/_next/image?url=%2Fimg%2Fbrand-logo-6.png&w=640&q=75 1x, /_next/image?url=%2Fimg%2Fbrand-logo-6.png&w=1080&q=75 2x"
           style={
             {
               "color": "transparent",
             }
           }
-          width={40}
+          width={500}
         />
       </article>
     </div>
@@ -210,25 +212,26 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
+        aria-labelledby=":r7:"
         className="emotion-1"
       >
         <img
-          alt="Brand partner 7"
-          className="partner__image"
+          alt="Partner"
           data-nimg="1"
           decoding="async"
-          height={40}
+          height={500}
+          id=":r7:"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          src="/_next/image?url=%2Fimg%2Fbrand-logo-7.png&w=1080&q=75"
+          srcSet="/_next/image?url=%2Fimg%2Fbrand-logo-7.png&w=640&q=75 1x, /_next/image?url=%2Fimg%2Fbrand-logo-7.png&w=1080&q=75 2x"
           style={
             {
               "color": "transparent",
             }
           }
-          width={40}
+          width={500}
         />
       </article>
     </div>
@@ -237,25 +240,26 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
+        aria-labelledby=":r8:"
         className="emotion-1"
       >
         <img
-          alt="Brand partner 8"
-          className="partner__image"
+          alt="Partner"
           data-nimg="1"
           decoding="async"
-          height={40}
+          height={500}
+          id=":r8:"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          src="/_next/image?url=%2Fimg%2Fbrand-logo-8.png&w=1080&q=75"
+          srcSet="/_next/image?url=%2Fimg%2Fbrand-logo-8.png&w=640&q=75 1x, /_next/image?url=%2Fimg%2Fbrand-logo-8.png&w=1080&q=75 2x"
           style={
             {
               "color": "transparent",
             }
           }
-          width={40}
+          width={500}
         />
       </article>
     </div>

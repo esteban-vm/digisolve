@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@/stories'
 import { Grid } from '@/components'
 import { styled } from '@/styles'
-import { packages } from '../Packages'
+import packages from '../packages.json'
 import Package from './Package'
 
 const Wrapper = styled.div`
@@ -33,11 +33,14 @@ export default {
   ],
   parameters: {
     layout: 'centered',
+    viewport: {
+      disable: true,
+    },
   },
 } as Meta<typeof Package>
 
 const Examples: StoryObj<typeof Package>[] = []
-for (const pack of packages) Examples.push({ args: pack })
+for (const _package of packages) Examples.push({ args: _package })
 
 export const Example1 = Examples[0]
 export const Example2 = Examples[1]

@@ -9,6 +9,9 @@ export default {
   title: 'Components/Button',
   parameters: {
     layout: 'centered',
+    viewport: {
+      disable: true,
+    },
   },
   play({ canvasElement }) {
     const canvas = within(canvasElement)

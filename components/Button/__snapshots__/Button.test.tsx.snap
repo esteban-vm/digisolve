@@ -5,12 +5,9 @@ exports[`🧪 BUTTON: style tests: with basic button: should render with correct
   display: inline-block;
 }
 
-.emotion-0 .btn {
+.emotion-0 input[type='submit'],
+.emotion-0 a {
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -25,8 +22,10 @@ exports[`🧪 BUTTON: style tests: with basic button: should render with correct
   color: var(--color-primary);
 }
 
-.emotion-0 .btn:hover,
-.emotion-0 .btn:active {
+.emotion-0 input[type='submit']:hover,
+.emotion-0 a:hover,
+.emotion-0 input[type='submit']:active,
+.emotion-0 a:active {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
@@ -35,7 +34,6 @@ exports[`🧪 BUTTON: style tests: with basic button: should render with correct
   className="emotion-0"
 >
   <a
-    className="btn"
     href="#"
     onClick={[Function]}
     onMouseEnter={[Function]}
@@ -52,12 +50,9 @@ exports[`🧪 BUTTON: style tests: with full button: should render with correct 
   display: inline-block;
 }
 
-.emotion-0 .btn {
+.emotion-0 input[type='submit'],
+.emotion-0 a {
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -72,8 +67,10 @@ exports[`🧪 BUTTON: style tests: with full button: should render with correct 
   color: var(--color-white);
 }
 
-.emotion-0 .btn:hover,
-.emotion-0 .btn:active {
+.emotion-0 input[type='submit']:hover,
+.emotion-0 a:hover,
+.emotion-0 input[type='submit']:active,
+.emotion-0 a:active {
   background-color: var(--color-dark-primary);
 }
 
@@ -81,7 +78,6 @@ exports[`🧪 BUTTON: style tests: with full button: should render with correct 
   className="emotion-0"
 >
   <a
-    className="btn"
     href="#"
     onClick={[Function]}
     onMouseEnter={[Function]}
@@ -98,12 +94,9 @@ exports[`🧪 BUTTON: style tests: with submit button should render with correct
   display: inline-block;
 }
 
-.emotion-0 .btn {
+.emotion-0 input[type='submit'],
+.emotion-0 a {
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -118,8 +111,10 @@ exports[`🧪 BUTTON: style tests: with submit button should render with correct
   color: var(--color-primary);
 }
 
-.emotion-0 .btn:hover,
-.emotion-0 .btn:active {
+.emotion-0 input[type='submit']:hover,
+.emotion-0 a:hover,
+.emotion-0 input[type='submit']:active,
+.emotion-0 a:active {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
@@ -128,7 +123,6 @@ exports[`🧪 BUTTON: style tests: with submit button should render with correct
   className="emotion-0"
 >
   <input
-    className="btn"
     type="submit"
     value="test"
   />

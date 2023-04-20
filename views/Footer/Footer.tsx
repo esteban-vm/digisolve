@@ -1,23 +1,32 @@
-import type { Component } from '@/types'
+import type { Component, IconComponentProps } from '@/types'
 import { Grid } from '@/components'
-import { styled } from '@/styles'
-import NavLinks from './NavLinks'
-import SocialLinks from './SocialLinks'
+import { styled, mediaQuery } from '@/styles'
+import links from './links.json'
+import NavLink from './NavLink'
+import SocialLink from './SocialLink'
 
 const FooterComponent: Component = (props) => {
   return (
     <footer {...props}>
       <Grid.Row>
         <Grid.Col isHalf>
-          <NavLinks />
+          <ul className='nav__links'>
+            {links.navLinks.map((link) => (
+              <NavLink key={crypto.randomUUID()} {...link} />
+            ))}
+          </ul>
         </Grid.Col>
         <Grid.Col isHalf>
-          <SocialLinks />
+          <ul className='social__links'>
+            {(links.socialLinks as IconComponentProps[]).map((link) => (
+              <SocialLink key={crypto.randomUUID()} {...link} />
+            ))}
+          </ul>
         </Grid.Col>
       </Grid.Row>
       <Grid.Row>
-        <p className='footer__paragraph'>This webpage has been created for educational purposes.</p>
-        <p className='footer__paragraph'>You are feel free to use it and customize it to make your own webpages.</p>
+        <p>This webpage has been created for educational purposes.</p>
+        <p>You are feel free to use it and customize it to make your own webpages.</p>
       </Grid.Row>
     </footer>
   )
@@ -28,25 +37,16 @@ const Footer = styled(FooterComponent)`
   padding: 50px;
   font-size: 80%;
   color: var(--color-dark);
-  list-style: none;
 
-  .footer {
-    &__paragraph {
-      text-align: center;
-      line-height: 1.5;
+  ${mediaQuery('md')} {
+    padding: 30px;
+  }
 
-      :first-of-type {
-        margin-top: 50px;
-      }
-    }
+  ul {
+    li {
+      display: inline-block;
 
-    &__nav,
-    &__social {
-      &--item {
-        display: inline-block;
-      }
-
-      &--link {
+      a {
         transition: all 500ms;
 
         :link,
@@ -56,6 +56,31 @@ const Footer = styled(FooterComponent)`
         }
       }
     }
+  }
+
+  p {
+    text-align: center;
+    line-height: 1.5;
+
+    ${mediaQuery('md')} {
+      line-height: 1.3;
+    }
+
+    :first-of-type {
+      margin-top: 50px;
+
+      ${mediaQuery('md')} {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .nav__links {
+    float: left;
+  }
+
+  .social__links {
+    float: right;
   }
 `
 

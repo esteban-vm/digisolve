@@ -1,14 +1,9 @@
-import type { Component, ImageComponentProps } from '@/types'
+import type { Component } from '@/types'
 import { useId } from 'react'
 import { Grid } from '@/components'
-import { brandLogos } from '@/images'
 import { styled } from '@/styles'
+import partners from './partners.json'
 import Partner from './Partner'
-
-export const partners = brandLogos.map((logo, index) => ({
-  src: logo,
-  alt: `Brand partner ${index + 1}`,
-})) as ImageComponentProps[]
 
 const PartnersComponent: Component = (props) => {
   const id = useId()
@@ -23,18 +18,16 @@ const PartnersComponent: Component = (props) => {
           We&apos;ve worked with some of the best companies in the world. Here are some of our Amazing Partners
         </h3>
       </Grid.Row>
-
       <Grid.Row>
-        {partners.slice(0, 4).map((partner, index) => (
-          <Grid.Col key={index} isOneQuarter>
+        {partners.slice(0, 4).map((partner) => (
+          <Grid.Col key={crypto.randomUUID()} isOneQuarter>
             <Partner {...partner} />
           </Grid.Col>
         ))}
       </Grid.Row>
-
       <Grid.Row>
-        {partners.slice(4).map((partner, index) => (
-          <Grid.Col key={index} isOneQuarter>
+        {partners.slice(4).map((partner) => (
+          <Grid.Col key={crypto.randomUUID()} isOneQuarter>
             <Partner {...partner} />
           </Grid.Col>
         ))}

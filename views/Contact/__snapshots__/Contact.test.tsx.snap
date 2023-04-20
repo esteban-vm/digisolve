@@ -5,10 +5,22 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
   text-align: center;
 }
 
-.emotion-0 .contact__heading {
+.emotion-0 h2 {
   color: var(--color-black);
   margin-top: 150px;
   margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .emotion-0 h2 {
+    margin-top: 90px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .emotion-0 h2 {
+    margin-top: 60px;
+  }
 }
 
 .emotion-1 {
@@ -18,14 +30,16 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
   color: var(--color-grey);
 }
 
-.emotion-1 .contact__form--label {
+.emotion-1 label {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 
-.emotion-1 .contact__form--control {
+.emotion-1 input[type='text'],
+.emotion-1 input[type='email'],
+.emotion-1 textarea {
   width: 100%;
   padding: 8px;
   border-radius: 3px;
@@ -33,42 +47,74 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
   background-color: var(--color-white);
 }
 
-.emotion-1 .contact__form--control::-webkit-input-placeholder {
+.emotion-1 input[type='text']::-webkit-input-placeholder {
   text-transform: capitalize;
   opacity: 0.7;
 }
 
-.emotion-1 .contact__form--control::-moz-placeholder {
+.emotion-1 input[type='text']::-moz-placeholder {
   text-transform: capitalize;
   opacity: 0.7;
 }
 
-.emotion-1 .contact__form--control:-ms-input-placeholder {
+.emotion-1 input[type='text']:-ms-input-placeholder {
   text-transform: capitalize;
   opacity: 0.7;
 }
 
-.emotion-1 .contact__form--control::placeholder {
+.emotion-1 input[type='email']::-webkit-input-placeholder {
   text-transform: capitalize;
   opacity: 0.7;
 }
 
-.emotion-1 .contact__form--control:is(textarea) {
+.emotion-1 input[type='email']::-moz-placeholder {
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
+.emotion-1 input[type='email']:-ms-input-placeholder {
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
+.emotion-1 textarea::-webkit-input-placeholder {
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
+.emotion-1 textarea::-moz-placeholder {
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
+.emotion-1 textarea:-ms-input-placeholder {
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
+.emotion-1 input[type='text']::placeholder,
+.emotion-1 input[type='email']::placeholder,
+.emotion-1 textarea::placeholder {
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
+.emotion-1 textarea {
   height: 100px;
   resize: none;
 }
 
-.emotion-1 .contact__form--checkbox {
+.emotion-1 input[type='checkbox'] {
   margin: 10px 5px 10px 0;
 }
 
-.emotion-1 .contact__form--toast {
+.emotion-1 .toast {
   text-align: center;
   color: var(--color-primary);
   background-color: var(--color-light);
 }
 
-.emotion-1 .contact__form--icon {
+.emotion-1 .icon {
   color: var(--color-secondary);
 }
 
@@ -76,12 +122,9 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
   display: inline-block;
 }
 
-.emotion-2 .btn {
+.emotion-2 input[type='submit'],
+.emotion-2 a {
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -96,8 +139,10 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
   color: var(--color-white);
 }
 
-.emotion-2 .btn:hover,
-.emotion-2 .btn:active {
+.emotion-2 input[type='submit']:hover,
+.emotion-2 a:hover,
+.emotion-2 input[type='submit']:active,
+.emotion-2 a:active {
   background-color: var(--color-dark-primary);
 }
 
@@ -110,7 +155,6 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
     role="presentation"
   >
     <h2
-      className="contact__heading"
       id=":r0:"
     >
       We are happy to hear from you
@@ -135,7 +179,6 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
           role="presentation"
         >
           <label
-            className="contact__form--label"
             htmlFor="name"
           >
             Name
@@ -147,7 +190,6 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
         >
           <input
             autoCorrect="off"
-            className="contact__form--control"
             id="name"
             name="name"
             onBlur={[Function]}
@@ -167,7 +209,6 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
           role="presentation"
         >
           <label
-            className="contact__form--label"
             htmlFor="email"
           >
             Email
@@ -178,7 +219,6 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
           role="presentation"
         >
           <input
-            className="contact__form--control"
             id="email"
             name="email"
             onBlur={[Function]}
@@ -197,7 +237,6 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
           role="presentation"
         >
           <label
-            className="contact__form--label"
             htmlFor="newsletter"
           >
             Newsletter?
@@ -208,7 +247,6 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
           role="presentation"
         >
           <input
-            className="contact__form--checkbox"
             defaultChecked={true}
             id="newsletter"
             name="newsletter"
@@ -228,7 +266,6 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
           role="presentation"
         >
           <label
-            className="contact__form--label"
             htmlFor="message"
           >
             Drop us a line
@@ -239,7 +276,6 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
           role="presentation"
         >
           <textarea
-            className="contact__form--control"
             id="message"
             name="message"
             onBlur={[Function]}
@@ -266,7 +302,6 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
             className="emotion-2"
           >
             <input
-              className="btn"
               type="submit"
               value="Send it!"
             />

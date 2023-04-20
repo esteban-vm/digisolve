@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`🧪 NAV LINK: style tests: should render with correct styles 1`] = `
+.emotion-0 {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.emotion-0 a:link,
+.emotion-0 a:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-white);
+  outline: none;
+  -webkit-transition: border-bottom 100ms;
+  transition: border-bottom 100ms;
+}
+
+.emotion-0 a:hover,
+.emotion-0 a:active {
+  border-bottom: 2px solid var(--color-primary);
+}
+
+<li
+  className="emotion-0"
+>
+  <a
+    href="#"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onTouchStart={[Function]}
+  >
+    Home
+  </a>
+</li>
+`;

@@ -1,35 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`🧪 PARTNER: style tests: should render with correct styles 1`] = `
-.emotion-0 .partner__image {
+.emotion-0 img {
   width: 65%;
   height: auto;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 <article
+  aria-labelledby=":r0:"
   className="emotion-0"
 >
   <img
-    alt="Brand partner 1"
-    className="partner__image"
+    alt="Partner"
     data-nimg="1"
     decoding="async"
-    height={40}
+    height={500}
+    id=":r0:"
     loading="lazy"
     onError={[Function]}
     onLoad={[Function]}
-    src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-    srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+    src="/_next/image?url=%2Fimg%2Fbrand-logo-1.png&w=1080&q=75"
+    srcSet="/_next/image?url=%2Fimg%2Fbrand-logo-1.png&w=640&q=75 1x, /_next/image?url=%2Fimg%2Fbrand-logo-1.png&w=1080&q=75 2x"
     style={
       {
         "color": "transparent",
       }
     }
-    width={40}
+    width={500}
   />
 </article>
 `;

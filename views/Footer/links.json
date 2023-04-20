@@ -1,0 +1,16 @@
+{
+  "navLinks": [
+    { "text": "About us" },
+    { "text": "Blog" },
+    { "text": "Help & Support" },
+    { "text": "iOS App" },
+    { "text": "Android App" }
+  ],
+  "socialLinks": [
+    { "icon": ["fab", "facebook-f"], "title": "Facebook" },
+    { "icon": ["fab", "twitter"], "title": "Twitter" },
+    { "icon": ["fab", "google-plus-g"], "title": "Google Plus" },
+    { "icon": ["fab", "instagram"], "title": "Instagram" },
+    { "icon": ["fab", "youtube"], "title": "YouTube" }
+  ]
+}

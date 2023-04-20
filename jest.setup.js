@@ -1,5 +1,7 @@
 import '@testing-library/jest-dom/extend-expect'
 import { matchers } from '@emotion/jest'
+import { Crypto } from '@peculiar/webcrypto'
+import '@/icons'
 
 expect.extend(matchers)
 
@@ -15,4 +17,12 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
   })),
+})
+
+const cryptoModule = new Crypto()
+
+Object.defineProperty(window, 'crypto', {
+  get() {
+    return cryptoModule
+  },
 })

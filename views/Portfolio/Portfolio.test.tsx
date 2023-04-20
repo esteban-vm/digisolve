@@ -1,40 +1,45 @@
 import { render, cleanup, screen, create } from '@/tests'
-import Portfolio, { works } from './Portfolio'
+import works from './works.json'
+import Portfolio from './Portfolio'
 
 describe('🧪 PORTFOLIO:', () => {
   describe('display tests:', () => {
-    let parent: HTMLElement
+    /** Section title */
+    const name = /^our work$/i
 
     beforeEach(() => {
       render(<Portfolio />)
-      parent = screen.getByRole('region')
     })
 
     afterEach(cleanup)
 
-    it('should display the heading', () => {
-      const heading = screen.getByRole('heading', { name: /^our work$/i, level: 2 })
-      expect(heading).toBeInTheDocument()
-      expect(heading).toBeVisible()
-      expect(parent).toContainElement(heading)
+    it('should be accessible', () => {
+      const section = screen.getByRole('region', { name })
+      expect(section).toBeInTheDocument()
     })
 
-    it('should display the subheading', () => {
-      const subheading = screen.getByRole('heading', { level: 3 })
-      expect(subheading).toBeInTheDocument()
-      expect(subheading).toBeVisible()
-      expect(parent).toContainElement(subheading)
-    })
+    describe('should be displayed:', () => {
+      it('the heading', () => {
+        const heading = screen.getByRole('heading', { name, level: 2 })
+        expect(heading).toBeInTheDocument()
+        expect(heading).toBeVisible()
+      })
 
-    it('should display the works', () => {
-      const workElements = screen.getAllByRole('figure')
-      expect(workElements).toHaveLength(works.length)
+      it('the subheading', () => {
+        const subheading = screen.getByRole('heading', { level: 3 })
+        expect(subheading).toBeInTheDocument()
+        expect(subheading).toBeVisible()
+      })
 
-      for (const work of workElements) {
-        expect(work).toBeInTheDocument()
-        expect(work).toBeVisible()
-        expect(parent).toContainElement(work)
-      }
+      it('the works', () => {
+        const workElements = screen.getAllByRole('figure')
+        expect(workElements).toHaveLength(works.length)
+
+        for (const work of workElements) {
+          expect(work).toBeInTheDocument()
+          expect(work).toBeVisible()
+        }
+      })
     })
   })
 

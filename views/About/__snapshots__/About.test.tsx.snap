@@ -6,7 +6,13 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   padding-bottom: 20px;
 }
 
-.emotion-0 .about__heading {
+@media only screen and (max-width: 1023px) {
+  .emotion-0 {
+    margin-top: 60px;
+  }
+}
+
+.emotion-0 h2 {
   color: var(--color-black);
   text-transform: capitalize;
   font-size: 250%;
@@ -14,34 +20,68 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   margin-bottom: 50px;
 }
 
-.emotion-0 .about__paragraph {
+@media only screen and (max-width: 1023px) {
+  .emotion-0 h2 {
+    margin-bottom: 35px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .emotion-0 h2 {
+    margin-bottom: 20px;
+  }
+}
+
+.emotion-0 p {
   color: var(--color-grey);
   margin-bottom: 50px;
 }
 
-.emotion-0 .about__image {
+@media only screen and (max-width: 1200px) {
+  .emotion-0 p:first-of-type {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .emotion-0 p:last-of-type {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-0 img {
   width: 80%;
   height: auto;
 }
 
-.emotion-0 .span_1_of_2:first-of-type {
+.emotion-0 .col:first-of-type {
   text-align: left;
 }
 
-.emotion-0 .span_1_of_2:last-of-type {
+@media only screen and (max-width: 1023px) {
+  .emotion-0 .col:first-of-type {
+    padding-left: 1%;
+  }
+}
+
+.emotion-0 .col:last-of-type {
   text-align: right;
+}
+
+@media only screen and (max-width: 1023px) {
+  .emotion-0 .col:last-of-type {
+    margin-left: 0;
+    text-align: center;
+  }
 }
 
 .emotion-1 {
   display: inline-block;
 }
 
-.emotion-1 .btn {
+.emotion-1 input[type='submit'],
+.emotion-1 a {
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -56,8 +96,10 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   color: var(--color-primary);
 }
 
-.emotion-1 .btn:hover,
-.emotion-1 .btn:active {
+.emotion-1 input[type='submit']:hover,
+.emotion-1 a:hover,
+.emotion-1 input[type='submit']:active,
+.emotion-1 a:active {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
@@ -75,26 +117,20 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <h2
-        className="about__heading"
         id=":r0:"
       >
         A digital agency focused on growing your online presence
       </h2>
-      <p
-        className="about__paragraph"
-      >
+      <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt. Architecto fugiat veritatis cum necessitatibus sapiente!
       </p>
-      <p
-        className="about__paragraph"
-      >
+      <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt. Architecto fugiat veritatis cum necessitatibus sapiente!
       </p>
       <span
         className="emotion-1"
       >
         <a
-          className="btn"
           href="#"
           onClick={[Function]}
           onMouseEnter={[Function]}
@@ -111,21 +147,20 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
     >
       <img
         alt="Digisolve app on Laptop"
-        className="about__image"
         data-nimg="1"
         decoding="async"
-        height={40}
+        height={1280}
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-        srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+        src="/_next/image?url=%2Fimg%2Fabout-img.jpg&w=3840&q=75"
+        srcSet="/_next/image?url=%2Fimg%2Fabout-img.jpg&w=1920&q=75 1x, /_next/image?url=%2Fimg%2Fabout-img.jpg&w=3840&q=75 2x"
         style={
           {
             "color": "transparent",
           }
         }
-        width={40}
+        width={1920}
       />
     </div>
   </div>

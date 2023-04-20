@@ -10,23 +10,32 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
   color: var(--color-white);
 }
 
-.emotion-0 .testimonials__heading {
+.emotion-0 h2 {
   font-size: 250%;
   margin-bottom: 20px;
   margin-top: 150px;
   text-transform: capitalize;
 }
 
+@media only screen and (max-width: 1200px) {
+  .emotion-0 h2 {
+    margin-top: 90px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .emotion-0 h2 {
+    margin-top: 60px;
+    margin-bottom: 10px;
+  }
+}
+
 .emotion-1 {
   text-align: left;
   margin-bottom: 50px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
-.emotion-1 .testimonial__quote {
+.emotion-1 blockquote {
   padding: 2%;
   font-style: italic;
   line-height: 145%;
@@ -34,7 +43,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
   margin-top: 40px;
 }
 
-.emotion-1 .testimonial__quote::before {
+.emotion-1 blockquote::before {
   content: '\\201C';
   display: block;
   font-size: 500%;
@@ -43,18 +52,18 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
   top: -5px;
 }
 
-.emotion-1 .testimonial__quote::first-letter {
+.emotion-1 blockquote::first-letter {
   text-transform: capitalize;
 }
 
-.emotion-1 .testimonial__box {
+.emotion-1 cite {
   display: block;
   margin-top: 25px;
   font-size: 90%;
   text-transform: capitalize;
 }
 
-.emotion-1 .testimonial__photo {
+.emotion-1 img {
   border-radius: 50%;
   height: 20%;
   vertical-align: middle;
@@ -70,7 +79,6 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
     role="presentation"
   >
     <h2
-      className="testimonials__heading"
       id=":r0:"
     >
       Our testimonials
@@ -85,33 +93,30 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
       role="presentation"
     >
       <article
+        aria-labelledby=":r1:"
         className="emotion-1"
       >
-        <blockquote
-          className="testimonial__quote"
-        >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
+        <blockquote>
+          lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
         </blockquote>
-        <cite
-          className="testimonial__box"
-        >
+        <cite>
           <img
             alt="Aaron Cruz"
-            className="testimonial__photo"
             data-nimg="1"
             decoding="async"
-            height={40}
+            height={72}
+            id=":r1:"
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            src="/_next/image?url=%2Fimg%2Fclient-1.jpg&w=256&q=75"
+            srcSet="/_next/image?url=%2Fimg%2Fclient-1.jpg&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fclient-1.jpg&w=256&q=75 2x"
             style={
               {
                 "color": "transparent",
               }
             }
-            width={40}
+            width={72}
           />
           Aaron Cruz
         </cite>
@@ -122,33 +127,30 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
       role="presentation"
     >
       <article
+        aria-labelledby=":r2:"
         className="emotion-1"
       >
-        <blockquote
-          className="testimonial__quote"
-        >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
+        <blockquote>
+          lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
         </blockquote>
-        <cite
-          className="testimonial__box"
-        >
+        <cite>
           <img
             alt="Jeff Jones"
-            className="testimonial__photo"
             data-nimg="1"
             decoding="async"
-            height={40}
+            height={72}
+            id=":r2:"
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            src="/_next/image?url=%2Fimg%2Fclient-2.jpg&w=256&q=75"
+            srcSet="/_next/image?url=%2Fimg%2Fclient-2.jpg&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fclient-2.jpg&w=256&q=75 2x"
             style={
               {
                 "color": "transparent",
               }
             }
-            width={40}
+            width={72}
           />
           Jeff Jones
         </cite>
@@ -159,33 +161,30 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
       role="presentation"
     >
       <article
+        aria-labelledby=":r3:"
         className="emotion-1"
       >
-        <blockquote
-          className="testimonial__quote"
-        >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
+        <blockquote>
+          lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
         </blockquote>
-        <cite
-          className="testimonial__box"
-        >
+        <cite>
           <img
             alt="Helen Smith"
-            className="testimonial__photo"
             data-nimg="1"
             decoding="async"
-            height={40}
+            height={72}
+            id=":r3:"
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            src="/_next/image?url=%2Fimg%2Fclient-3.jpg&w=256&q=75"
+            srcSet="/_next/image?url=%2Fimg%2Fclient-3.jpg&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fclient-3.jpg&w=256&q=75 2x"
             style={
               {
                 "color": "transparent",
               }
             }
-            width={40}
+            width={72}
           />
           Helen Smith
         </cite>

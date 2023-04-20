@@ -5,50 +5,47 @@ exports[`🧪 SERVICE: style tests: should render with correct styles 1`] = `
   padding: 1% 1.5%;
 }
 
-.emotion-0 .service__icon {
-  width: 3rem;
-  height: 3rem;
-  margin-bottom: 30px;
-  color: var(--color-secondary);
-}
-
-.emotion-0 .service__heading {
+.emotion-0 h4 {
   font-size: 150%;
   margin-bottom: 30px;
   font-weight: 400;
   text-transform: capitalize;
 }
 
-.emotion-0 .service__paragraph {
+.emotion-0 p {
   color: var(--color-grey);
   font-size: 90%;
   margin-bottom: 20px;
 }
 
-.emotion-0 .service__link {
+.emotion-0 a {
   color: var(--color-primary);
   text-transform: uppercase;
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   -webkit-transition: opacity 200ms;
   transition: opacity 200ms;
 }
 
-.emotion-0 .service__link:hover {
+.emotion-0 a:hover {
   opacity: 0.7;
 }
 
+.emotion-0 .icon {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 30px;
+  color: var(--color-secondary);
+}
+
 <article
+  aria-labelledby=":r0:"
   className="emotion-0"
 >
   <svg
-    aria-labelledby="svg-inline--fa-title-cmwtt0LDaV9k"
-    className="svg-inline--fa fa-tags service__icon"
+    aria-labelledby="svg-inline--fa-title-wnNk4gEVSCS8"
+    className="svg-inline--fa fa-tags icon"
     data-icon="tags"
     data-prefix="fas"
     role="img"
@@ -57,7 +54,7 @@ exports[`🧪 SERVICE: style tests: should render with correct styles 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="svg-inline--fa-title-cmwtt0LDaV9k"
+      id="svg-inline--fa-title-wnNk4gEVSCS8"
       style={{}}
     >
       branding
@@ -69,17 +66,14 @@ exports[`🧪 SERVICE: style tests: should render with correct styles 1`] = `
     />
   </svg>
   <h4
-    className="service__heading"
+    id=":r0:"
   >
     branding
   </h4>
-  <p
-    className="service__paragraph"
-  >
+  <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.
   </p>
   <a
-    className="service__link"
     href="#"
     onClick={[Function]}
     onMouseEnter={[Function]}

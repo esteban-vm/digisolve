@@ -13,7 +13,29 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
   text-transform: capitalize;
 }
 
-.emotion-0 .header__box {
+.emotion-0 h1 {
+  font-size: 500%;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.emotion-0 h2 {
+  font-size: 200%;
+  font-weight: 400;
+}
+
+.emotion-0 img {
+  height: 120px;
+  width: auto;
+  float: left;
+}
+
+.emotion-0 ul {
+  float: right;
+  margin-top: 70px;
+}
+
+.emotion-0 .box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -24,47 +46,23 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
   text-align: center;
 }
 
-.emotion-0 .header__titles {
+.emotion-0 .titles {
   margin-bottom: 100px;
 }
 
-.emotion-0 .header__heading {
-  font-size: 500%;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
-.emotion-0 .header__subheading {
-  font-size: 200%;
-  font-weight: 400;
+@media only screen and (max-width: 767px) {
+  .emotion-0 .titles {
+    margin-bottom: 50px;
+  }
 }
 
 .emotion-1 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-1 .navbar__image {
-  height: 120px;
-  width: auto;
-  float: left;
-}
-
-.emotion-1 .navbar__list {
-  list-style: none;
-  float: right;
-  margin-top: 70px;
-}
-
-.emotion-1 .navbar__item {
   display: inline-block;
   margin-right: 40px;
 }
 
-.emotion-1 .navbar__link:link,
-.emotion-1 .navbar__link:visited {
+.emotion-1 a:link,
+.emotion-1 a:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: uppercase;
@@ -74,21 +72,18 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
   transition: border-bottom 100ms;
 }
 
-.emotion-1 .navbar__link:hover,
-.emotion-1 .navbar__link:active {
+.emotion-1 a:hover,
+.emotion-1 a:active {
   border-bottom: 2px solid var(--color-primary);
 }
 
-.emotion-2 {
+.emotion-4 {
   display: inline-block;
 }
 
-.emotion-2 .btn {
+.emotion-4 input[type='submit'],
+.emotion-4 a {
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -103,43 +98,40 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
   color: var(--color-white);
 }
 
-.emotion-2 .btn:hover,
-.emotion-2 .btn:active {
+.emotion-4 input[type='submit']:hover,
+.emotion-4 a:hover,
+.emotion-4 input[type='submit']:active,
+.emotion-4 a:active {
   background-color: var(--color-dark-primary);
 }
 
 <header
+  aria-labelledby=":r0:"
   className="emotion-0"
 >
-  <nav
-    className="emotion-1"
-  >
+  <nav>
     <img
       alt="Digisolve logo"
-      className="navbar__image"
       data-nimg="1"
       decoding="async"
-      height={40}
+      height={216}
       loading="lazy"
       onError={[Function]}
       onLoad={[Function]}
-      src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-      srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+      src="/_next/image?url=%2Fimg%2Fdigisolve-logo.png&w=640&q=75"
+      srcSet="/_next/image?url=%2Fimg%2Fdigisolve-logo.png&w=256&q=75 1x, /_next/image?url=%2Fimg%2Fdigisolve-logo.png&w=640&q=75 2x"
       style={
         {
           "color": "transparent",
         }
       }
-      width={40}
+      width={216}
     />
-    <ul
-      className="navbar__list"
-    >
+    <ul>
       <li
-        className="navbar__item"
+        className="emotion-1"
       >
         <a
-          className="navbar__link"
           href="#"
           onClick={[Function]}
           onMouseEnter={[Function]}
@@ -149,10 +141,9 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
         </a>
       </li>
       <li
-        className="navbar__item"
+        className="emotion-1"
       >
         <a
-          className="navbar__link"
           href="#"
           onClick={[Function]}
           onMouseEnter={[Function]}
@@ -162,10 +153,9 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
         </a>
       </li>
       <li
-        className="navbar__item"
+        className="emotion-1"
       >
         <a
-          className="navbar__link"
           href="#"
           onClick={[Function]}
           onMouseEnter={[Function]}
@@ -177,27 +167,24 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
     </ul>
   </nav>
   <div
-    className="header__box"
+    className="box"
   >
     <div
-      className="header__titles"
+      className="titles"
     >
       <h1
-        className="header__heading"
+        id=":r0:"
       >
         Digital agency
       </h1>
-      <h2
-        className="header__subheading"
-      >
+      <h2>
         The one stop for all your digital solutions
       </h2>
     </div>
     <span
-      className="emotion-2"
+      className="emotion-4"
     >
       <a
-        className="btn"
         href="#"
         onClick={[Function]}
         onMouseEnter={[Function]}

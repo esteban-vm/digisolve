@@ -6,7 +6,7 @@ exports[`🧪 WORK: style tests: should render with correct styles 1`] = `
   overflow: hidden;
 }
 
-.emotion-0 .work__image {
+.emotion-0 img {
   width: 100%;
   height: auto;
   opacity: 0.7;
@@ -18,7 +18,7 @@ exports[`🧪 WORK: style tests: should render with correct styles 1`] = `
   transition: transform 500ms,opacity 500ms;
 }
 
-.emotion-0 .work__image:hover {
+.emotion-0 img:hover {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -26,35 +26,34 @@ exports[`🧪 WORK: style tests: should render with correct styles 1`] = `
   opacity: 1;
 }
 
-.emotion-0 .work__paragraph {
+.emotion-0 p {
   color: var(--color-white);
   text-transform: capitalize;
 }
 
 <figure
+  aria-labelledby=":r0:"
   className="emotion-0"
 >
   <img
     alt="Online advertising"
-    className="work__image"
     data-nimg="1"
     decoding="async"
-    height={40}
+    height={470}
+    id=":r0:"
     loading="lazy"
     onError={[Function]}
     onLoad={[Function]}
-    src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-    srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+    src="/_next/image?url=%2Fimg%2Fonline-advertising.png&w=828&q=75"
+    srcSet="/_next/image?url=%2Fimg%2Fonline-advertising.png&w=640&q=75 1x, /_next/image?url=%2Fimg%2Fonline-advertising.png&w=828&q=75 2x"
     style={
       {
         "color": "transparent",
       }
     }
-    width={40}
+    width={394}
   />
-  <p
-    className="work__paragraph"
-  >
+  <p>
     Online advertising
   </p>
 </figure>

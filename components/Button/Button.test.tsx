@@ -15,8 +15,13 @@ describe('🧪 BUTTON:', () => {
       })
 
       it('should have correct text and background color', () => {
-        expect(tree).toHaveStyleRule('background-color', 'var(--color-primary)', { target: ':active' })
-        expect(tree).toHaveStyleRule('color', 'var(--color-white)', { target: ':active' })
+        expect(tree).toHaveStyleRule('background-color', 'var(--color-primary)', {
+          target: ':active',
+        })
+
+        expect(tree).toHaveStyleRule('color', 'var(--color-white)', {
+          target: ':active',
+        })
       })
     })
 
@@ -30,16 +35,15 @@ describe('🧪 BUTTON:', () => {
       })
 
       it('should have correct background color', () => {
-        expect(tree).toHaveStyleRule('background-color', 'var(--color-dark-primary)', { target: ':active' })
+        expect(tree).toHaveStyleRule('background-color', 'var(--color-dark-primary)', {
+          target: ':active',
+        })
       })
     })
 
     describe('with submit button', () => {
-      beforeEach(() => {
-        tree = create(<Button text='test' isSubmit />)
-      })
-
       it('should render with correct styles', () => {
+        tree = create(<Button text='test' isSubmit />)
         expect(tree).toMatchSnapshot()
       })
     })

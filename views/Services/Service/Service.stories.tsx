@@ -1,7 +1,8 @@
-import { type Meta, type StoryObj, within, userEvent } from '@/stories'
+import type { Meta, StoryObj } from '@/stories'
+import type { IconComponentProps } from '@/types'
 import { Grid } from '@/components'
 import { styled } from '@/styles'
-import { services } from '../Services'
+import services from '../services.json'
 import Service from './Service'
 
 const Wrapper = styled.div`
@@ -38,18 +39,14 @@ export default {
   ],
   parameters: {
     layout: 'centered',
-  },
-  play({ canvasElement }) {
-    const canvas = within(canvasElement)
-    const logo = canvas.getByRole('img')
-    const link = canvas.getByRole('link')
-    userEvent.hover(logo)
-    userEvent.click(link)
+    viewport: {
+      disable: true,
+    },
   },
 } as Meta<typeof Service>
 
 const Examples: StoryObj<typeof Service>[] = []
-for (const service of services) Examples.push({ args: service })
+for (const service of services as IconComponentProps[]) Examples.push({ args: service })
 
 export const Example1 = Examples[0]
 export const Example2 = Examples[1]

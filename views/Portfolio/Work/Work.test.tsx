@@ -1,32 +1,34 @@
 import { render, cleanup, screen, create } from '@/tests'
-import { works } from '../Portfolio'
+import works from '../works.json'
 import Work from './Work'
 
 describe('🧪 WORK:', () => {
   const [testWork] = works
 
   describe('display tests:', () => {
-    let parent: HTMLElement
-
     beforeEach(() => {
       render(<Work {...testWork} />)
-      parent = screen.getByRole('figure')
     })
 
     afterEach(cleanup)
 
-    it('should display the image', () => {
-      const image = screen.getByRole('img', { name: testWork.alt })
-      expect(image).toBeInTheDocument()
-      expect(image).toBeVisible()
-      expect(parent).toContainElement(image)
+    it('should be accessible', () => {
+      const figure = screen.getByRole('figure', { name: testWork.text })
+      expect(figure).toBeInTheDocument()
     })
 
-    it('should display the text', () => {
-      const text = screen.getByText(testWork.alt)
-      expect(text).toBeInTheDocument()
-      expect(text).toBeVisible()
-      expect(parent).toContainElement(text)
+    describe('should be displayed:', () => {
+      it('the image', () => {
+        const image = screen.getByRole('img', { name: testWork.text })
+        expect(image).toBeInTheDocument()
+        expect(image).toBeVisible()
+      })
+
+      it('the text', () => {
+        const text = screen.getByText(testWork.text)
+        expect(text).toBeInTheDocument()
+        expect(text).toBeVisible()
+      })
     })
   })
 
@@ -41,9 +43,14 @@ describe('🧪 WORK:', () => {
       expect(tree).toMatchSnapshot()
     })
 
-    it('should transform scale and increment opacity when hovered', () => {
-      expect(tree).toHaveStyleRule('transform', 'scale(1)', { target: '.work__image:hover' })
-      expect(tree).toHaveStyleRule('opacity', '1', { target: '.work__image:hover' })
+    it('should have correct styles when hovered', () => {
+      expect(tree).toHaveStyleRule('transform', 'scale(1)', {
+        target: 'img:hover',
+      })
+
+      expect(tree).toHaveStyleRule('opacity', '1', {
+        target: 'img:hover',
+      })
     })
   })
 })

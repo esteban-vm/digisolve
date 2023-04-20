@@ -1,16 +1,9 @@
 import type { Component, IconComponentProps } from '@/types'
 import { useId } from 'react'
-import { faTags, faPenAlt, faFunnelDollar, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
 import { Grid } from '@/components'
 import { styled } from '@/styles'
+import services from './services.json'
 import Service from './Service'
-
-export const services: IconComponentProps[] = [
-  { title: 'branding', icon: faTags },
-  { title: 'content', icon: faPenAlt },
-  { title: 'marketing', icon: faFunnelDollar },
-  { title: 'web design', icon: faLaptopCode },
-]
 
 const ServicesComponent: Component = (props) => {
   const id = useId()
@@ -26,8 +19,8 @@ const ServicesComponent: Component = (props) => {
         </h3>
       </Grid.Row>
       <Grid.Row>
-        {services.map((service, index) => (
-          <Grid.Col key={index} isOneQuarter>
+        {(services as IconComponentProps[]).map((service) => (
+          <Grid.Col key={crypto.randomUUID()} isOneQuarter>
             <Service {...service} />
           </Grid.Col>
         ))}

@@ -1,0 +1,20 @@
+[
+  {
+    "image": "/img/client-1.jpg",
+    "text": "Aaron Cruz",
+    "height": 72,
+    "width": 72
+  },
+  {
+    "image": "/img/client-2.jpg",
+    "text": "Jeff Jones",
+    "height": 72,
+    "width": 72
+  },
+  {
+    "image": "/img/client-3.jpg",
+    "text": "Helen Smith",
+    "height": 72,
+    "width": 72
+  }
+]

@@ -4,13 +4,9 @@ exports[`🧪 TESTIMONIAL: style tests: should render with correct styles 1`] = 
 .emotion-0 {
   text-align: left;
   margin-bottom: 50px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
-.emotion-0 .testimonial__quote {
+.emotion-0 blockquote {
   padding: 2%;
   font-style: italic;
   line-height: 145%;
@@ -18,7 +14,7 @@ exports[`🧪 TESTIMONIAL: style tests: should render with correct styles 1`] = 
   margin-top: 40px;
 }
 
-.emotion-0 .testimonial__quote::before {
+.emotion-0 blockquote::before {
   content: '\\201C';
   display: block;
   font-size: 500%;
@@ -27,18 +23,18 @@ exports[`🧪 TESTIMONIAL: style tests: should render with correct styles 1`] = 
   top: -5px;
 }
 
-.emotion-0 .testimonial__quote::first-letter {
+.emotion-0 blockquote::first-letter {
   text-transform: capitalize;
 }
 
-.emotion-0 .testimonial__box {
+.emotion-0 cite {
   display: block;
   margin-top: 25px;
   font-size: 90%;
   text-transform: capitalize;
 }
 
-.emotion-0 .testimonial__photo {
+.emotion-0 img {
   border-radius: 50%;
   height: 20%;
   vertical-align: middle;
@@ -46,33 +42,30 @@ exports[`🧪 TESTIMONIAL: style tests: should render with correct styles 1`] = 
 }
 
 <article
+  aria-labelledby=":r0:"
   className="emotion-0"
 >
-  <blockquote
-    className="testimonial__quote"
-  >
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
+  <blockquote>
+    lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
   </blockquote>
-  <cite
-    className="testimonial__box"
-  >
+  <cite>
     <img
       alt="Aaron Cruz"
-      className="testimonial__photo"
       data-nimg="1"
       decoding="async"
-      height={40}
+      height={72}
+      id=":r0:"
       loading="lazy"
       onError={[Function]}
       onLoad={[Function]}
-      src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-      srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+      src="/_next/image?url=%2Fimg%2Fclient-1.jpg&w=256&q=75"
+      srcSet="/_next/image?url=%2Fimg%2Fclient-1.jpg&w=96&q=75 1x, /_next/image?url=%2Fimg%2Fclient-1.jpg&w=256&q=75 2x"
       style={
         {
           "color": "transparent",
         }
       }
-      width={40}
+      width={72}
     />
     Aaron Cruz
   </cite>

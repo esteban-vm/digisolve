@@ -1,15 +1,9 @@
-import type { Component, ImageComponentProps } from '@/types'
+import type { Component } from '@/types'
 import { useId } from 'react'
 import { Grid } from '@/components'
-import { client1, client2, client3 } from '@/images'
-import { styled } from '@/styles'
+import { styled, mediaQuery } from '@/styles'
+import testimonials from './testimonials.json'
 import Testimonial from './Testimonial'
-
-export const testimonials: ImageComponentProps[] = [
-  { src: client1, alt: 'Aaron Cruz' },
-  { src: client2, alt: 'Jeff Jones' },
-  { src: client3, alt: 'Helen Smith' },
-]
 
 const TestimonialsComponent: Component = (props) => {
   const id = useId()
@@ -17,14 +11,12 @@ const TestimonialsComponent: Component = (props) => {
   return (
     <section aria-labelledby={id} {...props}>
       <Grid.Row>
-        <h2 id={id} className='testimonials__heading'>
-          Our testimonials
-        </h2>
+        <h2 id={id}>Our testimonials</h2>
       </Grid.Row>
       <Grid.Row>
-        {testimonials.map((quote, index) => (
-          <Grid.Col key={index} isOneThird>
-            <Testimonial {...quote} />
+        {testimonials.map((testimonial) => (
+          <Grid.Col key={crypto.randomUUID()} isOneThird>
+            <Testimonial {...testimonial} />
           </Grid.Col>
         ))}
       </Grid.Row>
@@ -39,11 +31,20 @@ const Testimonials = styled(TestimonialsComponent)`
   text-align: center;
   color: var(--color-white);
 
-  .testimonials__heading {
+  h2 {
     font-size: 250%;
     margin-bottom: 20px;
     margin-top: 150px;
     text-transform: capitalize;
+
+    ${mediaQuery('lg')} {
+      margin-top: 90px;
+    }
+
+    ${mediaQuery('sm')} {
+      margin-top: 60px;
+      margin-bottom: 10px;
+    }
   }
 `
 

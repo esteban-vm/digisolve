@@ -1,7 +1,7 @@
-import { type Meta, type StoryObj, within, userEvent } from '@/stories'
+import type { Meta, StoryObj } from '@/stories'
 import { Grid } from '@/components'
 import { styled } from '@/styles'
-import { testimonials } from '../Testimonials'
+import testimonials from '../testimonials.json'
 import Testimonial from './Testimonial'
 
 const Wrapper = styled.div`
@@ -43,11 +43,9 @@ export default {
   ],
   parameters: {
     layout: 'centered',
-  },
-  play({ canvasElement }) {
-    const canvas = within(canvasElement)
-    const photo = canvas.getByRole('img')
-    userEvent.hover(photo)
+    viewport: {
+      disable: true,
+    },
   },
 } as Meta<typeof Testimonial>
 

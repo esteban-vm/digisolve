@@ -1,20 +1,22 @@
 import type { ImageComponent } from '@/types'
+import { useId } from 'react'
 import Image from 'next/image'
 import { styled } from '@/styles'
 
-const PartnerComponent: ImageComponent = ({ src, alt, ...rest }) => {
+const PartnerComponent: ImageComponent = ({ image, text, className, ...rest }) => {
+  const id = useId()
+
   return (
-    <article {...rest}>
-      <Image src={src} alt={alt} className='partner__image' />
+    <article aria-labelledby={id} className={className}>
+      <Image src={image} alt={text} id={id} {...rest} />
     </article>
   )
 }
 
 const Partner = styled(PartnerComponent)`
-  .partner__image {
+  img {
     width: 65%;
     height: auto;
-    user-select: none;
   }
 `
 

@@ -1,0 +1,26 @@
+[
+  {
+    "image": "/img/online-advertising.png",
+    "text": "Online advertising",
+    "height": 470,
+    "width": 394
+  },
+  {
+    "image": "/img/social-media-campaigns.png",
+    "text": "Social media campaigns",
+    "height": 470,
+    "width": 394
+  },
+  {
+    "image": "/img/ux-design.png",
+    "text": "UX design",
+    "height": 470,
+    "width": 394
+  },
+  {
+    "image": "/img/branding-digital-marketing.png",
+    "text": "Branding & digital marketing",
+    "height": 470,
+    "width": 394
+  }
+]

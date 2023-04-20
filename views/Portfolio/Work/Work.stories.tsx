@@ -1,6 +1,6 @@
-import { type Meta, type StoryObj, within, userEvent } from '@/stories'
+import type { Meta, StoryObj } from '@/stories'
 import { styled } from '@/styles'
-import { works } from '../Portfolio'
+import works from '../works.json'
 import Work from './Work'
 
 const Wrapper = styled.div`
@@ -26,12 +26,9 @@ export default {
   ],
   parameters: {
     layout: 'centered',
-  },
-  play({ canvasElement }) {
-    const canvas = within(canvasElement)
-    const image = canvas.getByRole('img')
-    userEvent.click(image)
-    userEvent.hover(image)
+    viewport: {
+      disable: true,
+    },
   },
 } as Meta<typeof Work>
 

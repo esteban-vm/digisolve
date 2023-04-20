@@ -1,46 +1,47 @@
 import { render, cleanup, screen, create } from '@/tests'
-import { services } from '../Services'
+import type { IconComponentProps } from '@/types'
+import services from '../services.json'
 import Service from './Service'
 
 describe('🧪 SERVICE:', () => {
-  const [testService] = services
+  const [testService] = services as IconComponentProps[]
 
   describe('display tests:', () => {
-    let parent: HTMLElement
-
     beforeEach(() => {
       render(<Service {...testService} />)
-      parent = screen.getByRole('article')
     })
 
     afterEach(cleanup)
 
-    it('should display the icon', () => {
-      const icon = screen.getByRole('img', { name: testService.title })
-      expect(icon).toBeInTheDocument()
-      expect(icon).toBeVisible()
-      expect(parent).toContainElement(icon)
+    it('should be accessible', () => {
+      const article = screen.getByRole('article', { name: testService.title })
+      expect(article).toBeInTheDocument()
     })
 
-    it('should display the heading', () => {
-      const heading = screen.getByRole('heading', { name: testService.title, level: 4 })
-      expect(heading).toBeInTheDocument()
-      expect(heading).toBeVisible()
-      expect(parent).toContainElement(heading)
-    })
+    describe('should be displayed:', () => {
+      it('the icon', () => {
+        const icon = screen.getByRole('img', { name: testService.title })
+        expect(icon).toBeInTheDocument()
+        expect(icon).toBeVisible()
+      })
 
-    it('should display the paragraph', () => {
-      const paragraph = screen.getByText(/^lorem ipsum/i)
-      expect(paragraph).toBeInTheDocument()
-      expect(paragraph).toBeVisible()
-      expect(parent).toContainElement(paragraph)
-    })
+      it('the heading', () => {
+        const heading = screen.getByRole('heading', { name: testService.title, level: 4 })
+        expect(heading).toBeInTheDocument()
+        expect(heading).toBeVisible()
+      })
 
-    it('should display the link', () => {
-      const link = screen.getByRole('link', { name: /^read more$/i })
-      expect(link).toBeInTheDocument()
-      expect(link).toBeVisible()
-      expect(parent).toContainElement(link)
+      it('the paragraph', () => {
+        const paragraph = screen.getByText(/^lorem ipsum/i)
+        expect(paragraph).toBeInTheDocument()
+        expect(paragraph).toBeVisible()
+      })
+
+      it('the link', () => {
+        const link = screen.getByRole('link', { name: /^read more$/i })
+        expect(link).toBeInTheDocument()
+        expect(link).toBeVisible()
+      })
     })
   })
 
@@ -55,8 +56,10 @@ describe('🧪 SERVICE:', () => {
       expect(tree).toMatchSnapshot()
     })
 
-    it('should decrease opacity when hovered', () => {
-      expect(tree).toHaveStyleRule('opacity', '0.7', { target: '.service__link:hover' })
+    it('should have correct styles when hovered', () => {
+      expect(tree).toHaveStyleRule('opacity', '0.7', {
+        target: 'a:hover',
+      })
     })
   })
 })

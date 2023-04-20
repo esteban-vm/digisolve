@@ -1,33 +1,59 @@
 import { render, cleanup, screen, create } from '@/tests'
-import { navLinks } from './NavLinks'
-import { socialLinks } from './SocialLinks'
+import links from './links.json'
+import { breakPoints } from '@/styles'
 import Footer from './Footer'
 
 describe('🧪 FOOTER:', () => {
   describe('display tests:', () => {
-    it('should display all the links', () => {
+    beforeEach(() => {
       render(<Footer />)
-      const parent = screen.getByRole('contentinfo')
+    })
 
-      const links = screen.getAllByRole('link')
-      const numberOfLinks = navLinks.length + socialLinks.length
-      expect(links.length).toBe(numberOfLinks)
+    afterEach(cleanup)
+
+    it('should be accessible', () => {
+      const footer = screen.getByRole('contentinfo')
+      expect(footer).toBeInTheDocument()
+    })
+
+    it('all links should be displayed', () => {
+      const linkElements = screen.getAllByRole('link')
+      const numberOfLinks = links.navLinks.length + links.socialLinks.length
+      expect(linkElements.length).toBe(numberOfLinks)
 
       for (let index = 0; index < numberOfLinks; index++) {
-        const link = links[index]
+        const link = linkElements[index]
         expect(link).toBeInTheDocument()
         expect(link).toBeVisible()
-        expect(parent).toContainElement(link)
       }
-
-      cleanup()
     })
   })
 
   describe('style tests:', () => {
+    let tree: ReturnType<typeof create>
+
+    beforeEach(() => {
+      tree = create(<Footer />)
+    })
+
     it('should render with correct styles', () => {
-      const tree = create(<Footer />)
       expect(tree).toMatchSnapshot()
+    })
+
+    it('should have correct styles on medium screen devices', () => {
+      expect(tree).toHaveStyleRule('padding', '30px', {
+        media: `(max-width: ${breakPoints.md})`,
+      })
+
+      expect(tree).toHaveStyleRule('line-height', '1.3', {
+        target: 'p',
+        media: `(max-width: ${breakPoints.md})`,
+      })
+
+      expect(tree).toHaveStyleRule('margin-top', '20px', {
+        target: 'p:first-of-type',
+        media: `(max-width: ${breakPoints.md})`,
+      })
     })
   })
 })

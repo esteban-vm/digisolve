@@ -1,3 +1,5 @@
 export type * from '@storybook/nextjs'
 export type * from '@storybook/react'
-export { within, userEvent } from '@storybook/testing-library'
+export * from '@storybook/addon-viewport'
+export * from '@storybook/testing-library'
+export { configure } from '@storybook/testing-library'

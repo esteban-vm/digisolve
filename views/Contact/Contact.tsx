@@ -1,8 +1,8 @@
 import type { Component } from '@/types'
 import { useId } from 'react'
 import { Grid } from '@/components'
-import { styled } from '@/styles'
-import ContactForm from './ContactForm'
+import { styled, mediaQuery } from '@/styles'
+import Form from './Form'
 
 const ContactComponent: Component = (props) => {
   const id = useId()
@@ -10,12 +10,10 @@ const ContactComponent: Component = (props) => {
   return (
     <section aria-labelledby={id} {...props}>
       <Grid.Row>
-        <h2 id={id} className='contact__heading'>
-          We are happy to hear from you
-        </h2>
+        <h2 id={id}>We are happy to hear from you</h2>
       </Grid.Row>
       <Grid.Row>
-        <ContactForm />
+        <Form />
       </Grid.Row>
     </section>
   )
@@ -24,10 +22,18 @@ const ContactComponent: Component = (props) => {
 const Contact = styled(ContactComponent)`
   text-align: center;
 
-  .contact__heading {
+  h2 {
     color: var(--color-black);
     margin-top: 150px;
     margin-bottom: 50px;
+
+    ${mediaQuery('lg')} {
+      margin-top: 90px;
+    }
+
+    ${mediaQuery('sm')} {
+      margin-top: 60px;
+    }
   }
 `
 

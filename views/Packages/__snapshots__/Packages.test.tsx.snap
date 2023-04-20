@@ -6,7 +6,7 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
   background-color: var(--color-light);
 }
 
-.emotion-0 .packages__heading {
+.emotion-0 h2 {
   color: var(--color-black);
   font-size: 250%;
   margin-bottom: 20px;
@@ -14,7 +14,19 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
   text-transform: capitalize;
 }
 
-.emotion-1 .package {
+@media only screen and (max-width: 1200px) {
+  .emotion-0 h2 {
+    margin-top: 90px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .emotion-0 h2 {
+    margin-top: 60px;
+  }
+}
+
+.emotion-1 {
   background-color: var(--color-white);
   width: 90%;
   margin: 0 auto 30px;
@@ -22,25 +34,13 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
   text-align: left;
 }
 
-.emotion-1 .package__section {
-  padding: 15px;
-  border-bottom: 1px solid var(--color-shadow);
+@media only screen and (max-width: 1023px) {
+  .emotion-1 {
+    width: 100%;
+  }
 }
 
-.emotion-1 .package__section:first-of-type {
-  background-color: var(--color-lighter);
-}
-
-.emotion-1 .package__section:last-of-type {
-  border: 0;
-  text-align: center;
-}
-
-.emotion-1 .package__section:last-of-type span {
-  margin: 15px 0;
-}
-
-.emotion-1 .package__heading {
+.emotion-1 h4 {
   font-size: 150%;
   color: var(--color-grey);
   font-weight: 400;
@@ -48,34 +48,50 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
   text-transform: capitalize;
 }
 
-.emotion-1 .package__paragraph:first-of-type {
+@media only screen and (max-width: 1023px) {
+  .emotion-1 h4 {
+    margin-bottom: 25px;
+  }
+}
+
+.emotion-1 p:first-of-type {
   color: var(--color-primary);
   font-size: 300%;
   font-weight: 300;
   margin-bottom: 10px;
 }
 
-.emotion-1 .package__paragraph:first-of-type span {
+.emotion-1 p:first-of-type span {
   font-size: 30%;
   font-weight: 500;
 }
 
-.emotion-1 .package__paragraph:last-of-type {
+.emotion-1 p:last-of-type {
   color: var(--color-grey);
   font-size: 80%;
   margin-bottom: 10px;
 }
 
-.emotion-1 .package__benefit--list {
-  list-style: none;
-}
-
-.emotion-1 .package__benefit--item {
+.emotion-1 ul li {
   color: var(--color-grey);
   padding: 5px 0;
 }
 
-.emotion-1 .package__benefit--icon {
+.emotion-1 .section {
+  padding: 15px;
+  border-bottom: 1px solid var(--color-shadow);
+}
+
+.emotion-1 .section:first-of-type {
+  background-color: var(--color-lighter);
+}
+
+.emotion-1 .section:last-of-type {
+  border: 0;
+  text-align: center;
+}
+
+.emotion-1 .icon {
   width: 1.2rem;
   height: 1.2rem;
   display: inline-block;
@@ -83,16 +99,17 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
   color: var(--color-primary);
 }
 
+.emotion-1 .btn {
+  margin: 15px 0;
+}
+
 .emotion-2 {
   display: inline-block;
 }
 
-.emotion-2 .btn {
+.emotion-2 input[type='submit'],
+.emotion-2 a {
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -107,8 +124,10 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
   color: var(--color-white);
 }
 
-.emotion-2 .btn:hover,
-.emotion-2 .btn:active {
+.emotion-2 input[type='submit']:hover,
+.emotion-2 a:hover,
+.emotion-2 input[type='submit']:active,
+.emotion-2 a:active {
   background-color: var(--color-dark-primary);
 }
 
@@ -121,7 +140,6 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
     role="presentation"
   >
     <h2
-      className="packages__heading"
       id=":r0:"
     >
       Check out our most popular packages
@@ -136,171 +154,151 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
+        aria-labelledby=":r1:"
         className="emotion-1"
       >
         <div
-          className="package"
+          className="section"
         >
-          <div
-            className="package__section"
+          <h4
+            id=":r1:"
           >
-            <h4
-              className="package__heading"
-            >
-              starter
-            </h4>
-            <p
-              className="package__paragraph"
-            >
-              $699
-               
-              <span>
-                3
-                 months
-              </span>
-            </p>
-            <p
-              className="package__paragraph"
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sit nemo natus ad vero molestias?
-            </p>
-          </div>
-          <div
-            className="package__section"
-          >
-            <ul
-              className="package__benefit--list"
-            >
-              <li
-                className="package__benefit--item"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-check package__benefit--icon"
-                  data-icon="check"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  style={{}}
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    fill="currentColor"
-                    style={{}}
-                  />
-                </svg>
-                SEO, SMO and PPC
-              </li>
-              <li
-                className="package__benefit--item"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-check package__benefit--icon"
-                  data-icon="check"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  style={{}}
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    fill="currentColor"
-                    style={{}}
-                  />
-                </svg>
-                2 Blogs per month
-              </li>
-              <li
-                className="package__benefit--item"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-check package__benefit--icon"
-                  data-icon="check"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  style={{}}
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    fill="currentColor"
-                    style={{}}
-                  />
-                </svg>
-                Facebook & Twitter Marketing
-              </li>
-              <li
-                className="package__benefit--item"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-check package__benefit--icon"
-                  data-icon="check"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  style={{}}
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    fill="currentColor"
-                    style={{}}
-                  />
-                </svg>
-                Monthly Performance
-              </li>
-              <li
-                className="package__benefit--item"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-check package__benefit--icon"
-                  data-icon="check"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  style={{}}
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    fill="currentColor"
-                    style={{}}
-                  />
-                </svg>
-                Traffic Report
-              </li>
-            </ul>
-          </div>
-          <div
-            className="package__section"
-          >
-            <span
-              className="emotion-2"
-            >
-              <a
-                className="btn"
-                href="#"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onTouchStart={[Function]}
-                role="button"
-              >
-                Sign up now
-              </a>
+            starter
+          </h4>
+          <p>
+            $699
+             
+            <span>
+              3
+               months
             </span>
-          </div>
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sit nemo natus ad vero molestias?
+          </p>
+        </div>
+        <div
+          className="section"
+        >
+          <ul>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check icon"
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              SEO, SMO and PPC
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check icon"
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              2 Blogs per month
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check icon"
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              Facebook & Twitter Marketing
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check icon"
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              Monthly Performance
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check icon"
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              Traffic Report
+            </li>
+          </ul>
+        </div>
+        <div
+          className="section"
+        >
+          <span
+            className="btn emotion-2"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+            >
+              Sign up now
+            </a>
+          </span>
         </div>
       </article>
     </div>
@@ -309,171 +307,151 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
+        aria-labelledby=":r2:"
         className="emotion-1"
       >
         <div
-          className="package"
+          className="section"
         >
-          <div
-            className="package__section"
+          <h4
+            id=":r2:"
           >
-            <h4
-              className="package__heading"
-            >
-              corporate
-            </h4>
-            <p
-              className="package__paragraph"
-            >
-              $2,999
-               
-              <span>
-                6
-                 months
-              </span>
-            </p>
-            <p
-              className="package__paragraph"
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sit nemo natus ad vero molestias?
-            </p>
-          </div>
-          <div
-            className="package__section"
-          >
-            <ul
-              className="package__benefit--list"
-            >
-              <li
-                className="package__benefit--item"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-check package__benefit--icon"
-                  data-icon="check"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  style={{}}
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    fill="currentColor"
-                    style={{}}
-                  />
-                </svg>
-                SEO, SMO and PPC
-              </li>
-              <li
-                className="package__benefit--item"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-check package__benefit--icon"
-                  data-icon="check"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  style={{}}
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    fill="currentColor"
-                    style={{}}
-                  />
-                </svg>
-                4 Blogs per month
-              </li>
-              <li
-                className="package__benefit--item"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-check package__benefit--icon"
-                  data-icon="check"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  style={{}}
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    fill="currentColor"
-                    style={{}}
-                  />
-                </svg>
-                All Social Media Channels
-              </li>
-              <li
-                className="package__benefit--item"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-check package__benefit--icon"
-                  data-icon="check"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  style={{}}
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    fill="currentColor"
-                    style={{}}
-                  />
-                </svg>
-                Monthly Performance
-              </li>
-              <li
-                className="package__benefit--item"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-check package__benefit--icon"
-                  data-icon="check"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  style={{}}
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    fill="currentColor"
-                    style={{}}
-                  />
-                </svg>
-                Traffic Report
-              </li>
-            </ul>
-          </div>
-          <div
-            className="package__section"
-          >
-            <span
-              className="emotion-2"
-            >
-              <a
-                className="btn"
-                href="#"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onTouchStart={[Function]}
-                role="button"
-              >
-                Sign up now
-              </a>
+            corporate
+          </h4>
+          <p>
+            $2,999
+             
+            <span>
+              6
+               months
             </span>
-          </div>
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sit nemo natus ad vero molestias?
+          </p>
+        </div>
+        <div
+          className="section"
+        >
+          <ul>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check icon"
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              SEO, SMO and PPC
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check icon"
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              4 Blogs per month
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check icon"
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              All Social Media Channels
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check icon"
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              Monthly Performance
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check icon"
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              Traffic Report
+            </li>
+          </ul>
+        </div>
+        <div
+          className="section"
+        >
+          <span
+            className="btn emotion-2"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+            >
+              Sign up now
+            </a>
+          </span>
         </div>
       </article>
     </div>
@@ -482,171 +460,151 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
+        aria-labelledby=":r3:"
         className="emotion-1"
       >
         <div
-          className="package"
+          className="section"
         >
-          <div
-            className="package__section"
+          <h4
+            id=":r3:"
           >
-            <h4
-              className="package__heading"
-            >
-              enterprice
-            </h4>
-            <p
-              className="package__paragraph"
-            >
-              $4,999
-               
-              <span>
-                6
-                 months
-              </span>
-            </p>
-            <p
-              className="package__paragraph"
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sit nemo natus ad vero molestias?
-            </p>
-          </div>
-          <div
-            className="package__section"
-          >
-            <ul
-              className="package__benefit--list"
-            >
-              <li
-                className="package__benefit--item"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-check package__benefit--icon"
-                  data-icon="check"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  style={{}}
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    fill="currentColor"
-                    style={{}}
-                  />
-                </svg>
-                Personalized Marketing
-              </li>
-              <li
-                className="package__benefit--item"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-check package__benefit--icon"
-                  data-icon="check"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  style={{}}
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    fill="currentColor"
-                    style={{}}
-                  />
-                </svg>
-                8 Blogs per month
-              </li>
-              <li
-                className="package__benefit--item"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-check package__benefit--icon"
-                  data-icon="check"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  style={{}}
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    fill="currentColor"
-                    style={{}}
-                  />
-                </svg>
-                All Social Media Channels
-              </li>
-              <li
-                className="package__benefit--item"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-check package__benefit--icon"
-                  data-icon="check"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  style={{}}
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    fill="currentColor"
-                    style={{}}
-                  />
-                </svg>
-                Monthly Performance
-              </li>
-              <li
-                className="package__benefit--item"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="svg-inline--fa fa-check package__benefit--icon"
-                  data-icon="check"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  style={{}}
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    fill="currentColor"
-                    style={{}}
-                  />
-                </svg>
-                Traffic Report
-              </li>
-            </ul>
-          </div>
-          <div
-            className="package__section"
-          >
-            <span
-              className="emotion-2"
-            >
-              <a
-                className="btn"
-                href="#"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onTouchStart={[Function]}
-                role="button"
-              >
-                Sign up now
-              </a>
+            enterprice
+          </h4>
+          <p>
+            $4,999
+             
+            <span>
+              6
+               months
             </span>
-          </div>
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sit nemo natus ad vero molestias?
+          </p>
+        </div>
+        <div
+          className="section"
+        >
+          <ul>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check icon"
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              Personalized Marketing
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check icon"
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              8 Blogs per month
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check icon"
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              All Social Media Channels
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check icon"
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              Monthly Performance
+            </li>
+            <li>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-check icon"
+                data-icon="check"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={{}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  fill="currentColor"
+                  style={{}}
+                />
+              </svg>
+              Traffic Report
+            </li>
+          </ul>
+        </div>
+        <div
+          className="section"
+        >
+          <span
+            className="btn emotion-2"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+            >
+              Sign up now
+            </a>
+          </span>
         </div>
       </article>
     </div>

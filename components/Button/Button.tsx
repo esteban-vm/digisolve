@@ -1,14 +1,14 @@
-import type { ButtonComponent as ButtonComponentType } from '@/types'
+import type { ButtonComponent } from '@/types'
 import Link from 'next/link'
 import { styled, css } from '@/styles'
 
-const ButtonComponent: ButtonComponentType = ({ isSubmit, href = '#', className, text }) => {
+const TheButtonComponent: ButtonComponent = ({ isSubmit, url = '#', text, className }) => {
   return (
     <span className={className}>
       {isSubmit ? (
-        <input type='submit' value={text} className='btn' />
+        <input type='submit' value={text} />
       ) : (
-        <Link href={href} role='button' className='btn'>
+        <Link href={url} role='button'>
           {text}
         </Link>
       )}
@@ -16,12 +16,12 @@ const ButtonComponent: ButtonComponentType = ({ isSubmit, href = '#', className,
   )
 }
 
-const Button = styled(ButtonComponent)`
+const Button = styled(TheButtonComponent)<{ isFull?: boolean }>`
   display: inline-block;
 
-  .btn {
+  input[type='submit'],
+  a {
     cursor: pointer;
-    user-select: none;
     text-decoration: none;
     text-transform: capitalize;
     padding: 10px 30px;

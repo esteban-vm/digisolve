@@ -1,16 +1,28 @@
 import type { Component } from '@/types'
+import Image from 'next/image'
+import { useId } from 'react'
 import { Button } from '@/components'
-import { styled } from '@/styles'
-import Navbar from './Navbar'
+import { styled, mediaQuery } from '@/styles'
+import links from './links.json'
+import NavLink from './NavLink'
 
 const HeaderComponent: Component = (props) => {
+  const id = useId()
+
   return (
-    <header {...props}>
-      <Navbar />
-      <div className='header__box'>
-        <div className='header__titles'>
-          <h1 className='header__heading'>Digital agency</h1>
-          <h2 className='header__subheading'>The one stop for all your digital solutions</h2>
+    <header aria-labelledby={id} {...props}>
+      <nav>
+        <Image src='/img/digisolve-logo.png' alt='Digisolve logo' width={216} height={216} />
+        <ul>
+          {links.map((link) => (
+            <NavLink key={crypto.randomUUID()} {...link} />
+          ))}
+        </ul>
+      </nav>
+      <div className='box'>
+        <div className='titles'>
+          <h1 id={id}>Digital agency</h1>
+          <h2>The one stop for all your digital solutions</h2>
         </div>
         <Button text='Get a quote today!' isFull />
       </div>
@@ -27,28 +39,41 @@ const Header = styled(HeaderComponent)`
   color: var(--color-white);
   text-transform: capitalize;
 
-  .header {
-    &__box {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
+  h1 {
+    font-size: 500%;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
 
-    &__titles {
-      margin-bottom: 100px;
-    }
+  h2 {
+    font-size: 200%;
+    font-weight: 400;
+  }
 
-    &__heading {
-      font-size: 500%;
-      font-weight: 400;
-      margin-bottom: 20px;
-    }
+  img {
+    height: 120px;
+    width: auto;
+    float: left;
+  }
 
-    &__subheading {
-      font-size: 200%;
-      font-weight: 400;
+  ul {
+    float: right;
+    margin-top: 70px;
+  }
+
+  .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .titles {
+    margin-bottom: 100px;
+
+    ${mediaQuery('sm')} {
+      margin-bottom: 50px;
     }
   }
 `

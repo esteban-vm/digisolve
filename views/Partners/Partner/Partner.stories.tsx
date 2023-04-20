@@ -1,7 +1,7 @@
-import { type Meta, type StoryObj, within, userEvent } from '@/stories'
+import type { Meta, StoryObj } from '@/stories'
 import { Grid } from '@/components'
 import { styled } from '@/styles'
-import { partners } from '../Partners'
+import partners from '../partners.json'
 import Partner from './Partner'
 
 const Wrapper = styled.div`
@@ -41,11 +41,9 @@ export default {
   ],
   parameters: {
     layout: 'centered',
-  },
-  play({ canvasElement }) {
-    const canvas = within(canvasElement)
-    const logo = canvas.getByRole('img')
-    userEvent.hover(logo)
+    viewport: {
+      disable: true,
+    },
   },
 } as Meta<typeof Partner>
 
