@@ -1,7 +1,7 @@
 import type { Meta } from '@/stories'
 import { Grid } from '@/components'
 import { styled } from '@/styles'
-import links from '../links.json'
+import links from '@/Footer/links'
 import NavLink from './NavLink'
 
 const Wrapper = styled.div`

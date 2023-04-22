@@ -50,7 +50,7 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
   margin-bottom: 100px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .emotion-0 .titles {
     margin-bottom: 50px;
   }

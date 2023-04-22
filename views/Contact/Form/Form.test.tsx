@@ -1,4 +1,5 @@
 import { render, cleanup, screen, create, userEvent } from '@/tests'
+import { mediaQuery } from '@/styles'
 import Form from './Form'
 
 describe('🧪 FORM:', () => {
@@ -75,9 +76,27 @@ describe('🧪 FORM:', () => {
   })
 
   describe('style tests:', () => {
+    let tree: ReturnType<typeof create>
+
+    beforeEach(() => {
+      tree = create(<Form />)
+    })
+
     it('should render with correct styles', () => {
-      const tree = create(<Form />)
       expect(tree).toMatchSnapshot()
+    })
+
+    describe('should have correct styles on:', () => {
+      it('extra small screen devices', () => {
+        const media = mediaQuery('xs')
+        expect(tree).toHaveStyleRule('width', '90%', { media })
+        expect(tree).toHaveStyleRule('margin-top', '5px', { target: 'label', media })
+        expect(tree).toHaveStyleRule('margin-top', '2px', { target: "input[type='checkbox']", media })
+      })
+
+      it('small screen devices', () => {
+        expect(tree).toHaveStyleRule('width', '70%', { media: mediaQuery('sm') })
+      })
     })
   })
 })

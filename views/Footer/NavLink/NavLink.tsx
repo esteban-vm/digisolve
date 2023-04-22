@@ -1,13 +1,15 @@
-import type { TextComponent } from '@/types'
+import type { ComponentWithLink } from '@/types'
 import Link from 'next/link'
 import { styled } from '@/styles'
 
-const NavLinkComponent: TextComponent = ({ text, ...rest }) => {
+type NavLinkProps = {
+  text: string
+}
+
+const NavLinkComponent: ComponentWithLink<NavLinkProps> = ({ text, url = '#', ...rest }) => {
   return (
     <li {...rest}>
-      <Link href='#' target='_blank'>
-        {text}
-      </Link>
+      <Link href={url}>{text}</Link>
     </li>
   )
 }

@@ -31,6 +31,10 @@ const Testimonials = styled(TestimonialsComponent)`
   text-align: center;
   color: var(--color-white);
 
+  ${mediaQuery('xs')} {
+    padding: 0 10%;
+  }
+
   h2 {
     font-size: 250%;
     margin-bottom: 20px;

@@ -1,25 +1,38 @@
-import type { ImageComponent } from '@/types'
+import type { ComponentWithImage } from '@/types'
 import { useId } from 'react'
 import Image from 'next/image'
-import { styled } from '@/styles'
+import { styled, mediaQuery } from '@/styles'
 
-const TestimonialComponent: ImageComponent = ({ image, text, className, ...rest }) => {
+type TestimonialProps = {
+  author: string
+  content?: string
+}
+
+const TestimonialComponent: ComponentWithImage<TestimonialProps> = ({ author, content, image, ...rest }) => {
   const id = useId()
 
   return (
-    <article aria-labelledby={id} className={className}>
-      <blockquote>lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.</blockquote>
+    <article aria-labelledby={id} {...rest}>
+      <blockquote>{content}</blockquote>
       <cite>
-        <Image src={image} alt={text} id={id} {...rest} />
-        {text}
+        <Image id={id} alt={author} {...image} />
+        {author}
       </cite>
     </article>
   )
 }
 
+TestimonialComponent.defaultProps = {
+  content: 'lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.',
+}
+
 const Testimonial = styled(TestimonialComponent)`
   text-align: left;
   margin-bottom: 50px;
+
+  ${mediaQuery('xs')} {
+    margin-bottom: 5px;
+  }
 
   blockquote {
     padding: 2%;

@@ -18,7 +18,7 @@ const customJestConfig = {
   // The paths have to be matching with the paths option within the compilerOptions in the tsconfig.json
   // For example:
 
-  moduleNameMapper: { '@/(.*)$': ['<rootDir>/$1', '<rootDir>/utils/$1'] },
+  moduleNameMapper: { '@/(.*)$': ['<rootDir>/$1', '<rootDir>/utils/$1', '<rootDir>/views/$1.json'] },
   testEnvironment: 'jest-environment-jsdom',
   verbose: true,
   silent: true,

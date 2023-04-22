@@ -1,10 +1,9 @@
 import { render, cleanup, screen, create } from '@/tests'
-import type { IconComponentProps } from '@/types'
-import links from '../links.json'
+import links from '@/Footer/links'
 import SocialLink from './SocialLink'
 
 describe('🧪 SOCIAL LINK:', () => {
-  const [testLink] = links.socialLinks as IconComponentProps[]
+  const [testLink] = links.socialLinks
 
   describe('display tests:', () => {
     beforeEach(() => {
@@ -20,7 +19,7 @@ describe('🧪 SOCIAL LINK:', () => {
 
     it('the icon of the link should be displayed', () => {
       const link = screen.getByRole('link')
-      const icon = screen.getByRole('img', { hidden: true, name: testLink.title })
+      const icon = screen.getByRole('img', { hidden: true, name: testLink.text })
       expect(link).toBeInTheDocument()
       expect(icon).toBeInTheDocument()
       expect(icon).toBeVisible()

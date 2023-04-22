@@ -1,5 +1,5 @@
 import { render, cleanup, screen, create } from '@/tests'
-import { breakPoints } from '@/styles'
+import { mediaQuery } from '@/styles'
 import Contact from './Contact'
 
 describe('🧪 CONTACT:', () => {
@@ -19,10 +19,10 @@ describe('🧪 CONTACT:', () => {
     })
 
     describe('should be displayed:', () => {
-      it('the heading', () => {
-        const heading = screen.getByRole('heading', { name, level: 2 })
-        expect(heading).toBeInTheDocument()
-        expect(heading).toBeVisible()
+      it('the title', () => {
+        const title = screen.getByRole('heading', { name, level: 2 })
+        expect(title).toBeInTheDocument()
+        expect(title).toBeVisible()
       })
 
       it('the form', () => {
@@ -45,18 +45,15 @@ describe('🧪 CONTACT:', () => {
     })
 
     describe('should have correct styles on:', () => {
+      const property = 'margin-top'
+      const target = 'h2'
+
       it('small screen devices', () => {
-        expect(tree).toHaveStyleRule('margin-top', '60px', {
-          target: 'h2',
-          media: `(max-width: ${breakPoints.sm})`,
-        })
+        expect(tree).toHaveStyleRule(property, '60px', { target, media: mediaQuery('sm') })
       })
 
       it('large screen devices', () => {
-        expect(tree).toHaveStyleRule('margin-top', '90px', {
-          target: 'h2',
-          media: `(max-width: ${breakPoints.lg})`,
-        })
+        expect(tree).toHaveStyleRule(property, '90px', { target, media: mediaQuery('lg') })
       })
     })
   })

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@/stories'
 import { styled } from '@/styles'
-import works from '../works.json'
+import works from '@/Portfolio/works'
 import Work from './Work'
 
 const Wrapper = styled.div`
@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 
 export default {
   argTypes: {
-    src: {
+    image: {
       control: false,
     },
   },

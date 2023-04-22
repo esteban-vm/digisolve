@@ -16,7 +16,7 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*", "./utils/*"]
+      "@/*": ["./*", "./utils/*", "./views/*.json"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".**/*.ts", ".**/*.tsx", "jest.setup.js"],

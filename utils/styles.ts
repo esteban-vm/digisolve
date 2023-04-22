@@ -4,11 +4,11 @@ export enum breakPoints {
   /** Big tablets to smaller laptop screens */
   lg = '1200px',
   /** Smaller tablets to larger tablet screens */
-  md = '1023px',
+  md = '1024px',
   /** Larger phones to smaller tablet screens */
-  sm = '767px',
+  sm = '768px',
   /** Smaller to larger mobile phones */
-  xs = '479px',
+  xs = '480px',
 }
 
 export const mediaQuery = (breakPoint: keyof typeof breakPoints) => {
@@ -111,6 +111,12 @@ export const globalStyles = css`
 
     ${mediaQuery('md')} {
       padding: 0 2%;
+    }
+  }
+
+  .xs_half {
+    ${mediaQuery('xs')} {
+      width: 50%;
     }
   }
 

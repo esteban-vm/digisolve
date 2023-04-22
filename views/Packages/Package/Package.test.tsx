@@ -1,7 +1,7 @@
 import { render, cleanup, screen, create } from '@/tests'
 import { formatPrice } from '@/helpers'
-import { breakPoints } from '@/styles'
-import packages from '../packages.json'
+import { mediaQuery } from '@/styles'
+import packages from '@/Packages/packages'
 import Package from './Package'
 
 describe('🧪 PACKAGE:', () => {
@@ -15,15 +15,15 @@ describe('🧪 PACKAGE:', () => {
     afterEach(cleanup)
 
     it('should be accessible', () => {
-      const article = screen.getByRole('article', { name: testPackage.heading })
+      const article = screen.getByRole('article', { name: testPackage.title })
       expect(article).toBeInTheDocument()
     })
 
     describe('should be displayed:', () => {
-      it('the heading', () => {
-        const heading = screen.getByRole('heading', { name: testPackage.heading, level: 4 })
-        expect(heading).toBeInTheDocument()
-        expect(heading).toBeVisible()
+      it('the title', () => {
+        const title = screen.getByRole('heading', { name: testPackage.title, level: 4 })
+        expect(title).toBeInTheDocument()
+        expect(title).toBeVisible()
       })
 
       it('the price', () => {
@@ -38,26 +38,26 @@ describe('🧪 PACKAGE:', () => {
         expect(duration).toBeVisible()
       })
 
+      it('the features', () => {
+        const list = screen.getByRole('list')
+        const features = screen.getAllByRole('listitem')
+        const icons = screen.getAllByRole('img', { hidden: true })
+        expect(icons.length).toBe(features.length)
+
+        for (let index = 0; index < features.length; index++) {
+          const feature = features[index]
+          expect(feature).toBeInTheDocument()
+          expect(feature).toBeVisible()
+          expect(feature).toContainElement(icons[index])
+          expect(feature).toHaveTextContent(testPackage.features[index])
+          expect(list).toContainElement(feature)
+        }
+      })
+
       it('the description', () => {
         const description = screen.getByText(/^lorem ipsum/i)
         expect(description).toBeInTheDocument()
         expect(description).toBeVisible()
-      })
-
-      it('the benefits', () => {
-        const list = screen.getByRole('list')
-        const benefits = screen.getAllByRole('listitem')
-        const icons = screen.getAllByRole('img', { hidden: true })
-        expect(icons.length).toBe(benefits.length)
-
-        for (let index = 0; index < benefits.length; index++) {
-          const benefit = benefits[index]
-          expect(benefit).toBeInTheDocument()
-          expect(benefit).toBeVisible()
-          expect(benefit).toContainElement(icons[index])
-          expect(benefit).toHaveTextContent(testPackage.benefits[index])
-          expect(list).toContainElement(benefit)
-        }
       })
 
       it('the button', () => {
@@ -79,14 +79,15 @@ describe('🧪 PACKAGE:', () => {
       expect(tree).toMatchSnapshot()
     })
 
-    it('should have correct styles on medium screen devices', () => {
-      expect(tree).toHaveStyleRule('width', '100%', {
-        media: `(max-width: ${breakPoints.md})`,
+    describe('should have correct styles on:', () => {
+      it('extra small screen devices', () => {
+        expect(tree).toHaveStyleRule('width', '80%', { media: mediaQuery('xs') })
       })
 
-      expect(tree).toHaveStyleRule('margin-bottom', '25px', {
-        target: 'h4',
-        media: `(max-width: ${breakPoints.md})`,
+      it('medium screen devices', () => {
+        const media = mediaQuery('md')
+        expect(tree).toHaveStyleRule('width', '100%', { media })
+        expect(tree).toHaveStyleRule('margin-bottom', '25px', { target: 'h4', media })
       })
     })
   })

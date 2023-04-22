@@ -1,9 +1,9 @@
 [
   {
-    "heading": "starter",
+    "title": "starter",
     "price": 699,
     "duration": 3,
-    "benefits": [
+    "features": [
       "SEO, SMO and PPC",
       "2 Blogs per month",
       "Facebook & Twitter Marketing",
@@ -12,10 +12,10 @@
     ]
   },
   {
-    "heading": "corporate",
+    "title": "corporate",
     "price": 2999,
     "duration": 6,
-    "benefits": [
+    "features": [
       "SEO, SMO and PPC",
       "4 Blogs per month",
       "All Social Media Channels",
@@ -24,10 +24,10 @@
     ]
   },
   {
-    "heading": "enterprice",
+    "title": "enterprice",
     "price": 4999,
     "duration": 6,
-    "benefits": [
+    "features": [
       "Personalized Marketing",
       "8 Blogs per month",
       "All Social Media Channels",

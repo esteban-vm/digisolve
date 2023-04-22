@@ -6,7 +6,7 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   padding-bottom: 20px;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .emotion-0 {
     margin-top: 60px;
   }
@@ -20,13 +20,13 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   margin-bottom: 50px;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .emotion-0 h2 {
     margin-bottom: 35px;
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .emotion-0 h2 {
     margin-bottom: 20px;
   }
@@ -43,7 +43,7 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .emotion-0 p:last-of-type {
     margin-bottom: 30px;
   }
@@ -54,13 +54,26 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   height: auto;
 }
 
+@media only screen and (max-width: 480px) {
+  .emotion-0 img {
+    margin: 30px auto;
+  }
+}
+
 .emotion-0 .col:first-of-type {
   text-align: left;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .emotion-0 .col:first-of-type {
     padding-left: 1%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .emotion-0 .col:first-of-type {
+    text-align: center;
+    padding: 0;
   }
 }
 
@@ -68,7 +81,7 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   text-align: right;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .emotion-0 .col:last-of-type {
     margin-left: 0;
     text-align: center;
@@ -109,11 +122,11 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   className="emotion-0"
 >
   <div
-    className="row"
+    className="row "
     role="presentation"
   >
     <div
-      className="col span_1_of_2"
+      className="col span_1_of_2 "
       role="presentation"
     >
       <h2
@@ -142,7 +155,7 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
       </span>
     </div>
     <div
-      className="col span_1_of_2"
+      className="col span_1_of_2 "
       role="presentation"
     >
       <img

@@ -1,10 +1,9 @@
 import { render, cleanup, screen, create } from '@/tests'
-import type { IconComponentProps } from '@/types'
-import services from '../services.json'
+import services from '@/Services/services'
 import Service from './Service'
 
 describe('🧪 SERVICE:', () => {
-  const [testService] = services as IconComponentProps[]
+  const [testService] = services
 
   describe('display tests:', () => {
     beforeEach(() => {
@@ -25,16 +24,16 @@ describe('🧪 SERVICE:', () => {
         expect(icon).toBeVisible()
       })
 
-      it('the heading', () => {
-        const heading = screen.getByRole('heading', { name: testService.title, level: 4 })
-        expect(heading).toBeInTheDocument()
-        expect(heading).toBeVisible()
+      it('the title', () => {
+        const title = screen.getByRole('heading', { name: testService.title, level: 4 })
+        expect(title).toBeInTheDocument()
+        expect(title).toBeVisible()
       })
 
-      it('the paragraph', () => {
-        const paragraph = screen.getByText(/^lorem ipsum/i)
-        expect(paragraph).toBeInTheDocument()
-        expect(paragraph).toBeVisible()
+      it('the description', () => {
+        const desc = screen.getByText(/^lorem ipsum/i)
+        expect(desc).toBeInTheDocument()
+        expect(desc).toBeVisible()
       })
 
       it('the link', () => {
@@ -57,9 +56,7 @@ describe('🧪 SERVICE:', () => {
     })
 
     it('should have correct styles when hovered', () => {
-      expect(tree).toHaveStyleRule('opacity', '0.7', {
-        target: 'a:hover',
-      })
+      expect(tree).toHaveStyleRule('opacity', '0.7', { target: 'a:hover' })
     })
   })
 })

@@ -19,16 +19,16 @@ describe('🧪 PORTFOLIO:', () => {
     })
 
     describe('should be displayed:', () => {
-      it('the heading', () => {
-        const heading = screen.getByRole('heading', { name, level: 2 })
-        expect(heading).toBeInTheDocument()
-        expect(heading).toBeVisible()
+      it('the title', () => {
+        const title = screen.getByRole('heading', { name, level: 2 })
+        expect(title).toBeInTheDocument()
+        expect(title).toBeVisible()
       })
 
-      it('the subheading', () => {
-        const subheading = screen.getByRole('heading', { level: 3 })
-        expect(subheading).toBeInTheDocument()
-        expect(subheading).toBeVisible()
+      it('the subtitle', () => {
+        const subtitle = screen.getByRole('heading', { level: 3 })
+        expect(subtitle).toBeInTheDocument()
+        expect(subtitle).toBeVisible()
       })
 
       it('the works', () => {

@@ -1,26 +1,34 @@
 [
   {
-    "image": "/img/online-advertising.png",
-    "text": "Online advertising",
-    "height": 470,
-    "width": 394
+    "title": "Online advertising",
+    "image": {
+      "src": "/img/online-advertising.png",
+      "height": 470,
+      "width": 394
+    }
   },
   {
-    "image": "/img/social-media-campaigns.png",
-    "text": "Social media campaigns",
-    "height": 470,
-    "width": 394
+    "title": "Social media campaigns",
+    "image": {
+      "src": "/img/social-media-campaigns.png",
+      "height": 470,
+      "width": 394
+    }
   },
   {
-    "image": "/img/ux-design.png",
-    "text": "UX design",
-    "height": 470,
-    "width": 394
+    "title": "UX design",
+    "image": {
+      "src": "/img/ux-design.png",
+      "height": 470,
+      "width": 394
+    }
   },
   {
-    "image": "/img/branding-digital-marketing.png",
-    "text": "Branding & digital marketing",
-    "height": 470,
-    "width": 394
+    "title": "Branding & digital marketing",
+    "image": {
+      "src": "/img/branding-digital-marketing.png",
+      "height": 470,
+      "width": 394
+    }
   }
 ]

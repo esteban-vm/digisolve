@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@/stories'
 import { Grid } from '@/components'
 import { styled } from '@/styles'
-import packages from '../packages.json'
+import packages from '@/Packages/packages'
 import Package from './Package'
 
 const Wrapper = styled.div`
@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 
 export default {
   argTypes: {
-    benefits: {
+    features: {
       control: false,
     },
   },
@@ -21,11 +21,11 @@ export default {
       return (
         <Wrapper>
           <Grid.Row>
-            <Grid.Col isOneThird>&nbsp;</Grid.Col>
+            <Grid.Col isOneThird />
             <Grid.Col isOneThird>
               <Story {...context} />
             </Grid.Col>
-            <Grid.Col isOneThird>&nbsp;</Grid.Col>
+            <Grid.Col isOneThird />
           </Grid.Row>
         </Wrapper>
       )

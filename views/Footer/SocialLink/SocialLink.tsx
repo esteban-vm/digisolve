@@ -1,13 +1,17 @@
-import type { IconComponent } from '@/types'
+import type { ComponentWithIcon, IconProp } from '@/types'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { styled } from '@/styles'
 
-const SocialLinkComponent: IconComponent = ({ icon, title, ...rest }) => {
+type SocialLinkProps = {
+  text: string
+}
+
+const SocialLinkComponent: ComponentWithIcon<SocialLinkProps> = ({ text, url = '#', icon, ...rest }) => {
   return (
     <li {...rest}>
-      <Link href='#' target='_blank'>
-        <FontAwesomeIcon icon={icon} title={title} />
+      <Link href={url} target='_blank'>
+        <FontAwesomeIcon icon={icon as IconProp} title={text} />
       </Link>
     </li>
   )

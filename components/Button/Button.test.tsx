@@ -15,13 +15,9 @@ describe('🧪 BUTTON:', () => {
       })
 
       it('should have correct text and background color', () => {
-        expect(tree).toHaveStyleRule('background-color', 'var(--color-primary)', {
-          target: ':active',
-        })
-
-        expect(tree).toHaveStyleRule('color', 'var(--color-white)', {
-          target: ':active',
-        })
+        const target = ':active'
+        expect(tree).toHaveStyleRule('background-color', 'var(--color-primary)', { target })
+        expect(tree).toHaveStyleRule('color', 'var(--color-white)', { target })
       })
     })
 
@@ -35,9 +31,7 @@ describe('🧪 BUTTON:', () => {
       })
 
       it('should have correct background color', () => {
-        expect(tree).toHaveStyleRule('background-color', 'var(--color-dark-primary)', {
-          target: ':active',
-        })
+        expect(tree).toHaveStyleRule('background-color', 'var(--color-dark-primary)', { target: ':active' })
       })
     })
 

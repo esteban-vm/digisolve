@@ -1,6 +1,6 @@
 [
-  { "icon": "tags", "title": "branding" },
-  { "icon": "pen-alt", "title": "content" },
-  { "icon": "funnel-dollar", "title": "marketing" },
-  { "icon": "laptop-code", "title": "web design" }
+  { "title": "branding", "icon": "tags" },
+  { "title": "content", "icon": "pen-alt" },
+  { "title": "marketing", "icon": "funnel-dollar" },
+  { "title": "web design", "icon": "laptop-code" }
 ]

@@ -20,14 +20,14 @@ const PartnersComponent: Component = (props) => {
       </Grid.Row>
       <Grid.Row>
         {partners.slice(0, 4).map((partner) => (
-          <Grid.Col key={crypto.randomUUID()} isOneQuarter>
+          <Grid.Col key={crypto.randomUUID()} className='xs_half' isOneQuarter>
             <Partner {...partner} />
           </Grid.Col>
         ))}
       </Grid.Row>
       <Grid.Row>
         {partners.slice(4).map((partner) => (
-          <Grid.Col key={crypto.randomUUID()} isOneQuarter>
+          <Grid.Col key={crypto.randomUUID()} className='xs_half' isOneQuarter>
             <Partner {...partner} />
           </Grid.Col>
         ))}

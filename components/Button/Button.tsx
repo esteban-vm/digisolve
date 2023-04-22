@@ -1,8 +1,13 @@
-import type { ButtonComponent } from '@/types'
+import type { ComponentWithLink } from '@/types'
 import Link from 'next/link'
 import { styled, css } from '@/styles'
 
-const TheButtonComponent: ButtonComponent = ({ isSubmit, url = '#', text, className }) => {
+type ButtonProps = {
+  text: string
+  isSubmit?: boolean
+}
+
+const ButtonComponent: ComponentWithLink<ButtonProps> = ({ text, url = '#', isSubmit, className }) => {
   return (
     <span className={className}>
       {isSubmit ? (
@@ -16,7 +21,11 @@ const TheButtonComponent: ButtonComponent = ({ isSubmit, url = '#', text, classN
   )
 }
 
-const Button = styled(TheButtonComponent)<{ isFull?: boolean }>`
+type StyledButtonProps = {
+  isFull?: boolean
+}
+
+const Button = styled(ButtonComponent)<StyledButtonProps>`
   display: inline-block;
 
   input[type='submit'],
@@ -45,10 +54,5 @@ const Button = styled(TheButtonComponent)<{ isFull?: boolean }>`
     }}
   }
 `
-
-Button.defaultProps = {
-  isFull: false,
-  isSubmit: false,
-}
 
 export default Button

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@/stories'
 import { Grid } from '@/components'
 import { styled } from '@/styles'
-import testimonials from '../testimonials.json'
+import testimonials from '@/Testimonials/testimonials'
 import Testimonial from './Testimonial'
 
 const Wrapper = styled.div`
@@ -20,7 +20,10 @@ const Wrapper = styled.div`
 
 export default {
   argTypes: {
-    src: {
+    image: {
+      control: false,
+    },
+    author: {
       control: false,
     },
   },
@@ -31,11 +34,11 @@ export default {
       return (
         <Wrapper>
           <Grid.Row>
-            <Grid.Col isOneThird>&nbsp;</Grid.Col>
+            <Grid.Col isOneThird />
             <Grid.Col isOneThird>
               <Story {...context} />
             </Grid.Col>
-            <Grid.Col isOneThird>&nbsp;</Grid.Col>
+            <Grid.Col isOneThird />
           </Grid.Row>
         </Wrapper>
       )

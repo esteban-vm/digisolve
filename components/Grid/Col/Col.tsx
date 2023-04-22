@@ -1,6 +1,21 @@
-import type { ColComponent } from '@/types'
+import type { ComponentWithChildren } from '@/types'
 
-const Col: ColComponent = ({ children, ...sizes }) => {
+type ColProps = Partial<{
+  /** class name: span_1_of_2 */
+  isHalf: boolean
+  /** class name: span_2_of_2 */
+  isFull: boolean
+  /** class name: span_1_of_3 */
+  isOneThird: boolean
+  /** class name: span_2_of_3 */
+  isTwoThirds: boolean
+  /** class name: span_1_of_4 */
+  isOneQuarter: boolean
+  /** class name: span_3_of_4 */
+  isThreeQuarters: boolean
+}>
+
+const Col: ComponentWithChildren<ColProps> = ({ children, className = '', ...sizes }) => {
   const span = sizes.isHalf
     ? 'span_1_of_2'
     : sizes.isFull
@@ -16,19 +31,10 @@ const Col: ColComponent = ({ children, ...sizes }) => {
     : ''
 
   return (
-    <div className={`col ${span}`} role='presentation'>
+    <div className={`col ${span} ${className}`} role='presentation'>
       {children}
     </div>
   )
-}
-
-Col.defaultProps = {
-  isHalf: false,
-  isFull: false,
-  isOneThird: false,
-  isTwoThirds: false,
-  isOneQuarter: false,
-  isThreeQuarters: false,
 }
 
 export default Col

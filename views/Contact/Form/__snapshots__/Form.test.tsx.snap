@@ -8,6 +8,18 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
   color: var(--color-grey);
 }
 
+@media only screen and (max-width: 768px) {
+  .emotion-0 {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .emotion-0 {
+    width: 90%;
+  }
+}
+
 .emotion-0 label {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -15,10 +27,20 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
   user-select: none;
 }
 
+@media only screen and (max-width: 480px) {
+  .emotion-0 label {
+    margin-top: 5px;
+  }
+
+  .emotion-0 label::after {
+    content: ':';
+  }
+}
+
 .emotion-0 input[type='text'],
 .emotion-0 input[type='email'],
 .emotion-0 textarea {
-  width: 100%;
+  width: 95%;
   padding: 8px;
   border-radius: 3px;
   border: 1px solid #ccc;
@@ -86,6 +108,12 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
   margin: 10px 5px 10px 0;
 }
 
+@media only screen and (max-width: 480px) {
+  .emotion-0 input[type='checkbox'] {
+    margin-top: 2px;
+  }
+}
+
 .emotion-0 .toast {
   text-align: center;
   color: var(--color-primary);
@@ -131,11 +159,11 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="row"
+    className="row "
     role="presentation"
   >
     <div
-      className="col span_1_of_3"
+      className="col span_1_of_3 "
       role="presentation"
     >
       <label
@@ -145,7 +173,7 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
       </label>
     </div>
     <div
-      className="col span_2_of_3"
+      className="col span_2_of_3 "
       role="presentation"
     >
       <input
@@ -161,11 +189,11 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
     </div>
   </div>
   <div
-    className="row"
+    className="row "
     role="presentation"
   >
     <div
-      className="col span_1_of_3"
+      className="col span_1_of_3 "
       role="presentation"
     >
       <label
@@ -175,7 +203,7 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
       </label>
     </div>
     <div
-      className="col span_2_of_3"
+      className="col span_2_of_3 "
       role="presentation"
     >
       <input
@@ -189,11 +217,11 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
     </div>
   </div>
   <div
-    className="row"
+    className="row "
     role="presentation"
   >
     <div
-      className="col span_1_of_3"
+      className="col span_1_of_3 "
       role="presentation"
     >
       <label
@@ -203,7 +231,7 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
       </label>
     </div>
     <div
-      className="col span_2_of_3"
+      className="col span_2_of_3 "
       role="presentation"
     >
       <input
@@ -218,11 +246,11 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
     </div>
   </div>
   <div
-    className="row"
+    className="row "
     role="presentation"
   >
     <div
-      className="col span_1_of_3"
+      className="col span_1_of_3 "
       role="presentation"
     >
       <label
@@ -232,7 +260,7 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
       </label>
     </div>
     <div
-      className="col span_2_of_3"
+      className="col span_2_of_3 "
       role="presentation"
     >
       <textarea
@@ -245,17 +273,15 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
     </div>
   </div>
   <div
-    className="row"
+    className="row "
     role="presentation"
   >
     <div
-      className="col span_1_of_3"
+      className="col span_1_of_3 "
       role="presentation"
-    >
-       
-    </div>
+    />
     <div
-      className="col span_2_of_3"
+      className="col span_2_of_3 "
       role="presentation"
     >
       <span

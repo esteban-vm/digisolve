@@ -5,6 +5,11 @@ export default {
   args: {
     text: 'button example',
   },
+  argTypes: {
+    isFull: {
+      control: false,
+    },
+  },
   component: Button,
   title: 'Components/Button',
   parameters: {
@@ -36,5 +41,10 @@ export const SubmitExample: StoryObj<typeof Button> = {
   args: {
     isSubmit: true,
     isFull: true,
+  },
+  argTypes: {
+    isSubmit: {
+      control: false,
+    },
   },
 }

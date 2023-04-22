@@ -1,6 +1,6 @@
 import type { Meta } from '@/stories'
 import { styled } from '@/styles'
-import links from '../links.json'
+import links from '@/Header/links'
 import NavLink from './NavLink'
 
 const Wrapper = styled.div`

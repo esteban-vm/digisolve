@@ -17,7 +17,6 @@ exports[`🧪 NAV LINK: style tests: should render with correct styles 1`] = `
     onClick={[Function]}
     onMouseEnter={[Function]}
     onTouchStart={[Function]}
-    target="_blank"
   >
     About us
   </a>

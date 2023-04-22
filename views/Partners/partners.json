@@ -1,50 +1,66 @@
 [
   {
-    "image": "/img/brand-logo-1.png",
-    "text": "Partner",
-    "height": 500,
-    "width": 500
+    "desc": "Partner",
+    "image": {
+      "src": "/img/brand-logo-1.png",
+      "height": 500,
+      "width": 500
+    }
   },
   {
-    "image": "/img/brand-logo-2.png",
-    "text": "Partner",
-    "height": 500,
-    "width": 500
+    "desc": "Partner",
+    "image": {
+      "src": "/img/brand-logo-2.png",
+      "height": 500,
+      "width": 500
+    }
   },
   {
-    "image": "/img/brand-logo-3.png",
-    "text": "Partner",
-    "height": 500,
-    "width": 500
+    "desc": "Partner",
+    "image": {
+      "src": "/img/brand-logo-3.png",
+      "height": 500,
+      "width": 500
+    }
   },
   {
-    "image": "/img/brand-logo-4.png",
-    "text": "Partner",
-    "height": 500,
-    "width": 500
+    "desc": "Partner",
+    "image": {
+      "src": "/img/brand-logo-4.png",
+      "height": 500,
+      "width": 500
+    }
   },
   {
-    "image": "/img/brand-logo-5.png",
-    "text": "Partner",
-    "height": 500,
-    "width": 500
+    "desc": "Partner",
+    "image": {
+      "src": "/img/brand-logo-5.png",
+      "height": 500,
+      "width": 500
+    }
   },
   {
-    "image": "/img/brand-logo-6.png",
-    "text": "Partner",
-    "height": 500,
-    "width": 500
+    "desc": "Partner",
+    "image": {
+      "src": "/img/brand-logo-6.png",
+      "height": 500,
+      "width": 500
+    }
   },
   {
-    "image": "/img/brand-logo-7.png",
-    "text": "Partner",
-    "height": 500,
-    "width": 500
+    "desc": "Partner",
+    "image": {
+      "src": "/img/brand-logo-7.png",
+      "height": 500,
+      "width": 500
+    }
   },
   {
-    "image": "/img/brand-logo-8.png",
-    "text": "Partner",
-    "height": 500,
-    "width": 500
+    "desc": "Partner",
+    "image": {
+      "src": "/img/brand-logo-8.png",
+      "height": 500,
+      "width": 500
+    }
   }
 ]

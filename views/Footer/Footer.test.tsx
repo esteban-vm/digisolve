@@ -1,6 +1,6 @@
 import { render, cleanup, screen, create } from '@/tests'
 import links from './links.json'
-import { breakPoints } from '@/styles'
+import { mediaQuery } from '@/styles'
 import Footer from './Footer'
 
 describe('🧪 FOOTER:', () => {
@@ -40,19 +40,20 @@ describe('🧪 FOOTER:', () => {
       expect(tree).toMatchSnapshot()
     })
 
-    it('should have correct styles on medium screen devices', () => {
-      expect(tree).toHaveStyleRule('padding', '30px', {
-        media: `(max-width: ${breakPoints.md})`,
+    describe('should have correct styles on:', () => {
+      it('extra small screen devices', () => {
+        const media = mediaQuery('xs')
+        const target = "ul[class$='__links']"
+        expect(tree).toHaveStyleRule('float', 'none', { target, media })
+        expect(tree).toHaveStyleRule('text-align', 'center', { target, media })
+        expect(tree).toHaveStyleRule('margin-bottom', '10px', { target, media })
       })
 
-      expect(tree).toHaveStyleRule('line-height', '1.3', {
-        target: 'p',
-        media: `(max-width: ${breakPoints.md})`,
-      })
-
-      expect(tree).toHaveStyleRule('margin-top', '20px', {
-        target: 'p:first-of-type',
-        media: `(max-width: ${breakPoints.md})`,
+      it('medium screen devices', () => {
+        const media = mediaQuery('md')
+        expect(tree).toHaveStyleRule('padding', '30px', { media })
+        expect(tree).toHaveStyleRule('line-height', '1.3', { target: 'p', media })
+        expect(tree).toHaveStyleRule('margin-top', '20px', { target: 'p:first-of-type', media })
       })
     })
   })

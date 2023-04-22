@@ -1,5 +1,5 @@
 import { render, cleanup, screen, create } from '@/tests'
-import { breakPoints } from '@/styles'
+import { mediaQuery } from '@/styles'
 import testimonials from './testimonials.json'
 import Testimonials from './Testimonials'
 
@@ -20,10 +20,10 @@ describe('🧪 TESTIMONIALS:', () => {
     })
 
     describe('should be displayed:', () => {
-      it('the heading', () => {
-        const heading = screen.getByRole('heading', { name, level: 2 })
-        expect(heading).toBeInTheDocument()
-        expect(heading).toBeVisible()
+      it('the title', () => {
+        const title = screen.getByRole('heading', { name, level: 2 })
+        expect(title).toBeInTheDocument()
+        expect(title).toBeVisible()
       })
 
       it('the testimonials', () => {
@@ -50,23 +50,19 @@ describe('🧪 TESTIMONIALS:', () => {
     })
 
     describe('should have correct styles on:', () => {
+      it('extra small screen devices', () => {
+        expect(tree).toHaveStyleRule('padding', '0 10%', { media: mediaQuery('xs') })
+      })
+
       it('small screen devices', () => {
-        expect(tree).toHaveStyleRule('margin-top', '90px', {
-          target: 'h2',
-          media: `(max-width: ${breakPoints.lg})`,
-        })
+        const media = mediaQuery('sm')
+        const target = 'h2'
+        expect(tree).toHaveStyleRule('margin-top', '60px', { target, media })
+        expect(tree).toHaveStyleRule('margin-bottom', '10px', { target, media })
       })
 
       it('large screen devices', () => {
-        expect(tree).toHaveStyleRule('margin-top', '60px', {
-          target: 'h2',
-          media: `(max-width: ${breakPoints.sm})`,
-        })
-
-        expect(tree).toHaveStyleRule('margin-bottom', '10px', {
-          target: 'h2',
-          media: `(max-width: ${breakPoints.sm})`,
-        })
+        expect(tree).toHaveStyleRule('margin-top', '90px', { target: 'h2', media: mediaQuery('lg') })
       })
     })
   })

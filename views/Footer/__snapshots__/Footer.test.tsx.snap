@@ -8,7 +8,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
   color: var(--color-dark);
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .emotion-0 {
     padding: 30px;
   }
@@ -30,12 +30,20 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
   text-decoration: none;
 }
 
+@media only screen and (max-width: 480px) {
+  .emotion-0 ul[class$='__links'] {
+    float: none;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
 .emotion-0 p {
   text-align: center;
   line-height: 1.5;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .emotion-0 p {
     line-height: 1.3;
   }
@@ -45,7 +53,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
   margin-top: 50px;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .emotion-0 p:first-of-type {
     margin-top: 20px;
   }
@@ -95,11 +103,11 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
   className="emotion-0"
 >
   <div
-    className="row"
+    className="row "
     role="presentation"
   >
     <div
-      className="col span_1_of_2"
+      className="col span_1_of_2 "
       role="presentation"
     >
       <ul
@@ -113,7 +121,6 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
-            target="_blank"
           >
             About us
           </a>
@@ -126,7 +133,6 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
-            target="_blank"
           >
             Blog
           </a>
@@ -139,7 +145,6 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
-            target="_blank"
           >
             Help & Support
           </a>
@@ -152,7 +157,6 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
-            target="_blank"
           >
             iOS App
           </a>
@@ -165,7 +169,6 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
-            target="_blank"
           >
             Android App
           </a>
@@ -173,7 +176,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
       </ul>
     </div>
     <div
-      className="col span_1_of_2"
+      className="col span_1_of_2 "
       role="presentation"
     >
       <ul
@@ -190,7 +193,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
             target="_blank"
           >
             <svg
-              aria-labelledby="svg-inline--fa-title-rgWOpprKfRoY"
+              aria-labelledby="svg-inline--fa-title-fmvECBNo8U6c"
               className="svg-inline--fa fa-facebook-f "
               data-icon="facebook-f"
               data-prefix="fab"
@@ -200,7 +203,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <title
-                id="svg-inline--fa-title-rgWOpprKfRoY"
+                id="svg-inline--fa-title-fmvECBNo8U6c"
                 style={{}}
               >
                 Facebook
@@ -224,7 +227,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
             target="_blank"
           >
             <svg
-              aria-labelledby="svg-inline--fa-title-MW8Npb6aS9lo"
+              aria-labelledby="svg-inline--fa-title-sQAaaYb7d0Xc"
               className="svg-inline--fa fa-twitter "
               data-icon="twitter"
               data-prefix="fab"
@@ -234,7 +237,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <title
-                id="svg-inline--fa-title-MW8Npb6aS9lo"
+                id="svg-inline--fa-title-sQAaaYb7d0Xc"
                 style={{}}
               >
                 Twitter
@@ -258,7 +261,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
             target="_blank"
           >
             <svg
-              aria-labelledby="svg-inline--fa-title-NysxIcLBf5Ej"
+              aria-labelledby="svg-inline--fa-title-Ehi5PPEPMsWT"
               className="svg-inline--fa fa-google-plus-g "
               data-icon="google-plus-g"
               data-prefix="fab"
@@ -268,7 +271,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <title
-                id="svg-inline--fa-title-NysxIcLBf5Ej"
+                id="svg-inline--fa-title-Ehi5PPEPMsWT"
                 style={{}}
               >
                 Google Plus
@@ -292,7 +295,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
             target="_blank"
           >
             <svg
-              aria-labelledby="svg-inline--fa-title-Gvjet5cvxqr1"
+              aria-labelledby="svg-inline--fa-title-T7inlRynxf1U"
               className="svg-inline--fa fa-instagram "
               data-icon="instagram"
               data-prefix="fab"
@@ -302,7 +305,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <title
-                id="svg-inline--fa-title-Gvjet5cvxqr1"
+                id="svg-inline--fa-title-T7inlRynxf1U"
                 style={{}}
               >
                 Instagram
@@ -326,7 +329,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
             target="_blank"
           >
             <svg
-              aria-labelledby="svg-inline--fa-title-qAJYAEHwwqbD"
+              aria-labelledby="svg-inline--fa-title-iTBizqo2h6I8"
               className="svg-inline--fa fa-youtube "
               data-icon="youtube"
               data-prefix="fab"
@@ -336,7 +339,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <title
-                id="svg-inline--fa-title-qAJYAEHwwqbD"
+                id="svg-inline--fa-title-iTBizqo2h6I8"
                 style={{}}
               >
                 YouTube
@@ -353,7 +356,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
     </div>
   </div>
   <div
-    className="row"
+    className="row "
     role="presentation"
   >
     <p>

@@ -6,7 +6,7 @@ import toast, { Toaster } from 'react-hot-toast'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelopeCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import { Button, Grid } from '@/components'
-import { styled } from '@/styles'
+import { styled, mediaQuery } from '@/styles'
 
 const validationSchema = yup.object().shape({
   name: yup.string().trim().required(),
@@ -86,7 +86,7 @@ const FormComponent: Component = (props) => {
         </Grid.Col>
       </Grid.Row>
       <Grid.Row>
-        <Grid.Col isOneThird>&nbsp;</Grid.Col>
+        <Grid.Col isOneThird />
         <Grid.Col isTwoThirds>
           <Button text='Send it!' isFull isSubmit />
         </Grid.Col>
@@ -102,14 +102,30 @@ const Form = styled(FormComponent)`
   margin: 0 auto;
   color: var(--color-grey);
 
+  ${mediaQuery('sm')} {
+    width: 70%;
+  }
+
+  ${mediaQuery('xs')} {
+    width: 90%;
+  }
+
   label {
     user-select: none;
+
+    ${mediaQuery('xs')} {
+      margin-top: 5px;
+
+      ::after {
+        content: ':';
+      }
+    }
   }
 
   input[type='text'],
   input[type='email'],
   textarea {
-    width: 100%;
+    width: 95%;
     padding: 8px;
     border-radius: 3px;
     border: 1px solid #ccc;
@@ -128,6 +144,10 @@ const Form = styled(FormComponent)`
 
   input[type='checkbox'] {
     margin: 10px 5px 10px 0;
+
+    ${mediaQuery('xs')} {
+      margin-top: 2px;
+    }
   }
 
   .toast {

@@ -6,6 +6,13 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
   background-color: var(--color-light);
 }
 
+@media only screen and (max-width: 480px) {
+  .emotion-0 .xs_half:first-of-type,
+  .emotion-0 .xs_half:nth-of-type(2) {
+    margin-bottom: 20px;
+  }
+}
+
 .emotion-1 {
   padding: 1% 1.5%;
 }
@@ -49,7 +56,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
   className="emotion-0"
 >
   <div
-    className="row"
+    className="row "
     role="presentation"
   >
     <h2
@@ -65,11 +72,11 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
     </h3>
   </div>
   <div
-    className="row"
+    className="row "
     role="presentation"
   >
     <div
-      className="col span_1_of_4"
+      className="col span_1_of_4 xs_half"
       role="presentation"
     >
       <article
@@ -77,7 +84,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
         className="emotion-1"
       >
         <svg
-          aria-labelledby="svg-inline--fa-title-kzeqKGBPR64Y"
+          aria-labelledby="svg-inline--fa-title-JlbVWYIt6PZ9"
           className="svg-inline--fa fa-tags icon"
           data-icon="tags"
           data-prefix="fas"
@@ -87,7 +94,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <title
-            id="svg-inline--fa-title-kzeqKGBPR64Y"
+            id="svg-inline--fa-title-JlbVWYIt6PZ9"
             style={{}}
           >
             branding
@@ -117,7 +124,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
       </article>
     </div>
     <div
-      className="col span_1_of_4"
+      className="col span_1_of_4 xs_half"
       role="presentation"
     >
       <article
@@ -125,7 +132,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
         className="emotion-1"
       >
         <svg
-          aria-labelledby="svg-inline--fa-title-yXfD9OeEyoST"
+          aria-labelledby="svg-inline--fa-title-Hnbi1Wc1P9Lx"
           className="svg-inline--fa fa-pen-clip icon"
           data-icon="pen-clip"
           data-prefix="fas"
@@ -135,7 +142,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <title
-            id="svg-inline--fa-title-yXfD9OeEyoST"
+            id="svg-inline--fa-title-Hnbi1Wc1P9Lx"
             style={{}}
           >
             content
@@ -165,7 +172,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
       </article>
     </div>
     <div
-      className="col span_1_of_4"
+      className="col span_1_of_4 xs_half"
       role="presentation"
     >
       <article
@@ -173,7 +180,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
         className="emotion-1"
       >
         <svg
-          aria-labelledby="svg-inline--fa-title-JmXfgWD42y2T"
+          aria-labelledby="svg-inline--fa-title-PZ8CsHF4Vmxw"
           className="svg-inline--fa fa-filter-circle-dollar icon"
           data-icon="filter-circle-dollar"
           data-prefix="fas"
@@ -183,7 +190,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <title
-            id="svg-inline--fa-title-JmXfgWD42y2T"
+            id="svg-inline--fa-title-PZ8CsHF4Vmxw"
             style={{}}
           >
             marketing
@@ -213,7 +220,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
       </article>
     </div>
     <div
-      className="col span_1_of_4"
+      className="col span_1_of_4 xs_half"
       role="presentation"
     >
       <article
@@ -221,7 +228,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
         className="emotion-1"
       >
         <svg
-          aria-labelledby="svg-inline--fa-title-bFzGh1yfEdN1"
+          aria-labelledby="svg-inline--fa-title-rCGV9Sbh3wR4"
           className="svg-inline--fa fa-laptop-code icon"
           data-icon="laptop-code"
           data-prefix="fas"
@@ -231,7 +238,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <title
-            id="svg-inline--fa-title-bFzGh1yfEdN1"
+            id="svg-inline--fa-title-rCGV9Sbh3wR4"
             style={{}}
           >
             web design

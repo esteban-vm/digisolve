@@ -7,10 +7,10 @@
     { "text": "Android App" }
   ],
   "socialLinks": [
-    { "icon": ["fab", "facebook-f"], "title": "Facebook" },
-    { "icon": ["fab", "twitter"], "title": "Twitter" },
-    { "icon": ["fab", "google-plus-g"], "title": "Google Plus" },
-    { "icon": ["fab", "instagram"], "title": "Instagram" },
-    { "icon": ["fab", "youtube"], "title": "YouTube" }
+    { "text": "Facebook", "icon": ["fab", "facebook-f"] },
+    { "text": "Twitter", "icon": ["fab", "twitter"] },
+    { "text": "Google Plus", "icon": ["fab", "google-plus-g"] },
+    { "text": "Instagram", "icon": ["fab", "instagram"] },
+    { "text": "YouTube", "icon": ["fab", "youtube"] }
   ]
 }

@@ -9,9 +9,15 @@ exports[`🧪 PACKAGE: style tests: should render with correct styles 1`] = `
   text-align: left;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .emotion-0 {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .emotion-0 {
+    width: 80%;
   }
 }
 
@@ -23,7 +29,7 @@ exports[`🧪 PACKAGE: style tests: should render with correct styles 1`] = `
   text-transform: capitalize;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .emotion-0 h4 {
     margin-bottom: 25px;
   }

@@ -74,6 +74,10 @@ const About = styled(AboutComponent)`
   img {
     width: 80%;
     height: auto;
+
+    ${mediaQuery('xs')} {
+      margin: 30px auto;
+    }
   }
 
   .col {
@@ -82,6 +86,11 @@ const About = styled(AboutComponent)`
 
       ${mediaQuery('md')} {
         padding-left: 1%;
+      }
+
+      ${mediaQuery('xs')} {
+        text-align: center;
+        padding: 0;
       }
     }
 

@@ -36,7 +36,7 @@ exports[`🧪 SOCIAL LINK: style tests: should render with correct styles 1`] = 
     target="_blank"
   >
     <svg
-      aria-labelledby="svg-inline--fa-title-PUjw6MiNbg1e"
+      aria-labelledby="svg-inline--fa-title-9zXEQbFBC6gz"
       className="svg-inline--fa fa-facebook-f "
       data-icon="facebook-f"
       data-prefix="fab"
@@ -46,7 +46,7 @@ exports[`🧪 SOCIAL LINK: style tests: should render with correct styles 1`] = 
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="svg-inline--fa-title-PUjw6MiNbg1e"
+        id="svg-inline--fa-title-9zXEQbFBC6gz"
         style={{}}
       >
         Facebook

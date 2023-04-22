@@ -10,6 +10,12 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
   color: var(--color-white);
 }
 
+@media only screen and (max-width: 480px) {
+  .emotion-0 {
+    padding: 0 10%;
+  }
+}
+
 .emotion-0 h2 {
   font-size: 250%;
   margin-bottom: 20px;
@@ -23,7 +29,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .emotion-0 h2 {
     margin-top: 60px;
     margin-bottom: 10px;
@@ -33,6 +39,12 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
 .emotion-1 {
   text-align: left;
   margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 480px) {
+  .emotion-1 {
+    margin-bottom: 5px;
+  }
 }
 
 .emotion-1 blockquote {
@@ -75,7 +87,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
   className="emotion-0"
 >
   <div
-    className="row"
+    className="row "
     role="presentation"
   >
     <h2
@@ -85,11 +97,11 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
     </h2>
   </div>
   <div
-    className="row"
+    className="row "
     role="presentation"
   >
     <div
-      className="col span_1_of_3"
+      className="col span_1_of_3 "
       role="presentation"
     >
       <article
@@ -123,7 +135,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
       </article>
     </div>
     <div
-      className="col span_1_of_3"
+      className="col span_1_of_3 "
       role="presentation"
     >
       <article
@@ -157,7 +169,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
       </article>
     </div>
     <div
-      className="col span_1_of_3"
+      className="col span_1_of_3 "
       role="presentation"
     >
       <article

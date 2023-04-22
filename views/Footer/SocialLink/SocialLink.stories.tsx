@@ -1,8 +1,7 @@
 import type { Meta } from '@/stories'
-import type { IconComponentProps } from '@/types'
 import { Grid } from '@/components'
 import { styled } from '@/styles'
-import links from '../links.json'
+import links from '@/Footer/links'
 import SocialLink from './SocialLink'
 
 const Wrapper = styled.div`
@@ -39,7 +38,7 @@ export default {
       return (
         <Wrapper>
           <Grid.Row>
-            <Grid.Col isHalf>&nbsp;</Grid.Col>
+            <Grid.Col isHalf />
             <Grid.Col isHalf>
               <Story {...context} />
             </Grid.Col>
@@ -58,7 +57,7 @@ export default {
 export const Example = () => {
   return (
     <ul>
-      {(links.socialLinks as IconComponentProps[]).map((link) => (
+      {links.socialLinks.map((link) => (
         <SocialLink key={crypto.randomUUID()} {...link} />
       ))}
     </ul>

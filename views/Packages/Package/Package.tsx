@@ -1,29 +1,37 @@
-import type { PackageComponent } from '@/types'
+import type { Component } from '@/types'
 import { useId } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button } from '@/components'
 import { formatPrice } from '@/helpers'
 import { styled, mediaQuery } from '@/styles'
 
-const PackageComponent: PackageComponent = ({ heading, price, duration, benefits, ...rest }) => {
+type PackageProps = {
+  title: string
+  price: number
+  duration: number
+  features: string[]
+  desc?: string
+}
+
+const PackageComponent: Component<PackageProps> = ({ title, price, duration, features, desc, ...rest }) => {
   const id = useId()
   const formattedPrice = formatPrice(price)
 
   return (
     <article aria-labelledby={id} {...rest}>
       <div className='section'>
-        <h4 id={id}>{heading}</h4>
+        <h4 id={id}>{title}</h4>
         <p>
           {formattedPrice} <span>{duration} months</span>
         </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sit nemo natus ad vero molestias?</p>
+        <p>{desc}</p>
       </div>
       <div className='section'>
         <ul>
-          {benefits.map((benefit) => (
+          {features.map((feature) => (
             <li key={crypto.randomUUID()}>
               <FontAwesomeIcon icon='check' className='icon' />
-              {benefit}
+              {feature}
             </li>
           ))}
         </ul>
@@ -35,6 +43,10 @@ const PackageComponent: PackageComponent = ({ heading, price, duration, benefits
   )
 }
 
+PackageComponent.defaultProps = {
+  desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sit nemo natus ad vero molestias?',
+}
+
 const Package = styled(PackageComponent)`
   background-color: var(--color-white);
   width: 90%;
@@ -44,6 +56,10 @@ const Package = styled(PackageComponent)`
 
   ${mediaQuery('md')} {
     width: 100%;
+  }
+
+  ${mediaQuery('xs')} {
+    width: 80%;
   }
 
   h4 {

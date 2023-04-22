@@ -1,4 +1,4 @@
-import type { Component, IconComponentProps } from '@/types'
+import type { Component } from '@/types'
 import { Grid } from '@/components'
 import { styled, mediaQuery } from '@/styles'
 import links from './links.json'
@@ -18,7 +18,7 @@ const FooterComponent: Component = (props) => {
         </Grid.Col>
         <Grid.Col isHalf>
           <ul className='social__links'>
-            {(links.socialLinks as IconComponentProps[]).map((link) => (
+            {links.socialLinks.map((link) => (
               <SocialLink key={crypto.randomUUID()} {...link} />
             ))}
           </ul>
@@ -54,6 +54,14 @@ const Footer = styled(FooterComponent)`
           color: var(--color-dark);
           text-decoration: none;
         }
+      }
+    }
+
+    &[class$='__links'] {
+      ${mediaQuery('xs')} {
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
       }
     }
   }

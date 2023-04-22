@@ -1,5 +1,6 @@
 import { render, cleanup, screen, create } from '@/tests'
-import testimonials from '../testimonials.json'
+import { mediaQuery } from '@/styles'
+import testimonials from '@/Testimonials/testimonials'
 import Testimonial from './Testimonial'
 
 describe('🧪 TESTIMONIAL:', () => {
@@ -13,35 +14,44 @@ describe('🧪 TESTIMONIAL:', () => {
     afterEach(cleanup)
 
     it('should be accessible', () => {
-      const article = screen.getByRole('article', { name: testTestimonial.text })
+      const article = screen.getByRole('article', { name: testTestimonial.author })
       expect(article).toBeInTheDocument()
     })
 
     describe('should be displayed:', () => {
-      it('the photo', () => {
-        const photo = screen.getByRole('img', { name: testTestimonial.text })
-        expect(photo).toBeInTheDocument()
-        expect(photo).toBeVisible()
+      it('the image', () => {
+        const image = screen.getByRole('img', { name: testTestimonial.author })
+        expect(image).toBeInTheDocument()
+        expect(image).toBeVisible()
       })
 
-      it('the name', () => {
-        const name = screen.getByText(testTestimonial.text)
-        expect(name).toBeInTheDocument()
-        expect(name).toBeVisible()
+      it('the author', () => {
+        const author = screen.getByText(testTestimonial.author)
+        expect(author).toBeInTheDocument()
+        expect(author).toBeVisible()
       })
 
-      it('the quote', () => {
-        const quote = screen.getByText(/^lorem ipsum/i)
-        expect(quote).toBeInTheDocument()
-        expect(quote).toBeVisible()
+      it('the content', () => {
+        const content = screen.getByText(/^lorem ipsum/i)
+        expect(content).toBeInTheDocument()
+        expect(content).toBeVisible()
       })
     })
   })
 
   describe('style tests:', () => {
+    let tree: ReturnType<typeof create>
+
+    beforeEach(() => {
+      tree = create(<Testimonial {...testTestimonial} />)
+    })
+
     it('should render with correct styles', () => {
-      const tree = create(<Testimonial {...testTestimonial} />)
       expect(tree).toMatchSnapshot()
+    })
+
+    it('should have correct styles on extra small screen devices', () => {
+      expect(tree).toHaveStyleRule('margin-bottom', '5px', { media: mediaQuery('xs') })
     })
   })
 })

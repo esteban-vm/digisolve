@@ -1,5 +1,5 @@
 import { render, cleanup, screen, create } from '@/tests'
-import { breakPoints } from '@/styles'
+import { mediaQuery } from '@/styles'
 import Header from './Header'
 
 describe('🧪 HEADER:', () => {
@@ -25,20 +25,16 @@ describe('🧪 HEADER:', () => {
         expect(navbar).toBeVisible()
       })
 
-      it('the heading', () => {
-        const heading = screen.getByRole('heading', { name, level: 1 })
-        expect(heading).toBeInTheDocument()
-        expect(heading).toBeVisible()
+      it('the title', () => {
+        const title = screen.getByRole('heading', { name, level: 1 })
+        expect(title).toBeInTheDocument()
+        expect(title).toBeVisible()
       })
 
-      it('the subheading', () => {
-        const subheading = screen.getByRole('heading', {
-          name: /^the one stop for all your digital solutions$/i,
-          level: 2,
-        })
-
-        expect(subheading).toBeInTheDocument()
-        expect(subheading).toBeVisible()
+      it('the subtitle', () => {
+        const subtitle = screen.getByRole('heading', { name: /all your digital solutions$/i, level: 2 })
+        expect(subtitle).toBeInTheDocument()
+        expect(subtitle).toBeVisible()
       })
 
       it('the button', () => {
@@ -61,10 +57,7 @@ describe('🧪 HEADER:', () => {
     })
 
     it('should have correct styles on small screen devices', () => {
-      expect(tree).toHaveStyleRule('margin-bottom', '50px', {
-        target: '.titles',
-        media: `(max-width: ${breakPoints.sm})`,
-      })
+      expect(tree).toHaveStyleRule('margin-bottom', '50px', { target: '.titles', media: mediaQuery('sm') })
     })
   })
 })

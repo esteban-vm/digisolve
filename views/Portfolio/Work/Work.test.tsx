@@ -1,5 +1,5 @@
 import { render, cleanup, screen, create } from '@/tests'
-import works from '../works.json'
+import works from '@/Portfolio/works'
 import Work from './Work'
 
 describe('🧪 WORK:', () => {
@@ -13,21 +13,21 @@ describe('🧪 WORK:', () => {
     afterEach(cleanup)
 
     it('should be accessible', () => {
-      const figure = screen.getByRole('figure', { name: testWork.text })
+      const figure = screen.getByRole('figure', { name: testWork.title })
       expect(figure).toBeInTheDocument()
     })
 
     describe('should be displayed:', () => {
       it('the image', () => {
-        const image = screen.getByRole('img', { name: testWork.text })
+        const image = screen.getByRole('img', { name: testWork.title })
         expect(image).toBeInTheDocument()
         expect(image).toBeVisible()
       })
 
-      it('the text', () => {
-        const text = screen.getByText(testWork.text)
-        expect(text).toBeInTheDocument()
-        expect(text).toBeVisible()
+      it('the title', () => {
+        const title = screen.getByText(testWork.title)
+        expect(title).toBeInTheDocument()
+        expect(title).toBeVisible()
       })
     })
   })
@@ -44,13 +44,9 @@ describe('🧪 WORK:', () => {
     })
 
     it('should have correct styles when hovered', () => {
-      expect(tree).toHaveStyleRule('transform', 'scale(1)', {
-        target: 'img:hover',
-      })
-
-      expect(tree).toHaveStyleRule('opacity', '1', {
-        target: 'img:hover',
-      })
+      const target = 'img:hover'
+      expect(tree).toHaveStyleRule('transform', 'scale(1)', { target })
+      expect(tree).toHaveStyleRule('opacity', '1', { target })
     })
   })
 })

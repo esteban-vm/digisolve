@@ -1,22 +1,29 @@
-import type { IconComponent } from '@/types'
+import type { ComponentWithIcon, IconProp } from '@/types'
 import { useId } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import { styled } from '@/styles'
 
-const ServiceComponent: IconComponent = ({ icon, title, ...rest }) => {
+type ServiceProps = {
+  title: string
+  desc?: string
+}
+
+const ServiceComponent: ComponentWithIcon<ServiceProps> = ({ title, desc, url = '#', icon, ...rest }) => {
   const id = useId()
 
   return (
     <article aria-labelledby={id} {...rest}>
-      <FontAwesomeIcon icon={icon} title={title} className='icon' />
+      <FontAwesomeIcon icon={icon as IconProp} title={title} className='icon' />
       <h4 id={id}>{title}</h4>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.
-      </p>
-      <Link href='#'>Read more</Link>
+      <p>{desc}</p>
+      <Link href={url}>Read more</Link>
     </article>
   )
+}
+
+ServiceComponent.defaultProps = {
+  desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.',
 }
 
 const Service = styled(ServiceComponent)`

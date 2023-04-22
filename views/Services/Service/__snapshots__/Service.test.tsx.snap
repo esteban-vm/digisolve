@@ -44,7 +44,7 @@ exports[`🧪 SERVICE: style tests: should render with correct styles 1`] = `
   className="emotion-0"
 >
   <svg
-    aria-labelledby="svg-inline--fa-title-wnNk4gEVSCS8"
+    aria-labelledby="svg-inline--fa-title-0BVNzk8KKI6O"
     className="svg-inline--fa fa-tags icon"
     data-icon="tags"
     data-prefix="fas"
@@ -54,7 +54,7 @@ exports[`🧪 SERVICE: style tests: should render with correct styles 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="svg-inline--fa-title-wnNk4gEVSCS8"
+      id="svg-inline--fa-title-0BVNzk8KKI6O"
       style={{}}
     >
       branding

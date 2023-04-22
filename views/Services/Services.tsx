@@ -1,7 +1,7 @@
-import type { Component, IconComponentProps } from '@/types'
+import type { Component } from '@/types'
 import { useId } from 'react'
 import { Grid } from '@/components'
-import { styled } from '@/styles'
+import { styled, mediaQuery } from '@/styles'
 import services from './services.json'
 import Service from './Service'
 
@@ -19,8 +19,8 @@ const ServicesComponent: Component = (props) => {
         </h3>
       </Grid.Row>
       <Grid.Row>
-        {(services as IconComponentProps[]).map((service) => (
-          <Grid.Col key={crypto.randomUUID()} isOneQuarter>
+        {services.map((service) => (
+          <Grid.Col key={crypto.randomUUID()} className='xs_half' isOneQuarter>
             <Service {...service} />
           </Grid.Col>
         ))}
@@ -32,6 +32,15 @@ const ServicesComponent: Component = (props) => {
 const Services = styled(ServicesComponent)`
   text-align: center;
   background-color: var(--color-light);
+
+  .xs_half {
+    ${mediaQuery('xs')} {
+      :first-of-type,
+      :nth-of-type(2) {
+        margin-bottom: 20px;
+      }
+    }
+  }
 `
 
 export default Services
