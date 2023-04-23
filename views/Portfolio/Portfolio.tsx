@@ -1,7 +1,7 @@
 import type { Component } from '@/types'
 import { useId } from 'react'
 import { Grid } from '@/components'
-import { styled } from '@/styles'
+import { styled, mediaQuery } from '@/styles'
 import works from './works.json'
 import Work from './Work'
 
@@ -41,6 +41,10 @@ const Portfolio = styled(PortfolioComponent)`
       display: block;
       width: 25%;
       float: left;
+
+      ${mediaQuery('xs')} {
+        width: 50%;
+      }
     }
   }
 `

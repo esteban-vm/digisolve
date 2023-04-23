@@ -193,7 +193,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
             target="_blank"
           >
             <svg
-              aria-labelledby="svg-inline--fa-title-fmvECBNo8U6c"
+              aria-labelledby="svg-inline--fa-title-9uqZlQelBy8n"
               className="svg-inline--fa fa-facebook-f "
               data-icon="facebook-f"
               data-prefix="fab"
@@ -203,7 +203,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <title
-                id="svg-inline--fa-title-fmvECBNo8U6c"
+                id="svg-inline--fa-title-9uqZlQelBy8n"
                 style={{}}
               >
                 Facebook
@@ -227,7 +227,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
             target="_blank"
           >
             <svg
-              aria-labelledby="svg-inline--fa-title-sQAaaYb7d0Xc"
+              aria-labelledby="svg-inline--fa-title-0okyJxNCHima"
               className="svg-inline--fa fa-twitter "
               data-icon="twitter"
               data-prefix="fab"
@@ -237,7 +237,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <title
-                id="svg-inline--fa-title-sQAaaYb7d0Xc"
+                id="svg-inline--fa-title-0okyJxNCHima"
                 style={{}}
               >
                 Twitter
@@ -261,7 +261,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
             target="_blank"
           >
             <svg
-              aria-labelledby="svg-inline--fa-title-Ehi5PPEPMsWT"
+              aria-labelledby="svg-inline--fa-title-jjjnRHSMwdtd"
               className="svg-inline--fa fa-google-plus-g "
               data-icon="google-plus-g"
               data-prefix="fab"
@@ -271,7 +271,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <title
-                id="svg-inline--fa-title-Ehi5PPEPMsWT"
+                id="svg-inline--fa-title-jjjnRHSMwdtd"
                 style={{}}
               >
                 Google Plus
@@ -295,7 +295,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
             target="_blank"
           >
             <svg
-              aria-labelledby="svg-inline--fa-title-T7inlRynxf1U"
+              aria-labelledby="svg-inline--fa-title-Slz069IjLavV"
               className="svg-inline--fa fa-instagram "
               data-icon="instagram"
               data-prefix="fab"
@@ -305,7 +305,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <title
-                id="svg-inline--fa-title-T7inlRynxf1U"
+                id="svg-inline--fa-title-Slz069IjLavV"
                 style={{}}
               >
                 Instagram
@@ -329,7 +329,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
             target="_blank"
           >
             <svg
-              aria-labelledby="svg-inline--fa-title-iTBizqo2h6I8"
+              aria-labelledby="svg-inline--fa-title-GKCQ3QbCwTFv"
               className="svg-inline--fa fa-youtube "
               data-icon="youtube"
               data-prefix="fab"
@@ -339,7 +339,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <title
-                id="svg-inline--fa-title-iTBizqo2h6I8"
+                id="svg-inline--fa-title-GKCQ3QbCwTFv"
                 style={{}}
               >
                 YouTube

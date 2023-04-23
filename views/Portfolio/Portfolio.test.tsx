@@ -1,4 +1,5 @@
 import { render, cleanup, screen, create } from '@/tests'
+import { mediaQuery } from '@/styles'
 import works from './works.json'
 import Portfolio from './Portfolio'
 
@@ -44,9 +45,18 @@ describe('🧪 PORTFOLIO:', () => {
   })
 
   describe('style tests:', () => {
+    let tree: ReturnType<typeof create>
+
+    beforeEach(() => {
+      tree = create(<Portfolio />)
+    })
+
     it('should render with correct styles', () => {
-      const tree = create(<Portfolio />)
       expect(tree).toMatchSnapshot()
+    })
+
+    it('should have correct styles on extra small screen devices', () => {
+      expect(tree).toHaveStyleRule('width', '50%', { target: 'ul li', media: mediaQuery('xs') })
     })
   })
 })
