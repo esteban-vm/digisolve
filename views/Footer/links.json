@@ -9,7 +9,7 @@
   "socialLinks": [
     { "text": "Facebook", "icon": ["fab", "facebook-f"] },
     { "text": "Twitter", "icon": ["fab", "twitter"] },
-    { "text": "Google Plus", "icon": ["fab", "google-plus-g"] },
+    { "text": "Google+", "icon": ["fab", "google-plus-g"] },
     { "text": "Instagram", "icon": ["fab", "instagram"] },
     { "text": "YouTube", "icon": ["fab", "youtube"] }
   ]

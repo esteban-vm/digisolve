@@ -1,6 +1,7 @@
 import type { Component } from '@/types'
 import { useId } from 'react'
 import { Grid } from '@/components'
+import { uuid } from '@/helpers'
 import { styled } from '@/styles'
 import partners from './partners.json'
 import Partner from './Partner'
@@ -20,14 +21,14 @@ const PartnersComponent: Component = (props) => {
       </Grid.Row>
       <Grid.Row>
         {partners.slice(0, 4).map((partner) => (
-          <Grid.Col key={crypto.randomUUID()} className='xs_half' isOneQuarter>
+          <Grid.Col key={uuid()} className='xs_half' isOneQuarter>
             <Partner {...partner} />
           </Grid.Col>
         ))}
       </Grid.Row>
       <Grid.Row>
         {partners.slice(4).map((partner) => (
-          <Grid.Col key={crypto.randomUUID()} className='xs_half' isOneQuarter>
+          <Grid.Col key={uuid()} className='xs_half' isOneQuarter>
             <Partner {...partner} />
           </Grid.Col>
         ))}

@@ -18,8 +18,8 @@ describe('🧪 SOCIAL LINK:', () => {
     })
 
     it('the icon of the link should be displayed', () => {
-      const link = screen.getByRole('link')
-      const icon = screen.getByRole('img', { hidden: true, name: testLink.text })
+      const link = screen.getByRole('link', { name: testLink.text })
+      const icon = screen.getByRole('img', { hidden: true })
       expect(link).toBeInTheDocument()
       expect(icon).toBeInTheDocument()
       expect(icon).toBeVisible()

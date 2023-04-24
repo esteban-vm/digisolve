@@ -1,6 +1,7 @@
 import type { Component } from '@/types'
 import { useId } from 'react'
 import { Grid } from '@/components'
+import { uuid } from '@/helpers'
 import { styled, mediaQuery } from '@/styles'
 import works from './works.json'
 import Work from './Work'
@@ -20,7 +21,7 @@ const PortfolioComponent: Component = (props) => {
       </Grid.Row>
       <ul className='clear_fix'>
         {works.map((work) => (
-          <li key={crypto.randomUUID()}>
+          <li key={uuid()}>
             <Work {...work} />
           </li>
         ))}

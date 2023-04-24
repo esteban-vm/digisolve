@@ -2,7 +2,7 @@ import type { Component } from '@/types'
 import { useId } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button } from '@/components'
-import { formatPrice } from '@/helpers'
+import { formatPrice, uuid } from '@/helpers'
 import { styled, mediaQuery } from '@/styles'
 
 type PackageProps = {
@@ -29,7 +29,7 @@ const PackageComponent: Component<PackageProps> = ({ title, price, duration, fea
       <div className='section'>
         <ul>
           {features.map((feature) => (
-            <li key={crypto.randomUUID()}>
+            <li key={uuid()}>
               <FontAwesomeIcon icon='check' className='icon' />
               {feature}
             </li>

@@ -1,5 +1,6 @@
 import type { Component } from '@/types'
 import { Grid } from '@/components'
+import { uuid } from '@/helpers'
 import { styled, mediaQuery } from '@/styles'
 import links from './links.json'
 import NavLink from './NavLink'
@@ -12,14 +13,14 @@ const FooterComponent: Component = (props) => {
         <Grid.Col isHalf>
           <ul className='nav__links'>
             {links.navLinks.map((link) => (
-              <NavLink key={crypto.randomUUID()} {...link} />
+              <NavLink key={uuid()} {...link} />
             ))}
           </ul>
         </Grid.Col>
         <Grid.Col isHalf>
           <ul className='social__links'>
             {links.socialLinks.map((link) => (
-              <SocialLink key={crypto.randomUUID()} {...link} />
+              <SocialLink key={uuid()} {...link} />
             ))}
           </ul>
         </Grid.Col>

@@ -2,6 +2,7 @@ import type { Component } from '@/types'
 import Image from 'next/image'
 import { useId } from 'react'
 import { Button } from '@/components'
+import { uuid } from '@/helpers'
 import { styled, mediaQuery } from '@/styles'
 import links from './links.json'
 import NavLink from './NavLink'
@@ -15,7 +16,7 @@ const HeaderComponent: Component = (props) => {
         <Image src='/img/digisolve-logo.png' alt='Digisolve logo' width={216} height={216} />
         <ul>
           {links.map((link) => (
-            <NavLink key={crypto.randomUUID()} {...link} />
+            <NavLink key={uuid()} {...link} />
           ))}
         </ul>
       </nav>

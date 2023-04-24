@@ -1,4 +1,5 @@
 import type { Meta } from '@/stories'
+import { uuid } from '@/helpers'
 import { Grid } from '@/components'
 import { styled } from '@/styles'
 
@@ -45,7 +46,7 @@ export const Example = () => {
         {Array<string>(2)
           .fill('½')
           .map((item) => (
-            <Grid.Col key={crypto.randomUUID()} isHalf>
+            <Grid.Col key={uuid()} isHalf>
               <div title='is half'>{item}</div>
             </Grid.Col>
           ))}
@@ -55,7 +56,7 @@ export const Example = () => {
         {Array<string>(3)
           .fill('⅓')
           .map((item) => (
-            <Grid.Col key={crypto.randomUUID()} isOneThird>
+            <Grid.Col key={uuid()} isOneThird>
               <div title='is one third'>{item}</div>
             </Grid.Col>
           ))}
@@ -65,7 +66,7 @@ export const Example = () => {
         {Array<string>(4)
           .fill('¼')
           .map((item) => (
-            <Grid.Col key={crypto.randomUUID()} isOneQuarter>
+            <Grid.Col key={uuid()} isOneQuarter>
               <div title='is one quarter'>{item}</div>
             </Grid.Col>
           ))}

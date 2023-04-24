@@ -19,7 +19,7 @@ describe('🧪 SERVICE:', () => {
 
     describe('should be displayed:', () => {
       it('the icon', () => {
-        const icon = screen.getByRole('img', { name: testService.title })
+        const icon = screen.getByRole('img', { hidden: true })
         expect(icon).toBeInTheDocument()
         expect(icon).toBeVisible()
       })

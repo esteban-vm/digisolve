@@ -1,5 +1,6 @@
 import type { Meta } from '@/stories'
 import { Grid } from '@/components'
+import { uuid } from '@/helpers'
 import { styled } from '@/styles'
 import links from '@/Footer/links'
 import NavLink from './NavLink'
@@ -57,7 +58,7 @@ export const Example = () => {
   return (
     <ul>
       {links.navLinks.map((link) => (
-        <NavLink key={crypto.randomUUID()} {...link} />
+        <NavLink key={uuid()} {...link} />
       ))}
     </ul>
   )

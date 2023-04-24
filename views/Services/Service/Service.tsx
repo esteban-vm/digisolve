@@ -14,7 +14,7 @@ const ServiceComponent: ComponentWithIcon<ServiceProps> = ({ title, desc, url = 
 
   return (
     <article aria-labelledby={id} {...rest}>
-      <FontAwesomeIcon icon={icon as IconProp} title={title} className='icon' />
+      <FontAwesomeIcon icon={icon as IconProp} className='icon' />
       <h4 id={id}>{title}</h4>
       <p>{desc}</p>
       <Link href={url}>Read more</Link>

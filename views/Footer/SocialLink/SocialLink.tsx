@@ -10,8 +10,8 @@ type SocialLinkProps = {
 const SocialLinkComponent: ComponentWithIcon<SocialLinkProps> = ({ text, url = '#', icon, ...rest }) => {
   return (
     <li {...rest}>
-      <Link href={url} target='_blank'>
-        <FontAwesomeIcon icon={icon as IconProp} title={text} />
+      <Link href={url} target='_blank' rel='noopener noreferrer' title={text}>
+        <FontAwesomeIcon size='lg' icon={icon as IconProp} />
       </Link>
     </li>
   )

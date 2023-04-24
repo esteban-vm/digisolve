@@ -1,6 +1,7 @@
 import type { Component } from '@/types'
 import { useId } from 'react'
 import { Grid } from '@/components'
+import { uuid } from '@/helpers'
 import { styled, mediaQuery } from '@/styles'
 import services from './services.json'
 import Service from './Service'
@@ -20,7 +21,7 @@ const ServicesComponent: Component = (props) => {
       </Grid.Row>
       <Grid.Row>
         {services.map((service) => (
-          <Grid.Col key={crypto.randomUUID()} className='xs_half' isOneQuarter>
+          <Grid.Col key={uuid()} className='xs_half' isOneQuarter>
             <Service {...service} />
           </Grid.Col>
         ))}
