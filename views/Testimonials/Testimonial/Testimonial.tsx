@@ -1,5 +1,4 @@
 import type { ComponentWithImage } from '@/types'
-import { useId } from 'react'
 import Image from 'next/image'
 import { styled, mediaQuery } from '@/styles'
 
@@ -9,13 +8,11 @@ type TestimonialProps = {
 }
 
 const TestimonialComponent: ComponentWithImage<TestimonialProps> = ({ author, content, image, ...rest }) => {
-  const id = useId()
-
   return (
-    <article aria-labelledby={id} {...rest}>
+    <article aria-labelledby='testimonial_image' {...rest}>
       <blockquote>{content}</blockquote>
       <cite>
-        <Image id={id} alt={author} {...image} />
+        <Image id='testimonial_image' alt={author} {...image} />
         {author}
       </cite>
     </article>

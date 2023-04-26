@@ -25,14 +25,14 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
 }
 
 .emotion-0 img {
-  height: 120px;
+  height: 8.5rem;
   width: auto;
   float: left;
 }
 
 .emotion-0 ul {
   float: right;
-  margin-top: 70px;
+  margin-top: 4.3rem;
 }
 
 .emotion-0 .box {
@@ -106,10 +106,12 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
 }
 
 <header
-  aria-labelledby=":r0:"
+  aria-labelledby="header_title"
   className="emotion-0"
 >
-  <nav>
+  <nav
+    className="animate__animated animate__fast"
+  >
     <img
       alt="Digisolve logo"
       data-nimg="1"
@@ -144,7 +146,7 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
         className="emotion-1"
       >
         <a
-          href="#"
+          href="#contact"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
@@ -156,7 +158,7 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
         className="emotion-1"
       >
         <a
-          href="#"
+          href="#about"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
@@ -173,7 +175,7 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
       className="titles"
     >
       <h1
-        id=":r0:"
+        id="header_title"
       >
         Digital agency
       </h1>

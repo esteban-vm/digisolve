@@ -18,6 +18,7 @@ export const mediaQuery = (breakPoint: keyof typeof breakPoints) => {
 export const globalStyles = css`
   @import url('/css/fluid.min.css');
   @import url('/css/normalize.min.css');
+  @import url('/css/animate.min.css');
 
   @font-face {
     font-family: 'Work Sans';
@@ -167,6 +168,24 @@ export const globalStyles = css`
         ${mediaQuery('sm')} {
           margin-top: 15px;
         }
+      }
+    }
+  }
+
+  .sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    box-shadow: 0 2px 2px var(--color-shadow);
+    z-index: 100;
+
+    a {
+      :link,
+      :visited {
+        color: var(--color-grey) !important;
+        font-weight: 700;
       }
     }
   }

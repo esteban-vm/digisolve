@@ -1,38 +1,56 @@
 import type { Component } from '@/types'
-import { useId } from 'react'
+import { Waypoint } from 'react-waypoint'
+import { useRef } from 'react'
 import Image from 'next/image'
 import { Button, Grid } from '@/components'
 import { styled, mediaQuery } from '@/styles'
 
 const AboutComponent: Component = (props) => {
-  const id = useId()
+  const aboutRef = useRef<HTMLElement>(null)
+
+  const animateAbout = (action: 'add' | 'remove') => {
+    return () => {
+      aboutRef.current?.classList[action]('animate__fadeIn')
+    }
+  }
 
   return (
-    <section aria-labelledby={id} {...props}>
-      <Grid.Row>
-        <Grid.Col isHalf>
-          <h2 id={id}>A digital agency focused on growing your online presence</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt.
-            Architecto fugiat veritatis cum necessitatibus sapiente!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt.
-            Architecto fugiat veritatis cum necessitatibus sapiente!
-          </p>
-          <Button text='Read more' />
-        </Grid.Col>
-        <Grid.Col isHalf>
-          <Image src='/img/about-img.jpg' alt='Digisolve app on Laptop' width={1_920} height={1_280} />
-        </Grid.Col>
-      </Grid.Row>
-    </section>
+    <Waypoint onEnter={animateAbout('add')} onLeave={animateAbout('remove')}>
+      <section id='about' aria-labelledby='about_title' ref={aboutRef} {...props}>
+        <Grid.Row>
+          <Grid.Col className='about_col' isHalf>
+            <h2 id='about_title'>A digital agency focused on growing your online presence</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt.
+              Architecto fugiat veritatis cum necessitatibus sapiente!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt.
+              Architecto fugiat veritatis cum necessitatibus sapiente!
+            </p>
+            <Button text='Read more' />
+          </Grid.Col>
+          <Grid.Col className='about_col' isHalf>
+            <Image src='/img/about-img.jpg' alt='Digisolve app on Laptop' width={1_920} height={1_280} />
+          </Grid.Col>
+        </Grid.Row>
+      </section>
+    </Waypoint>
   )
+}
+
+AboutComponent.defaultProps = {
+  className: 'animate__animated animate__fast',
 }
 
 const About = styled(AboutComponent)`
   margin-top: 150px;
   padding-bottom: 20px;
+  opacity: 0.1;
+
+  .animate__fadeIn {
+    opacity: 1;
+  }
 
   ${mediaQuery('md')} {
     margin-top: 60px;
@@ -80,7 +98,7 @@ const About = styled(AboutComponent)`
     }
   }
 
-  .col {
+  .about_col {
     :first-of-type {
       text-align: left;
 

@@ -1,6 +1,7 @@
 import type { Component } from '@/types'
 import Image from 'next/image'
-import { useId } from 'react'
+import { Waypoint } from 'react-waypoint'
+import { useRef } from 'react'
 import { Button } from '@/components'
 import { uuid } from '@/helpers'
 import { styled, mediaQuery } from '@/styles'
@@ -8,26 +9,34 @@ import links from './links.json'
 import NavLink from './NavLink'
 
 const HeaderComponent: Component = (props) => {
-  const id = useId()
+  const navbarRef = useRef<HTMLElement>(null)
+
+  const stickNavbar = (action: 'add' | 'remove') => {
+    return () => {
+      navbarRef.current?.classList[action]('animate__backInDown', 'sticky')
+    }
+  }
 
   return (
-    <header aria-labelledby={id} {...props}>
-      <nav>
-        <Image src='/img/digisolve-logo.png' alt='Digisolve logo' width={216} height={216} />
-        <ul>
-          {links.map((link) => (
-            <NavLink key={uuid()} {...link} />
-          ))}
-        </ul>
-      </nav>
-      <div className='box'>
-        <div className='titles'>
-          <h1 id={id}>Digital agency</h1>
-          <h2>The one stop for all your digital solutions</h2>
+    <Waypoint onEnter={stickNavbar('remove')} onLeave={stickNavbar('add')} topOffset='200px'>
+      <header aria-labelledby='header_title' {...props}>
+        <nav ref={navbarRef} className='animate__animated animate__fast'>
+          <Image src='/img/digisolve-logo.png' alt='Digisolve logo' width={216} height={216} />
+          <ul>
+            {links.map((link) => (
+              <NavLink key={uuid()} {...link} />
+            ))}
+          </ul>
+        </nav>
+        <div className='box'>
+          <div className='titles'>
+            <h1 id='header_title'>Digital agency</h1>
+            <h2>The one stop for all your digital solutions</h2>
+          </div>
+          <Button text='Get a quote today!' isFull />
         </div>
-        <Button text='Get a quote today!' isFull />
-      </div>
-    </header>
+      </header>
+    </Waypoint>
   )
 }
 
@@ -52,14 +61,14 @@ const Header = styled(HeaderComponent)`
   }
 
   img {
-    height: 120px;
+    height: 8.5rem;
     width: auto;
     float: left;
   }
 
   ul {
     float: right;
-    margin-top: 70px;
+    margin-top: 4.3rem;
   }
 
   .box {

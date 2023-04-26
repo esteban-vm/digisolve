@@ -113,14 +113,14 @@ exports[`🧪 PACKAGE: style tests: should render with correct styles 1`] = `
 }
 
 <article
-  aria-labelledby=":r0:"
+  aria-labelledby="package_title"
   className="emotion-0"
 >
   <div
     className="section"
   >
     <h4
-      id=":r0:"
+      id="package_title"
     >
       starter
     </h4>

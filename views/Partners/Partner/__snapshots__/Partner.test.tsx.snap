@@ -7,7 +7,7 @@ exports[`🧪 PARTNER: style tests: should render with correct styles 1`] = `
 }
 
 <article
-  aria-labelledby=":r0:"
+  aria-labelledby="partner_image"
   className="emotion-0"
 >
   <img
@@ -15,7 +15,7 @@ exports[`🧪 PARTNER: style tests: should render with correct styles 1`] = `
     data-nimg="1"
     decoding="async"
     height={500}
-    id=":r0:"
+    id="partner_image"
     loading="lazy"
     onError={[Function]}
     onLoad={[Function]}

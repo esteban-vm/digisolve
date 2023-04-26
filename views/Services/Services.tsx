@@ -1,5 +1,4 @@
 import type { Component } from '@/types'
-import { useId } from 'react'
 import { Grid } from '@/components'
 import { uuid } from '@/helpers'
 import { styled, mediaQuery } from '@/styles'
@@ -7,12 +6,10 @@ import services from './services.json'
 import Service from './Service'
 
 const ServicesComponent: Component = (props) => {
-  const id = useId()
-
   return (
-    <section aria-labelledby={id} {...props}>
+    <section id='services' aria-labelledby='services_title' {...props}>
       <Grid.Row>
-        <h2 id={id} className='section__heading'>
+        <h2 id='services_title' className='section__heading'>
           Our services
         </h2>
         <h3 className='section__subheading'>

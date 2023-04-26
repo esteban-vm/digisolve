@@ -1,11 +1,14 @@
 [
   {
-    "text": "Home"
+    "text": "Home",
+    "url": "#"
   },
   {
-    "text": "Contact"
+    "text": "Contact",
+    "url": "#contact"
   },
   {
-    "text": "About"
+    "text": "About",
+    "url": "#about"
   }
 ]

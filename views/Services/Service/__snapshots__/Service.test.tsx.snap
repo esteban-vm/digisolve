@@ -40,7 +40,7 @@ exports[`🧪 SERVICE: style tests: should render with correct styles 1`] = `
 }
 
 <article
-  aria-labelledby=":r0:"
+  aria-labelledby="service_title"
   className="emotion-0"
 >
   <svg
@@ -61,7 +61,7 @@ exports[`🧪 SERVICE: style tests: should render with correct styles 1`] = `
     />
   </svg>
   <h4
-    id=":r0:"
+    id="service_title"
   >
     branding
   </h4>

@@ -138,15 +138,16 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
 }
 
 <section
-  aria-labelledby=":r0:"
+  aria-labelledby="packages_title"
   className="emotion-0"
+  id="packages"
 >
   <div
     className="row "
     role="presentation"
   >
     <h2
-      id=":r0:"
+      id="packages_title"
     >
       Check out our most popular packages
     </h2>
@@ -160,14 +161,14 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby=":r1:"
+        aria-labelledby="package_title"
         className="emotion-1"
       >
         <div
           className="section"
         >
           <h4
-            id=":r1:"
+            id="package_title"
           >
             starter
           </h4>
@@ -313,14 +314,14 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby=":r2:"
+        aria-labelledby="package_title"
         className="emotion-1"
       >
         <div
           className="section"
         >
           <h4
-            id=":r2:"
+            id="package_title"
           >
             corporate
           </h4>
@@ -466,14 +467,14 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby=":r3:"
+        aria-labelledby="package_title"
         className="emotion-1"
       >
         <div
           className="section"
         >
           <h4
-            id=":r3:"
+            id="package_title"
           >
             enterprice
           </h4>

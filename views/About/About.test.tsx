@@ -64,8 +64,8 @@ describe('🧪 ABOUT:', () => {
       it('extra small screen devices', () => {
         const media = mediaQuery('xs')
         expect(tree).toHaveStyleRule('margin', '30px auto', { target: 'img', media })
-        expect(tree).toHaveStyleRule('text-align', 'center', { target: '.col:first-of-type', media })
-        expect(tree).toHaveStyleRule('padding', '0', { target: '.col:first-of-type', media })
+        expect(tree).toHaveStyleRule('text-align', 'center', { target: '.about_col:first-of-type', media })
+        expect(tree).toHaveStyleRule('padding', '0', { target: '.about_col:first-of-type', media })
       })
 
       it('small screen devices', () => {
@@ -78,9 +78,9 @@ describe('🧪 ABOUT:', () => {
         const media = mediaQuery('md')
         expect(tree).toHaveStyleRule('margin-top', '60px', { media })
         expect(tree).toHaveStyleRule('margin-bottom', '35px', { target: 'h2', media })
-        expect(tree).toHaveStyleRule('padding-left', '1%', { target: '.col:first-of-type', media })
-        expect(tree).toHaveStyleRule('margin-left', '0', { target: '.col:last-of-type', media })
-        expect(tree).toHaveStyleRule('text-align', 'center', { target: '.col:last-of-type', media })
+        expect(tree).toHaveStyleRule('padding-left', '1%', { target: '.about_col:first-of-type', media })
+        expect(tree).toHaveStyleRule('margin-left', '0', { target: '.about_col:last-of-type', media })
+        expect(tree).toHaveStyleRule('text-align', 'center', { target: '.about_col:last-of-type', media })
       })
 
       it('large screen devices', () => {

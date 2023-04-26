@@ -1,16 +1,13 @@
 import type { Component } from '@/types'
-import { useId } from 'react'
 import { Grid } from '@/components'
 import { styled, mediaQuery } from '@/styles'
 import Form from './Form'
 
 const ContactComponent: Component = (props) => {
-  const id = useId()
-
   return (
-    <section aria-labelledby={id} {...props}>
+    <section id='contact' aria-labelledby='contact_title' {...props}>
       <Grid.Row>
-        <h2 id={id}>We are happy to hear from you</h2>
+        <h2 id='contact_title'>We are happy to hear from you</h2>
       </Grid.Row>
       <Grid.Row>
         <Form />

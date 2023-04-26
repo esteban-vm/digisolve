@@ -117,7 +117,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
           className="emotion-1"
         >
           <a
-            href="#"
+            href="#about"
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}

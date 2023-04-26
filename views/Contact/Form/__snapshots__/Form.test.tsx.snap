@@ -37,9 +37,7 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
   }
 }
 
-.emotion-0 input[type='text'],
-.emotion-0 input[type='email'],
-.emotion-0 textarea {
+.emotion-0 .field {
   width: 95%;
   padding: 8px;
   border-radius: 3px;
@@ -47,69 +45,37 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
   background-color: var(--color-white);
 }
 
-.emotion-0 input[type='text']::-webkit-input-placeholder {
+.emotion-0 .field::-webkit-input-placeholder {
   text-transform: capitalize;
   opacity: 0.7;
 }
 
-.emotion-0 input[type='text']::-moz-placeholder {
+.emotion-0 .field::-moz-placeholder {
   text-transform: capitalize;
   opacity: 0.7;
 }
 
-.emotion-0 input[type='text']:-ms-input-placeholder {
+.emotion-0 .field:-ms-input-placeholder {
   text-transform: capitalize;
   opacity: 0.7;
 }
 
-.emotion-0 input[type='email']::-webkit-input-placeholder {
+.emotion-0 .field::placeholder {
   text-transform: capitalize;
   opacity: 0.7;
 }
 
-.emotion-0 input[type='email']::-moz-placeholder {
-  text-transform: capitalize;
-  opacity: 0.7;
-}
-
-.emotion-0 input[type='email']:-ms-input-placeholder {
-  text-transform: capitalize;
-  opacity: 0.7;
-}
-
-.emotion-0 textarea::-webkit-input-placeholder {
-  text-transform: capitalize;
-  opacity: 0.7;
-}
-
-.emotion-0 textarea::-moz-placeholder {
-  text-transform: capitalize;
-  opacity: 0.7;
-}
-
-.emotion-0 textarea:-ms-input-placeholder {
-  text-transform: capitalize;
-  opacity: 0.7;
-}
-
-.emotion-0 input[type='text']::placeholder,
-.emotion-0 input[type='email']::placeholder,
-.emotion-0 textarea::placeholder {
-  text-transform: capitalize;
-  opacity: 0.7;
-}
-
-.emotion-0 textarea {
+.emotion-0 .field:is(textarea) {
   height: 100px;
   resize: none;
 }
 
-.emotion-0 input[type='checkbox'] {
+.emotion-0 .check {
   margin: 10px 5px 10px 0;
 }
 
 @media only screen and (max-width: 480px) {
-  .emotion-0 input[type='checkbox'] {
+  .emotion-0 .check {
     margin-top: 2px;
   }
 }
@@ -178,6 +144,7 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
     >
       <input
         autoCorrect="off"
+        className="field"
         id="name"
         name="name"
         onBlur={[Function]}
@@ -207,6 +174,7 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <input
+        className="field"
         id="email"
         name="email"
         onBlur={[Function]}
@@ -235,6 +203,7 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <input
+        className="check"
         defaultChecked={true}
         id="newsletter"
         name="newsletter"
@@ -264,6 +233,7 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <textarea
+        className="field"
         id="message"
         name="message"
         onBlur={[Function]}

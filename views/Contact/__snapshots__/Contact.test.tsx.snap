@@ -59,9 +59,7 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
   }
 }
 
-.emotion-1 input[type='text'],
-.emotion-1 input[type='email'],
-.emotion-1 textarea {
+.emotion-1 .field {
   width: 95%;
   padding: 8px;
   border-radius: 3px;
@@ -69,69 +67,37 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
   background-color: var(--color-white);
 }
 
-.emotion-1 input[type='text']::-webkit-input-placeholder {
+.emotion-1 .field::-webkit-input-placeholder {
   text-transform: capitalize;
   opacity: 0.7;
 }
 
-.emotion-1 input[type='text']::-moz-placeholder {
+.emotion-1 .field::-moz-placeholder {
   text-transform: capitalize;
   opacity: 0.7;
 }
 
-.emotion-1 input[type='text']:-ms-input-placeholder {
+.emotion-1 .field:-ms-input-placeholder {
   text-transform: capitalize;
   opacity: 0.7;
 }
 
-.emotion-1 input[type='email']::-webkit-input-placeholder {
+.emotion-1 .field::placeholder {
   text-transform: capitalize;
   opacity: 0.7;
 }
 
-.emotion-1 input[type='email']::-moz-placeholder {
-  text-transform: capitalize;
-  opacity: 0.7;
-}
-
-.emotion-1 input[type='email']:-ms-input-placeholder {
-  text-transform: capitalize;
-  opacity: 0.7;
-}
-
-.emotion-1 textarea::-webkit-input-placeholder {
-  text-transform: capitalize;
-  opacity: 0.7;
-}
-
-.emotion-1 textarea::-moz-placeholder {
-  text-transform: capitalize;
-  opacity: 0.7;
-}
-
-.emotion-1 textarea:-ms-input-placeholder {
-  text-transform: capitalize;
-  opacity: 0.7;
-}
-
-.emotion-1 input[type='text']::placeholder,
-.emotion-1 input[type='email']::placeholder,
-.emotion-1 textarea::placeholder {
-  text-transform: capitalize;
-  opacity: 0.7;
-}
-
-.emotion-1 textarea {
+.emotion-1 .field:is(textarea) {
   height: 100px;
   resize: none;
 }
 
-.emotion-1 input[type='checkbox'] {
+.emotion-1 .check {
   margin: 10px 5px 10px 0;
 }
 
 @media only screen and (max-width: 480px) {
-  .emotion-1 input[type='checkbox'] {
+  .emotion-1 .check {
     margin-top: 2px;
   }
 }
@@ -175,15 +141,16 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
 }
 
 <section
-  aria-labelledby=":r0:"
+  aria-labelledby="contact_title"
   className="emotion-0"
+  id="contact"
 >
   <div
     className="row "
     role="presentation"
   >
     <h2
-      id=":r0:"
+      id="contact_title"
     >
       We are happy to hear from you
     </h2>
@@ -218,6 +185,7 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
         >
           <input
             autoCorrect="off"
+            className="field"
             id="name"
             name="name"
             onBlur={[Function]}
@@ -247,6 +215,7 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
           role="presentation"
         >
           <input
+            className="field"
             id="email"
             name="email"
             onBlur={[Function]}
@@ -275,6 +244,7 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
           role="presentation"
         >
           <input
+            className="check"
             defaultChecked={true}
             id="newsletter"
             name="newsletter"
@@ -304,6 +274,7 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
           role="presentation"
         >
           <textarea
+            className="field"
             id="message"
             name="message"
             onBlur={[Function]}

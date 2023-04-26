@@ -1,5 +1,4 @@
 import type { ComponentWithIcon, IconProp } from '@/types'
-import { useId } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import { styled } from '@/styles'
@@ -10,12 +9,10 @@ type ServiceProps = {
 }
 
 const ServiceComponent: ComponentWithIcon<ServiceProps> = ({ title, desc, url = '#', icon, ...rest }) => {
-  const id = useId()
-
   return (
-    <article aria-labelledby={id} {...rest}>
+    <article aria-labelledby='service_title' {...rest}>
       <FontAwesomeIcon icon={icon as IconProp} className='icon' />
-      <h4 id={id}>{title}</h4>
+      <h4 id='service_title'>{title}</h4>
       <p>{desc}</p>
       <Link href={url}>Read more</Link>
     </article>

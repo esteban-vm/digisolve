@@ -1,5 +1,4 @@
 import type { ComponentWithImage } from '@/types'
-import { useId } from 'react'
 import Image from 'next/image'
 import { styled } from '@/styles'
 
@@ -8,11 +7,9 @@ type WorkProps = {
 }
 
 const WorkComponent: ComponentWithImage<WorkProps> = ({ title, image, ...rest }) => {
-  const id = useId()
-
   return (
-    <figure aria-labelledby={id} {...rest}>
-      <Image alt={title} id={id} {...image} />
+    <figure aria-labelledby='work_image' {...rest}>
+      <Image alt={title} id='work_image' {...image} />
       <p>{title}</p>
     </figure>
   )

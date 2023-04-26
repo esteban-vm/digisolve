@@ -1,5 +1,4 @@
 import type { Component } from '@/types'
-import { useId } from 'react'
 import { Grid } from '@/components'
 import { uuid } from '@/helpers'
 import { styled, mediaQuery } from '@/styles'
@@ -7,12 +6,10 @@ import testimonials from './testimonials.json'
 import Testimonial from './Testimonial'
 
 const TestimonialsComponent: Component = (props) => {
-  const id = useId()
-
   return (
-    <section aria-labelledby={id} {...props}>
+    <section id='testimonials' aria-labelledby='testimonials_title' {...props}>
       <Grid.Row>
-        <h2 id={id}>Our testimonials</h2>
+        <h2 id='testimonials_title'>Our testimonials</h2>
       </Grid.Row>
       <Grid.Row>
         {testimonials.map((testimonial) => (

@@ -1,19 +1,11 @@
 import type { Component } from '@/types'
 import { useForm, type SubmitHandler } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
-import * as yup from 'yup'
+import { string, boolean, object, type ObjectSchema } from 'yup'
 import toast, { Toaster } from 'react-hot-toast'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelopeCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import { Button, Grid } from '@/components'
 import { styled, mediaQuery } from '@/styles'
-
-const validationSchema = yup.object().shape({
-  name: yup.string().trim().required(),
-  email: yup.string().trim().email().required(),
-  newsletter: yup.boolean().default(true),
-  message: yup.string().trim().required(),
-})
 
 type FormFields = {
   name: string
@@ -21,6 +13,13 @@ type FormFields = {
   newsletter: boolean
   message: string
 }
+
+const validationSchema: ObjectSchema<FormFields> = object().shape({
+  name: string().trim().required(),
+  email: string().trim().email().required(),
+  newsletter: boolean().default(true),
+  message: string().trim().required(),
+})
 
 const FormComponent: Component = (props) => {
   const { register, handleSubmit, reset } = useForm<FormFields>({ resolver: yupResolver(validationSchema) })
@@ -33,7 +32,7 @@ const FormComponent: Component = (props) => {
     `
 
     toast(data, {
-      icon: <FontAwesomeIcon size='2x' icon={faEnvelopeCircleCheck} className='icon' />,
+      icon: <FontAwesomeIcon size='2x' icon='envelope-circle-check' className='icon' />,
       duration: 5_000,
       position: 'top-center',
       ariaProps: { role: 'alert', 'aria-live': 'assertive' },
@@ -56,6 +55,7 @@ const FormComponent: Component = (props) => {
             placeholder='your name'
             spellCheck={false}
             autoCorrect='off'
+            className='field'
             {...register('name')}
           />
         </Grid.Col>
@@ -65,7 +65,7 @@ const FormComponent: Component = (props) => {
           <label htmlFor='email'>Email</label>
         </Grid.Col>
         <Grid.Col isTwoThirds>
-          <input type='email' id='email' placeholder='your email' {...register('email')} />
+          <input type='email' id='email' placeholder='your email' className='field' {...register('email')} />
         </Grid.Col>
       </Grid.Row>
       <Grid.Row>
@@ -73,7 +73,7 @@ const FormComponent: Component = (props) => {
           <label htmlFor='newsletter'>Newsletter?</label>
         </Grid.Col>
         <Grid.Col isTwoThirds>
-          <input type='checkbox' id='newsletter' defaultChecked {...register('newsletter')} />
+          <input type='checkbox' id='newsletter' className='check' defaultChecked {...register('newsletter')} />
           Yes, Please
         </Grid.Col>
       </Grid.Row>
@@ -82,7 +82,7 @@ const FormComponent: Component = (props) => {
           <label htmlFor='message'>Drop us a line</label>
         </Grid.Col>
         <Grid.Col isTwoThirds>
-          <textarea id='message' placeholder='your message' {...register('message')} />
+          <textarea id='message' placeholder='your message' className='field' {...register('message')} />
         </Grid.Col>
       </Grid.Row>
       <Grid.Row>
@@ -122,9 +122,7 @@ const Form = styled(FormComponent)`
     }
   }
 
-  input[type='text'],
-  input[type='email'],
-  textarea {
+  .field {
     width: 95%;
     padding: 8px;
     border-radius: 3px;
@@ -135,14 +133,14 @@ const Form = styled(FormComponent)`
       text-transform: capitalize;
       opacity: 0.7;
     }
+
+    :is(textarea) {
+      height: 100px;
+      resize: none;
+    }
   }
 
-  textarea {
-    height: 100px;
-    resize: none;
-  }
-
-  input[type='checkbox'] {
+  .check {
     margin: 10px 5px 10px 0;
 
     ${mediaQuery('xs')} {

@@ -11,8 +11,9 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
 }
 
 <section
-  aria-labelledby=":r0:"
+  aria-labelledby="partners_title"
   className="emotion-0"
+  id="partners"
 >
   <div
     className="row "
@@ -20,7 +21,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
   >
     <h2
       className="section__heading"
-      id=":r0:"
+      id="partners_title"
     >
       Featured clients
     </h2>
@@ -39,7 +40,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby=":r1:"
+        aria-labelledby="partner_image"
         className="emotion-1"
       >
         <img
@@ -47,7 +48,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={500}
-          id=":r1:"
+          id="partner_image"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -67,7 +68,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby=":r2:"
+        aria-labelledby="partner_image"
         className="emotion-1"
       >
         <img
@@ -75,7 +76,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={500}
-          id=":r2:"
+          id="partner_image"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -95,7 +96,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby=":r3:"
+        aria-labelledby="partner_image"
         className="emotion-1"
       >
         <img
@@ -103,7 +104,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={500}
-          id=":r3:"
+          id="partner_image"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -123,7 +124,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby=":r4:"
+        aria-labelledby="partner_image"
         className="emotion-1"
       >
         <img
@@ -131,7 +132,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={500}
-          id=":r4:"
+          id="partner_image"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -156,7 +157,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby=":r5:"
+        aria-labelledby="partner_image"
         className="emotion-1"
       >
         <img
@@ -164,7 +165,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={500}
-          id=":r5:"
+          id="partner_image"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -184,7 +185,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby=":r6:"
+        aria-labelledby="partner_image"
         className="emotion-1"
       >
         <img
@@ -192,7 +193,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={500}
-          id=":r6:"
+          id="partner_image"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -212,7 +213,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby=":r7:"
+        aria-labelledby="partner_image"
         className="emotion-1"
       >
         <img
@@ -220,7 +221,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={500}
-          id=":r7:"
+          id="partner_image"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -240,7 +241,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby=":r8:"
+        aria-labelledby="partner_image"
         className="emotion-1"
       >
         <img
@@ -248,7 +249,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={500}
-          id=":r8:"
+          id="partner_image"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}

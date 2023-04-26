@@ -48,7 +48,7 @@ exports[`🧪 TESTIMONIAL: style tests: should render with correct styles 1`] = 
 }
 
 <article
-  aria-labelledby=":r0:"
+  aria-labelledby="testimonial_image"
   className="emotion-0"
 >
   <blockquote>
@@ -60,7 +60,7 @@ exports[`🧪 TESTIMONIAL: style tests: should render with correct styles 1`] = 
       data-nimg="1"
       decoding="async"
       height={72}
-      id=":r0:"
+      id="testimonial_image"
       loading="lazy"
       onError={[Function]}
       onLoad={[Function]}

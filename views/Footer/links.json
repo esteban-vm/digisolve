@@ -1,6 +1,6 @@
 {
   "navLinks": [
-    { "text": "About us" },
+    { "text": "About us", "url": "#about" },
     { "text": "Blog" },
     { "text": "Help & Support" },
     { "text": "iOS App" },

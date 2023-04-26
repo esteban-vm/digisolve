@@ -1,5 +1,4 @@
 import type { Component } from '@/types'
-import { useId } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button } from '@/components'
 import { formatPrice, uuid } from '@/helpers'
@@ -14,13 +13,12 @@ type PackageProps = {
 }
 
 const PackageComponent: Component<PackageProps> = ({ title, price, duration, features, desc, ...rest }) => {
-  const id = useId()
   const formattedPrice = formatPrice(price)
 
   return (
-    <article aria-labelledby={id} {...rest}>
+    <article aria-labelledby='package_title' {...rest}>
       <div className='section'>
-        <h4 id={id}>{title}</h4>
+        <h4 id='package_title'>{title}</h4>
         <p>
           {formattedPrice} <span>{duration} months</span>
         </p>

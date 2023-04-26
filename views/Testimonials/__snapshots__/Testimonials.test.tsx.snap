@@ -83,15 +83,16 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
 }
 
 <section
-  aria-labelledby=":r0:"
+  aria-labelledby="testimonials_title"
   className="emotion-0"
+  id="testimonials"
 >
   <div
     className="row "
     role="presentation"
   >
     <h2
-      id=":r0:"
+      id="testimonials_title"
     >
       Our testimonials
     </h2>
@@ -105,7 +106,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
       role="presentation"
     >
       <article
-        aria-labelledby=":r1:"
+        aria-labelledby="testimonial_image"
         className="emotion-1"
       >
         <blockquote>
@@ -117,7 +118,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
             data-nimg="1"
             decoding="async"
             height={72}
-            id=":r1:"
+            id="testimonial_image"
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
@@ -139,7 +140,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
       role="presentation"
     >
       <article
-        aria-labelledby=":r2:"
+        aria-labelledby="testimonial_image"
         className="emotion-1"
       >
         <blockquote>
@@ -151,7 +152,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
             data-nimg="1"
             decoding="async"
             height={72}
-            id=":r2:"
+            id="testimonial_image"
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
@@ -173,7 +174,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
       role="presentation"
     >
       <article
-        aria-labelledby=":r3:"
+        aria-labelledby="testimonial_image"
         className="emotion-1"
       >
         <blockquote>
@@ -185,7 +186,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
             data-nimg="1"
             decoding="async"
             height={72}
-            id=":r3:"
+            id="testimonial_image"
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}

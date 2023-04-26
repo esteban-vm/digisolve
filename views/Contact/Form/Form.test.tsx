@@ -91,7 +91,7 @@ describe('🧪 FORM:', () => {
         const media = mediaQuery('xs')
         expect(tree).toHaveStyleRule('width', '90%', { media })
         expect(tree).toHaveStyleRule('margin-top', '5px', { target: 'label', media })
-        expect(tree).toHaveStyleRule('margin-top', '2px', { target: "input[type='checkbox']", media })
+        expect(tree).toHaveStyleRule('margin-top', '2px', { target: '.check', media })
       })
 
       it('small screen devices', () => {

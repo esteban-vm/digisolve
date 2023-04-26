@@ -52,8 +52,9 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
 }
 
 <section
-  aria-labelledby=":r0:"
+  aria-labelledby="services_title"
   className="emotion-0"
+  id="services"
 >
   <div
     className="row "
@@ -61,7 +62,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
   >
     <h2
       className="section__heading"
-      id=":r0:"
+      id="services_title"
     >
       Our services
     </h2>
@@ -80,7 +81,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby=":r1:"
+        aria-labelledby="service_title"
         className="emotion-1"
       >
         <svg
@@ -101,7 +102,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
           />
         </svg>
         <h4
-          id=":r1:"
+          id="service_title"
         >
           branding
         </h4>
@@ -123,7 +124,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby=":r2:"
+        aria-labelledby="service_title"
         className="emotion-1"
       >
         <svg
@@ -144,7 +145,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
           />
         </svg>
         <h4
-          id=":r2:"
+          id="service_title"
         >
           content
         </h4>
@@ -166,7 +167,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby=":r3:"
+        aria-labelledby="service_title"
         className="emotion-1"
       >
         <svg
@@ -187,7 +188,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
           />
         </svg>
         <h4
-          id=":r3:"
+          id="service_title"
         >
           marketing
         </h4>
@@ -209,7 +210,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby=":r4:"
+        aria-labelledby="service_title"
         className="emotion-1"
       >
         <svg
@@ -230,7 +231,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
           />
         </svg>
         <h4
-          id=":r4:"
+          id="service_title"
         >
           web design
         </h4>
