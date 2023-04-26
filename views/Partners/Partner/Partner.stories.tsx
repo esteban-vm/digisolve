@@ -14,14 +14,6 @@ const Wrapper = styled.div`
 `
 
 export default {
-  argTypes: {
-    image: {
-      control: false,
-    },
-    desc: {
-      control: false,
-    },
-  },
   component: Partner,
   title: 'Views/Partners/Partners',
   decorators: [
@@ -43,6 +35,9 @@ export default {
     layout: 'centered',
     viewport: {
       disable: true,
+    },
+    controls: {
+      exclude: ['desc', 'image', 'theme'],
     },
   },
 } as Meta<typeof Partner>

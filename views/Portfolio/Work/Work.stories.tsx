@@ -8,11 +8,6 @@ const Wrapper = styled.div`
 `
 
 export default {
-  argTypes: {
-    image: {
-      control: false,
-    },
-  },
   component: Work,
   title: 'Views/Portfolio/Works',
   decorators: [
@@ -28,6 +23,9 @@ export default {
     layout: 'centered',
     viewport: {
       disable: true,
+    },
+    controls: {
+      exclude: ['image', 'theme'],
     },
   },
 } as Meta<typeof Work>

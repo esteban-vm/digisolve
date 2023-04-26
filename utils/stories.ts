@@ -1,5 +1,5 @@
-export type * from '@storybook/nextjs'
-export type * from '@storybook/react'
+export * from '@storybook/nextjs'
+export * from '@storybook/react'
 export * from '@storybook/addon-viewport'
 export * from '@storybook/testing-library'
 export { configure } from '@storybook/testing-library'

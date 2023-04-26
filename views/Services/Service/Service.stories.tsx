@@ -14,11 +14,6 @@ const Wrapper = styled.div`
 `
 
 export default {
-  argTypes: {
-    icon: {
-      control: false,
-    },
-  },
   component: Service,
   title: 'Views/Services/Services',
   decorators: [
@@ -40,6 +35,9 @@ export default {
     layout: 'centered',
     viewport: {
       disable: true,
+    },
+    controls: {
+      exclude: ['icon', 'desc', 'url', 'theme'],
     },
   },
 } as Meta<typeof Service>

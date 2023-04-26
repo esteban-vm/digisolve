@@ -43,9 +43,9 @@ const preview: Preview = {
     layout: 'fullscreen',
     viewport: {
       viewports: {
+        ...CUSTOM_VIEWPORTS,
         ...MINIMAL_VIEWPORTS,
         ...INITIAL_VIEWPORTS,
-        ...CUSTOM_VIEWPORTS,
       },
     },
   },

@@ -19,14 +19,6 @@ const Wrapper = styled.div`
 `
 
 export default {
-  argTypes: {
-    image: {
-      control: false,
-    },
-    author: {
-      control: false,
-    },
-  },
   component: Testimonial,
   title: 'Views/Testimonials/Testimonials',
   decorators: [
@@ -48,6 +40,9 @@ export default {
     layout: 'centered',
     viewport: {
       disable: true,
+    },
+    controls: {
+      exclude: ['author', 'image', 'content', 'theme'],
     },
   },
 } as Meta<typeof Testimonial>

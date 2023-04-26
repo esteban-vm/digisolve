@@ -5,17 +5,15 @@ export default {
   args: {
     text: 'button example',
   },
-  argTypes: {
-    isFull: {
-      control: false,
-    },
-  },
   component: Button,
   title: 'Components/Button',
   parameters: {
     layout: 'centered',
     viewport: {
       disable: true,
+    },
+    controls: {
+      exclude: ['isFull', 'isSubmit', 'url', 'theme'],
     },
   },
   play({ canvasElement }) {

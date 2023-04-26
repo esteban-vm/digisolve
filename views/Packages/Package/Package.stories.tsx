@@ -9,11 +9,6 @@ const Wrapper = styled.div`
 `
 
 export default {
-  argTypes: {
-    features: {
-      control: false,
-    },
-  },
   component: Package,
   title: 'Views/Packages/Packages',
   decorators: [
@@ -35,6 +30,9 @@ export default {
     layout: 'centered',
     viewport: {
       disable: true,
+    },
+    controls: {
+      exclude: ['features', 'desc', 'theme'],
     },
   },
 } as Meta<typeof Package>
