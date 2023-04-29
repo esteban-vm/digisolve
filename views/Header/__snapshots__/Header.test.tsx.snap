@@ -106,7 +106,7 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
 }
 
 <header
-  aria-labelledby="header_title"
+  aria-labelledby=":r0:"
   className="emotion-0"
 >
   <nav
@@ -132,36 +132,36 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
     <ul>
       <li
         className="emotion-1"
+        id="919579c0-a375-483f-91cf-8bcacbe2b9d8"
       >
         <a
-          href="#"
+          href="##"
           onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
+          style={{}}
         >
           Home
         </a>
       </li>
       <li
         className="emotion-1"
+        id="2661b69e-ee92-4d43-81d8-e2c698634809"
       >
         <a
           href="#contact"
           onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
+          style={{}}
         >
           Contact
         </a>
       </li>
       <li
         className="emotion-1"
+        id="2f95d6eb-b257-4d91-94e3-214c757186b3"
       >
         <a
           href="#about"
           onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
+          style={{}}
         >
           About
         </a>
@@ -175,7 +175,7 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
       className="titles"
     >
       <h1
-        id="header_title"
+        id=":r0:"
       >
         Digital agency
       </h1>

@@ -1,15 +1,15 @@
-import type { ComponentWithLink } from '@/types'
-import Link from 'next/link'
+import type { Component, PropsWithLink } from '@/types'
+import { Link } from 'react-scroll'
 import { styled } from '@/styles'
 
-type NavLinkProps = {
-  text: string
-}
+export type NavLinkProps = PropsWithLink<{ text: string }>
 
-const NavLinkComponent: ComponentWithLink<NavLinkProps> = ({ text, url = '#', ...rest }) => {
+const NavLinkComponent: Component<NavLinkProps> = ({ text, link = '', ...rest }) => {
   return (
     <li {...rest}>
-      <Link href={url}>{text}</Link>
+      <Link to={link} href={`#${link}`} offset={-250} delay={500} smooth>
+        {text}
+      </Link>
     </li>
   )
 }

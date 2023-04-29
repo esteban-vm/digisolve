@@ -1,4 +1,5 @@
 import type { Component } from '@/types'
+import { useId } from 'react'
 import { Waypoint } from 'react-waypoint'
 import { useRef } from 'react'
 import Image from 'next/image'
@@ -6,6 +7,7 @@ import { Button, Grid } from '@/components'
 import { styled, mediaQuery } from '@/styles'
 
 const AboutComponent: Component = (props) => {
+  const nameID = useId()
   const aboutRef = useRef<HTMLElement>(null)
 
   const animateAbout = (action: 'add' | 'remove') => {
@@ -16,10 +18,10 @@ const AboutComponent: Component = (props) => {
 
   return (
     <Waypoint onEnter={animateAbout('add')} onLeave={animateAbout('remove')}>
-      <section id='about' aria-labelledby='about_title' ref={aboutRef} {...props}>
+      <section id='about' aria-labelledby={nameID} ref={aboutRef} {...props}>
         <Grid.Row>
           <Grid.Col className='about_col' isHalf>
-            <h2 id='about_title'>A digital agency focused on growing your online presence</h2>
+            <h2 id={nameID}>A digital agency focused on growing your online presence</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt.
               Architecto fugiat veritatis cum necessitatibus sapiente!

@@ -1,28 +1,37 @@
-import type { Component } from '@/types'
+import type { Component, PropsWithLink } from '@/types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button } from '@/components'
 import { formatPrice, uuid } from '@/helpers'
 import { styled, mediaQuery } from '@/styles'
 
-type PackageProps = {
+export type PackageProps = PropsWithLink<{
   title: string
   price: number
   duration: number
-  features: string[]
-  desc?: string
-}
+  description: string
+  features: [string, string, string, string, string]
+}>
 
-const PackageComponent: Component<PackageProps> = ({ title, price, duration, features, desc, ...rest }) => {
+const PackageComponent: Component<PackageProps> = ({
+  id,
+  title,
+  price,
+  duration,
+  description,
+  features,
+  link,
+  ...rest
+}) => {
   const formattedPrice = formatPrice(price)
 
   return (
-    <article aria-labelledby='package_title' {...rest}>
+    <article aria-labelledby={id} {...rest}>
       <div className='section'>
-        <h4 id='package_title'>{title}</h4>
+        <h4 id={id}>{title}</h4>
         <p>
           {formattedPrice} <span>{duration} months</span>
         </p>
-        <p>{desc}</p>
+        <p>{description}</p>
       </div>
       <div className='section'>
         <ul>
@@ -35,14 +44,10 @@ const PackageComponent: Component<PackageProps> = ({ title, price, duration, fea
         </ul>
       </div>
       <div className='section'>
-        <Button text='Sign up now' className='btn' isFull />
+        <Button text='Sign up now' link={link} className='btn' isFull />
       </div>
     </article>
   )
-}
-
-PackageComponent.defaultProps = {
-  desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sit nemo natus ad vero molestias?',
 }
 
 const Package = styled(PackageComponent)`

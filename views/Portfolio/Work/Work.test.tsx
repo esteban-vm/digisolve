@@ -1,5 +1,5 @@
 import { render, cleanup, screen, create } from '@/tests'
-import works from '@/Portfolio/works'
+import works from '../Portfolio.data'
 import Work from './Work'
 
 describe('🧪 WORK:', () => {
@@ -13,19 +13,19 @@ describe('🧪 WORK:', () => {
     afterEach(cleanup)
 
     it('should be accessible', () => {
-      const figure = screen.getByRole('figure', { name: testWork.title })
+      const figure = screen.getByRole('figure', { name: testWork.text })
       expect(figure).toBeInTheDocument()
     })
 
     describe('should be displayed:', () => {
       it('the image', () => {
-        const image = screen.getByRole('img', { name: testWork.title })
+        const image = screen.getByRole('img', { name: testWork.text })
         expect(image).toBeInTheDocument()
         expect(image).toBeVisible()
       })
 
       it('the title', () => {
-        const title = screen.getByText(testWork.title)
+        const title = screen.getByText(testWork.text)
         expect(title).toBeInTheDocument()
         expect(title).toBeVisible()
       })

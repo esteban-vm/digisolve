@@ -1,19 +1,21 @@
 import type { Component } from '@/types'
+import { useId } from 'react'
 import { Grid } from '@/components'
-import { uuid } from '@/helpers'
 import { styled, mediaQuery } from '@/styles'
-import packages from './packages.json'
+import packages from './Packages.data'
 import Package from './Package'
 
 const PackagesComponent: Component = (props) => {
+  const nameID = useId()
+
   return (
-    <section id='packages' aria-labelledby='packages_title' {...props}>
+    <section id='packages' aria-labelledby={nameID} {...props}>
       <Grid.Row>
-        <h2 id='packages_title'>Check out our most popular packages</h2>
+        <h2 id={nameID}>Check out our most popular packages</h2>
       </Grid.Row>
       <Grid.Row>
         {packages.map((_package) => (
-          <Grid.Col key={uuid()} isOneThird>
+          <Grid.Col key={_package.id} isOneThird>
             <Package {..._package} />
           </Grid.Col>
         ))}

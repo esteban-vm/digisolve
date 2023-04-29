@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@/stories'
 import { Grid } from '@/components'
 import { styled } from '@/styles'
-import services from '@/Services/services'
+import services from '../Services.data'
 import Service from './Service'
 
 const Wrapper = styled.div`
@@ -37,7 +37,7 @@ export default {
       disable: true,
     },
     controls: {
-      exclude: ['icon', 'desc', 'url', 'theme'],
+      exclude: /^(id|description|link|icon|theme|className)$/,
     },
   },
 } as Meta<typeof Service>

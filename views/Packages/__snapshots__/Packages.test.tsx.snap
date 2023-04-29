@@ -138,7 +138,7 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
 }
 
 <section
-  aria-labelledby="packages_title"
+  aria-labelledby=":r0:"
   className="emotion-0"
   id="packages"
 >
@@ -147,7 +147,7 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
     role="presentation"
   >
     <h2
-      id="packages_title"
+      id=":r0:"
     >
       Check out our most popular packages
     </h2>
@@ -161,14 +161,14 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby="package_title"
+        aria-labelledby="5d189275-7ea1-4c6b-8276-5e328a8777e9"
         className="emotion-1"
       >
         <div
           className="section"
         >
           <h4
-            id="package_title"
+            id="5d189275-7ea1-4c6b-8276-5e328a8777e9"
           >
             starter
           </h4>
@@ -181,7 +181,7 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
             </span>
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sit nemo natus ad vero molestias?
+            Explicabo hic aperiam voluptate exercitationem consectetur eaque nobis delectus.
           </p>
         </div>
         <div
@@ -314,14 +314,14 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby="package_title"
+        aria-labelledby="c612a1f0-5ddb-4e39-af7f-4da6324235e4"
         className="emotion-1"
       >
         <div
           className="section"
         >
           <h4
-            id="package_title"
+            id="c612a1f0-5ddb-4e39-af7f-4da6324235e4"
           >
             corporate
           </h4>
@@ -334,7 +334,7 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
             </span>
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sit nemo natus ad vero molestias?
+            Explicabo hic aperiam voluptate exercitationem consectetur eaque nobis delectus.
           </p>
         </div>
         <div
@@ -467,14 +467,14 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby="package_title"
+        aria-labelledby="4879cec6-3c1d-439e-b051-9c871ff83f7f"
         className="emotion-1"
       >
         <div
           className="section"
         >
           <h4
-            id="package_title"
+            id="4879cec6-3c1d-439e-b051-9c871ff83f7f"
           >
             enterprice
           </h4>
@@ -487,7 +487,7 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
             </span>
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sit nemo natus ad vero molestias?
+            Explicabo hic aperiam voluptate exercitationem consectetur eaque nobis delectus.
           </p>
         </div>
         <div

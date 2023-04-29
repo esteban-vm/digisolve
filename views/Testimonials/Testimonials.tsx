@@ -1,19 +1,21 @@
 import type { Component } from '@/types'
+import { useId } from 'react'
 import { Grid } from '@/components'
-import { uuid } from '@/helpers'
 import { styled, mediaQuery } from '@/styles'
-import testimonials from './testimonials.json'
+import testimonials from './Testimonials.data'
 import Testimonial from './Testimonial'
 
 const TestimonialsComponent: Component = (props) => {
+  const nameID = useId()
+
   return (
-    <section id='testimonials' aria-labelledby='testimonials_title' {...props}>
+    <section id='testimonials' aria-labelledby={nameID} {...props}>
       <Grid.Row>
-        <h2 id='testimonials_title'>Our testimonials</h2>
+        <h2 id={nameID}>Our testimonials</h2>
       </Grid.Row>
       <Grid.Row>
         {testimonials.map((testimonial) => (
-          <Grid.Col key={uuid()} isOneThird>
+          <Grid.Col key={testimonial.id} isOneThird>
             <Testimonial {...testimonial} />
           </Grid.Col>
         ))}

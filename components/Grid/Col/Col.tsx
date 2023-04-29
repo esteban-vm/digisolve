@@ -1,4 +1,4 @@
-import type { ComponentWithChildren } from '@/types'
+import type { Component, PropsWithChildren } from '@/types'
 
 type ColProps = Partial<{
   /** class name: span_1_of_2 */
@@ -15,7 +15,7 @@ type ColProps = Partial<{
   isThreeQuarters: boolean
 }>
 
-const Col: ComponentWithChildren<ColProps> = ({ children, className = '', ...sizes }) => {
+const Col: Component<PropsWithChildren<ColProps>> = ({ children, className = '', ...sizes }) => {
   const span = sizes.isHalf
     ? 'span_1_of_2'
     : sizes.isFull

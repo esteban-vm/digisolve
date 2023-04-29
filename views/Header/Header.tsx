@@ -1,14 +1,15 @@
 import type { Component } from '@/types'
 import Image from 'next/image'
+import { useId } from 'react'
 import { Waypoint } from 'react-waypoint'
 import { useRef } from 'react'
 import { Button } from '@/components'
-import { uuid } from '@/helpers'
 import { styled, mediaQuery } from '@/styles'
-import links from './links.json'
+import links from './Header.data'
 import NavLink from './NavLink'
 
 const HeaderComponent: Component = (props) => {
+  const nameID = useId()
   const navbarRef = useRef<HTMLElement>(null)
 
   const stickNavbar = (action: 'add' | 'remove') => {
@@ -19,18 +20,18 @@ const HeaderComponent: Component = (props) => {
 
   return (
     <Waypoint onEnter={stickNavbar('remove')} onLeave={stickNavbar('add')} topOffset='200px'>
-      <header aria-labelledby='header_title' {...props}>
+      <header aria-labelledby={nameID} {...props}>
         <nav ref={navbarRef} className='animate__animated animate__fast'>
           <Image src='/img/digisolve-logo.png' alt='Digisolve logo' width={216} height={216} />
           <ul>
             {links.map((link) => (
-              <NavLink key={uuid()} {...link} />
+              <NavLink key={link.id} {...link} />
             ))}
           </ul>
         </nav>
         <div className='box'>
           <div className='titles'>
-            <h1 id='header_title'>Digital agency</h1>
+            <h1 id={nameID}>Digital agency</h1>
             <h2>The one stop for all your digital solutions</h2>
           </div>
           <Button text='Get a quote today!' isFull />

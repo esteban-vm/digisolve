@@ -1,5 +1,5 @@
 import { render, cleanup, screen, create } from '@/tests'
-import partners from '@/Partners/partners'
+import partners from '../Partners.data'
 import Partner from './Partner'
 
 describe('🧪 PARTNER:', () => {
@@ -13,12 +13,12 @@ describe('🧪 PARTNER:', () => {
     afterEach(cleanup)
 
     it('should be accessible', () => {
-      const article = screen.getByRole('article', { name: testPartner.desc })
+      const article = screen.getByRole('article', { name: testPartner.text })
       expect(article).toBeInTheDocument()
     })
 
     it('the logo should be displayed', () => {
-      const logo = screen.getByRole('img', { name: testPartner.desc })
+      const logo = screen.getByRole('img', { name: testPartner.text })
       expect(logo).toBeInTheDocument()
       expect(logo).toBeVisible()
     })

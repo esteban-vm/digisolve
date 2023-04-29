@@ -1,9 +1,9 @@
 import { render, cleanup, screen, create } from '@/tests'
-import links from '@/Footer/links'
+import { socialLinks } from '../Footer.data'
 import SocialLink from './SocialLink'
 
 describe('🧪 SOCIAL LINK:', () => {
-  const [testLink] = links.socialLinks
+  const [testLink] = socialLinks
 
   describe('display tests:', () => {
     beforeEach(() => {

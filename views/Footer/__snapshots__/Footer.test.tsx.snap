@@ -115,9 +115,10 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
       >
         <li
           className="emotion-1"
+          id="09214e0f-2b4b-49be-8629-26b9dfb1a60f"
         >
           <a
-            href="#about"
+            href="#"
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
@@ -127,6 +128,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
         </li>
         <li
           className="emotion-1"
+          id="0db71589-4796-40eb-bfc0-d98dbf8a8528"
         >
           <a
             href="#"
@@ -139,6 +141,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
         </li>
         <li
           className="emotion-1"
+          id="43bcd45f-04fd-4d0f-9b13-989317925376"
         >
           <a
             href="#"
@@ -151,6 +154,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
         </li>
         <li
           className="emotion-1"
+          id="3371d47f-b6f3-4db8-aaa2-a445301101df"
         >
           <a
             href="#"
@@ -163,6 +167,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
         </li>
         <li
           className="emotion-1"
+          id="f4e58e87-0cde-46cc-aeaa-0be6349f7c3f"
         >
           <a
             href="#"
@@ -184,6 +189,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
       >
         <li
           className="emotion-6"
+          id="74c51a0e-3561-4265-9c09-e8183d735c1a"
         >
           <a
             href="#"
@@ -215,6 +221,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
         </li>
         <li
           className="emotion-6"
+          id="8e190c18-59dd-4b7e-98a2-d2809336eda9"
         >
           <a
             href="#"
@@ -246,6 +253,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
         </li>
         <li
           className="emotion-6"
+          id="c3c2a993-9a46-46b7-bd2f-fa3105e36ce5"
         >
           <a
             href="#"
@@ -277,6 +285,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
         </li>
         <li
           className="emotion-6"
+          id="14cf8455-d597-41b3-b1d1-8aa887cac7b0"
         >
           <a
             href="#"
@@ -308,6 +317,7 @@ exports[`🧪 FOOTER: style tests: should render with correct styles 1`] = `
         </li>
         <li
           className="emotion-6"
+          id="d7b1141f-f366-43a2-8e19-9142c3bd866a"
         >
           <a
             href="#"

@@ -43,33 +43,27 @@ export const Example = () => {
       </Grid.Row>
 
       <Grid.Row>
-        {Array<string>(2)
-          .fill('½')
-          .map((item) => (
-            <Grid.Col key={uuid()} isHalf>
-              <div title='is half'>{item}</div>
-            </Grid.Col>
-          ))}
+        {[...Array(2)].map(() => (
+          <Grid.Col key={uuid()} isHalf>
+            <div title='is half'>½</div>
+          </Grid.Col>
+        ))}
       </Grid.Row>
 
       <Grid.Row>
-        {Array<string>(3)
-          .fill('⅓')
-          .map((item) => (
-            <Grid.Col key={uuid()} isOneThird>
-              <div title='is one third'>{item}</div>
-            </Grid.Col>
-          ))}
+        {[...Array(3)].map(() => (
+          <Grid.Col key={uuid()} isOneThird>
+            <div title='is one third'>⅓</div>
+          </Grid.Col>
+        ))}
       </Grid.Row>
 
       <Grid.Row>
-        {Array<string>(4)
-          .fill('¼')
-          .map((item) => (
-            <Grid.Col key={uuid()} isOneQuarter>
-              <div title='is one quarter'>{item}</div>
-            </Grid.Col>
-          ))}
+        {[...Array(4)].map(() => (
+          <Grid.Col key={uuid()} isOneQuarter>
+            <div title='is one quarter'>¼</div>
+          </Grid.Col>
+        ))}
       </Grid.Row>
 
       <Grid.Row>

@@ -1,8 +1,7 @@
 import type { Meta } from '@/stories'
 import { Grid } from '@/components'
-import { uuid } from '@/helpers'
 import { styled } from '@/styles'
-import links from '@/Footer/links'
+import { navLinks } from '../Footer.data'
 import NavLink from './NavLink'
 
 const Wrapper = styled.div`
@@ -57,8 +56,8 @@ export default {
 export const Example = () => {
   return (
     <ul>
-      {links.navLinks.map((link) => (
-        <NavLink key={uuid()} {...link} />
+      {navLinks.map((link) => (
+        <NavLink key={link.id} {...link} />
       ))}
     </ul>
   )

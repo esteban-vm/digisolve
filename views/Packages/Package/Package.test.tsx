@@ -1,7 +1,7 @@
 import { render, cleanup, screen, create } from '@/tests'
 import { formatPrice } from '@/helpers'
 import { mediaQuery } from '@/styles'
-import packages from '@/Packages/packages'
+import packages from '../Packages.data'
 import Package from './Package'
 
 describe('🧪 PACKAGE:', () => {
@@ -55,7 +55,7 @@ describe('🧪 PACKAGE:', () => {
       })
 
       it('the description', () => {
-        const description = screen.getByText(/^lorem ipsum/i)
+        const description = screen.getByText(testPackage.description)
         expect(description).toBeInTheDocument()
         expect(description).toBeVisible()
       })

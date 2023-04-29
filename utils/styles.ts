@@ -102,6 +102,10 @@ export const globalStyles = css`
     user-select: none;
   }
 
+  a {
+    cursor: pointer;
+  }
+
   ul {
     list-style: none;
   }
@@ -182,11 +186,8 @@ export const globalStyles = css`
     z-index: 100;
 
     a {
-      :link,
-      :visited {
-        color: var(--color-grey) !important;
-        font-weight: 700;
-      }
+      color: var(--color-grey) !important;
+      font-weight: 700;
     }
   }
 `

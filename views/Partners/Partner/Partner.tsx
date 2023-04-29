@@ -1,15 +1,13 @@
-import type { ComponentWithImage } from '@/types'
+import type { Component, PropsWithImage } from '@/types'
 import Image from 'next/image'
 import { styled } from '@/styles'
 
-type PartnerProps = {
-  desc: string
-}
+export type PartnerProps = PropsWithImage<{ text: string }>
 
-const PartnerComponent: ComponentWithImage<PartnerProps> = ({ desc, image, ...rest }) => {
+const PartnerComponent: Component<PartnerProps> = ({ id, text, image, ...rest }) => {
   return (
-    <article aria-labelledby='partner_image' {...rest}>
-      <Image alt={desc} id='partner_image' {...image} />
+    <article aria-labelledby={id} {...rest}>
+      <Image alt={text} id={id} {...image} />
     </article>
   )
 }

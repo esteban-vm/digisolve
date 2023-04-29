@@ -1,7 +1,6 @@
 import type { Meta } from '@/stories'
-import { uuid } from '@/helpers'
 import { styled } from '@/styles'
-import links from '@/Header/links'
+import links from '../Header.data'
 import NavLink from './NavLink'
 
 const Wrapper = styled.div`
@@ -43,7 +42,7 @@ export const Example = () => {
   return (
     <ul>
       {links.map((link) => (
-        <NavLink key={uuid()} {...link} />
+        <NavLink key={link.id} {...link} />
       ))}
     </ul>
   )

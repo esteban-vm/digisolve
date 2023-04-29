@@ -1,5 +1,6 @@
 import { render, cleanup, screen, create } from '@/tests'
 import { mediaQuery } from '@/styles'
+import links from './Header.data'
 import Header from './Header'
 
 describe('🧪 HEADER:', () => {
@@ -41,6 +42,18 @@ describe('🧪 HEADER:', () => {
         const button = screen.getByRole('button', { name: /^get a quote today\!$/i })
         expect(button).toBeInTheDocument()
         expect(button).toBeVisible()
+      })
+
+      it('the links', () => {
+        const linkElements = screen.getAllByRole('link')
+        const numberOfLinks = links.length
+        expect(linkElements.length).toBe(numberOfLinks)
+
+        for (let index = 0; index < numberOfLinks; index++) {
+          const link = linkElements[index]
+          expect(link).toBeInTheDocument()
+          expect(link).toBeVisible()
+        }
       })
     })
   })

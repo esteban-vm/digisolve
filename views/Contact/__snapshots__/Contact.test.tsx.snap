@@ -141,7 +141,7 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
 }
 
 <section
-  aria-labelledby="contact_title"
+  aria-labelledby=":r0:"
   className="emotion-0"
   id="contact"
 >
@@ -150,7 +150,7 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
     role="presentation"
   >
     <h2
-      id="contact_title"
+      id=":r0:"
     >
       We are happy to hear from you
     </h2>

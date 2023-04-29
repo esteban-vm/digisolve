@@ -1,6 +1,6 @@
 import { render, cleanup, screen, create } from '@/tests'
 import { mediaQuery } from '@/styles'
-import services from './services.json'
+import services from './Services.data'
 import Services from './Services'
 
 describe('🧪 SERVICES:', () => {

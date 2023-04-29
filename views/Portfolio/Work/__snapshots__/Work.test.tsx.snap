@@ -32,7 +32,7 @@ exports[`🧪 WORK: style tests: should render with correct styles 1`] = `
 }
 
 <figure
-  aria-labelledby="work_image"
+  aria-labelledby="52713cf5-dc67-4d9c-964a-9cd6885e1a71"
   className="emotion-0"
 >
   <img
@@ -40,7 +40,7 @@ exports[`🧪 WORK: style tests: should render with correct styles 1`] = `
     data-nimg="1"
     decoding="async"
     height={470}
-    id="work_image"
+    id="52713cf5-dc67-4d9c-964a-9cd6885e1a71"
     loading="lazy"
     onError={[Function]}
     onLoad={[Function]}

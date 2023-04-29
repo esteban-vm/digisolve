@@ -123,7 +123,7 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
 }
 
 <section
-  aria-labelledby="about_title"
+  aria-labelledby=":r0:"
   className="animate__animated animate__fast emotion-0"
   id="about"
 >
@@ -136,7 +136,7 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <h2
-        id="about_title"
+        id=":r0:"
       >
         A digital agency focused on growing your online presence
       </h2>

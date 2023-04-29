@@ -1,9 +1,9 @@
 import { render, cleanup, screen, create } from '@/tests'
-import links from '@/Footer/links'
+import { navLinks } from '../Footer.data'
 import NavLink from './NavLink'
 
 describe('🧪 NAV LINK:', () => {
-  const [testLink] = links.navLinks
+  const [testLink] = navLinks
 
   describe('display tests:', () => {
     beforeEach(() => {

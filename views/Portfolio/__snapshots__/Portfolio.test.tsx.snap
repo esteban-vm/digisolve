@@ -54,7 +54,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
 }
 
 <section
-  aria-labelledby="portfolio_title"
+  aria-labelledby=":r0:"
   className="emotion-0"
   id="portfolio"
 >
@@ -64,7 +64,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
   >
     <h2
       className="section__heading"
-      id="portfolio_title"
+      id=":r0:"
     >
       Our Work
     </h2>
@@ -79,7 +79,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
   >
     <li>
       <figure
-        aria-labelledby="work_image"
+        aria-labelledby="0df8d214-30fd-4758-afb1-63c9b8561a98"
         className="emotion-1"
       >
         <img
@@ -87,7 +87,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={470}
-          id="work_image"
+          id="0df8d214-30fd-4758-afb1-63c9b8561a98"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -107,7 +107,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
     </li>
     <li>
       <figure
-        aria-labelledby="work_image"
+        aria-labelledby="fedf7eca-d174-4c13-a4a6-51996a3542ef"
         className="emotion-1"
       >
         <img
@@ -115,7 +115,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={470}
-          id="work_image"
+          id="fedf7eca-d174-4c13-a4a6-51996a3542ef"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -135,7 +135,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
     </li>
     <li>
       <figure
-        aria-labelledby="work_image"
+        aria-labelledby="aac96f03-b8d3-4236-bfa8-0e996a50fdef"
         className="emotion-1"
       >
         <img
@@ -143,7 +143,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={470}
-          id="work_image"
+          id="aac96f03-b8d3-4236-bfa8-0e996a50fdef"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -163,7 +163,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
     </li>
     <li>
       <figure
-        aria-labelledby="work_image"
+        aria-labelledby="117db787-c6a7-435d-96a1-ba461ccd95b2"
         className="emotion-1"
       >
         <img
@@ -171,7 +171,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={470}
-          id="work_image"
+          id="117db787-c6a7-435d-96a1-ba461ccd95b2"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}

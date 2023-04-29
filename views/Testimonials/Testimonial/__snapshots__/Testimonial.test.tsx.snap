@@ -48,19 +48,19 @@ exports[`🧪 TESTIMONIAL: style tests: should render with correct styles 1`] = 
 }
 
 <article
-  aria-labelledby="testimonial_image"
+  aria-labelledby="ad22ff9e-c450-470e-b988-6b2a76142c73"
   className="emotion-0"
 >
   <blockquote>
-    lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
+    Odio natus necessitatibus sequi laboriosam pariatur deleniti officiis.
   </blockquote>
   <cite>
     <img
-      alt="Aaron Cruz"
+      alt="Conrad Fay"
       data-nimg="1"
       decoding="async"
       height={72}
-      id="testimonial_image"
+      id="ad22ff9e-c450-470e-b988-6b2a76142c73"
       loading="lazy"
       onError={[Function]}
       onLoad={[Function]}
@@ -73,7 +73,7 @@ exports[`🧪 TESTIMONIAL: style tests: should render with correct styles 1`] = 
       }
       width={72}
     />
-    Aaron Cruz
+    Conrad Fay
   </cite>
 </article>
 `;

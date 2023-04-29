@@ -1,1 +1,1 @@
-export { default } from './Service'
+export { default, type ServiceProps } from './Service'

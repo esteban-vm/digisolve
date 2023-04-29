@@ -1,6 +1,6 @@
 import { render, cleanup, screen, create } from '@/tests'
 import { mediaQuery } from '@/styles'
-import works from './works.json'
+import works from './Portfolio.data'
 import Portfolio from './Portfolio'
 
 describe('🧪 PORTFOLIO:', () => {

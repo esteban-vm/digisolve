@@ -27,6 +27,7 @@ exports[`🧪 SOCIAL LINK: style tests: should render with correct styles 1`] = 
 
 <li
   className="emotion-0"
+  id="807440d5-c925-420b-a6bf-03de2866da73"
 >
   <a
     href="#"

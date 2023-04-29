@@ -1,19 +1,16 @@
-import type { ComponentWithLink } from '@/types'
+import type { Component, PropsWithLink } from '@/types'
 import Link from 'next/link'
 import { styled, css } from '@/styles'
 
-type ButtonProps = {
-  text: string
-  isSubmit?: boolean
-}
+type ButtonProps = { text: string } & Omit<PropsWithLink<{ isSubmit?: boolean }>, 'id'>
 
-const ButtonComponent: ComponentWithLink<ButtonProps> = ({ text, url = '#', isSubmit, className }) => {
+const ButtonComponent: Component<ButtonProps> = ({ text, link = '#', isSubmit, className }) => {
   return (
     <span className={className}>
       {isSubmit ? (
         <input type='submit' value={text} />
       ) : (
-        <Link href={url} role='button'>
+        <Link href={link} role='button'>
           {text}
         </Link>
       )}
@@ -21,9 +18,7 @@ const ButtonComponent: ComponentWithLink<ButtonProps> = ({ text, url = '#', isSu
   )
 }
 
-type StyledButtonProps = {
-  isFull?: boolean
-}
+type StyledButtonProps = { isFull?: boolean }
 
 const Button = styled(ButtonComponent)<StyledButtonProps>`
   display: inline-block;

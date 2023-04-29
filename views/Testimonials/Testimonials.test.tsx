@@ -1,6 +1,6 @@
 import { render, cleanup, screen, create } from '@/tests'
 import { mediaQuery } from '@/styles'
-import testimonials from './testimonials.json'
+import testimonials from './Testimonials.data'
 import Testimonials from './Testimonials'
 
 describe('🧪 TESTIMONIALS:', () => {

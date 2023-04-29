@@ -16,6 +16,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@faker-js/faker": "^7.6.0",
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
@@ -31,6 +32,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.8",
     "react-hot-toast": "^2.4.0",
+    "react-scroll": "^1.8.9",
     "react-waypoint": "^10.3.0",
     "typescript": "4.9.5",
     "yup": "^1.0.2"
@@ -52,6 +54,7 @@
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.4.0",
+    "@types/react-scroll": "^1.8.6",
     "@types/react-test-renderer": "^18.0.0",
     "@types/testing-library__jest-dom": "^5.14.5",
     "@typescript-eslint/eslint-plugin": "^5.54.0",

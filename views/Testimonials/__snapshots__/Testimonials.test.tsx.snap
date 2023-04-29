@@ -83,7 +83,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
 }
 
 <section
-  aria-labelledby="testimonials_title"
+  aria-labelledby=":r0:"
   className="emotion-0"
   id="testimonials"
 >
@@ -92,7 +92,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
     role="presentation"
   >
     <h2
-      id="testimonials_title"
+      id=":r0:"
     >
       Our testimonials
     </h2>
@@ -106,19 +106,19 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
       role="presentation"
     >
       <article
-        aria-labelledby="testimonial_image"
+        aria-labelledby="9a4de570-5383-4d55-9e65-834cf387e987"
         className="emotion-1"
       >
         <blockquote>
-          lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
+          Nam consequuntur atque illum aliquam dolor illo eveniet.
         </blockquote>
         <cite>
           <img
-            alt="Aaron Cruz"
+            alt="Merle Hyatt"
             data-nimg="1"
             decoding="async"
             height={72}
-            id="testimonial_image"
+            id="9a4de570-5383-4d55-9e65-834cf387e987"
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
@@ -131,7 +131,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
             }
             width={72}
           />
-          Aaron Cruz
+          Merle Hyatt
         </cite>
       </article>
     </div>
@@ -140,19 +140,19 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
       role="presentation"
     >
       <article
-        aria-labelledby="testimonial_image"
+        aria-labelledby="fb12dec5-b624-4166-8fcf-373add8499ef"
         className="emotion-1"
       >
         <blockquote>
-          lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
+          Nam consequuntur atque illum aliquam dolor illo eveniet.
         </blockquote>
         <cite>
           <img
-            alt="Jeff Jones"
+            alt="Marcus Lakin"
             data-nimg="1"
             decoding="async"
             height={72}
-            id="testimonial_image"
+            id="fb12dec5-b624-4166-8fcf-373add8499ef"
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
@@ -165,7 +165,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
             }
             width={72}
           />
-          Jeff Jones
+          Marcus Lakin
         </cite>
       </article>
     </div>
@@ -174,19 +174,19 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
       role="presentation"
     >
       <article
-        aria-labelledby="testimonial_image"
+        aria-labelledby="c5c7ea89-2276-41d0-9a08-bebcb9fa4edc"
         className="emotion-1"
       >
         <blockquote>
-          lorem ipsum dolor, sit amet consectetur adipisicing elit. At, praesentium.
+          Nam consequuntur atque illum aliquam dolor illo eveniet.
         </blockquote>
         <cite>
           <img
-            alt="Helen Smith"
+            alt="Misty Cronin"
             data-nimg="1"
             decoding="async"
             height={72}
-            id="testimonial_image"
+            id="c5c7ea89-2276-41d0-9a08-bebcb9fa4edc"
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
@@ -199,7 +199,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
             }
             width={72}
           />
-          Helen Smith
+          Misty Cronin
         </cite>
       </article>
     </div>

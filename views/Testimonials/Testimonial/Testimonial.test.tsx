@@ -1,6 +1,6 @@
 import { render, cleanup, screen, create } from '@/tests'
 import { mediaQuery } from '@/styles'
-import testimonials from '@/Testimonials/testimonials'
+import testimonials from '../Testimonials.data'
 import Testimonial from './Testimonial'
 
 describe('🧪 TESTIMONIAL:', () => {
@@ -14,25 +14,25 @@ describe('🧪 TESTIMONIAL:', () => {
     afterEach(cleanup)
 
     it('should be accessible', () => {
-      const article = screen.getByRole('article', { name: testTestimonial.author })
+      const article = screen.getByRole('article')
       expect(article).toBeInTheDocument()
     })
 
     describe('should be displayed:', () => {
       it('the image', () => {
-        const image = screen.getByRole('img', { name: testTestimonial.author })
+        const image = screen.getByRole('img', { name: testTestimonial.customer })
         expect(image).toBeInTheDocument()
         expect(image).toBeVisible()
       })
 
-      it('the author', () => {
-        const author = screen.getByText(testTestimonial.author)
-        expect(author).toBeInTheDocument()
-        expect(author).toBeVisible()
+      it('the customer', () => {
+        const customer = screen.getByText(testTestimonial.customer)
+        expect(customer).toBeInTheDocument()
+        expect(customer).toBeVisible()
       })
 
       it('the content', () => {
-        const content = screen.getByText(/^lorem ipsum/i)
+        const content = screen.getByText(testTestimonial.content)
         expect(content).toBeInTheDocument()
         expect(content).toBeVisible()
       })

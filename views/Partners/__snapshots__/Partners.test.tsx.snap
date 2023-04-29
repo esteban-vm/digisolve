@@ -11,7 +11,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
 }
 
 <section
-  aria-labelledby="partners_title"
+  aria-labelledby=":r0:"
   className="emotion-0"
   id="partners"
 >
@@ -21,7 +21,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
   >
     <h2
       className="section__heading"
-      id="partners_title"
+      id=":r0:"
     >
       Featured clients
     </h2>
@@ -40,7 +40,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby="partner_image"
+        aria-labelledby="95db63a1-e70a-48a2-b8d9-a0c7d5c8d950"
         className="emotion-1"
       >
         <img
@@ -48,7 +48,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={500}
-          id="partner_image"
+          id="95db63a1-e70a-48a2-b8d9-a0c7d5c8d950"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -68,7 +68,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby="partner_image"
+        aria-labelledby="dc5df0f2-f44a-4ab5-b416-f221a4752abd"
         className="emotion-1"
       >
         <img
@@ -76,7 +76,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={500}
-          id="partner_image"
+          id="dc5df0f2-f44a-4ab5-b416-f221a4752abd"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -96,7 +96,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby="partner_image"
+        aria-labelledby="7e2b8f74-438d-4033-9afa-f71287259cf5"
         className="emotion-1"
       >
         <img
@@ -104,7 +104,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={500}
-          id="partner_image"
+          id="7e2b8f74-438d-4033-9afa-f71287259cf5"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -124,7 +124,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby="partner_image"
+        aria-labelledby="64f59621-150c-4bf1-bdf0-aefd1aaee5a1"
         className="emotion-1"
       >
         <img
@@ -132,7 +132,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={500}
-          id="partner_image"
+          id="64f59621-150c-4bf1-bdf0-aefd1aaee5a1"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -157,7 +157,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby="partner_image"
+        aria-labelledby="21eb5d41-652a-40b6-9aff-ce957e47d3b7"
         className="emotion-1"
       >
         <img
@@ -165,7 +165,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={500}
-          id="partner_image"
+          id="21eb5d41-652a-40b6-9aff-ce957e47d3b7"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -185,7 +185,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby="partner_image"
+        aria-labelledby="52c3f40b-c1b5-4b0e-8677-6c3c2cc2a382"
         className="emotion-1"
       >
         <img
@@ -193,7 +193,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={500}
-          id="partner_image"
+          id="52c3f40b-c1b5-4b0e-8677-6c3c2cc2a382"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -213,7 +213,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby="partner_image"
+        aria-labelledby="6e6b1219-8094-4f57-8320-9f1a020c7a09"
         className="emotion-1"
       >
         <img
@@ -221,7 +221,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={500}
-          id="partner_image"
+          id="6e6b1219-8094-4f57-8320-9f1a020c7a09"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -241,7 +241,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby="partner_image"
+        aria-labelledby="0929dcc8-956b-479c-a31f-eb798e97ec6a"
         className="emotion-1"
       >
         <img
@@ -249,7 +249,7 @@ exports[`🧪 PARTNERS: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={500}
-          id="partner_image"
+          id="0929dcc8-956b-479c-a31f-eb798e97ec6a"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}

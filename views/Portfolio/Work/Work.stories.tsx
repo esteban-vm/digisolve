@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@/stories'
 import { styled } from '@/styles'
-import works from '@/Portfolio/works'
+import works from '../Portfolio.data'
 import Work from './Work'
 
 const Wrapper = styled.div`
@@ -25,7 +25,7 @@ export default {
       disable: true,
     },
     controls: {
-      exclude: ['image', 'theme'],
+      exclude: /^(id|image|theme|className)$/,
     },
   },
 } as Meta<typeof Work>

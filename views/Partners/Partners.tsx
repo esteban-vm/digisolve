@@ -1,15 +1,17 @@
 import type { Component } from '@/types'
+import { useId } from 'react'
 import { Grid } from '@/components'
-import { uuid } from '@/helpers'
 import { styled } from '@/styles'
-import partners from './partners.json'
+import partners from './Partners.data'
 import Partner from './Partner'
 
 const PartnersComponent: Component = (props) => {
+  const nameID = useId()
+
   return (
-    <section id='partners' aria-labelledby='partners_title' {...props}>
+    <section id='partners' aria-labelledby={nameID} {...props}>
       <Grid.Row>
-        <h2 id='partners_title' className='section__heading'>
+        <h2 id={nameID} className='section__heading'>
           Featured clients
         </h2>
         <h3 className='section__subheading'>
@@ -18,14 +20,14 @@ const PartnersComponent: Component = (props) => {
       </Grid.Row>
       <Grid.Row>
         {partners.slice(0, 4).map((partner) => (
-          <Grid.Col key={uuid()} className='xs_half' isOneQuarter>
+          <Grid.Col key={partner.id} className='xs_half' isOneQuarter>
             <Partner {...partner} />
           </Grid.Col>
         ))}
       </Grid.Row>
       <Grid.Row>
         {partners.slice(4).map((partner) => (
-          <Grid.Col key={uuid()} className='xs_half' isOneQuarter>
+          <Grid.Col key={partner.id} className='xs_half' isOneQuarter>
             <Partner {...partner} />
           </Grid.Col>
         ))}

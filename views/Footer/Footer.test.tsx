@@ -1,5 +1,5 @@
 import { render, cleanup, screen, create } from '@/tests'
-import links from './links.json'
+import { navLinks, socialLinks } from './Footer.data'
 import { mediaQuery } from '@/styles'
 import Footer from './Footer'
 
@@ -18,7 +18,7 @@ describe('🧪 FOOTER:', () => {
 
     it('all links should be displayed', () => {
       const linkElements = screen.getAllByRole('link')
-      const numberOfLinks = links.navLinks.length + links.socialLinks.length
+      const numberOfLinks = navLinks.length + socialLinks.length
       expect(linkElements.length).toBe(numberOfLinks)
 
       for (let index = 0; index < numberOfLinks; index++) {

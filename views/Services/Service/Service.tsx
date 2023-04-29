@@ -1,26 +1,19 @@
-import type { ComponentWithIcon, IconProp } from '@/types'
+import type { Component, PropsWithIcon } from '@/types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import { styled } from '@/styles'
 
-type ServiceProps = {
-  title: string
-  desc?: string
-}
+export type ServiceProps = PropsWithIcon<{ title: string; description: string }>
 
-const ServiceComponent: ComponentWithIcon<ServiceProps> = ({ title, desc, url = '#', icon, ...rest }) => {
+const ServiceComponent: Component<ServiceProps> = ({ id, title, description, link = '#', icon, ...rest }) => {
   return (
-    <article aria-labelledby='service_title' {...rest}>
-      <FontAwesomeIcon icon={icon as IconProp} className='icon' />
-      <h4 id='service_title'>{title}</h4>
-      <p>{desc}</p>
-      <Link href={url}>Read more</Link>
+    <article aria-labelledby={id} {...rest}>
+      <FontAwesomeIcon icon={icon} className='icon' />
+      <h4 id={id}>{title}</h4>
+      <p>{description}</p>
+      <Link href={link}>Read more</Link>
     </article>
   )
-}
-
-ServiceComponent.defaultProps = {
-  desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.',
 }
 
 const Service = styled(ServiceComponent)`
@@ -40,11 +33,14 @@ const Service = styled(ServiceComponent)`
   }
 
   a {
-    color: var(--color-primary);
-    text-transform: uppercase;
-    text-decoration: none;
-    outline: none;
-    transition: opacity 200ms;
+    :link,
+    :visited {
+      color: var(--color-primary);
+      text-transform: uppercase;
+      text-decoration: none;
+      outline: none;
+      transition: opacity 200ms;
+    }
 
     :hover {
       opacity: 0.7;

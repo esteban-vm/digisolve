@@ -1,5 +1,5 @@
 import { render, cleanup, screen, create } from '@/tests'
-import partners from './partners.json'
+import partners from './Partners.data'
 import Partners from './Partners'
 
 describe('🧪 PARTNERS:', () => {

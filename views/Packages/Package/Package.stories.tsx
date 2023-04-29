@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@/stories'
 import { Grid } from '@/components'
 import { styled } from '@/styles'
-import packages from '@/Packages/packages'
+import packages from '../Packages.data'
 import Package from './Package'
 
 const Wrapper = styled.div`
@@ -32,7 +32,7 @@ export default {
       disable: true,
     },
     controls: {
-      exclude: ['features', 'desc', 'theme'],
+      exclude: /^(id|features|description|link|theme|className)$/,
     },
   },
 } as Meta<typeof Package>

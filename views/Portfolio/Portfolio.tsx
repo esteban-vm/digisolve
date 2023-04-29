@@ -1,15 +1,17 @@
 import type { Component } from '@/types'
+import { useId } from 'react'
 import { Grid } from '@/components'
-import { uuid } from '@/helpers'
 import { styled, mediaQuery } from '@/styles'
-import works from './works.json'
+import works from './Portfolio.data'
 import Work from './Work'
 
 const PortfolioComponent: Component = (props) => {
+  const nameID = useId()
+
   return (
-    <section id='portfolio' aria-labelledby='portfolio_title' {...props}>
+    <section id='portfolio' aria-labelledby={nameID} {...props}>
       <Grid.Row>
-        <h2 id='portfolio_title' className='section__heading'>
+        <h2 id={nameID} className='section__heading'>
           Our Work
         </h2>
         <h3 className='section__subheading'>
@@ -18,7 +20,7 @@ const PortfolioComponent: Component = (props) => {
       </Grid.Row>
       <ul className='clear_fix'>
         {works.map((work) => (
-          <li key={uuid()}>
+          <li key={work.id}>
             <Work {...work} />
           </li>
         ))}

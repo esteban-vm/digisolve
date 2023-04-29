@@ -1,5 +1,5 @@
 import { render, cleanup, screen, create } from '@/tests'
-import services from '@/Services/services'
+import services from '../Services.data'
 import Service from './Service'
 
 describe('🧪 SERVICE:', () => {
@@ -18,12 +18,6 @@ describe('🧪 SERVICE:', () => {
     })
 
     describe('should be displayed:', () => {
-      it('the icon', () => {
-        const icon = screen.getByRole('img', { hidden: true })
-        expect(icon).toBeInTheDocument()
-        expect(icon).toBeVisible()
-      })
-
       it('the title', () => {
         const title = screen.getByRole('heading', { name: testService.title, level: 4 })
         expect(title).toBeInTheDocument()
@@ -31,7 +25,7 @@ describe('🧪 SERVICE:', () => {
       })
 
       it('the description', () => {
-        const desc = screen.getByText(/^lorem ipsum/i)
+        const desc = screen.getByText(testService.description)
         expect(desc).toBeInTheDocument()
         expect(desc).toBeVisible()
       })
@@ -40,6 +34,12 @@ describe('🧪 SERVICE:', () => {
         const link = screen.getByRole('link', { name: /^read more$/i })
         expect(link).toBeInTheDocument()
         expect(link).toBeVisible()
+      })
+
+      it('the icon', () => {
+        const icon = screen.getByRole('img', { hidden: true })
+        expect(icon).toBeInTheDocument()
+        expect(icon).toBeVisible()
       })
     })
   })

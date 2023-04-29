@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@/stories'
 import { Grid } from '@/components'
 import { styled } from '@/styles'
-import testimonials from '@/Testimonials/testimonials'
+import testimonials from '../Testimonials.data'
 import Testimonial from './Testimonial'
 
 const Wrapper = styled.div`
@@ -42,7 +42,7 @@ export default {
       disable: true,
     },
     controls: {
-      exclude: ['author', 'image', 'content', 'theme'],
+      exclude: /^(id|customer|content|image|theme|className)$/,
     },
   },
 } as Meta<typeof Testimonial>

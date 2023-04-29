@@ -30,7 +30,8 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
   margin-bottom: 20px;
 }
 
-.emotion-1 a {
+.emotion-1 a:link,
+.emotion-1 a:visited {
   color: var(--color-primary);
   text-transform: uppercase;
   -webkit-text-decoration: none;
@@ -52,7 +53,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
 }
 
 <section
-  aria-labelledby="services_title"
+  aria-labelledby=":r0:"
   className="emotion-0"
   id="services"
 >
@@ -62,7 +63,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
   >
     <h2
       className="section__heading"
-      id="services_title"
+      id=":r0:"
     >
       Our services
     </h2>
@@ -81,7 +82,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby="service_title"
+        aria-labelledby="69852d9b-9209-4dab-8bb1-8bf17b952566"
         className="emotion-1"
       >
         <svg
@@ -102,12 +103,12 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
           />
         </svg>
         <h4
-          id="service_title"
+          id="69852d9b-9209-4dab-8bb1-8bf17b952566"
         >
           branding
         </h4>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.
+          Officiis consequuntur molestias praesentium aliquam corporis.
         </p>
         <a
           href="#"
@@ -124,7 +125,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby="service_title"
+        aria-labelledby="306dafc8-526d-4f54-9cfc-065883f67e20"
         className="emotion-1"
       >
         <svg
@@ -145,12 +146,12 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
           />
         </svg>
         <h4
-          id="service_title"
+          id="306dafc8-526d-4f54-9cfc-065883f67e20"
         >
           content
         </h4>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.
+          Officiis consequuntur molestias praesentium aliquam corporis.
         </p>
         <a
           href="#"
@@ -167,7 +168,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby="service_title"
+        aria-labelledby="2382afe4-78d0-4bf6-98dd-b763bbc5841b"
         className="emotion-1"
       >
         <svg
@@ -188,12 +189,12 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
           />
         </svg>
         <h4
-          id="service_title"
+          id="2382afe4-78d0-4bf6-98dd-b763bbc5841b"
         >
           marketing
         </h4>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.
+          Officiis consequuntur molestias praesentium aliquam corporis.
         </p>
         <a
           href="#"
@@ -210,7 +211,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby="service_title"
+        aria-labelledby="911f8c67-5bef-489c-82ae-46341f53523f"
         className="emotion-1"
       >
         <svg
@@ -231,12 +232,12 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
           />
         </svg>
         <h4
-          id="service_title"
+          id="911f8c67-5bef-489c-82ae-46341f53523f"
         >
           web design
         </h4>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.
+          Officiis consequuntur molestias praesentium aliquam corporis.
         </p>
         <a
           href="#"

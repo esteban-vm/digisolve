@@ -18,7 +18,8 @@ exports[`🧪 SERVICE: style tests: should render with correct styles 1`] = `
   margin-bottom: 20px;
 }
 
-.emotion-0 a {
+.emotion-0 a:link,
+.emotion-0 a:visited {
   color: var(--color-primary);
   text-transform: uppercase;
   -webkit-text-decoration: none;
@@ -40,7 +41,7 @@ exports[`🧪 SERVICE: style tests: should render with correct styles 1`] = `
 }
 
 <article
-  aria-labelledby="service_title"
+  aria-labelledby="d9071c5c-fb0f-42a0-8c84-365f980875c0"
   className="emotion-0"
 >
   <svg
@@ -61,12 +62,12 @@ exports[`🧪 SERVICE: style tests: should render with correct styles 1`] = `
     />
   </svg>
   <h4
-    id="service_title"
+    id="d9071c5c-fb0f-42a0-8c84-365f980875c0"
   >
     branding
   </h4>
   <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, debitis illum expedita nulla quae consectetur.
+    Reprehenderit sapiente sit deleniti laudantium dolores.
   </p>
   <a
     href="#"

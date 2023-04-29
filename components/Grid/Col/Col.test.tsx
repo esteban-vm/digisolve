@@ -7,37 +7,37 @@ describe('🧪 COL:', () => {
       afterEach(cleanup)
 
       it('span_1_of_2', () => {
-        render(<Col isHalf>&nbsp;</Col>)
+        render(<Col isHalf />)
         const colElement = screen.getByRole('presentation')
         expect(colElement).toHaveClass('span_1_of_2')
       })
 
       it('span_2_of_2', () => {
-        render(<Col isFull>&nbsp;</Col>)
+        render(<Col isFull />)
         const colElement = screen.getByRole('presentation')
         expect(colElement).toHaveClass('span_2_of_2')
       })
 
       it('span_1_of_3', () => {
-        render(<Col isOneThird>&nbsp;</Col>)
+        render(<Col isOneThird />)
         const colElement = screen.getByRole('presentation')
         expect(colElement).toHaveClass('span_1_of_3')
       })
 
       it('span_2_of_3', () => {
-        render(<Col isTwoThirds>&nbsp;</Col>)
+        render(<Col isTwoThirds />)
         const colElement = screen.getByRole('presentation')
         expect(colElement).toHaveClass('span_2_of_3')
       })
 
       it('span_1_of_4', () => {
-        render(<Col isOneQuarter>&nbsp;</Col>)
+        render(<Col isOneQuarter />)
         const colElement = screen.getByRole('presentation')
         expect(colElement).toHaveClass('span_1_of_4')
       })
 
       it('span_3_of_4', () => {
-        render(<Col isThreeQuarters>&nbsp;</Col>)
+        render(<Col isThreeQuarters />)
         const colElement = screen.getByRole('presentation')
         expect(colElement).toHaveClass('span_3_of_4')
       })

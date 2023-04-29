@@ -1,1 +1,1 @@
-export { default } from './SocialLink'
+export { default, type SocialLinkProps } from './SocialLink'

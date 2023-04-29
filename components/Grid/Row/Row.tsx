@@ -1,6 +1,6 @@
-import type { ComponentWithChildren } from '@/types'
+import type { Component, PropsWithChildren } from '@/types'
 
-const Row: ComponentWithChildren = ({ children, className = '' }) => {
+const Row: Component<PropsWithChildren> = ({ children, className = '' }) => {
   return (
     <div className={`row ${className}`} role='presentation'>
       {children}

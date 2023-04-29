@@ -1,21 +1,12 @@
-import type { FC, HTMLAttributes, PropsWithChildren } from 'react'
-import type { ImageProps } from 'next/image'
-import type { LinkProps } from 'next/link'
+import type { FC } from 'react'
+import type { IconProp } from '@fortawesome/fontawesome-svg-core'
 
-type WithClassName = Pick<HTMLAttributes<HTMLElement>, 'className'>
-type WithImage = { image: Required<Pick<ImageProps, 'src' | 'width' | 'height'>> }
-type WithIcon = { icon: string | string[] }
-type WithLink = { url?: LinkProps['href'] }
+export type Component<P = unknown> = FC<P & { className?: string }>
 
-type PropsWithClassName<P> = P & WithClassName
-type PropsWithImage<P> = P & WithImage
-type PropsWithIcon<P> = P & WithIcon
-type PropsWithLink<P> = P & WithLink
+type PropsWithID<P = unknown> = P & { id: string }
 
-export type Component<P = unknown> = FC<PropsWithClassName<P>>
-export type ComponentWithImage<P> = Component<PropsWithImage<P>>
-export type ComponentWithIcon<P> = ComponentWithLink<PropsWithIcon<P>>
-export type ComponentWithLink<P> = Component<PropsWithLink<P>>
-export type ComponentWithChildren<P = unknown> = Component<PropsWithChildren<P>>
+export type PropsWithLink<P> = P & PropsWithID<{ link?: string }>
+export type PropsWithImage<P> = P & PropsWithID<{ image: { src: string; width: number; height: number } }>
+export type PropsWithIcon<P> = P & PropsWithLink<{ icon: IconProp }>
 
-export type { IconProp } from '@fortawesome/fontawesome-svg-core'
+export type { PropsWithChildren } from 'react'

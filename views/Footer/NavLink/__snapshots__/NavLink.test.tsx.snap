@@ -11,9 +11,10 @@ exports[`🧪 NAV LINK: style tests: should render with correct styles 1`] = `
 
 <li
   className="emotion-0"
+  id="fcdb695f-4316-478a-ac18-fbd3868ff420"
 >
   <a
-    href="#about"
+    href="#"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onTouchStart={[Function]}

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@/stories'
 import { Grid } from '@/components'
 import { styled } from '@/styles'
-import partners from '@/Partners/partners'
+import partners from '../Partners.data'
 import Partner from './Partner'
 
 const Wrapper = styled.div`
@@ -37,7 +37,7 @@ export default {
       disable: true,
     },
     controls: {
-      exclude: ['desc', 'image', 'theme'],
+      exclude: /^(id|text|image|theme|className)$/,
     },
   },
 } as Meta<typeof Partner>

@@ -1,5 +1,5 @@
 import { render, cleanup, screen, create } from '@/tests'
-import links from '@/Header/links'
+import links from '../Header.data'
 import NavLink from './NavLink'
 
 describe('🧪 NAV LINK:', () => {

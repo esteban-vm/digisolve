@@ -1,8 +1,7 @@
 import type { Meta } from '@/stories'
 import { Grid } from '@/components'
-import { uuid } from '@/helpers'
 import { styled } from '@/styles'
-import links from '@/Footer/links'
+import { socialLinks } from '../Footer.data'
 import SocialLink from './SocialLink'
 
 const Wrapper = styled.div`
@@ -58,8 +57,8 @@ export default {
 export const Example = () => {
   return (
     <ul>
-      {links.socialLinks.map((link) => (
-        <SocialLink key={uuid()} {...link} />
+      {socialLinks.map((link) => (
+        <SocialLink key={link.id} {...link} />
       ))}
     </ul>
   )
