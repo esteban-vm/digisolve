@@ -83,7 +83,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
     >
       <article
         aria-labelledby="99a36a03-7210-44c9-b031-f0e2acec54e5"
-        className="emotion-1"
+        className="animate__animated animate__fast emotion-1"
       >
         <svg
           aria-hidden="true"
@@ -126,7 +126,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
     >
       <article
         aria-labelledby="82879f1c-49d5-4b10-b419-043556c4aa3b"
-        className="emotion-1"
+        className="animate__animated animate__fast emotion-1"
       >
         <svg
           aria-hidden="true"
@@ -169,7 +169,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
     >
       <article
         aria-labelledby="7ec3da85-2944-4097-b198-f1fc7a0863a7"
-        className="emotion-1"
+        className="animate__animated animate__fast emotion-1"
       >
         <svg
           aria-hidden="true"
@@ -212,7 +212,7 @@ exports[`🧪 SERVICES: style tests: should render with correct styles 1`] = `
     >
       <article
         aria-labelledby="fba92296-7d8b-4150-b10d-2f1a90041c65"
-        className="emotion-1"
+        className="animate__animated animate__fast emotion-1"
       >
         <svg
           aria-hidden="true"

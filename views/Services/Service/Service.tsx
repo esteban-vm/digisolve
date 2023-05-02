@@ -1,4 +1,6 @@
 import type { Component, PropsWithIcon } from '@/types'
+import { useRef } from 'react'
+import { Waypoint } from 'react-waypoint'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import { styled } from '@/styles'
@@ -6,14 +8,28 @@ import { styled } from '@/styles'
 export type ServiceProps = PropsWithIcon<{ title: string; description: string }>
 
 const ServiceComponent: Component<ServiceProps> = ({ id, title, description, link = '#', icon, ...rest }) => {
+  const serviceRef = useRef<HTMLElement>(null)
+
+  const animateService = (action: 'add' | 'remove') => {
+    return () => {
+      serviceRef.current?.classList[action]('animate__zoomIn')
+    }
+  }
+
   return (
-    <article aria-labelledby={id} {...rest}>
-      <FontAwesomeIcon icon={icon} className='icon' />
-      <h4 id={id}>{title}</h4>
-      <p>{description}</p>
-      <Link href={link}>Read more</Link>
-    </article>
+    <Waypoint onEnter={animateService('add')} onLeave={animateService('remove')}>
+      <article aria-labelledby={id} ref={serviceRef} {...rest}>
+        <FontAwesomeIcon icon={icon} className='icon' />
+        <h4 id={id}>{title}</h4>
+        <p>{description}</p>
+        <Link href={link}>Read more</Link>
+      </article>
+    </Waypoint>
   )
+}
+
+ServiceComponent.defaultProps = {
+  className: 'animate__animated animate__fast',
 }
 
 const Service = styled(ServiceComponent)`

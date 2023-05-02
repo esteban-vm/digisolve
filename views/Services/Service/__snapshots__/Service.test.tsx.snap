@@ -42,7 +42,7 @@ exports[`🧪 SERVICE: style tests: should render with correct styles 1`] = `
 
 <article
   aria-labelledby="99a36a03-7210-44c9-b031-f0e2acec54e5"
-  className="emotion-0"
+  className="animate__animated animate__fast emotion-0"
 >
   <svg
     aria-hidden="true"
