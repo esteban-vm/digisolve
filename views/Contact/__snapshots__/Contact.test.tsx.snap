@@ -113,12 +113,8 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
 }
 
 .emotion-2 {
-  display: inline-block;
-}
-
-.emotion-2 input[type='submit'],
-.emotion-2 a {
   cursor: pointer;
+  display: inline-block;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -133,10 +129,7 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
   color: var(--color-white);
 }
 
-.emotion-2 input[type='submit']:hover,
-.emotion-2 a:hover,
-.emotion-2 input[type='submit']:active,
-.emotion-2 a:active {
+.emotion-2:hover {
   background-color: var(--color-dark-primary);
 }
 
@@ -295,14 +288,12 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
           className="col span_2_of_3 "
           role="presentation"
         >
-          <span
+          <button
             className="emotion-2"
+            type="submit"
           >
-            <input
-              type="submit"
-              value="Send it!"
-            />
-          </span>
+            Send it!
+          </button>
         </div>
       </div>
       <div

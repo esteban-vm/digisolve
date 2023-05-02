@@ -1,7 +1,7 @@
 import type { Component, PropsWithLink } from '@/types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button } from '@/components'
-import { formatPrice, uuid } from '@/helpers'
+import { formatPrice } from '@/helpers'
 import { styled, mediaQuery } from '@/styles'
 
 export type PackageProps = PropsWithLink<{
@@ -35,8 +35,8 @@ const PackageComponent: Component<PackageProps> = ({
       </div>
       <div className='section'>
         <ul>
-          {features.map((feature) => (
-            <li key={uuid()}>
+          {features.map((feature, index) => (
+            <li key={index}>
               <FontAwesomeIcon icon='check' className='icon' />
               {feature}
             </li>
@@ -44,7 +44,7 @@ const PackageComponent: Component<PackageProps> = ({
         </ul>
       </div>
       <div className='section'>
-        <Button text='Sign up now' link={link} className='btn' isFull />
+        <Button text='Sign up now' link={link} className='btn' full />
       </div>
     </article>
   )

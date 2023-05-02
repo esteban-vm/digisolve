@@ -79,7 +79,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
   >
     <li>
       <figure
-        aria-labelledby="0df8d214-30fd-4758-afb1-63c9b8561a98"
+        aria-labelledby="0a6dd16e-0229-4898-a3b4-b6b8a2dd5e5a"
         className="emotion-1"
       >
         <img
@@ -87,7 +87,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={470}
-          id="0df8d214-30fd-4758-afb1-63c9b8561a98"
+          id="0a6dd16e-0229-4898-a3b4-b6b8a2dd5e5a"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -107,7 +107,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
     </li>
     <li>
       <figure
-        aria-labelledby="fedf7eca-d174-4c13-a4a6-51996a3542ef"
+        aria-labelledby="35501350-65b2-47bc-95a8-97bc27d2e186"
         className="emotion-1"
       >
         <img
@@ -115,7 +115,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={470}
-          id="fedf7eca-d174-4c13-a4a6-51996a3542ef"
+          id="35501350-65b2-47bc-95a8-97bc27d2e186"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -135,7 +135,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
     </li>
     <li>
       <figure
-        aria-labelledby="aac96f03-b8d3-4236-bfa8-0e996a50fdef"
+        aria-labelledby="26c86632-8302-4ba4-b316-0a810712efef"
         className="emotion-1"
       >
         <img
@@ -143,7 +143,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={470}
-          id="aac96f03-b8d3-4236-bfa8-0e996a50fdef"
+          id="26c86632-8302-4ba4-b316-0a810712efef"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
@@ -163,7 +163,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
     </li>
     <li>
       <figure
-        aria-labelledby="117db787-c6a7-435d-96a1-ba461ccd95b2"
+        aria-labelledby="e333c170-6d2a-43e9-9720-0a1d50d9c3ba"
         className="emotion-1"
       >
         <img
@@ -171,7 +171,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
           data-nimg="1"
           decoding="async"
           height={470}
-          id="117db787-c6a7-435d-96a1-ba461ccd95b2"
+          id="e333c170-6d2a-43e9-9720-0a1d50d9c3ba"
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}

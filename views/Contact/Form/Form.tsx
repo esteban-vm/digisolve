@@ -88,7 +88,7 @@ const FormComponent: Component = (props) => {
       <Grid.Row>
         <Grid.Col isOneThird />
         <Grid.Col isTwoThirds>
-          <Button text='Send it!' isFull isSubmit />
+          <Button text='Send it!' submit />
         </Grid.Col>
       </Grid.Row>
       <Toaster />

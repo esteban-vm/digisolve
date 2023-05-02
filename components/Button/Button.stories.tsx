@@ -13,7 +13,7 @@ export default {
       disable: true,
     },
     controls: {
-      exclude: /^(is(Full|Submit)|link|theme|className)$/,
+      exclude: /^(full|submit|link|theme|className)$/,
     },
   },
   play({ canvasElement }) {
@@ -24,14 +24,14 @@ export default {
 } as Meta<typeof Button>
 
 export const BasicExample: StoryObj<typeof Button> = {
-  args: { isFull: false },
+  args: { full: false },
 }
 
 export const FullExample: StoryObj<typeof Button> = {
-  args: { isFull: true },
+  args: { full: true },
 }
 
 export const SubmitExample: StoryObj<typeof Button> = {
-  args: { isSubmit: true, isFull: true },
-  argTypes: { isSubmit: { control: false } },
+  args: { submit: true },
+  argTypes: { submit: { control: false } },
 }

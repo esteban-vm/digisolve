@@ -94,12 +94,8 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
 }
 
 .emotion-1 {
-  display: inline-block;
-}
-
-.emotion-1 input[type='submit'],
-.emotion-1 a {
   cursor: pointer;
+  display: inline-block;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -114,10 +110,7 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
   color: var(--color-primary);
 }
 
-.emotion-1 input[type='submit']:hover,
-.emotion-1 a:hover,
-.emotion-1 input[type='submit']:active,
-.emotion-1 a:active {
+.emotion-1:hover {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
@@ -146,19 +139,13 @@ exports[`🧪 ABOUT: style tests: should render with correct styles 1`] = `
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestiae quod vitae deserunt. Architecto fugiat veritatis cum necessitatibus sapiente!
       </p>
-      <span
+      <button
         className="emotion-1"
+        onClick={[Function]}
+        type="button"
       >
-        <a
-          href="#"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          role="button"
-        >
-          Read more
-        </a>
-      </span>
+        Read more
+      </button>
     </div>
     <div
       className="col span_1_of_2 about_col"

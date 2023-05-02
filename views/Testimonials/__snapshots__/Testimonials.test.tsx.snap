@@ -106,19 +106,19 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
       role="presentation"
     >
       <article
-        aria-labelledby="9a4de570-5383-4d55-9e65-834cf387e987"
+        aria-labelledby="c2f0fc36-aad3-4e98-9ff8-61a30257d41c"
         className="emotion-1"
       >
         <blockquote>
-          Nam consequuntur atque illum aliquam dolor illo eveniet.
+          Voluptates hic pariatur reiciendis minus vel labore dolorum.
         </blockquote>
         <cite>
           <img
-            alt="Merle Hyatt"
+            alt="Herman Gibson"
             data-nimg="1"
             decoding="async"
             height={72}
-            id="9a4de570-5383-4d55-9e65-834cf387e987"
+            id="c2f0fc36-aad3-4e98-9ff8-61a30257d41c"
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
@@ -131,7 +131,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
             }
             width={72}
           />
-          Merle Hyatt
+          Herman Gibson
         </cite>
       </article>
     </div>
@@ -140,19 +140,19 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
       role="presentation"
     >
       <article
-        aria-labelledby="fb12dec5-b624-4166-8fcf-373add8499ef"
+        aria-labelledby="efc0be82-fe34-4df9-8821-cf195a75da1d"
         className="emotion-1"
       >
         <blockquote>
-          Nam consequuntur atque illum aliquam dolor illo eveniet.
+          Voluptates hic pariatur reiciendis minus vel labore dolorum.
         </blockquote>
         <cite>
           <img
-            alt="Marcus Lakin"
+            alt="Peter Kemmer"
             data-nimg="1"
             decoding="async"
             height={72}
-            id="fb12dec5-b624-4166-8fcf-373add8499ef"
+            id="efc0be82-fe34-4df9-8821-cf195a75da1d"
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
@@ -165,7 +165,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
             }
             width={72}
           />
-          Marcus Lakin
+          Peter Kemmer
         </cite>
       </article>
     </div>
@@ -174,19 +174,19 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
       role="presentation"
     >
       <article
-        aria-labelledby="c5c7ea89-2276-41d0-9a08-bebcb9fa4edc"
+        aria-labelledby="c679bf1c-1387-4aa0-9eec-ab2d28d79310"
         className="emotion-1"
       >
         <blockquote>
-          Nam consequuntur atque illum aliquam dolor illo eveniet.
+          Voluptates hic pariatur reiciendis minus vel labore dolorum.
         </blockquote>
         <cite>
           <img
-            alt="Misty Cronin"
+            alt="Naomi Stoltenberg"
             data-nimg="1"
             decoding="async"
             height={72}
-            id="c5c7ea89-2276-41d0-9a08-bebcb9fa4edc"
+            id="c679bf1c-1387-4aa0-9eec-ab2d28d79310"
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
@@ -199,7 +199,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
             }
             width={72}
           />
-          Misty Cronin
+          Naomi Stoltenberg
         </cite>
       </article>
     </div>

@@ -85,12 +85,8 @@ exports[`🧪 PACKAGE: style tests: should render with correct styles 1`] = `
 }
 
 .emotion-1 {
-  display: inline-block;
-}
-
-.emotion-1 input[type='submit'],
-.emotion-1 a {
   cursor: pointer;
+  display: inline-block;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -105,22 +101,19 @@ exports[`🧪 PACKAGE: style tests: should render with correct styles 1`] = `
   color: var(--color-white);
 }
 
-.emotion-1 input[type='submit']:hover,
-.emotion-1 a:hover,
-.emotion-1 input[type='submit']:active,
-.emotion-1 a:active {
+.emotion-1:hover {
   background-color: var(--color-dark-primary);
 }
 
 <article
-  aria-labelledby="37e4ea70-26d2-48bb-ab80-411d41f77872"
+  aria-labelledby="d7e645e0-e825-11ed-b24d-893619994521"
   className="emotion-0"
 >
   <div
     className="section"
   >
     <h4
-      id="37e4ea70-26d2-48bb-ab80-411d41f77872"
+      id="d7e645e0-e825-11ed-b24d-893619994521"
     >
       starter
     </h4>
@@ -133,7 +126,7 @@ exports[`🧪 PACKAGE: style tests: should render with correct styles 1`] = `
       </span>
     </p>
     <p>
-      Cumque soluta error consectetur adipisci dicta quod sed ullam.
+      Ratione similique aut incidunt repellendus excepturi ut commodi laboriosam.
     </p>
   </div>
   <div
@@ -245,19 +238,13 @@ exports[`🧪 PACKAGE: style tests: should render with correct styles 1`] = `
   <div
     className="section"
   >
-    <span
+    <button
       className="btn emotion-1"
+      onClick={[Function]}
+      type="button"
     >
-      <a
-        href="#"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
-        role="button"
-      >
-        Sign up now
-      </a>
-    </span>
+      Sign up now
+    </button>
   </div>
 </article>
 `;

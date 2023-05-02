@@ -110,12 +110,8 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
 }
 
 .emotion-2 {
-  display: inline-block;
-}
-
-.emotion-2 input[type='submit'],
-.emotion-2 a {
   cursor: pointer;
+  display: inline-block;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -130,10 +126,7 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
   color: var(--color-white);
 }
 
-.emotion-2 input[type='submit']:hover,
-.emotion-2 a:hover,
-.emotion-2 input[type='submit']:active,
-.emotion-2 a:active {
+.emotion-2:hover {
   background-color: var(--color-dark-primary);
 }
 
@@ -161,14 +154,14 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby="5d189275-7ea1-4c6b-8276-5e328a8777e9"
+        aria-labelledby="d7e645e0-e825-11ed-b24d-893619994521"
         className="emotion-1"
       >
         <div
           className="section"
         >
           <h4
-            id="5d189275-7ea1-4c6b-8276-5e328a8777e9"
+            id="d7e645e0-e825-11ed-b24d-893619994521"
           >
             starter
           </h4>
@@ -181,7 +174,7 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
             </span>
           </p>
           <p>
-            Explicabo hic aperiam voluptate exercitationem consectetur eaque nobis delectus.
+            Ratione similique aut incidunt repellendus excepturi ut commodi laboriosam.
           </p>
         </div>
         <div
@@ -293,19 +286,13 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
         <div
           className="section"
         >
-          <span
+          <button
             className="btn emotion-2"
+            onClick={[Function]}
+            type="button"
           >
-            <a
-              href="#"
-              onClick={[Function]}
-              onMouseEnter={[Function]}
-              onTouchStart={[Function]}
-              role="button"
-            >
-              Sign up now
-            </a>
-          </span>
+            Sign up now
+          </button>
         </div>
       </article>
     </div>
@@ -314,14 +301,14 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby="c612a1f0-5ddb-4e39-af7f-4da6324235e4"
+        aria-labelledby="df095c40-e825-11ed-b24d-893619994521"
         className="emotion-1"
       >
         <div
           className="section"
         >
           <h4
-            id="c612a1f0-5ddb-4e39-af7f-4da6324235e4"
+            id="df095c40-e825-11ed-b24d-893619994521"
           >
             corporate
           </h4>
@@ -334,7 +321,7 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
             </span>
           </p>
           <p>
-            Explicabo hic aperiam voluptate exercitationem consectetur eaque nobis delectus.
+            Ratione similique aut incidunt repellendus excepturi ut commodi laboriosam.
           </p>
         </div>
         <div
@@ -446,19 +433,13 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
         <div
           className="section"
         >
-          <span
+          <button
             className="btn emotion-2"
+            onClick={[Function]}
+            type="button"
           >
-            <a
-              href="#"
-              onClick={[Function]}
-              onMouseEnter={[Function]}
-              onTouchStart={[Function]}
-              role="button"
-            >
-              Sign up now
-            </a>
-          </span>
+            Sign up now
+          </button>
         </div>
       </article>
     </div>
@@ -467,14 +448,14 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
       role="presentation"
     >
       <article
-        aria-labelledby="4879cec6-3c1d-439e-b051-9c871ff83f7f"
+        aria-labelledby="e21563c0-e825-11ed-b24d-893619994521"
         className="emotion-1"
       >
         <div
           className="section"
         >
           <h4
-            id="4879cec6-3c1d-439e-b051-9c871ff83f7f"
+            id="e21563c0-e825-11ed-b24d-893619994521"
           >
             enterprice
           </h4>
@@ -487,7 +468,7 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
             </span>
           </p>
           <p>
-            Explicabo hic aperiam voluptate exercitationem consectetur eaque nobis delectus.
+            Ratione similique aut incidunt repellendus excepturi ut commodi laboriosam.
           </p>
         </div>
         <div
@@ -599,19 +580,13 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
         <div
           className="section"
         >
-          <span
+          <button
             className="btn emotion-2"
+            onClick={[Function]}
+            type="button"
           >
-            <a
-              href="#"
-              onClick={[Function]}
-              onMouseEnter={[Function]}
-              onTouchStart={[Function]}
-              role="button"
-            >
-              Sign up now
-            </a>
-          </span>
+            Sign up now
+          </button>
         </div>
       </article>
     </div>

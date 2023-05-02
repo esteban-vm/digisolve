@@ -1,12 +1,10 @@
 import type { PackageProps } from './Package'
-import { faker } from '@faker-js/faker'
-import { uuid } from '@/helpers'
 
-const description = faker.lorem.sentence(9)
+const description = 'Ratione similique aut incidunt repellendus excepturi ut commodi laboriosam.'
 
 const packages: PackageProps[] = [
   {
-    id: uuid(),
+    id: 'd7e645e0-e825-11ed-b24d-893619994521',
     title: 'starter',
     price: 699,
     duration: 3,
@@ -20,7 +18,7 @@ const packages: PackageProps[] = [
     ],
   },
   {
-    id: uuid(),
+    id: 'df095c40-e825-11ed-b24d-893619994521',
     title: 'corporate',
     price: 2999,
     duration: 6,
@@ -34,7 +32,7 @@ const packages: PackageProps[] = [
     ],
   },
   {
-    id: uuid(),
+    id: 'e21563c0-e825-11ed-b24d-893619994521',
     title: 'enterprice',
     price: 4999,
     duration: 6,

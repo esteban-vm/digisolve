@@ -2,7 +2,7 @@ import type { Meta } from '@/stories'
 import HomePage from '@/pages'
 
 export default {
-  title: 'Home',
+  title: 'Pages/Home',
   component: HomePage,
   parameters: {
     backgrounds: {

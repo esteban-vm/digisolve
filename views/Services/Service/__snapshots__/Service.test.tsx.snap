@@ -41,7 +41,7 @@ exports[`🧪 SERVICE: style tests: should render with correct styles 1`] = `
 }
 
 <article
-  aria-labelledby="d9071c5c-fb0f-42a0-8c84-365f980875c0"
+  aria-labelledby="99a36a03-7210-44c9-b031-f0e2acec54e5"
   className="emotion-0"
 >
   <svg
@@ -62,12 +62,12 @@ exports[`🧪 SERVICE: style tests: should render with correct styles 1`] = `
     />
   </svg>
   <h4
-    id="d9071c5c-fb0f-42a0-8c84-365f980875c0"
+    id="99a36a03-7210-44c9-b031-f0e2acec54e5"
   >
     branding
   </h4>
   <p>
-    Reprehenderit sapiente sit deleniti laudantium dolores.
+    Ipsam reiciendis eligendi est qui itaque.
   </p>
   <a
     href="#"

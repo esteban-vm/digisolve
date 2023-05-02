@@ -78,12 +78,8 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
 }
 
 .emotion-4 {
-  display: inline-block;
-}
-
-.emotion-4 input[type='submit'],
-.emotion-4 a {
   cursor: pointer;
+  display: inline-block;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -98,16 +94,14 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
   color: var(--color-white);
 }
 
-.emotion-4 input[type='submit']:hover,
-.emotion-4 a:hover,
-.emotion-4 input[type='submit']:active,
-.emotion-4 a:active {
+.emotion-4:hover {
   background-color: var(--color-dark-primary);
 }
 
 <header
   aria-labelledby=":r0:"
   className="emotion-0"
+  id="home"
 >
   <nav
     className="animate__animated animate__fast"
@@ -132,10 +126,10 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
     <ul>
       <li
         className="emotion-1"
-        id="919579c0-a375-483f-91cf-8bcacbe2b9d8"
+        id="ca898ec0-e825-11ed-b24d-893619994521"
       >
         <a
-          href="##"
+          href="#home"
           onClick={[Function]}
           style={{}}
         >
@@ -144,7 +138,7 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
       </li>
       <li
         className="emotion-1"
-        id="2661b69e-ee92-4d43-81d8-e2c698634809"
+        id="cd8d31d0-e825-11ed-b24d-893619994521"
       >
         <a
           href="#contact"
@@ -156,7 +150,7 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
       </li>
       <li
         className="emotion-1"
-        id="2f95d6eb-b257-4d91-94e3-214c757186b3"
+        id="d01cb650-e825-11ed-b24d-893619994521"
       >
         <a
           href="#about"
@@ -183,19 +177,13 @@ exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
         The one stop for all your digital solutions
       </h2>
     </div>
-    <span
+    <button
       className="emotion-4"
+      onClick={[Function]}
+      type="button"
     >
-      <a
-        href="#"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
-        role="button"
-      >
-        Get a quote today!
-      </a>
-    </span>
+      Get a quote today!
+    </button>
   </div>
 </header>
 `;

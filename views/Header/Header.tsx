@@ -20,7 +20,7 @@ const HeaderComponent: Component = (props) => {
 
   return (
     <Waypoint onEnter={stickNavbar('remove')} onLeave={stickNavbar('add')} topOffset='200px'>
-      <header aria-labelledby={nameID} {...props}>
+      <header id='home' aria-labelledby={nameID} {...props}>
         <nav ref={navbarRef} className='animate__animated animate__fast'>
           <Image src='/img/digisolve-logo.png' alt='Digisolve logo' width={216} height={216} />
           <ul>
@@ -34,7 +34,7 @@ const HeaderComponent: Component = (props) => {
             <h1 id={nameID}>Digital agency</h1>
             <h2>The one stop for all your digital solutions</h2>
           </div>
-          <Button text='Get a quote today!' isFull />
+          <Button text='Get a quote today!' link='contact' full />
         </div>
       </header>
     </Waypoint>

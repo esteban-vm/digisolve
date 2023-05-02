@@ -1,5 +1,4 @@
 import type { Meta } from '@/stories'
-import { uuid } from '@/helpers'
 import { Grid } from '@/components'
 import { styled } from '@/styles'
 
@@ -43,24 +42,24 @@ export const Example = () => {
       </Grid.Row>
 
       <Grid.Row>
-        {[...Array(2)].map(() => (
-          <Grid.Col key={uuid()} isHalf>
+        {[...Array(2)].map((_, index) => (
+          <Grid.Col key={index} isHalf>
             <div title='is half'>½</div>
           </Grid.Col>
         ))}
       </Grid.Row>
 
       <Grid.Row>
-        {[...Array(3)].map(() => (
-          <Grid.Col key={uuid()} isOneThird>
+        {[...Array(3)].map((_, index) => (
+          <Grid.Col key={index} isOneThird>
             <div title='is one third'>⅓</div>
           </Grid.Col>
         ))}
       </Grid.Row>
 
       <Grid.Row>
-        {[...Array(4)].map(() => (
-          <Grid.Col key={uuid()} isOneQuarter>
+        {[...Array(4)].map((_, index) => (
+          <Grid.Col key={index} isOneQuarter>
             <div title='is one quarter'>¼</div>
           </Grid.Col>
         ))}

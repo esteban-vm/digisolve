@@ -16,7 +16,6 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@faker-js/faker": "^7.6.0",
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
@@ -67,6 +66,7 @@
     "jest-environment-jsdom": "^29.5.0",
     "prettier": "^2.8.4",
     "react-test-renderer": "^18.2.0",
+    "sharp": "^0.32.1",
     "storybook": "7.0.7"
   },
   "readme": "ERROR: No README data found!",

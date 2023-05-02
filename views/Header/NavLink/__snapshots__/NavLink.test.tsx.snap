@@ -24,10 +24,10 @@ exports[`🧪 NAV LINK: style tests: should render with correct styles 1`] = `
 
 <li
   className="emotion-0"
-  id="f1e2ba3b-8234-4fdc-adf4-9ca854095efb"
+  id="ca898ec0-e825-11ed-b24d-893619994521"
 >
   <a
-    href="##"
+    href="#home"
     onClick={[Function]}
     style={{}}
   >

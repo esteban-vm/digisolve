@@ -1,19 +1,18 @@
 import type { NavLinkProps } from './NavLink'
-import { uuid } from '@/helpers'
 
 const links: NavLinkProps[] = [
   {
-    id: uuid(),
+    id: 'ca898ec0-e825-11ed-b24d-893619994521',
     text: 'Home',
-    link: '#',
+    link: 'home',
   },
   {
-    id: uuid(),
+    id: 'cd8d31d0-e825-11ed-b24d-893619994521',
     text: 'Contact',
     link: 'contact',
   },
   {
-    id: uuid(),
+    id: 'd01cb650-e825-11ed-b24d-893619994521',
     text: 'About',
     link: 'about',
   },

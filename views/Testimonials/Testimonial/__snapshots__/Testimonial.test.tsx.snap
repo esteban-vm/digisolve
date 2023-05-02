@@ -48,19 +48,19 @@ exports[`🧪 TESTIMONIAL: style tests: should render with correct styles 1`] = 
 }
 
 <article
-  aria-labelledby="ad22ff9e-c450-470e-b988-6b2a76142c73"
+  aria-labelledby="c2f0fc36-aad3-4e98-9ff8-61a30257d41c"
   className="emotion-0"
 >
   <blockquote>
-    Odio natus necessitatibus sequi laboriosam pariatur deleniti officiis.
+    Voluptates hic pariatur reiciendis minus vel labore dolorum.
   </blockquote>
   <cite>
     <img
-      alt="Conrad Fay"
+      alt="Herman Gibson"
       data-nimg="1"
       decoding="async"
       height={72}
-      id="ad22ff9e-c450-470e-b988-6b2a76142c73"
+      id="c2f0fc36-aad3-4e98-9ff8-61a30257d41c"
       loading="lazy"
       onError={[Function]}
       onLoad={[Function]}
@@ -73,7 +73,7 @@ exports[`🧪 TESTIMONIAL: style tests: should render with correct styles 1`] = 
       }
       width={72}
     />
-    Conrad Fay
+    Herman Gibson
   </cite>
 </article>
 `;
