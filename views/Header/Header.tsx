@@ -34,7 +34,7 @@ const HeaderComponent: Component = (props) => {
             <h1 id={nameID}>Digital agency</h1>
             <h2>The one stop for all your digital solutions</h2>
           </div>
-          <Button text='Get a quote today!' link='contact' full />
+          <Button text='Get a quote today!' link='contact' isFull />
         </div>
       </header>
     </Waypoint>

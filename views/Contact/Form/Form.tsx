@@ -1,98 +1,106 @@
 import type { Component } from '@/types'
+import { useState } from 'react'
 import { useForm, type SubmitHandler } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { string, boolean, object, type ObjectSchema } from 'yup'
-import toast, { Toaster } from 'react-hot-toast'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Grid } from '@/components'
 import { styled, mediaQuery } from '@/styles'
+import Toast from '../Toast'
 
-type FormFields = {
+type FormValues = {
   name: string
   email: string
   newsletter: boolean
   message: string
 }
 
-const validationSchema: ObjectSchema<FormFields> = object().shape({
+const validationSchema: ObjectSchema<FormValues> = object().shape({
   name: string().trim().required(),
   email: string().trim().email().required(),
   newsletter: boolean().default(true),
   message: string().trim().required(),
 })
 
+const defaultValues: FormValues = {
+  name: '',
+  email: '',
+  newsletter: false,
+  message: '',
+}
+
 const FormComponent: Component = (props) => {
-  const { register, handleSubmit, reset } = useForm<FormFields>({ resolver: yupResolver(validationSchema) })
+  const [formValues, setFormValues] = useState(defaultValues)
 
-  const onSubmit: SubmitHandler<FormFields> = ({ name, email, newsletter, message }) => {
-    const data = `Name: ${name}
-      Email: ${email}
-      Newsletter?: ${newsletter ? 'yes' : 'no'}
-      Message: ${message}
-    `
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { isSubmitSuccessful },
+  } = useForm({ resolver: yupResolver(validationSchema), defaultValues })
 
-    toast(data, {
-      icon: <FontAwesomeIcon size='2x' icon='envelope-circle-check' className='icon' />,
-      duration: 5_000,
-      position: 'top-center',
-      ariaProps: { role: 'alert', 'aria-live': 'assertive' },
-      className: 'toast',
-    })
-
+  const onSubmit: SubmitHandler<FormValues> = (data) => {
+    setFormValues({ ...formValues, ...data })
     reset()
   }
 
   return (
-    <form aria-label='Send a message' onSubmit={handleSubmit(onSubmit)} noValidate {...props}>
-      <Grid.Row>
-        <Grid.Col isOneThird>
-          <label htmlFor='name'>Name</label>
-        </Grid.Col>
-        <Grid.Col isTwoThirds>
-          <input
-            type='text'
-            id='name'
-            placeholder='your name'
-            spellCheck={false}
-            autoCorrect='off'
-            className='field'
-            {...register('name')}
-          />
-        </Grid.Col>
-      </Grid.Row>
-      <Grid.Row>
-        <Grid.Col isOneThird>
-          <label htmlFor='email'>Email</label>
-        </Grid.Col>
-        <Grid.Col isTwoThirds>
-          <input type='email' id='email' placeholder='your email' className='field' {...register('email')} />
-        </Grid.Col>
-      </Grid.Row>
-      <Grid.Row>
-        <Grid.Col isOneThird>
-          <label htmlFor='newsletter'>Newsletter?</label>
-        </Grid.Col>
-        <Grid.Col isTwoThirds>
-          <input type='checkbox' id='newsletter' className='check' defaultChecked {...register('newsletter')} />
-          Yes, Please
-        </Grid.Col>
-      </Grid.Row>
-      <Grid.Row>
-        <Grid.Col isOneThird>
-          <label htmlFor='message'>Drop us a line</label>
-        </Grid.Col>
-        <Grid.Col isTwoThirds>
-          <textarea id='message' placeholder='your message' className='field' {...register('message')} />
-        </Grid.Col>
-      </Grid.Row>
-      <Grid.Row>
-        <Grid.Col isOneThird />
-        <Grid.Col isTwoThirds>
-          <Button text='Send it!' submit />
-        </Grid.Col>
-      </Grid.Row>
-      <Toaster />
-    </form>
+    <>
+      <form aria-label='Send a message' onSubmit={handleSubmit(onSubmit)} noValidate {...props}>
+        <Grid.Row>
+          <Grid.Col isOneThird>
+            <label htmlFor='name'>Name</label>
+          </Grid.Col>
+          <Grid.Col isTwoThirds>
+            <input
+              type='text'
+              id='name'
+              placeholder='your name'
+              spellCheck={false}
+              autoCorrect='off'
+              className='field'
+              {...register('name')}
+            />
+          </Grid.Col>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Col isOneThird>
+            <label htmlFor='email'>Email</label>
+          </Grid.Col>
+          <Grid.Col isTwoThirds>
+            <input type='email' id='email' placeholder='your email' className='field' {...register('email')} />
+          </Grid.Col>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Col isOneThird>
+            <label htmlFor='newsletter'>Newsletter?</label>
+          </Grid.Col>
+          <Grid.Col isTwoThirds>
+            <input type='checkbox' id='newsletter' className='check' defaultChecked {...register('newsletter')} />
+            Yes, Please
+          </Grid.Col>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Col isOneThird>
+            <label htmlFor='message'>Drop us a line</label>
+          </Grid.Col>
+          <Grid.Col isTwoThirds>
+            <textarea id='message' placeholder='your message' className='field' {...register('message')} />
+          </Grid.Col>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Col isOneThird />
+          <Grid.Col isTwoThirds>
+            <Button text='Send it!' isSubmit />
+          </Grid.Col>
+        </Grid.Row>
+        <Toast isOpen={isSubmitSuccessful}>
+          <p>{formValues.name}</p>
+          <p>{formValues.email}</p>
+          <p>{formValues.newsletter ? 'yes' : 'no'}</p>
+          <p>{formValues.message}</p>
+        </Toast>
+      </form>
+    </>
   )
 }
 
@@ -146,16 +154,6 @@ const Form = styled(FormComponent)`
     ${mediaQuery('xs')} {
       margin-top: 2px;
     }
-  }
-
-  .toast {
-    text-align: center;
-    color: var(--color-primary);
-    background-color: var(--color-light);
-  }
-
-  .icon {
-    color: var(--color-secondary);
   }
 `
 

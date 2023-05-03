@@ -55,9 +55,9 @@ describe('🧪 FORM:', () => {
     it('should fail with all fields empty', async () => {
       const submitButton = screen.getByRole('button', { name: /^send it\!$/i })
       await userEvent.click(submitButton)
-      const notification = screen.queryByRole('alert')
+      const toast = screen.queryByRole('dialog')
       const nameField = screen.getByPlaceholderText(/^your name$/i)
-      expect(notification).not.toBeInTheDocument()
+      expect(toast).not.toBeInTheDocument()
       expect(nameField).toHaveFocus()
     })
 
@@ -70,8 +70,8 @@ describe('🧪 FORM:', () => {
       await userEvent.type(emailField, 'test@example.com')
       await userEvent.type(messageField, 'test message')
       await userEvent.click(submitButton)
-      const notification = await screen.findByRole('alert')
-      expect(notification).toBeInTheDocument()
+      const toast = await screen.findByRole('dialog', { hidden: true })
+      expect(toast).toBeInTheDocument()
     })
   })
 

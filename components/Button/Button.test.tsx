@@ -23,7 +23,7 @@ describe('🧪 BUTTON:', () => {
 
     describe('with full button:', () => {
       beforeEach(() => {
-        tree = create(<Button text='test' full />)
+        tree = create(<Button text='test' isFull />)
       })
 
       it('should render with correct styles', () => {
@@ -37,7 +37,7 @@ describe('🧪 BUTTON:', () => {
 
     describe('with submit button', () => {
       it('should render with correct styles', () => {
-        tree = create(<Button text='test' submit />)
+        tree = create(<Button text='test' isSubmit />)
         expect(tree).toMatchSnapshot()
       })
     })

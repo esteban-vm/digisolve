@@ -44,7 +44,7 @@ const PackageComponent: Component<PackageProps> = ({
         </ul>
       </div>
       <div className='section'>
-        <Button text='Sign up now' link={link} className='btn' full />
+        <Button text='Sign up now' link={link} className='btn' isFull />
       </div>
     </article>
   )

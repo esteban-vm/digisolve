@@ -1,19 +1,15 @@
 {
   "extends": [
-    "next/core-web-vitals",
     "plugin:storybook/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:jest/recommended",
-    "plugin:jsx-a11y/recommended"
+    "plugin:jsx-a11y/recommended",
+    "next"
   ],
   "plugins": ["@emotion", "jsx-a11y"],
   "ignorePatterns": ["*.js"],
   "env": {
     "jest": true
-  },
-  "rules": {
-    "@emotion/no-vanilla": "error",
-    "@emotion/syntax-preference": ["error", "string"]
   }
 }

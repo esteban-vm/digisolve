@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   padding: 3rem 0;
   width: 60vw;
   background-color: var(--color-white);
+  text-align: center;
 `
 
 export default {

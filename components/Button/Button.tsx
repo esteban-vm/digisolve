@@ -2,22 +2,34 @@ import type { Component, PropsWithLink } from '@/types'
 import { animateScroll as scroll, scroller } from 'react-scroll'
 import { styled, css } from '@/styles'
 
-type ButtonProps = { text: string } & Omit<PropsWithLink<{ submit?: boolean }>, 'id'>
+type ButtonProps = Omit<
+  PropsWithLink<{
+    text: string
+    isSubmit?: boolean
+    isClose?: boolean
+    onClose?: () => void
+  }>,
+  'id'
+>
 
-const ButtonComponent: Component<ButtonProps> = ({ text, link, submit, className }) => {
+const ButtonComponent: Component<ButtonProps> = ({ text, link, isSubmit, isClose, onClose, className }) => {
   const makeScroll = () => {
     if (link) scroller.scrollTo(link, { smooth: 'easeInQuint' })
     else scroll.scrollToTop({ smooth: 'easeOutQuint' })
   }
 
   return (
-    <button type={submit ? 'submit' : 'button'} onClick={submit ? undefined : makeScroll} className={className}>
+    <button
+      type={isSubmit ? 'submit' : 'button'}
+      onClick={isSubmit ? undefined : isClose ? onClose : makeScroll}
+      className={className}
+    >
       {text}
     </button>
   )
 }
 
-type StyledButtonProps = { full?: boolean }
+type StyledButtonProps = { isFull?: boolean }
 
 const Button = styled(ButtonComponent)<StyledButtonProps>`
   cursor: pointer;
@@ -31,16 +43,16 @@ const Button = styled(ButtonComponent)<StyledButtonProps>`
   transition: background-color 500ms;
   border: 2px solid var(--color-primary);
 
-  ${({ full, submit }) => {
-    const isFull = full || submit
+  ${({ isFull, isSubmit }) => {
+    const shouldBeFull = isFull || isSubmit
 
     return css`
-      background-color: ${isFull ? 'var(--color-primary)' : 'transparent'};
-      color: ${isFull ? 'var(--color-white)' : 'var(--color-primary)'};
+      background-color: ${shouldBeFull ? 'var(--color-primary)' : 'transparent'};
+      color: ${shouldBeFull ? 'var(--color-white)' : 'var(--color-primary)'};
 
       :hover {
-        background-color: ${isFull ? 'var(--color-dark-primary)' : 'var(--color-primary)'};
-        color: ${!isFull && 'var(--color-white)'};
+        background-color: ${shouldBeFull ? 'var(--color-dark-primary)' : 'var(--color-primary)'};
+        color: ${!shouldBeFull && 'var(--color-white)'};
       }
     `
   }}
