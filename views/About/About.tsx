@@ -1,8 +1,7 @@
 import type { Component } from '@/types'
-import { useId } from 'react'
-import { Waypoint } from 'react-waypoint'
-import { useRef } from 'react'
 import Image from 'next/image'
+import { useId, useRef } from 'react'
+import { Waypoint } from 'react-waypoint'
 import { Button, Grid } from '@/components'
 import { styled, mediaQuery } from '@/styles'
 
