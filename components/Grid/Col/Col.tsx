@@ -1,21 +1,26 @@
-import type { Component, PropsWithChildren } from '@/types'
+import type { PropsWithChildren, PropsWithClassName } from '@/types'
+import { forwardRef } from 'react'
 
-type ColProps = Partial<{
-  /** class name: span_1_of_2 */
-  isHalf: boolean
-  /** class name: span_2_of_2 */
-  isFull: boolean
-  /** class name: span_1_of_3 */
-  isOneThird: boolean
-  /** class name: span_2_of_3 */
-  isTwoThirds: boolean
-  /** class name: span_1_of_4 */
-  isOneQuarter: boolean
-  /** class name: span_3_of_4 */
-  isThreeQuarters: boolean
-}>
+type ColProps = PropsWithChildren<
+  PropsWithClassName<
+    Partial<{
+      /** class name: span_1_of_2 */
+      isHalf: boolean
+      /** class name: span_2_of_2 */
+      isFull: boolean
+      /** class name: span_1_of_3 */
+      isOneThird: boolean
+      /** class name: span_2_of_3 */
+      isTwoThirds: boolean
+      /** class name: span_1_of_4 */
+      isOneQuarter: boolean
+      /** class name: span_3_of_4 */
+      isThreeQuarters: boolean
+    }>
+  >
+>
 
-const Col: Component<PropsWithChildren<ColProps>> = ({ children, className = '', ...sizes }) => {
+const Col = forwardRef<HTMLDivElement, ColProps>(({ children, className = '', ...sizes }, ref) => {
   const span = sizes.isHalf
     ? 'span_1_of_2'
     : sizes.isFull
@@ -31,10 +36,12 @@ const Col: Component<PropsWithChildren<ColProps>> = ({ children, className = '',
     : ''
 
   return (
-    <div className={`col ${span} ${className}`} role='presentation'>
+    <div className={`col ${span} ${className}`} role='presentation' ref={ref}>
       {children}
     </div>
   )
-}
+})
+
+Col.displayName = 'Col'
 
 export default Col

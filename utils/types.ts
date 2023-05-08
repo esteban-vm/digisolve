@@ -1,7 +1,8 @@
 import type { FC } from 'react'
 import type { EmptyObject } from 'type-fest'
 
-export type Component<P = EmptyObject> = FC<P & { className?: string }>
+export type PropsWithClassName<P = EmptyObject> = P & { className?: string }
+export type Component<P = EmptyObject> = FC<PropsWithClassName<P>>
 
 type PropsWithID<P> = P & { id: `${string}-${string}-${string}-${string}-${string}` }
 export type PropsWithLink<P> = P & PropsWithID<{ link?: string }>
