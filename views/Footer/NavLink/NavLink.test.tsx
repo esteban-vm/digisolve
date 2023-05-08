@@ -1,23 +1,29 @@
-import { render, cleanup, screen, create } from '@/tests'
+import { render, cleanup, screen, create, axe } from '@/tests'
 import { navLinks } from '../Footer.data'
 import NavLink from './NavLink'
 
 describe('🧪 NAV LINK:', () => {
   const [testLink] = navLinks
 
-  describe('display tests:', () => {
+  describe('render tests:', () => {
+    let container: HTMLElement
+
     beforeEach(() => {
-      render(<NavLink {...testLink} />)
+      void ({ container } = render(
+        <ul>
+          <NavLink {...testLink} />
+        </ul>
+      ))
     })
 
     afterEach(cleanup)
 
-    it('should be accessible', () => {
-      const listItem = screen.getByRole('listitem')
-      expect(listItem).toBeInTheDocument()
+    it('should be accessible', async () => {
+      const results = await axe(container)
+      expect(results).toHaveNoViolations()
     })
 
-    it('the text of the link should be displayed', () => {
+    it('the text of the link should be rendered', () => {
       const link = screen.getByRole('link', { name: testLink.text })
       expect(link).toBeInTheDocument()
       expect(link).toBeVisible()

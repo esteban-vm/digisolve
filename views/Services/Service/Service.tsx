@@ -1,11 +1,11 @@
-import type { Component, PropsWithIcon } from '@/types'
+import type { Component, PropsWithLink } from '@/types'
 import { useRef } from 'react'
 import { Waypoint } from 'react-waypoint'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
+import { Icon, type IconName } from '@/components'
 import { styled } from '@/styles'
 
-export type ServiceProps = PropsWithIcon<{ title: string; description: string }>
+export type ServiceProps = PropsWithLink<{ title: string; description: string; icon: IconName }>
 
 const ServiceComponent: Component<ServiceProps> = ({ id, title, description, link = '#', icon, ...rest }) => {
   const serviceRef = useRef<HTMLElement>(null)
@@ -19,7 +19,7 @@ const ServiceComponent: Component<ServiceProps> = ({ id, title, description, lin
   return (
     <Waypoint onEnter={animateService('add')} onLeave={animateService('remove')}>
       <article aria-labelledby={id} ref={serviceRef} {...rest}>
-        <FontAwesomeIcon icon={icon} className='icon' />
+        <Icon name={icon} size={3} className='icon' />
         <h4 id={id}>{title}</h4>
         <p>{description}</p>
         <Link href={link}>Read more</Link>
@@ -64,8 +64,6 @@ const Service = styled(ServiceComponent)`
   }
 
   .icon {
-    width: 3rem;
-    height: 3rem;
     margin-bottom: 30px;
     color: var(--color-secondary);
   }

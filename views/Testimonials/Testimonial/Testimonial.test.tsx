@@ -1,4 +1,4 @@
-import { render, cleanup, screen, create } from '@/tests'
+import { render, cleanup, screen, create, axe } from '@/tests'
 import { mediaQuery } from '@/styles'
 import testimonials from '../Testimonials.data'
 import Testimonial from './Testimonial'
@@ -6,21 +6,23 @@ import Testimonial from './Testimonial'
 describe('🧪 TESTIMONIAL:', () => {
   const [testTestimonial] = testimonials
 
-  describe('display tests:', () => {
+  describe('render tests:', () => {
+    let container: HTMLElement
+
     beforeEach(() => {
-      render(<Testimonial {...testTestimonial} />)
+      void ({ container } = render(<Testimonial {...testTestimonial} />))
     })
 
     afterEach(cleanup)
 
-    it('should be accessible', () => {
-      const article = screen.getByRole('article')
-      expect(article).toBeInTheDocument()
+    it('should be accessible', async () => {
+      const results = await axe(container)
+      expect(results).toHaveNoViolations()
     })
 
-    describe('should be displayed:', () => {
+    describe('should be rendered:', () => {
       it('the image', () => {
-        const image = screen.getByRole('img', { name: testTestimonial.customer })
+        const image = screen.getByRole('img')
         expect(image).toBeInTheDocument()
         expect(image).toBeVisible()
       })

@@ -1,22 +1,24 @@
-import { render, cleanup, screen, create } from '@/tests'
+import { render, cleanup, screen, create, axe } from '@/tests'
 import { navLinks, socialLinks } from './Footer.data'
 import { mediaQuery } from '@/styles'
 import Footer from './Footer'
 
 describe('🧪 FOOTER:', () => {
-  describe('display tests:', () => {
+  describe('render tests:', () => {
+    let container: HTMLElement
+
     beforeEach(() => {
-      render(<Footer />)
+      void ({ container } = render(<Footer />))
     })
 
     afterEach(cleanup)
 
-    it('should be accessible', () => {
-      const footer = screen.getByRole('contentinfo')
-      expect(footer).toBeInTheDocument()
+    it('should be accessible', async () => {
+      const results = await axe(container)
+      expect(results).toHaveNoViolations()
     })
 
-    it('all links should be displayed', () => {
+    it('all links should be rendered', () => {
       const linkElements = screen.getAllByRole('link')
       const numberOfLinks = navLinks.length + socialLinks.length
       expect(linkElements.length).toBe(numberOfLinks)

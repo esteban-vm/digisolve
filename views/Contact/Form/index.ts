@@ -1,1 +1,1 @@
-export { default, type FormFields } from './Form'
+export { default } from './Form'

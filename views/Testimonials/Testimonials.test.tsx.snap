@@ -114,7 +114,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
         </blockquote>
         <cite>
           <img
-            alt="Herman Gibson"
+            alt=""
             data-nimg="1"
             decoding="async"
             height={72}
@@ -148,7 +148,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
         </blockquote>
         <cite>
           <img
-            alt="Peter Kemmer"
+            alt=""
             data-nimg="1"
             decoding="async"
             height={72}
@@ -182,7 +182,7 @@ exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] =
         </blockquote>
         <cite>
           <img
-            alt="Naomi Stoltenberg"
+            alt=""
             data-nimg="1"
             decoding="async"
             height={72}

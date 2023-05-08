@@ -83,7 +83,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
         className="emotion-1"
       >
         <img
-          alt="Online advertising"
+          alt=""
           data-nimg="1"
           decoding="async"
           height={470}
@@ -111,7 +111,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
         className="emotion-1"
       >
         <img
-          alt="Social media campaigns"
+          alt=""
           data-nimg="1"
           decoding="async"
           height={470}
@@ -139,7 +139,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
         className="emotion-1"
       >
         <img
-          alt="UX design"
+          alt=""
           data-nimg="1"
           decoding="async"
           height={470}
@@ -167,7 +167,7 @@ exports[`🧪 PORTFOLIO: style tests: should render with correct styles 1`] = `
         className="emotion-1"
       >
         <img
-          alt="Branding & digital marketing"
+          alt=""
           data-nimg="1"
           decoding="async"
           height={470}

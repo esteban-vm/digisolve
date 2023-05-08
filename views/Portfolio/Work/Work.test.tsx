@@ -1,25 +1,27 @@
-import { render, cleanup, screen, create } from '@/tests'
+import { render, cleanup, screen, create, axe } from '@/tests'
 import works from '../Portfolio.data'
 import Work from './Work'
 
 describe('🧪 WORK:', () => {
   const [testWork] = works
 
-  describe('display tests:', () => {
+  describe('render tests:', () => {
+    let container: HTMLElement
+
     beforeEach(() => {
-      render(<Work {...testWork} />)
+      void ({ container } = render(<Work {...testWork} />))
     })
 
     afterEach(cleanup)
 
-    it('should be accessible', () => {
-      const figure = screen.getByRole('figure', { name: testWork.text })
-      expect(figure).toBeInTheDocument()
+    it('should be accessible', async () => {
+      const results = await axe(container)
+      expect(results).toHaveNoViolations()
     })
 
-    describe('should be displayed:', () => {
+    describe('should be rendered:', () => {
       it('the image', () => {
-        const image = screen.getByRole('img', { name: testWork.text })
+        const image = screen.getByRole('img')
         expect(image).toBeInTheDocument()
         expect(image).toBeVisible()
       })

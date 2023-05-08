@@ -1,23 +1,25 @@
-import { render, cleanup, screen, create } from '@/tests'
+import { render, cleanup, screen, create, axe } from '@/tests'
 import services from '../Services.data'
 import Service from './Service'
 
 describe('🧪 SERVICE:', () => {
   const [testService] = services
 
-  describe('display tests:', () => {
+  describe('render tests:', () => {
+    let container: HTMLElement
+
     beforeEach(() => {
-      render(<Service {...testService} />)
+      void ({ container } = render(<Service {...testService} />))
     })
 
     afterEach(cleanup)
 
-    it('should be accessible', () => {
-      const article = screen.getByRole('article', { name: testService.title })
-      expect(article).toBeInTheDocument()
+    it('should be accessible', async () => {
+      const results = await axe(container)
+      expect(results).toHaveNoViolations()
     })
 
-    describe('should be displayed:', () => {
+    describe('should be rendered:', () => {
       it('the title', () => {
         const title = screen.getByRole('heading', { name: testService.title, level: 4 })
         expect(title).toBeInTheDocument()

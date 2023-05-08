@@ -5,24 +5,8 @@ exports[`🧪 SOCIAL LINK: style tests: should render with correct styles 1`] = 
   margin-left: 20px;
 }
 
-.emotion-0 a:hover .fa-facebook-f {
-  color: var(--color-facebook);
-}
-
-.emotion-0 a:hover .fa-twitter {
-  color: var(--color-twitter);
-}
-
-.emotion-0 a:hover .fa-google-plus-g {
-  color: var(--color-google-plus);
-}
-
-.emotion-0 a:hover .fa-instagram {
-  color: var(--color-instagram);
-}
-
-.emotion-0 a:hover .fa-youtube {
-  color: var(--color-youtube);
+.emotion-0 .icon {
+  color: inherit;
 }
 
 <li
@@ -39,20 +23,17 @@ exports[`🧪 SOCIAL LINK: style tests: should render with correct styles 1`] = 
     title="Facebook"
   >
     <svg
-      aria-hidden="true"
-      className="svg-inline--fa fa-facebook-f fa-lg "
-      data-icon="facebook-f"
-      data-prefix="fab"
-      focusable="false"
+      aria-hidden={true}
+      className="icon"
+      color="var(--color-primary)"
+      fill="currentColor"
+      height="1.5rem"
       role="img"
-      style={{}}
       viewBox="0 0 320 512"
-      xmlns="http://www.w3.org/2000/svg"
+      width="1.5rem"
     >
       <path
         d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-        fill="currentColor"
-        style={{}}
       />
     </svg>
   </a>

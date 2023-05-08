@@ -9,7 +9,7 @@ const TestimonialComponent: Component<TestimonialProps> = ({ id, customer, conte
     <article aria-labelledby={id} {...rest}>
       <blockquote>{content}</blockquote>
       <cite>
-        <Image alt={customer} id={id} {...image} />
+        <Image alt='' id={id} {...image} />
         {customer}
       </cite>
     </article>

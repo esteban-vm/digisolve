@@ -7,7 +7,7 @@ export type WorkProps = PropsWithImage<{ text: string }>
 const WorkComponent: Component<WorkProps> = ({ id, text, image, ...rest }) => {
   return (
     <figure aria-labelledby={id} {...rest}>
-      <Image alt={text} id={id} {...image} />
+      <Image alt='' id={id} {...image} />
       <p>{text}</p>
     </figure>
   )

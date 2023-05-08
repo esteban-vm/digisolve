@@ -1,15 +1,15 @@
-import type { Component, PropsWithIcon } from '@/types'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import type { Component, PropsWithLink } from '@/types'
 import Link from 'next/link'
+import { Icon, type IconName } from '@/components'
 import { styled } from '@/styles'
 
-export type SocialLinkProps = PropsWithIcon<{ text: string }>
+export type SocialLinkProps = PropsWithLink<{ text: string; icon: IconName }>
 
 const SocialLinkComponent: Component<SocialLinkProps> = ({ text, link = '#', icon, ...rest }) => {
   return (
     <li {...rest}>
       <Link href={link} target='_blank' rel='noopener noreferrer' title={text}>
-        <FontAwesomeIcon size='lg' icon={icon} />
+        <Icon name={icon} size={1.5} className='icon' />
       </Link>
     </li>
   )
@@ -18,28 +18,8 @@ const SocialLinkComponent: Component<SocialLinkProps> = ({ text, link = '#', ico
 const SocialLink = styled(SocialLinkComponent)`
   margin-left: 20px;
 
-  a:hover {
-    .fa {
-      &-facebook-f {
-        color: var(--color-facebook);
-      }
-
-      &-twitter {
-        color: var(--color-twitter);
-      }
-
-      &-google-plus-g {
-        color: var(--color-google-plus);
-      }
-
-      &-instagram {
-        color: var(--color-instagram);
-      }
-
-      &-youtube {
-        color: var(--color-youtube);
-      }
-    }
+  .icon {
+    color: inherit;
   }
 `
 

@@ -36,7 +36,7 @@ exports[`🧪 WORK: style tests: should render with correct styles 1`] = `
   className="emotion-0"
 >
   <img
-    alt="Online advertising"
+    alt=""
     data-nimg="1"
     decoding="async"
     height={470}

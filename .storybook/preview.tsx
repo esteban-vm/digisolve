@@ -1,6 +1,5 @@
 import { type Preview, MINIMAL_VIEWPORTS, INITIAL_VIEWPORTS } from '@/stories'
 import { Global, globalStyles, breakPoints } from '@/styles'
-import '@/icons'
 
 /** Custom viewports based on break points */
 const CUSTOM_VIEWPORTS: typeof MINIMAL_VIEWPORTS = {

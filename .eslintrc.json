@@ -8,7 +8,7 @@
     "next"
   ],
   "plugins": ["@emotion", "jsx-a11y"],
-  "ignorePatterns": ["*.js"],
+  "ignorePatterns": ["*.js", "node_modules", "/build", "/public/*", "/.next", "next-env.d.ts"],
   "env": {
     "jest": true
   }

@@ -1,7 +1,6 @@
 import type { Component, PropsWithChildren } from '@/types'
 import { useRef, useEffect } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Button } from '@/components'
+import { Button, Icon } from '@/components'
 import { styled } from '@/styles'
 
 type ToastProps = Required<PropsWithChildren<{ isOpen: boolean }>>
@@ -19,14 +18,16 @@ const ToastComponent: Component<ToastProps> = ({ isOpen, children, ...rest }) =>
 
   return (
     <dialog ref={toastRef} {...rest}>
-      <h2>Submitted successfully</h2>
-      <FontAwesomeIcon
-        size='2x'
-        icon='envelope-circle-check'
-        className='animate__animated animate__heartBeat animate__infinite icon'
-      />
-      {children}
-      <Button text='ok' isClose onClose={closeToast} className='btn' />
+      <div className='content'>
+        <h2>Submitted successfully</h2>
+        <Icon
+          name='envelope-circle-check'
+          size={3}
+          className='animate__animated animate__heartBeat animate__infinite icon'
+        />
+        {children}
+        <Button text='ok' isClose onClose={closeToast} className='btn' />
+      </div>
     </dialog>
   )
 }
@@ -37,17 +38,24 @@ const Toast = styled(ToastComponent)`
   background-color: var(--color-light);
   border: 2px solid var(--color-primary);
   border-radius: 5px;
-  padding: 2rem;
+  max-width: 60%;
 
   h2 {
     margin: 0;
     color: var(--color-primary);
   }
 
+  .content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .icon {
-    display: block;
+    color: inherit;
     margin: 10px auto;
-    color: var(--color-secondary);
   }
 
   .btn {

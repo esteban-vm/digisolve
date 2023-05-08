@@ -9,7 +9,6 @@ const Wrapper = styled.div`
   padding: 50px;
   font-size: 80%;
   color: var(--color-dark);
-  list-style: none;
 
   ul {
     float: left;

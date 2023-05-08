@@ -1,32 +1,34 @@
-import { render, cleanup, screen, create } from '@/tests'
+import { render, cleanup, screen, create, axe } from '@/tests'
 import Toast from './Toast'
 
 describe('🧪 TOAST:', () => {
-  describe('display tests:', () => {
+  describe('render tests:', () => {
+    let container: HTMLElement
+
     beforeEach(() => {
-      render(
+      void ({ container } = render(
         <Toast isOpen>
           <p>Test</p>
         </Toast>
-      )
+      ))
     })
 
     afterEach(cleanup)
 
-    it('should be accessible', () => {
-      const toast = screen.getByRole('dialog', { hidden: true })
-      expect(toast).toBeInTheDocument()
+    it('should be accessible', async () => {
+      const results = await axe(container)
+      expect(results).toHaveNoViolations()
     })
 
-    describe('should be displayed:', () => {
-      it('the heading', () => {
-        const heading = screen.getByRole('heading', {
+    describe('should be rendered:', () => {
+      it('the title', () => {
+        const title = screen.getByRole('heading', {
           name: /^submitted successfully$/i,
           level: 2,
           hidden: true,
         })
 
-        expect(heading).toBeInTheDocument()
+        expect(title).toBeInTheDocument()
       })
 
       it('the icon', () => {

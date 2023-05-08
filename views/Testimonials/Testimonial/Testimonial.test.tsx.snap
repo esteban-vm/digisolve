@@ -56,7 +56,7 @@ exports[`🧪 TESTIMONIAL: style tests: should render with correct styles 1`] = 
   </blockquote>
   <cite>
     <img
-      alt="Herman Gibson"
+      alt=""
       data-nimg="1"
       decoding="async"
       height={72}

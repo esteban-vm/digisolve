@@ -1,10 +1,9 @@
 import type { ReactElement } from 'react'
-import { create, type TestRendererOptions } from 'react-test-renderer'
+import { create } from 'react-test-renderer'
 
-const customCreate = (ui: ReactElement, options?: TestRendererOptions) => {
-  return create(ui, options).toJSON()
-}
-
+const customCreate = (element: ReactElement) => create(element).toJSON()
 export { customCreate as create }
+
 export * from '@testing-library/react'
+export * from 'jest-axe'
 export { default as userEvent } from '@testing-library/user-event'

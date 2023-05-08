@@ -1,26 +1,29 @@
-import { render, cleanup, screen, create } from '@/tests'
+import { render, cleanup, screen, create, axe } from '@/tests'
 import { mediaQuery } from '@/styles'
 import About from './About'
 
 describe('🧪 ABOUT:', () => {
-  describe('display tests:', () => {
-    /** Section title */
-    const name = /^a digital agency focused on growing your online presence$/i
+  describe('render tests:', () => {
+    let container: HTMLElement
 
     beforeEach(() => {
-      render(<About />)
+      void ({ container } = render(<About />))
     })
 
     afterEach(cleanup)
 
-    it('should be accessible', () => {
-      const section = screen.getByRole('region', { name })
-      expect(section).toBeInTheDocument()
+    it('should be accessible', async () => {
+      const results = await axe(container)
+      expect(results).toHaveNoViolations()
     })
 
-    describe('should be displayed:', () => {
+    describe('should be rendered:', () => {
       it('the title', () => {
-        const title = screen.getByRole('heading', { name, level: 2 })
+        const title = screen.getByRole('heading', {
+          name: /^a digital agency focused on growing your online presence$/i,
+          level: 2,
+        })
+
         expect(title).toBeInTheDocument()
         expect(title).toBeVisible()
       })

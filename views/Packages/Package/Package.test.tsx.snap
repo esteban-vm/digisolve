@@ -21,7 +21,7 @@ exports[`🧪 PACKAGE: style tests: should render with correct styles 1`] = `
   }
 }
 
-.emotion-0 h4 {
+.emotion-0 h3 {
   font-size: 150%;
   color: var(--color-grey);
   font-weight: 400;
@@ -30,7 +30,7 @@ exports[`🧪 PACKAGE: style tests: should render with correct styles 1`] = `
 }
 
 @media only screen and (max-width: 1024px) {
-  .emotion-0 h4 {
+  .emotion-0 h3 {
     margin-bottom: 25px;
   }
 }
@@ -73,11 +73,8 @@ exports[`🧪 PACKAGE: style tests: should render with correct styles 1`] = `
 }
 
 .emotion-0 .icon {
-  width: 1.2rem;
-  height: 1.2rem;
   display: inline-block;
   margin-right: 10px;
-  color: var(--color-primary);
 }
 
 .emotion-0 .btn {
@@ -112,11 +109,11 @@ exports[`🧪 PACKAGE: style tests: should render with correct styles 1`] = `
   <div
     className="section"
   >
-    <h4
+    <h3
       id="d7e645e0-e825-11ed-b24d-893619994521"
     >
       starter
-    </h4>
+    </h3>
     <p>
       $699
        
@@ -135,100 +132,85 @@ exports[`🧪 PACKAGE: style tests: should render with correct styles 1`] = `
     <ul>
       <li>
         <svg
-          aria-hidden="true"
-          className="svg-inline--fa fa-check icon"
-          data-icon="check"
-          data-prefix="fas"
-          focusable="false"
+          aria-hidden={true}
+          className="icon"
+          color="var(--color-primary)"
+          fill="currentColor"
+          height="1.2rem"
           role="img"
-          style={{}}
           viewBox="0 0 512 512"
-          xmlns="http://www.w3.org/2000/svg"
+          width="1.2rem"
         >
           <path
-            d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-            fill="currentColor"
-            style={{}}
+            d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7l233.4-233.3c12.5-12.5 32.8-12.5 45.3 0z"
           />
         </svg>
         SEO, SMO and PPC
       </li>
       <li>
         <svg
-          aria-hidden="true"
-          className="svg-inline--fa fa-check icon"
-          data-icon="check"
-          data-prefix="fas"
-          focusable="false"
+          aria-hidden={true}
+          className="icon"
+          color="var(--color-primary)"
+          fill="currentColor"
+          height="1.2rem"
           role="img"
-          style={{}}
           viewBox="0 0 512 512"
-          xmlns="http://www.w3.org/2000/svg"
+          width="1.2rem"
         >
           <path
-            d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-            fill="currentColor"
-            style={{}}
+            d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7l233.4-233.3c12.5-12.5 32.8-12.5 45.3 0z"
           />
         </svg>
         2 Blogs per month
       </li>
       <li>
         <svg
-          aria-hidden="true"
-          className="svg-inline--fa fa-check icon"
-          data-icon="check"
-          data-prefix="fas"
-          focusable="false"
+          aria-hidden={true}
+          className="icon"
+          color="var(--color-primary)"
+          fill="currentColor"
+          height="1.2rem"
           role="img"
-          style={{}}
           viewBox="0 0 512 512"
-          xmlns="http://www.w3.org/2000/svg"
+          width="1.2rem"
         >
           <path
-            d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-            fill="currentColor"
-            style={{}}
+            d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7l233.4-233.3c12.5-12.5 32.8-12.5 45.3 0z"
           />
         </svg>
         Facebook & Twitter Marketing
       </li>
       <li>
         <svg
-          aria-hidden="true"
-          className="svg-inline--fa fa-check icon"
-          data-icon="check"
-          data-prefix="fas"
-          focusable="false"
+          aria-hidden={true}
+          className="icon"
+          color="var(--color-primary)"
+          fill="currentColor"
+          height="1.2rem"
           role="img"
-          style={{}}
           viewBox="0 0 512 512"
-          xmlns="http://www.w3.org/2000/svg"
+          width="1.2rem"
         >
           <path
-            d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-            fill="currentColor"
-            style={{}}
+            d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7l233.4-233.3c12.5-12.5 32.8-12.5 45.3 0z"
           />
         </svg>
         Monthly Performance
       </li>
       <li>
         <svg
-          aria-hidden="true"
-          className="svg-inline--fa fa-check icon"
-          data-icon="check"
-          data-prefix="fas"
-          focusable="false"
+          aria-hidden={true}
+          className="icon"
+          color="var(--color-primary)"
+          fill="currentColor"
+          height="1.2rem"
           role="img"
-          style={{}}
           viewBox="0 0 512 512"
-          xmlns="http://www.w3.org/2000/svg"
+          width="1.2rem"
         >
           <path
-            d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-            fill="currentColor"
-            style={{}}
+            d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7l233.4-233.3c12.5-12.5 32.8-12.5 45.3 0z"
           />
         </svg>
         Traffic Report

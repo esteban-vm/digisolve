@@ -44,7 +44,7 @@ export const globalStyles = css`
     --color-shadow: #efefefef;
     --color-facebook: #3b5998;
     --color-twitter: #00aced;
-    --color-google-plus: #dd4b39;
+    --color-tiktok: #ee1d51;
     --color-youtube: #f00;
     --color-instagram: #517fa4;
   }

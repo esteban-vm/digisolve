@@ -44,63 +44,63 @@ const FormComponent: Component = (props) => {
   }
 
   return (
-    <>
-      <form aria-label='Send a message' onSubmit={handleSubmit(onSubmit)} noValidate {...props}>
-        <Grid.Row>
-          <Grid.Col isOneThird>
-            <label htmlFor='name'>Name</label>
-          </Grid.Col>
-          <Grid.Col isTwoThirds>
-            <input
-              type='text'
-              id='name'
-              placeholder='your name'
-              spellCheck={false}
-              autoCorrect='off'
-              className='field'
-              {...register('name')}
-            />
-          </Grid.Col>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Col isOneThird>
-            <label htmlFor='email'>Email</label>
-          </Grid.Col>
-          <Grid.Col isTwoThirds>
-            <input type='email' id='email' placeholder='your email' className='field' {...register('email')} />
-          </Grid.Col>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Col isOneThird>
-            <label htmlFor='newsletter'>Newsletter?</label>
-          </Grid.Col>
-          <Grid.Col isTwoThirds>
-            <input type='checkbox' id='newsletter' className='check' defaultChecked {...register('newsletter')} />
-            Yes, Please
-          </Grid.Col>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Col isOneThird>
-            <label htmlFor='message'>Drop us a line</label>
-          </Grid.Col>
-          <Grid.Col isTwoThirds>
-            <textarea id='message' placeholder='your message' className='field' {...register('message')} />
-          </Grid.Col>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Col isOneThird />
-          <Grid.Col isTwoThirds>
-            <Button text='Send it!' isSubmit />
-          </Grid.Col>
-        </Grid.Row>
-        <Toast isOpen={isSubmitSuccessful}>
+    <form aria-label='Send a message' onSubmit={handleSubmit(onSubmit)} noValidate {...props}>
+      <Grid.Row>
+        <Grid.Col isOneThird>
+          <label htmlFor='name'>Name</label>
+        </Grid.Col>
+        <Grid.Col isTwoThirds>
+          <input
+            type='text'
+            id='name'
+            placeholder='your name'
+            spellCheck={false}
+            autoCorrect='off'
+            className='field'
+            {...register('name')}
+          />
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Col isOneThird>
+          <label htmlFor='email'>Email</label>
+        </Grid.Col>
+        <Grid.Col isTwoThirds>
+          <input type='email' id='email' placeholder='your email' className='field' {...register('email')} />
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Col isOneThird>
+          <label htmlFor='newsletter'>Newsletter?</label>
+        </Grid.Col>
+        <Grid.Col isTwoThirds>
+          <input type='checkbox' id='newsletter' className='check' defaultChecked {...register('newsletter')} />
+          Yes, Please
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Col isOneThird>
+          <label htmlFor='message'>Drop us a line</label>
+        </Grid.Col>
+        <Grid.Col isTwoThirds>
+          <textarea id='message' placeholder='your message' className='field' {...register('message')} />
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Col isOneThird />
+        <Grid.Col isTwoThirds>
+          <Button text='Send it!' isSubmit />
+        </Grid.Col>
+      </Grid.Row>
+      <Toast isOpen={isSubmitSuccessful}>
+        <div>
           <p>{formValues.name}</p>
           <p>{formValues.email}</p>
           <p>{formValues.newsletter ? 'yes' : 'no'}</p>
           <p>{formValues.message}</p>
-        </Toast>
-      </form>
-    </>
+        </div>
+      </Toast>
+    </form>
   )
 }
 

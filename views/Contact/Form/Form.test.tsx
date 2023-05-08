@@ -1,21 +1,23 @@
-import { render, cleanup, screen, create, userEvent } from '@/tests'
+import { render, cleanup, screen, create, userEvent, axe } from '@/tests'
 import { mediaQuery } from '@/styles'
 import Form from './Form'
 
 describe('🧪 FORM:', () => {
-  describe('display tests:', () => {
+  describe('render tests:', () => {
+    let container: HTMLElement
+
     beforeEach(() => {
-      render(<Form />)
+      void ({ container } = render(<Form />))
     })
 
     afterEach(cleanup)
 
-    it('should be accessible', () => {
-      const form = screen.getByRole('form', { name: /^send a message$/i })
-      expect(form).toBeInTheDocument()
+    it('should be accessible', async () => {
+      const results = await axe(container)
+      expect(results).toHaveNoViolations()
     })
 
-    describe('should be displayed:', () => {
+    describe('should be rendered:', () => {
       it('the field for name', () => {
         const nameField = screen.getByPlaceholderText(/^your name$/i)
         expect(nameField).toBeInTheDocument()

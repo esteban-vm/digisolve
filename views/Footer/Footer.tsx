@@ -89,6 +89,38 @@ const Footer = styled(FooterComponent)`
 
   .social__links {
     float: right;
+
+    li {
+      :first-of-type {
+        a:hover {
+          color: var(--color-facebook);
+        }
+      }
+
+      :nth-of-type(2) {
+        a:hover {
+          color: var(--color-twitter);
+        }
+      }
+
+      :nth-of-type(3) {
+        a:hover {
+          color: var(--color-tiktok);
+        }
+      }
+
+      :nth-of-type(4) {
+        a:hover {
+          color: var(--color-instagram);
+        }
+      }
+
+      :last-of-type {
+        a:hover {
+          color: var(--color-youtube);
+        }
+      }
+    }
   }
 `
 

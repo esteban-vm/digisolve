@@ -1,23 +1,25 @@
-import { render, cleanup, screen, create } from '@/tests'
+import { render, cleanup, screen, create, axe } from '@/tests'
 import partners from '../Partners.data'
 import Partner from './Partner'
 
 describe('🧪 PARTNER:', () => {
   const [testPartner] = partners
 
-  describe('display tests:', () => {
+  describe('render tests:', () => {
+    let container: HTMLElement
+
     beforeEach(() => {
-      render(<Partner {...testPartner} />)
+      void ({ container } = render(<Partner {...testPartner} />))
     })
 
     afterEach(cleanup)
 
-    it('should be accessible', () => {
-      const article = screen.getByRole('article', { name: testPartner.text })
-      expect(article).toBeInTheDocument()
+    it('should be accessible', async () => {
+      const results = await axe(container)
+      expect(results).toHaveNoViolations()
     })
 
-    it('the logo should be displayed', () => {
+    it('the logo should be rendered', () => {
       const logo = screen.getByRole('img', { name: testPartner.text })
       expect(logo).toBeInTheDocument()
       expect(logo).toBeVisible()

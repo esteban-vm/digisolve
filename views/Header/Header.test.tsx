@@ -1,25 +1,24 @@
-import { render, cleanup, screen, create } from '@/tests'
+import { render, cleanup, screen, create, axe } from '@/tests'
 import { mediaQuery } from '@/styles'
 import links from './Header.data'
 import Header from './Header'
 
 describe('🧪 HEADER:', () => {
-  describe('display tests:', () => {
-    /** Header title */
-    const name = /^digital agency$/i
+  describe('render tests:', () => {
+    let container: HTMLElement
 
     beforeEach(() => {
-      render(<Header />)
+      void ({ container } = render(<Header />))
     })
 
     afterEach(cleanup)
 
-    it('should be accessible', () => {
-      const header = screen.getByRole('banner', { name })
-      expect(header).toBeInTheDocument()
+    it('should be accessible', async () => {
+      const results = await axe(container)
+      expect(results).toHaveNoViolations()
     })
 
-    describe('should be displayed:', () => {
+    describe('should be rendered:', () => {
       it('the navbar', () => {
         const navbar = screen.getByRole('navigation')
         expect(navbar).toBeInTheDocument()
@@ -27,7 +26,7 @@ describe('🧪 HEADER:', () => {
       })
 
       it('the title', () => {
-        const title = screen.getByRole('heading', { name, level: 1 })
+        const title = screen.getByRole('heading', { name: /^digital agency$/i, level: 1 })
         expect(title).toBeInTheDocument()
         expect(title).toBeVisible()
       })

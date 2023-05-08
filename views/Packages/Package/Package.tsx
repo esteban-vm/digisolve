@@ -1,6 +1,5 @@
 import type { Component, PropsWithLink } from '@/types'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Button } from '@/components'
+import { Button, Icon } from '@/components'
 import { formatPrice } from '@/helpers'
 import { styled, mediaQuery } from '@/styles'
 
@@ -27,7 +26,7 @@ const PackageComponent: Component<PackageProps> = ({
   return (
     <article aria-labelledby={id} {...rest}>
       <div className='section'>
-        <h4 id={id}>{title}</h4>
+        <h3 id={id}>{title}</h3>
         <p>
           {formattedPrice} <span>{duration} months</span>
         </p>
@@ -37,7 +36,7 @@ const PackageComponent: Component<PackageProps> = ({
         <ul>
           {features.map((feature, index) => (
             <li key={index}>
-              <FontAwesomeIcon icon='check' className='icon' />
+              <Icon name='check' size={1.2} className='icon' />
               {feature}
             </li>
           ))}
@@ -65,7 +64,7 @@ const Package = styled(PackageComponent)`
     width: 80%;
   }
 
-  h4 {
+  h3 {
     font-size: 150%;
     color: var(--color-grey);
     font-weight: 400;
@@ -119,11 +118,8 @@ const Package = styled(PackageComponent)`
   }
 
   .icon {
-    width: 1.2rem;
-    height: 1.2rem;
     display: inline-block;
     margin-right: 10px;
-    color: var(--color-primary);
   }
 
   .btn {

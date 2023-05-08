@@ -1,4 +1,4 @@
-import { render, cleanup, screen, create } from '@/tests'
+import { render, cleanup, screen, create, axe } from '@/tests'
 import { formatPrice } from '@/helpers'
 import { mediaQuery } from '@/styles'
 import packages from '../Packages.data'
@@ -7,21 +7,23 @@ import Package from './Package'
 describe('🧪 PACKAGE:', () => {
   const [testPackage] = packages
 
-  describe('display tests:', () => {
+  describe('render tests:', () => {
+    let container: HTMLElement
+
     beforeEach(() => {
-      render(<Package {...testPackage} />)
+      void ({ container } = render(<Package {...testPackage} />))
     })
 
     afterEach(cleanup)
 
-    it('should be accessible', () => {
-      const article = screen.getByRole('article', { name: testPackage.title })
-      expect(article).toBeInTheDocument()
+    it('should be accessible', async () => {
+      const results = await axe(container)
+      expect(results).toHaveNoViolations()
     })
 
-    describe('should be displayed:', () => {
+    describe('should be rendered:', () => {
       it('the title', () => {
-        const title = screen.getByRole('heading', { name: testPackage.title, level: 4 })
+        const title = screen.getByRole('heading', { name: testPackage.title, level: 3 })
         expect(title).toBeInTheDocument()
         expect(title).toBeVisible()
       })
@@ -87,7 +89,7 @@ describe('🧪 PACKAGE:', () => {
       it('medium screen devices', () => {
         const media = mediaQuery('md')
         expect(tree).toHaveStyleRule('width', '100%', { media })
-        expect(tree).toHaveStyleRule('margin-bottom', '25px', { target: 'h4', media })
+        expect(tree).toHaveStyleRule('margin-bottom', '25px', { target: 'h3', media })
       })
     })
   })

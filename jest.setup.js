@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom/extend-expect'
+import 'jest-axe/extend-expect'
 import { matchers } from '@emotion/jest'
-import '@/icons'
 
 expect.extend(matchers)
 

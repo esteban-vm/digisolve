@@ -9,7 +9,6 @@ const Wrapper = styled.div`
   padding: 50px;
   font-size: 80%;
   color: var(--color-dark);
-  list-style: none;
 
   ul {
     float: right;
@@ -24,6 +23,36 @@ const Wrapper = styled.div`
         :visited {
           color: var(--color-dark);
           text-decoration: none;
+        }
+      }
+
+      :first-of-type {
+        a:hover {
+          color: var(--color-facebook);
+        }
+      }
+
+      :nth-of-type(2) {
+        a:hover {
+          color: var(--color-twitter);
+        }
+      }
+
+      :nth-of-type(3) {
+        a:hover {
+          color: var(--color-tiktok);
+        }
+      }
+
+      :nth-of-type(4) {
+        a:hover {
+          color: var(--color-instagram);
+        }
+      }
+
+      :last-of-type {
+        a:hover {
+          color: var(--color-youtube);
         }
       }
     }
