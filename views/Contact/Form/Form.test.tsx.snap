@@ -257,7 +257,6 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
     >
       <input
         className="check"
-        defaultChecked={true}
         id="newsletter"
         name="newsletter"
         onBlur={[Function]}
@@ -342,7 +341,7 @@ exports[`🧪 FORM: style tests: should render with correct styles 1`] = `
         <p />
         <p />
         <p>
-          no
+          yes
         </p>
         <p />
       </div>

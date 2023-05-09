@@ -24,7 +24,7 @@ const validationSchema: ObjectSchema<FormValues> = object().shape({
 const defaultValues: FormValues = {
   name: '',
   email: '',
-  newsletter: false,
+  newsletter: true,
   message: '',
 }
 
@@ -74,7 +74,7 @@ const FormComponent: Component = (props) => {
           <label htmlFor='newsletter'>Newsletter?</label>
         </Grid.Col>
         <Grid.Col isTwoThirds>
-          <input type='checkbox' id='newsletter' className='check' defaultChecked {...register('newsletter')} />
+          <input type='checkbox' id='newsletter' className='check' {...register('newsletter')} />
           Yes, Please
         </Grid.Col>
       </Grid.Row>
