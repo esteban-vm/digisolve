@@ -1,4 +1,4 @@
-import { render, cleanup, screen, create, axe } from '@/tests'
+import { render, cleanup, screen, create, userEvent, axe } from '@/tests'
 import Button from './Button'
 
 describe('🧪 BUTTON:', () => {
@@ -20,6 +20,16 @@ describe('🧪 BUTTON:', () => {
       const button = screen.getByRole('button', { name: 'test' })
       expect(button).toBeInTheDocument()
       expect(button).toBeVisible()
+    })
+  })
+
+  describe('event tests:', () => {
+    it('onClick event should be called', async () => {
+      const onClick = jest.fn()
+      render(<Button text='test' onClick={onClick} />)
+      const button = screen.getByRole('button', { name: 'test' })
+      await userEvent.click(button)
+      expect(onClick).toHaveBeenCalled()
     })
   })
 

@@ -26,7 +26,7 @@ const ToastComponent: Component<ToastProps> = ({ isOpen, children, ...rest }) =>
           className='animate__animated animate__heartBeat animate__infinite icon'
         />
         {children}
-        <Button text='ok' isClose onClose={closeToast} className='btn' />
+        <Button text='ok' onClick={closeToast} className='btn' />
       </div>
     </dialog>
   )
