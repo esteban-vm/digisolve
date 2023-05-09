@@ -1,7 +1,7 @@
 import type { Component, PropsWithChildren } from '@/types'
 import { useRef, useEffect } from 'react'
 import { Button, Icon } from '@/components'
-import { styled } from '@/styles'
+import { styled, mediaQuery } from '@/styles'
 
 type ToastProps = Required<PropsWithChildren<{ isOpen: boolean }>>
 
@@ -39,6 +39,10 @@ const Toast = styled(ToastComponent)`
   border: 2px solid var(--color-primary);
   border-radius: 5px;
   max-width: 60%;
+
+  ${mediaQuery('xs')} {
+    max-width: 90%;
+  }
 
   h2 {
     margin: 0;

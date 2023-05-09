@@ -1,4 +1,5 @@
 import { render, cleanup, screen, create, axe } from '@/tests'
+import { mediaQuery } from '@/styles'
 import Toast from './Toast'
 
 describe('🧪 TOAST:', () => {
@@ -49,14 +50,22 @@ describe('🧪 TOAST:', () => {
   })
 
   describe('style tests:', () => {
-    it('should render with correct styles', () => {
-      const tree = create(
+    let tree: ReturnType<typeof create>
+
+    beforeEach(() => {
+      tree = create(
         <Toast isOpen>
           <p>Test</p>
         </Toast>
       )
+    })
 
+    it('should render with correct styles', () => {
       expect(tree).toMatchSnapshot()
+    })
+
+    it('should have correct styles on extra small screen devices', () => {
+      expect(tree).toHaveStyleRule('max-width', '90%', { media: mediaQuery('xs') })
     })
   })
 })

@@ -10,6 +10,12 @@ exports[`🧪 TOAST: style tests: should render with correct styles 1`] = `
   max-width: 60%;
 }
 
+@media only screen and (max-width: 480px) {
+  .emotion-0 {
+    max-width: 90%;
+  }
+}
+
 .emotion-0 h2 {
   margin: 0;
   color: var(--color-primary);
