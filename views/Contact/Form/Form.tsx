@@ -1,50 +1,14 @@
 import type { Component } from '@/types'
-import { useState } from 'react'
-import { useForm, type SubmitHandler } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
-import { string, boolean, object, type ObjectSchema } from 'yup'
 import { Button, Grid } from '@/components'
+import { useForm } from '@/hooks'
 import { styled, mediaQuery } from '@/styles'
 import Toast from '../Toast'
 
-type FormValues = {
-  name: string
-  email: string
-  newsletter: boolean
-  message: string
-}
-
-const validationSchema: ObjectSchema<FormValues> = object().shape({
-  name: string().trim().required(),
-  email: string().trim().email().required(),
-  newsletter: boolean().default(true),
-  message: string().trim().required(),
-})
-
-const defaultValues: FormValues = {
-  name: '',
-  email: '',
-  newsletter: true,
-  message: '',
-}
-
 const FormComponent: Component = (props) => {
-  const [formValues, setFormValues] = useState(defaultValues)
-
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { isSubmitSuccessful },
-  } = useForm({ resolver: yupResolver(validationSchema), defaultValues })
-
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
-    setFormValues({ ...formValues, ...data })
-    reset()
-  }
+  const { values, fields, submit, isSuccess } = useForm()
 
   return (
-    <form aria-label='Send a message' onSubmit={handleSubmit(onSubmit)} noValidate {...props}>
+    <form aria-label='Send a message' onSubmit={submit} noValidate {...props}>
       <Grid.Row>
         <Grid.Col isOneThird>
           <label htmlFor='name'>Name</label>
@@ -57,7 +21,7 @@ const FormComponent: Component = (props) => {
             spellCheck={false}
             autoCorrect='off'
             className='field'
-            {...register('name')}
+            {...fields.name}
           />
         </Grid.Col>
       </Grid.Row>
@@ -66,7 +30,7 @@ const FormComponent: Component = (props) => {
           <label htmlFor='email'>Email</label>
         </Grid.Col>
         <Grid.Col isTwoThirds>
-          <input type='email' id='email' placeholder='your email' className='field' {...register('email')} />
+          <input type='email' id='email' placeholder='your email' className='field' {...fields.email} />
         </Grid.Col>
       </Grid.Row>
       <Grid.Row>
@@ -74,7 +38,7 @@ const FormComponent: Component = (props) => {
           <label htmlFor='newsletter'>Newsletter?</label>
         </Grid.Col>
         <Grid.Col isTwoThirds>
-          <input type='checkbox' id='newsletter' className='check' {...register('newsletter')} />
+          <input type='checkbox' id='newsletter' className='check' {...fields.newsletter} />
           Yes, Please
         </Grid.Col>
       </Grid.Row>
@@ -83,7 +47,7 @@ const FormComponent: Component = (props) => {
           <label htmlFor='message'>Drop us a line</label>
         </Grid.Col>
         <Grid.Col isTwoThirds>
-          <textarea id='message' placeholder='your message' className='field' {...register('message')} />
+          <textarea id='message' placeholder='your message' className='field' {...fields.message} />
         </Grid.Col>
       </Grid.Row>
       <Grid.Row>
@@ -92,12 +56,12 @@ const FormComponent: Component = (props) => {
           <Button text='Send it!' isSubmit />
         </Grid.Col>
       </Grid.Row>
-      <Toast isOpen={isSubmitSuccessful}>
+      <Toast isOpen={isSuccess}>
         <div>
-          <p>{formValues.name}</p>
-          <p>{formValues.email}</p>
-          <p>{formValues.newsletter ? 'yes' : 'no'}</p>
-          <p>{formValues.message}</p>
+          <p>{values.name}</p>
+          <p>{values.email}</p>
+          <p>{values.newsletter ? 'yes' : 'no'}</p>
+          <p>{values.message}</p>
         </div>
       </Toast>
     </form>
