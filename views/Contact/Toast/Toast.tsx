@@ -12,7 +12,7 @@ const ToastComponent: Component<ToastProps> = ({ isOpen, children, ...rest }) =>
     if (isOpen) toastRef.current?.showModal()
   }, [isOpen])
 
-  const closeToast = () => {
+  const closeModal = () => {
     toastRef.current?.close()
   }
 
@@ -26,7 +26,7 @@ const ToastComponent: Component<ToastProps> = ({ isOpen, children, ...rest }) =>
           className='animate__animated animate__heartBeat animate__infinite icon'
         />
         {children}
-        <Button text='ok' onClick={closeToast} className='btn' />
+        <Button text='ok' onClick={closeModal} className='btn' />
       </div>
     </dialog>
   )
@@ -39,6 +39,11 @@ const Toast = styled(ToastComponent)`
   border: 2px solid var(--color-primary);
   border-radius: 5px;
   max-width: 60%;
+
+  ::backdrop {
+    background-color: black;
+    opacity: 0.5;
+  }
 
   ${mediaQuery('xs')} {
     max-width: 90%;

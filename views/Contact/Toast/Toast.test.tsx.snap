@@ -10,6 +10,11 @@ exports[`🧪 TOAST: style tests: should render with correct styles 1`] = `
   max-width: 60%;
 }
 
+.emotion-0::backdrop {
+  background-color: black;
+  opacity: 0.5;
+}
+
 @media only screen and (max-width: 480px) {
   .emotion-0 {
     max-width: 90%;
