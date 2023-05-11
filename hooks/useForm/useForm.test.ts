@@ -9,10 +9,19 @@ describe('🧪 USE FORM:', () => {
   })
 
   it('should return default form values', () => {
-    expect(result.current.values).toHaveProperty('name', '')
-    expect(result.current.values).toHaveProperty('email', '')
-    expect(result.current.values).toHaveProperty('newsletter', true)
-    expect(result.current.values).toHaveProperty('message', '')
+    const { values } = result.current
+    expect(values).toHaveProperty('name', '')
+    expect(values).toHaveProperty('email', '')
+    expect(values).toHaveProperty('newsletter', true)
+    expect(values).toHaveProperty('message', '')
+  })
+
+  it('should return form errors', () => {
+    const { errors } = result.current
+    expect(errors).toBeDefined()
+    expect(errors.name).toBeUndefined()
+    expect(errors.email).toBeUndefined()
+    expect(errors.message).toBeUndefined()
   })
 
   it('should return form fields', () => {

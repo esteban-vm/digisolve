@@ -5,7 +5,7 @@ import { styled, mediaQuery } from '@/styles'
 import Toast from '../Toast'
 
 const FormComponent: Component = (props) => {
-  const { values, fields, submit, isSuccess } = useForm()
+  const { values, errors, fields, submit, isSuccess } = useForm()
 
   return (
     <form aria-label='Send a message' onSubmit={submit} noValidate {...props}>
@@ -23,6 +23,7 @@ const FormComponent: Component = (props) => {
             className='field'
             {...fields.name}
           />
+          <small>{errors.name?.message}</small>
         </Grid.Col>
       </Grid.Row>
       <Grid.Row>
@@ -31,6 +32,7 @@ const FormComponent: Component = (props) => {
         </Grid.Col>
         <Grid.Col isTwoThirds>
           <input type='email' id='email' placeholder='your email' className='field' {...fields.email} />
+          <small>{errors.email?.message}</small>
         </Grid.Col>
       </Grid.Row>
       <Grid.Row>
@@ -48,6 +50,7 @@ const FormComponent: Component = (props) => {
         </Grid.Col>
         <Grid.Col isTwoThirds>
           <textarea id='message' placeholder='your message' className='field' {...fields.message} />
+          <small>{errors.message?.message}</small>
         </Grid.Col>
       </Grid.Row>
       <Grid.Row>
@@ -58,10 +61,18 @@ const FormComponent: Component = (props) => {
       </Grid.Row>
       <Toast isOpen={isSuccess}>
         <div>
-          <p>{values.name}</p>
-          <p>{values.email}</p>
-          <p>{values.newsletter ? 'yes' : 'no'}</p>
-          <p>{values.message}</p>
+          <p>
+            <span className='bold'>Name:</span> <span className='capitalized'>{values.name}</span>
+          </p>
+          <p>
+            <span className='bold'>Email:</span> <span className='cursive'>{values.email}</span>
+          </p>
+          <p>
+            <span className='bold'>Newsletter?</span> {values.newsletter ? 'yes' : 'no'}
+          </p>
+          <p>
+            <span className='bold'>Message:</span> {values.message}
+          </p>
         </div>
       </Toast>
     </form>
@@ -94,6 +105,10 @@ const Form = styled(FormComponent)`
     }
   }
 
+  small {
+    color: red;
+  }
+
   .field {
     width: 95%;
     padding: 8px;
@@ -118,6 +133,18 @@ const Form = styled(FormComponent)`
     ${mediaQuery('xs')} {
       margin-top: 2px;
     }
+  }
+
+  .capitalized {
+    text-transform: capitalize;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .cursive {
+    font-style: italic;
   }
 `
 

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useForm, type SubmitHandler } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { string, boolean, object, type ObjectSchema } from 'yup'
+import { isClean } from '@/helpers'
 
 type FormValues = {
   name: string
@@ -10,11 +11,13 @@ type FormValues = {
   message: string
 }
 
+const requiredMsg = 'Your ${path} is required'
+
 const validationSchema: ObjectSchema<FormValues> = object().shape({
-  name: string().trim().required(),
-  email: string().trim().email().required(),
+  name: string().trim().required(requiredMsg),
+  email: string().trim().email('Your ${path} must be valid').required(requiredMsg),
   newsletter: boolean().default(true),
-  message: string().trim().required(),
+  message: string().trim().required(requiredMsg).test({ test: isClean, message: "Please, don't use bad words" }),
 })
 
 const defaultValues: FormValues = {
@@ -31,7 +34,7 @@ const useCustomForm = () => {
     register,
     handleSubmit,
     reset,
-    formState: { isSubmitSuccessful },
+    formState: { isSubmitSuccessful, errors },
   } = useForm({ resolver: yupResolver(validationSchema), defaultValues })
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
@@ -41,6 +44,7 @@ const useCustomForm = () => {
 
   return {
     values: formValues,
+    errors,
     fields: {
       name: register('name'),
       email: register('email'),

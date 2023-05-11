@@ -59,6 +59,10 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
   }
 }
 
+.emotion-1 small {
+  color: red;
+}
+
 .emotion-1 .field {
   width: 95%;
   padding: 8px;
@@ -102,6 +106,18 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
   }
 }
 
+.emotion-1 .capitalized {
+  text-transform: capitalize;
+}
+
+.emotion-1 .bold {
+  font-weight: bold;
+}
+
+.emotion-1 .cursive {
+  font-style: italic;
+}
+
 .emotion-2 {
   cursor: pointer;
   display: inline-block;
@@ -130,6 +146,11 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
   border: 2px solid var(--color-primary);
   border-radius: 5px;
   max-width: 60%;
+}
+
+.emotion-3::backdrop {
+  background-color: black;
+  opacity: 0.5;
 }
 
 @media only screen and (max-width: 480px) {
@@ -247,6 +268,7 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
             spellCheck={false}
             type="text"
           />
+          <small />
         </div>
       </div>
       <div
@@ -276,6 +298,7 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
             placeholder="your email"
             type="email"
           />
+          <small />
         </div>
       </div>
       <div
@@ -333,6 +356,7 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
             onChange={[Function]}
             placeholder="your message"
           />
+          <small />
         </div>
       </div>
       <div
@@ -379,12 +403,45 @@ exports[`🧪 CONTACT: style tests: should render with correct styles 1`] = `
             />
           </svg>
           <div>
-            <p />
-            <p />
             <p>
+              <span
+                className="bold"
+              >
+                Name:
+              </span>
+               
+              <span
+                className="capitalized"
+              />
+            </p>
+            <p>
+              <span
+                className="bold"
+              >
+                Email:
+              </span>
+               
+              <span
+                className="cursive"
+              />
+            </p>
+            <p>
+              <span
+                className="bold"
+              >
+                Newsletter?
+              </span>
+               
               yes
             </p>
-            <p />
+            <p>
+              <span
+                className="bold"
+              >
+                Message:
+              </span>
+               
+            </p>
           </div>
           <button
             className="btn emotion-4"

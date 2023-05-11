@@ -54,25 +54,71 @@ describe('🧪 FORM:', () => {
 
     afterEach(cleanup)
 
-    it('should fail with all fields empty', async () => {
+    it('should fail with name empty', async () => {
+      const [nameField, emailField, messageField] = screen.getAllByRole('textbox')
       const submitButton = screen.getByRole('button', { name: /^send it\!$/i })
+      await userEvent.type(emailField, 'test@example.com')
+      await userEvent.type(messageField, 'test message')
       await userEvent.click(submitButton)
-      const toast = screen.queryByRole('dialog')
-      const nameField = screen.getByPlaceholderText(/^your name$/i)
-      expect(toast).not.toBeInTheDocument()
+      const errorFeedback = screen.getByText(/^your name is required$/i)
       expect(nameField).toHaveFocus()
+      expect(errorFeedback).toBeInTheDocument()
     })
 
-    it('should succeed with all fields full', async () => {
-      const nameField = screen.getByPlaceholderText(/^your name$/i)
-      const emailField = screen.getByPlaceholderText(/^your email$/i)
-      const messageField = screen.getByPlaceholderText(/^your message$/i)
+    it('should fail with email empty', async () => {
+      const [nameField, emailField, messageField] = screen.getAllByRole('textbox')
+      const submitButton = screen.getByRole('button', { name: /^send it\!$/i })
+      await userEvent.type(nameField, 'John Doe')
+      await userEvent.type(messageField, 'test message')
+      await userEvent.click(submitButton)
+      const errorFeedback = screen.getByText(/^your email is required$/i)
+      expect(emailField).toHaveFocus()
+      expect(errorFeedback).toBeInTheDocument()
+    })
+
+    it('should fail with message empty', async () => {
+      const [nameField, emailField, messageField] = screen.getAllByRole('textbox')
+      const submitButton = screen.getByRole('button', { name: /^send it\!$/i })
+      await userEvent.type(nameField, 'John Doe')
+      await userEvent.type(emailField, 'test@example.com')
+      await userEvent.click(submitButton)
+      const errorFeedback = screen.getByText(/^your message is required$/i)
+      expect(messageField).toHaveFocus()
+      expect(errorFeedback).toBeInTheDocument()
+    })
+
+    it('should fail with email invalid', async () => {
+      const [nameField, emailField, messageField] = screen.getAllByRole('textbox')
+      const submitButton = screen.getByRole('button', { name: /^send it\!$/i })
+      await userEvent.type(nameField, 'John Doe')
+      await userEvent.type(emailField, 'wrong email')
+      await userEvent.type(messageField, 'test message')
+      await userEvent.click(submitButton)
+      const errorFeedback = screen.getByText(/^your email must be valid$/i)
+      expect(emailField).toHaveFocus()
+      expect(errorFeedback).toBeInTheDocument()
+    })
+
+    it('should fail with bad words in message', async () => {
+      const [nameField, emailField, messageField] = screen.getAllByRole('textbox')
+      const submitButton = screen.getByRole('button', { name: /^send it\!$/i })
+      await userEvent.type(emailField, 'test@example.com')
+      await userEvent.type(nameField, 'John Doe')
+      await userEvent.type(messageField, 'sh1t')
+      await userEvent.click(submitButton)
+      const errorFeedback = screen.getByText(/^please, don't use bad words$/i)
+      expect(messageField).toHaveFocus()
+      expect(errorFeedback).toBeInTheDocument()
+    })
+
+    it('should succeed with all fields full and valid', async () => {
+      const [nameField, emailField, messageField] = screen.getAllByRole('textbox')
       const submitButton = screen.getByRole('button', { name: /^send it\!$/i })
       await userEvent.type(nameField, 'John Doe')
       await userEvent.type(emailField, 'test@example.com')
       await userEvent.type(messageField, 'test message')
       await userEvent.click(submitButton)
-      const toast = await screen.findByRole('dialog', { hidden: true })
+      const toast = screen.getByRole('dialog', { hidden: true })
       expect(toast).toBeInTheDocument()
     })
   })
