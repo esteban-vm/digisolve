@@ -19,14 +19,14 @@ describe('🧪 FORM:', () => {
 
     describe('should be rendered:', () => {
       it('the field for name', () => {
-        const nameField = screen.getByPlaceholderText(/^your name$/i)
+        const nameField = screen.getByRole('textbox', { name: /^name$/i })
         expect(nameField).toBeInTheDocument()
         expect(nameField).toBeVisible()
         expect(nameField).toHaveAccessibleName(/^name$/i)
       })
 
       it('the field for email', () => {
-        const emailField = screen.getByPlaceholderText(/^your email$/i)
+        const emailField = screen.getByRole('textbox', { name: /^email$/i })
         expect(emailField).toBeInTheDocument()
         expect(emailField).toBeVisible()
         expect(emailField).toHaveAccessibleName(/^email$/i)
@@ -38,8 +38,8 @@ describe('🧪 FORM:', () => {
         expect(checkbox).toBeVisible()
       })
 
-      it('the text box for message', () => {
-        const messageField = screen.getByPlaceholderText(/^your message$/i)
+      it('the field for message', () => {
+        const messageField = screen.getByRole('textbox', { name: /^drop us a line$/i })
         expect(messageField).toBeInTheDocument()
         expect(messageField).toBeVisible()
         expect(messageField).toHaveAccessibleName(/^drop us a line$/i)
