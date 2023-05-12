@@ -29,6 +29,9 @@ export default {
   ],
   parameters: {
     layout: 'centered',
+    viewport: {
+      defaultViewport: 'large',
+    },
   },
 } as Meta
 

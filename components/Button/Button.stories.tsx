@@ -3,7 +3,7 @@ import Button from './Button'
 
 export default {
   args: {
-    text: 'button example',
+    text: 'example',
   },
   component: Button,
   title: 'Components/Button',
@@ -13,7 +13,7 @@ export default {
       disable: true,
     },
     controls: {
-      exclude: /(full|submit|close|link|theme|className)$/i,
+      exclude: /^(is(full|submit)|onclick|link|theme|classname)$/i,
     },
   },
   play({ canvasElement }) {

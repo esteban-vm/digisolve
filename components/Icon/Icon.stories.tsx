@@ -22,4 +22,4 @@ export default {
   },
 } as Meta<typeof Icon>
 
-export const IconExamples: StoryFn<typeof Icon> = (args) => <Icon {...args} />
+export const Examples: StoryFn<typeof Icon> = (args) => <Icon {...args} />
