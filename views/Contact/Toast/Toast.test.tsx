@@ -64,6 +64,12 @@ describe('🧪 TOAST:', () => {
       expect(tree).toMatchSnapshot()
     })
 
+    it('should have correct styles in backdrop pseudo-element', () => {
+      const target = '::backdrop'
+      expect(tree).toHaveStyleRule('background-color', 'black', { target })
+      expect(tree).toHaveStyleRule('opacity', '0.5', { target })
+    })
+
     it('should have correct styles on extra small screen devices', () => {
       expect(tree).toHaveStyleRule('max-width', '90%', { media: mediaQuery('xs') })
     })
