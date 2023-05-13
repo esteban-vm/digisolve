@@ -1,1 +1,1 @@
-export { default, type NavLinkProps } from './NavLink'
+export { default /* type NavLinkProps */ } from './NavLink'

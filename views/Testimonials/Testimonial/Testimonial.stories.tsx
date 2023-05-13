@@ -42,7 +42,7 @@ export default {
       disable: true,
     },
     controls: {
-      exclude: /^(id|customer|content|image|theme|className)$/,
+      exclude: /^(id|text|image|theme|className)$/,
     },
   },
 } as Meta<typeof Testimonial>

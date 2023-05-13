@@ -1,6 +1,6 @@
-import type { NavLinkProps } from './NavLink'
+import type { PropsWithLink } from '@/types'
 
-const links: NavLinkProps[] = [
+const links: PropsWithLink[] = [
   {
     id: 'ca898ec0-e825-11ed-b24d-893619994521',
     text: 'Home',

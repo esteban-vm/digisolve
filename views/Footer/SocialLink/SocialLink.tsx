@@ -1,11 +1,9 @@
-import type { Component, PropsWithLink } from '@/types'
+import type { ComponentWithIcon } from '@/types'
 import Link from 'next/link'
-import { Icon, type IconName } from '@/components'
+import { Icon /* type IconName */ } from '@/components'
 import { styled } from '@/styles'
 
-export type SocialLinkProps = PropsWithLink<{ text: string; icon: IconName }>
-
-const SocialLinkComponent: Component<SocialLinkProps> = ({ text, link = '#', icon, ...rest }) => {
+const SocialLinkComponent: ComponentWithIcon = ({ text, link = '#', icon, ...rest }) => {
   return (
     <li {...rest}>
       <Link href={link} target='_blank' rel='noopener noreferrer' title={text}>

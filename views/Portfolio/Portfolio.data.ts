@@ -1,9 +1,9 @@
-import type { WorkProps } from './Work'
+import type { PropsWithImage } from '@/types'
 
 const width = 394
 const height = 470
 
-const works: WorkProps[] = [
+const works: PropsWithImage[] = [
   {
     id: '0a6dd16e-0229-4898-a3b4-b6b8a2dd5e5a',
     text: 'Online advertising',

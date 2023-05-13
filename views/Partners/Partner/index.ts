@@ -1,1 +1,1 @@
-export { default, type PartnerProps } from './Partner'
+export { default /* type PartnerProps */ } from './Partner'

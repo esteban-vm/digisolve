@@ -1,23 +1,22 @@
-import type { Component, PropsWithLink } from '@/types'
+import type { ComponentWithLink } from '@/types'
 import { Button, Icon } from '@/components'
 import { formatPrice } from '@/helpers'
 import { styled, mediaQuery } from '@/styles'
 
-export type PackageProps = PropsWithLink<{
+export type PackageProps = {
   title: string
   price: number
   duration: number
-  description: string
   features: [string, string, string, string, string]
-}>
+}
 
-const PackageComponent: Component<PackageProps> = ({
+const PackageComponent: ComponentWithLink<PackageProps> = ({
   id,
   title,
   price,
   duration,
-  description,
   features,
+  text,
   link,
   ...rest
 }) => {
@@ -30,7 +29,7 @@ const PackageComponent: Component<PackageProps> = ({
         <p>
           {formattedPrice} <span>{duration} months</span>
         </p>
-        <p>{description}</p>
+        <p>{text}</p>
       </div>
       <div className='section'>
         <ul>

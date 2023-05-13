@@ -1,10 +1,8 @@
-import type { Component, PropsWithImage } from '@/types'
+import type { ComponentWithImage } from '@/types'
 import Image from 'next/image'
 import { styled } from '@/styles'
 
-export type WorkProps = PropsWithImage<{ text: string }>
-
-const WorkComponent: Component<WorkProps> = ({ id, text, image, ...rest }) => {
+const WorkComponent: ComponentWithImage = ({ id, text, image, ...rest }) => {
   return (
     <figure aria-labelledby={id} {...rest}>
       <Image alt='' id={id} {...image} />

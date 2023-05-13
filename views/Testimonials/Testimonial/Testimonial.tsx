@@ -1,13 +1,13 @@
-import type { Component, PropsWithImage } from '@/types'
+import type { ComponentWithImage } from '@/types'
 import Image from 'next/image'
 import { styled, mediaQuery } from '@/styles'
 
-export type TestimonialProps = PropsWithImage<{ customer: string; content: string }>
+export type TestimonialProps = { customer: string }
 
-const TestimonialComponent: Component<TestimonialProps> = ({ id, customer, content, image, ...rest }) => {
+const TestimonialComponent: ComponentWithImage<TestimonialProps> = ({ id, customer, text, image, ...rest }) => {
   return (
     <article aria-labelledby={id} {...rest}>
-      <blockquote>{content}</blockquote>
+      <blockquote>{text}</blockquote>
       <cite>
         <Image alt='' id={id} {...image} />
         {customer}

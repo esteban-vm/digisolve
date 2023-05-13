@@ -26,10 +26,10 @@ describe('🧪 SERVICE:', () => {
         expect(title).toBeVisible()
       })
 
-      it('the description', () => {
-        const desc = screen.getByText(testService.description)
-        expect(desc).toBeInTheDocument()
-        expect(desc).toBeVisible()
+      it('the text', () => {
+        const text = screen.getByText(testService.text)
+        expect(text).toBeInTheDocument()
+        expect(text).toBeVisible()
       })
 
       it('the link', () => {

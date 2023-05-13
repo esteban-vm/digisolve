@@ -1,1 +1,1 @@
-export { default, type WorkProps } from './Work'
+export { default /* type WorkProps */ } from './Work'

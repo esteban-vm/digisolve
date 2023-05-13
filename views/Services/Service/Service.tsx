@@ -1,13 +1,13 @@
-import type { Component, PropsWithLink } from '@/types'
+import type { ComponentWithIcon } from '@/types'
 import { useRef } from 'react'
 import { Waypoint } from 'react-waypoint'
 import Link from 'next/link'
-import { Icon, type IconName } from '@/components'
+import { Icon } from '@/components'
 import { styled } from '@/styles'
 
-export type ServiceProps = PropsWithLink<{ title: string; description: string; icon: IconName }>
+export type ServiceProps = { title: string }
 
-const ServiceComponent: Component<ServiceProps> = ({ id, title, description, link = '#', icon, ...rest }) => {
+const ServiceComponent: ComponentWithIcon<ServiceProps> = ({ id, title, text, link = '#', icon, ...rest }) => {
   const serviceRef = useRef<HTMLElement>(null)
 
   const animateService = (action: 'add' | 'remove') => {
@@ -21,7 +21,7 @@ const ServiceComponent: Component<ServiceProps> = ({ id, title, description, lin
       <article aria-labelledby={id} ref={serviceRef} {...rest}>
         <Icon name={icon} size={3} className='icon' />
         <h4 id={id}>{title}</h4>
-        <p>{description}</p>
+        <p>{text}</p>
         <Link href={link}>Read more</Link>
       </article>
     </Waypoint>

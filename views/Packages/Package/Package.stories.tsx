@@ -32,7 +32,7 @@ export default {
       disable: true,
     },
     controls: {
-      exclude: /^(id|features|description|link|theme|className)$/,
+      exclude: /^(id|features|text|link|theme|className)$/,
     },
   },
 } as Meta<typeof Package>

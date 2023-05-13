@@ -1,10 +1,10 @@
-import type { PartnerProps } from './Partner'
+import type { PropsWithImage } from '@/types'
 
 const text = 'Partner'
 const width = 500
 const height = 500
 
-const partners: PartnerProps[] = [
+const partners: PropsWithImage[] = [
   {
     id: '4adc3171-c484-48a4-94ae-299132c15a62',
     text,

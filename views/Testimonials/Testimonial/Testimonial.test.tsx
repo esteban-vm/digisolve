@@ -33,10 +33,10 @@ describe('🧪 TESTIMONIAL:', () => {
         expect(customer).toBeVisible()
       })
 
-      it('the content', () => {
-        const content = screen.getByText(testTestimonial.content)
-        expect(content).toBeInTheDocument()
-        expect(content).toBeVisible()
+      it('the text', () => {
+        const text = screen.getByText(testTestimonial.text)
+        expect(text).toBeInTheDocument()
+        expect(text).toBeVisible()
       })
     })
   })

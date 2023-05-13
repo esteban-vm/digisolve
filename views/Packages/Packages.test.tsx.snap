@@ -171,7 +171,7 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
             </span>
           </p>
           <p>
-            Ratione similique aut incidunt repellendus excepturi ut commodi laboriosam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus corrupti delectus quae
           </p>
         </div>
         <div
@@ -303,7 +303,7 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
             </span>
           </p>
           <p>
-            Ratione similique aut incidunt repellendus excepturi ut commodi laboriosam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus corrupti delectus quae
           </p>
         </div>
         <div
@@ -435,7 +435,7 @@ exports[`🧪 PACKAGES: style tests: should render with correct styles 1`] = `
             </span>
           </p>
           <p>
-            Ratione similique aut incidunt repellendus excepturi ut commodi laboriosam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus corrupti delectus quae
           </p>
         </div>
         <div

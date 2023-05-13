@@ -37,7 +37,7 @@ export default {
       disable: true,
     },
     controls: {
-      exclude: /^(id|description|link|icon|theme|className)$/,
+      exclude: /^(id|text|link|icon|theme|className)$/,
     },
   },
 } as Meta<typeof Service>

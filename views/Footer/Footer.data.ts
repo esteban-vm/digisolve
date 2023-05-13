@@ -1,7 +1,6 @@
-import type { NavLinkProps } from './NavLink'
-import type { SocialLinkProps } from './SocialLink'
+import type { PropsWithLink, PropsWithIcon } from '@/types'
 
-export const navLinks: NavLinkProps[] = [
+export const navLinks: PropsWithLink[] = [
   {
     id: '97e51480-e825-11ed-b24d-893619994521',
     text: 'About us',
@@ -24,7 +23,7 @@ export const navLinks: NavLinkProps[] = [
   },
 ]
 
-export const socialLinks: SocialLinkProps[] = [
+export const socialLinks: PropsWithIcon[] = [
   {
     id: 'bb690ae0-8c1b-428c-9113-6e22cfb5c44b',
     text: 'Facebook',

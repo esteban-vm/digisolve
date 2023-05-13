@@ -1,10 +1,8 @@
-import type { Component, PropsWithLink } from '@/types'
+import type { ComponentWithLink } from '@/types'
 import Link from 'next/link'
 import { styled } from '@/styles'
 
-export type NavLinkProps = PropsWithLink<{ text: string }>
-
-const NavLinkComponent: Component<NavLinkProps> = ({ text, link = '#', ...rest }) => {
+const NavLinkComponent: ComponentWithLink = ({ text, link = '#', ...rest }) => {
   return (
     <li {...rest}>
       <Link href={link}>{text}</Link>

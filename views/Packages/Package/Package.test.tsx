@@ -56,10 +56,10 @@ describe('🧪 PACKAGE:', () => {
         }
       })
 
-      it('the description', () => {
-        const description = screen.getByText(testPackage.description)
-        expect(description).toBeInTheDocument()
-        expect(description).toBeVisible()
+      it('the text', () => {
+        const text = screen.getByText(testPackage.text)
+        expect(text).toBeInTheDocument()
+        expect(text).toBeVisible()
       })
 
       it('the button', () => {
