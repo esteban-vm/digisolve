@@ -65,8 +65,7 @@
     "prettier": "^2.8.4",
     "react-test-renderer": "^18.2.0",
     "sharp": "^0.32.1",
-    "storybook": "7.0.7",
-    "type-fest": "^3.9.0"
+    "storybook": "7.0.7"
   },
   "readme": "ERROR: No README data found!",
   "_id": "digisolve@0.1.0"

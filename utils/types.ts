@@ -19,4 +19,16 @@ export type ComponentWithImage<P = unknown> = Component<PropsWithImage<P>>
 export type ComponentWithIcon<P = unknown> = ComponentWithLink<PropsWithIcon<P>>
 
 export type { PropsWithChildren } from 'react'
-export * from 'type-fest'
+
+/**
+ * @see {@link https://stackoverflow.com/questions/66140451/typescript-add-kebab-case-types-form-actual-camel-case-keys |TypeScript add kebab case types form actual camel case keys}
+ */
+export type KebabCase<S> = S extends `${infer C}${infer T}`
+  ? KebabCase<T> extends infer U
+    ? U extends string
+      ? T extends Uncapitalize<T>
+        ? `${Uncapitalize<C>}${U}`
+        : `${Uncapitalize<C>}-${U}`
+      : never
+    : never
+  : S

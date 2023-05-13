@@ -80,7 +80,7 @@ devDependencies:
     version: 7.0.7(react-dom@18.2.0)(react@18.2.0)
   '@storybook/nextjs':
     specifier: 7.0.7
-    version: 7.0.7(@babel/core@7.21.8)(esbuild@0.17.18)(next@13.2.3)(react-dom@18.2.0)(react@18.2.0)(type-fest@3.9.0)(typescript@4.9.5)(webpack@5.75.0)
+    version: 7.0.7(@babel/core@7.21.8)(esbuild@0.17.18)(next@13.2.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)(webpack@5.75.0)
   '@storybook/react':
     specifier: 7.0.7
     version: 7.0.7(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
@@ -153,9 +153,6 @@ devDependencies:
   storybook:
     specifier: 7.0.7
     version: 7.0.7
-  type-fest:
-    specifier: ^3.9.0
-    version: 3.9.0
 
 packages:
 
@@ -2443,7 +2440,7 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /@pmmmwh/react-refresh-webpack-plugin@0.5.10(react-refresh@0.11.0)(type-fest@3.9.0)(webpack@5.75.0):
+  /@pmmmwh/react-refresh-webpack-plugin@0.5.10(react-refresh@0.11.0)(webpack@5.75.0):
     resolution: {integrity: sha512-j0Ya0hCFZPd4x40qLzbhGsh9TMtdb+CJQiso+WxLOPNasohq9cc5SNUcwsZaRH6++Xh91Xkm/xHCkuIiIu0LUA==}
     engines: {node: '>= 10.13'}
     peerDependencies:
@@ -2479,7 +2476,6 @@ packages:
       react-refresh: 0.11.0
       schema-utils: 3.1.1
       source-map: 0.7.4
-      type-fest: 3.9.0
       webpack: 5.75.0(esbuild@0.17.18)
     dev: true
 
@@ -3337,7 +3333,7 @@ packages:
     resolution: {integrity: sha512-dBAnEL4HfxxJmv7LdEYUoZlQbWj9APZNIbOaq0tgF8XkxiIbzqvgB0jhL/9UOrysSDbQWBiCRTu2wOVxedGfmw==}
     dev: true
 
-  /@storybook/nextjs@7.0.7(@babel/core@7.21.8)(esbuild@0.17.18)(next@13.2.3)(react-dom@18.2.0)(react@18.2.0)(type-fest@3.9.0)(typescript@4.9.5)(webpack@5.75.0):
+  /@storybook/nextjs@7.0.7(@babel/core@7.21.8)(esbuild@0.17.18)(next@13.2.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)(webpack@5.75.0):
     resolution: {integrity: sha512-pIhQgjNjwBkmDqnhr9pFJ8Sxjg92GZMW8t2fKleOiWtOW0IJAZdFwBJyE5l5cOguV0auP9XZbFiIfk5jiwEbgw==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
@@ -3377,7 +3373,7 @@ packages:
       '@storybook/builder-webpack5': 7.0.7(esbuild@0.17.18)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
       '@storybook/core-common': 7.0.7
       '@storybook/node-logger': 7.0.7
-      '@storybook/preset-react-webpack': 7.0.7(@babel/core@7.21.8)(esbuild@0.17.18)(react-dom@18.2.0)(react@18.2.0)(type-fest@3.9.0)(typescript@4.9.5)
+      '@storybook/preset-react-webpack': 7.0.7(@babel/core@7.21.8)(esbuild@0.17.18)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
       '@storybook/preview-api': 7.0.7
       '@storybook/react': 7.0.7(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
       '@types/node': 16.18.14
@@ -3435,7 +3431,7 @@ packages:
     resolution: {integrity: sha512-APcZ2KaR7z1aJje3pID4Ywmt1/aVcP3Sc4ltzNdH9mCkEsuq0fZHHQrYSa9Ya1IPRmSeLZ5/23q1iyqmGU3zoQ==}
     dev: true
 
-  /@storybook/preset-react-webpack@7.0.7(@babel/core@7.21.8)(esbuild@0.17.18)(react-dom@18.2.0)(react@18.2.0)(type-fest@3.9.0)(typescript@4.9.5):
+  /@storybook/preset-react-webpack@7.0.7(@babel/core@7.21.8)(esbuild@0.17.18)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5):
     resolution: {integrity: sha512-OvLnWuZg/idR5gi8kinZf8RVCFcmAsSAbMI0CENaUAPkozFgQNpVlUzWZIHA9PXwPZC4dl2tkVbphkwYOfU9AA==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
@@ -3452,7 +3448,7 @@ packages:
       '@babel/core': 7.21.8
       '@babel/preset-flow': 7.18.6(@babel/core@7.21.8)
       '@babel/preset-react': 7.18.6(@babel/core@7.21.8)
-      '@pmmmwh/react-refresh-webpack-plugin': 0.5.10(react-refresh@0.11.0)(type-fest@3.9.0)(webpack@5.75.0)
+      '@pmmmwh/react-refresh-webpack-plugin': 0.5.10(react-refresh@0.11.0)(webpack@5.75.0)
       '@storybook/core-webpack': 7.0.7
       '@storybook/docs-tools': 7.0.7
       '@storybook/node-logger': 7.0.7
@@ -11292,11 +11288,6 @@ packages:
   /type-fest@2.19.0:
     resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
     engines: {node: '>=12.20'}
-
-  /type-fest@3.9.0:
-    resolution: {integrity: sha512-hR8JP2e8UiH7SME5JZjsobBlEiatFoxpzCP+R3ZeCo7kAaG1jXQE5X/buLzogM6GJu8le9Y4OcfNuIQX0rZskA==}
-    engines: {node: '>=14.16'}
-    dev: true
 
   /type-is@1.6.18:
     resolution: {integrity: sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==}
