@@ -1,8 +1,12 @@
+const repo = 'digisolve'
+const basePath = `/${repo}`
+const assetPrefix = `/${repo}/`
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  basePath: '/digisolve',
-  assetPrefix: '/digisolve',
+  basePath,
+  assetPrefix,
 }
 
 module.exports = nextConfig
