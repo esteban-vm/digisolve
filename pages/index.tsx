@@ -12,7 +12,7 @@ export default function Home() {
         <meta name='keywords' content='digital agency, online business' />
         <meta name='robots' content='index' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <link rel='icon' href='img/digisolve-logo.png' type='image/png' />
+        <link rel='icon' href='/img/digisolve-logo.png' type='image/png' />
       </Head>
       <main>
         <Views.Header />

@@ -16,9 +16,9 @@ export const mediaQuery = (breakPoint: keyof typeof breakPoints) => {
 }
 
 export const globalStyles = css`
-  @import url('css/fluid.min.css');
-  @import url('css/normalize.min.css');
-  @import url('css/animate.min.css');
+  @import url('/css/fluid.min.css');
+  @import url('/css/normalize.min.css');
+  @import url('/css/animate.min.css');
 
   @font-face {
     font-family: 'Work Sans';

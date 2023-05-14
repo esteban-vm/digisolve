@@ -6,7 +6,7 @@ let prefix = '/'
 if (isGithubActions) {
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
   path = `/${repo}`
-  prefix = `/${repo}/`
+  prefix = `/${repo}`
 }
 
 /** @type {import('next').NextConfig} */

@@ -2,7 +2,7 @@
 
 exports[`🧪 HEADER: style tests: should render with correct styles 1`] = `
 .emotion-0 {
-  background-image: linear-gradient(var(--color-overlay1), var(--color-overlay2)),url('img/header-img.jpg');
+  background-image: linear-gradient(var(--color-overlay1), var(--color-overlay2)),url('/img/header-img.jpg');
   -webkit-background-size: cover;
   background-size: cover;
   -webkit-background-position: center;

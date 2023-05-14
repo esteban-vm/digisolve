@@ -2,7 +2,7 @@
 
 exports[`🧪 TESTIMONIALS: style tests: should render with correct styles 1`] = `
 .emotion-0 {
-  background-image: linear-gradient(var(--color-overlay3), var(--color-overlay4)),url('img/testimonial-bg.jpg');
+  background-image: linear-gradient(var(--color-overlay3), var(--color-overlay4)),url('/img/testimonial-bg.jpg');
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
