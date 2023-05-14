@@ -11,7 +11,7 @@
     "format": "prettier --write .",
     "sb": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=13d0620a8f93"
+    "chromatic": "npx chromatic"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
