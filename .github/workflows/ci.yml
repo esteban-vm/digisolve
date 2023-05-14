@@ -10,32 +10,37 @@ jobs:
   ci:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [18]
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18.x'
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 8
 
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
       - name: Install dependencies
         run: pnpm install
 
-      - name: Lint
+      - name: Run lint
         run: pnpm lint
 
-      - name: Format
+      - name: Run format
         run: pnpm format
 
-      - name: Test
+      - name: Run test
         run: pnpm test
 
       - name: Publish to Chromatic
