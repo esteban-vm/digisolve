@@ -25,7 +25,7 @@ const TestimonialsComponent: Component = (props) => {
 }
 
 const Testimonials = styled(TestimonialsComponent)`
-  background-image: linear-gradient(var(--color-overlay3), var(--color-overlay4)), url('/img/testimonial-bg.jpg');
+  background-image: linear-gradient(var(--color-overlay3), var(--color-overlay4)), url('img/testimonial-bg.jpg');
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
