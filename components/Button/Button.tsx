@@ -2,15 +2,18 @@ import type { Component, PropsWithLink } from '@/types'
 import { animateScroll as scroll, scroller } from 'react-scroll'
 import { styled, css } from '@/styles'
 
-type ButtonProps = Omit<PropsWithLink<{ text: string; isSubmit?: boolean; onClick?: () => void }>, 'id'>
+type ButtonProps = Omit<PropsWithLink<{ isSubmit?: boolean; onClick?: () => void }>, 'id'>
 
-const ButtonComponent: Component<ButtonProps> = ({ text, isSubmit, onClick, link, className }) => {
+const ButtonComponent: Component<ButtonProps> = ({ text, link, isSubmit, onClick, className }) => {
   const clickHandler = () => {
     if (onClick) {
       onClick()
     } else {
-      if (link) scroller.scrollTo(link, { smooth: 'easeInQuint' })
-      else scroll.scrollToTop({ smooth: 'easeOutQuint' })
+      if (link) {
+        scroller.scrollTo(link, { smooth: 'easeInQuint' })
+      } else {
+        scroll.scrollToTop({ smooth: 'easeOutQuint' })
+      }
     }
   }
 
