@@ -2,6 +2,9 @@
 
 This is a **Next.js** website project for a **fictional company** bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Storybook:
+https://6407a53bb3f4ed23513a5bad-cjgjrnbxzh.chromatic.com/
+
 ## Main dependencies:
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
