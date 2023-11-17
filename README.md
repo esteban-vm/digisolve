@@ -3,9 +3,11 @@
 This is a **Next.js** website project for a **fictional company** bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Storybook:
+
 https://6407a53bb3f4ed23513a5bad-cjgjrnbxzh.chromatic.com/
 
 ## Main dependencies:
+
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Emotion](https://emotion.sh/)
@@ -16,6 +18,7 @@ https://6407a53bb3f4ed23513a5bad-cjgjrnbxzh.chromatic.com/
 - [Prettier](https://prettier.io/)
 
 ## License:
-This project is released under the MIT [LICENSE](/LICENSE).
 
-![Digisolve screenshot](/screenshot.jpeg "Digisolve screenshot")
+This project is released under the MIT [LICENSE](/LICENSE)
+
+![Digisolve screenshot](/screenshot.jpeg 'Digisolve screenshot')
